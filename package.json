@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^12.0.5",
+    "@material-ui/core": "^4.12.3",
     "expo": "~44.0.2",
     "expo-gl": "^11.1.2",
     "expo-graphics": "^2.0.0",
@@ -21,6 +23,7 @@
     "react-native": "0.64.3",
     "react-native-maps": "0.29.4",
     "react-native-web": ">=0.12.4",
+    "react-router-dom": "^6.2.1",
     "three": "^0.137.5"
   },
   "devDependencies": {
