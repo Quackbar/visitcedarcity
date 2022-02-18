@@ -6,6 +6,7 @@
     "@capacitor/android": "^3.4.1",
     "@capacitor/core": "3.4.0",
     "@capacitor/ios": "^3.4.1",
+    "@capacitor/storage": "^1.2.4",
     "@ionic/react": "^6.0.0-rc.2",
     "@ionic/react-router": "^6.0.0-rc.2",
     "@types/jest": "24.0.18",
