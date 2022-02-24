@@ -4,7 +4,7 @@ import { getMode } from '@ionic/core';
 import { IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonContent, IonList, IonListHeader, IonItem, IonLabel, IonCheckbox, IonFooter, IonIcon } from '@ionic/react';
 import { logoAngular, call, document, logoIonic, hammer, restaurant, cog, colorPalette, construct, compass } from 'ionicons/icons';
 
-import './SessionListFilter.css'
+import './DiscoverListFilter.css'
 
 import { connect } from '../data/connect';
 import { updateFilteredTracks } from '../data/sessions/sessions.actions';
@@ -22,9 +22,9 @@ interface DispatchProps {
   updateFilteredTracks: typeof updateFilteredTracks;
 }
 
-type SessionListFilterProps = OwnProps & StateProps & DispatchProps;
+type DiscoverListFilterProps = OwnProps & StateProps & DispatchProps;
 
-const SessionListFilter: React.FC<SessionListFilterProps> = ({ allTracks, filteredTracks, onDismissModal, updateFilteredTracks }) => {
+const DiscoverListFilter: React.FC<DiscoverListFilterProps> = ({ allTracks, filteredTracks, onDismissModal, updateFilteredTracks }) => {
   const ios = getMode() === 'ios';
 
   const toggleTrackFilter = (track: string) => {
@@ -124,5 +124,5 @@ export default connect<OwnProps, StateProps, DispatchProps>({
   mapDispatchToProps: {
     updateFilteredTracks
   },
-  component: SessionListFilter
+  component: DiscoverListFilter
 })

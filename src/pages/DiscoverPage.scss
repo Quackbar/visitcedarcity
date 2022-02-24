@@ -7,6 +7,11 @@
     --color: var(--ion-color-primary, #3880ff);
   }
 
+  // make all cards full width
+  ion-card {
+    width: 100%;
+  }
+
   /*
    * Material Design uses the ripple for activated
    * so only style the iOS activated background

@@ -3,9 +3,9 @@ import React, { useState, useRef } from 'react';
 import { IonToolbar, IonContent, IonPage, IonButtons, IonTitle, IonMenuButton, IonSegment, IonSegmentButton, IonButton, IonIcon, IonSearchbar, IonRefresher, IonRefresherContent, IonToast, IonModal, IonHeader, getConfig } from '@ionic/react';
 import { options, search } from 'ionicons/icons';
 
-import SessionList from '../components/SessionList';
-import SessionListFilter from '../components/SessionListFilter';
-import './SchedulePage.scss'
+import DiscoverList from '../components/DiscoverList';
+import DiscoverListFilter from '../components/DiscoverListFilter';
+import './DiscoverPage.scss'
 
 import ShareSocialFab from '../components/ShareSocialFab';
 
@@ -26,9 +26,9 @@ interface DispatchProps {
   setSearchText: typeof setSearchText;
 }
 
-type SchedulePageProps = OwnProps & StateProps & DispatchProps;
+type DiscoverPageProps = OwnProps & StateProps & DispatchProps;
 
-const SchedulePage: React.FC<SchedulePageProps> = ({ favoritesSchedule, schedule, setSearchText, mode }) => {
+const DiscoverPage: React.FC<DiscoverPageProps> = ({ favoritesSchedule, schedule, setSearchText, mode }) => {
   const [segment, setSegment] = useState<'all' | 'favorites'>('all');
   const [showSearchbar, setShowSearchbar] = useState<boolean>(false);
   const [showFilterModal, setShowFilterModal] = useState(false);
@@ -103,7 +103,7 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ favoritesSchedule, schedule
       <IonContent fullscreen={true}>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Schedule</IonTitle>
+            <IonTitle size="large">Discover</IonTitle>
           </IonToolbar>
           <IonToolbar>
             <IonSearchbar placeholder="Search" onIonChange={(e: CustomEvent) => setSearchText(e.detail.value)}></IonSearchbar>
@@ -121,12 +121,12 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ favoritesSchedule, schedule
           onDidDismiss={() => setShowCompleteToast(false)}
         />
 
-        <SessionList
+        <DiscoverList
           schedule={schedule}
           listType={segment}
           hide={segment === 'favorites'}
         />
-        <SessionList
+        <DiscoverList
           // schedule={schedule}
           schedule={favoritesSchedule}
           listType={segment}
@@ -140,7 +140,7 @@ const SchedulePage: React.FC<SchedulePageProps> = ({ favoritesSchedule, schedule
         swipeToClose={true}
         presentingElement={pageRef.current!}
       >
-        <SessionListFilter
+        <DiscoverListFilter
           onDismissModal={() => setShowFilterModal(false)}
         />
       </IonModal>
@@ -160,5 +160,5 @@ export default connect<OwnProps, StateProps, DispatchProps>({
   mapDispatchToProps: {
     setSearchText
   },
-  component: React.memo(SchedulePage)
+  component: React.memo(DiscoverPage)
 });
