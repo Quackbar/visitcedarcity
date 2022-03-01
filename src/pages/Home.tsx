@@ -1,11 +1,11 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 
-const Account: React.FC = () => {
+const Home: React.FC = () => {
     return (
-        <IonPage id="account-page">
+        <IonPage id="home-page">
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Account</IonTitle>
+                    <IonTitle>Home</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent>
@@ -14,4 +14,4 @@ const Account: React.FC = () => {
         </IonPage>
     )
 }
-export default Account;
+export default Home;
