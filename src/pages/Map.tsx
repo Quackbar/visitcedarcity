@@ -11,6 +11,7 @@ import {
 // @ts-ignore
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 
+import 'mapbox-gl/dist/mapbox-gl.css'
 import "../assets/scss/Map.scss";
 
 mapboxgl.accessToken =
