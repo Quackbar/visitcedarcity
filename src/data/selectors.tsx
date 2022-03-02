@@ -1,17 +1,15 @@
-import { createSelector } from "reselect";
-import { TourismItem } from "../models/defaultModels";
+import { AttractionItem } from "../models/defaultModels";
 import { AppState } from "./AppContext";
 
-const getTourismItems = (state: AppState) => state.tourismItems;
+const getAttractionItems = (state: AppState) => state.attractionItems;
 
 const getIdParam = (_state: AppState, props: any) => {
-  return props.match.params["id"];
+  return +props.match.params["id"];
 };
 
-export const getTourismItem = createSelector(
-  getTourismItems,
-  getIdParam,
-  (items, id) => {
-    return items.find((i: TourismItem) => i.id === id);
-  }
-);
+export const getAttractionItem = (state: AppState, props: any) => {
+  const attractions = getAttractionItems(state);
+  const id = getIdParam(state, props);
+
+  return attractions.find((a: AttractionItem) => {return a.id === id});
+};

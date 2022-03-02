@@ -5,20 +5,18 @@ import {
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
+  IonImg,
 } from "@ionic/react";
-import { TourismItem } from "../models/defaultModels";
+import { AttractionItem } from "../models/defaultModels";
 
 interface DiscoverListItemProps {
-  data: TourismItem;
+  data: AttractionItem;
 }
 
 const DiscoverListItem: React.FC<DiscoverListItemProps> = ({ data }) => {
   return (
-    <IonCard routerLink={`/discover/${data.type}/${data.id}`}>
-      <img
-        src={data.image}
-        alt="logo"
-      />
+    <IonCard routerLink={`/discover/${data.id}`}>
+      <IonImg src={data.image} />
       <IonCardHeader>
         <IonCardSubtitle>{data.subtitle}</IonCardSubtitle>
         <IonCardTitle>{data.title}</IonCardTitle>

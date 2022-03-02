@@ -19,8 +19,7 @@ import {
 import { AppContextProvider } from "./data/AppContext";
 import Home from "./pages/Home";
 import Discover from "./pages/Discover";
-import EventDetail from "./pages/EventDetail";
-import LocationDetail from "./pages/LocationDetail";
+import AttractionItemDetail from "./pages/AttractionItemDetail";
 import Map from "./pages/Map";
 import Account from "./pages/Account";
 
@@ -53,8 +52,7 @@ const VisitCedarCity: React.FC = () => (
           <Redirect exact from="/" to="/home" />
           <Route exact path="/home" render={() => <Home />} />
           <Route exact path="/discover" render={() => <Discover />} />
-          <Route path="/discover/event/:id" component={EventDetail} />
-          <Route path="/discover/location/:id" component={LocationDetail} />
+          <Route path="/discover/:id" component={AttractionItemDetail} />
           <Route exact path="/map" render={() => <Map />} />
           <Route exact path="/account" render={() => <Account />} />
         </IonRouterOutlet>
