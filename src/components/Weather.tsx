@@ -13,7 +13,7 @@ const BrianTemp = JSON.stringify(localStorage.getItem('BrianTemp'))
 export default function Weather() {
     return (
         <>
-                <IonCardHeader class="centered gray">
+                <IonCardHeader class="centered gray backgrounded" >
                 <h1>Cedar City</h1>
                         
                         <img src={CedarImg.slice(1, -1)}/>
