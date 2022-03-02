@@ -1,113 +1,93 @@
-import React, { useEffect } from 'react';
-import { Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-
-import Menu from './components/Menu';
+import {
+  IonApp,
+  IonIcon,
+  IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs,
+  setupIonicReact,
+} from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
+import { Route, Redirect } from "react-router-dom";
+import {
+  homeOutline,
+  searchOutline,
+  mapOutline,
+  personOutline,
+} from "ionicons/icons";
+import { AppContextProvider } from "./data/AppContext";
+import Home from "./pages/Home";
+import Discover from "./pages/Discover";
+import AttractionItemDetail from "./pages/AttractionItemDetail";
+import Map from "./pages/Map";
+import Account from "./pages/Account";
 
 /* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css';
+import "@ionic/react/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
+import "@ionic/react/css/normalize.css";
+import "@ionic/react/css/structure.css";
+import "@ionic/react/css/typography.css";
 
 /* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
+import "@ionic/react/css/padding.css";
+import "@ionic/react/css/float-elements.css";
+import "@ionic/react/css/text-alignment.css";
+import "@ionic/react/css/text-transformation.css";
+import "@ionic/react/css/flex-utils.css";
+import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import './theme/variables.css';
-import MainTabs from './pages/MainTabs';
-import { connect } from './data/connect';
-import { AppContextProvider } from './data/AppContext';
-import { loadConfData } from './data/sessions/sessions.actions';
-import { setIsLoggedIn, setUsername, loadUserData } from './data/user/user.actions';
-import Account from './pages/Account';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Support from './pages/Support';
-import Tutorial from './pages/Tutorial';
-import HomeOrTutorial from './components/HomeOrTutorial';
-import { Schedule } from "./models/Schedule";
-import RedirectToLogin from './components/RedirectToLogin';
+import "./theme/variables.css";
+
+import './assets/scss/app.scss';
+
+
+setupIonicReact();
+
+const VisitCedarCity: React.FC = () => (
+  <IonApp>
+    <IonReactRouter>
+      <IonTabs>
+        <IonRouterOutlet>
+          <Redirect exact from="/" to="/home" />
+          <Route exact path="/home" render={() => <Home />} />
+          <Route exact path="/discover" render={() => <Discover />} />
+          <Route path="/discover/:id" component={AttractionItemDetail} />
+          <Route exact path="/map" render={() => <Map />} />
+          <Route exact path="/account" render={() => <Account />} />
+        </IonRouterOutlet>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="home" href="/home">
+            <IonIcon icon={homeOutline} />
+            <IonLabel>Home</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="discover" href="/discover">
+            <IonIcon icon={searchOutline} />
+            <IonLabel>Discover</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="map" href="/map">
+            <IonIcon icon={mapOutline} />
+            <IonLabel>Map</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="account" href="/account">
+            <IonIcon icon={personOutline} />
+            <IonLabel>Account</IonLabel>
+          </IonTabButton>
+        </IonTabBar>
+      </IonTabs>
+    </IonReactRouter>
+  </IonApp>
+);
 
 const App: React.FC = () => {
   return (
     <AppContextProvider>
-      <IonicAppConnected />
+      <VisitCedarCity />
     </AppContextProvider>
   );
 };
 
-interface StateProps {
-  darkMode: boolean;
-  schedule: Schedule;
-}
-
-interface DispatchProps {
-  loadConfData: typeof loadConfData;
-  loadUserData: typeof loadUserData;
-  setIsLoggedIn: typeof setIsLoggedIn;
-  setUsername: typeof setUsername;
-}
-
-interface IonicAppProps extends StateProps, DispatchProps { }
-
-const IonicApp: React.FC<IonicAppProps> = ({ darkMode, schedule, setIsLoggedIn, setUsername, loadConfData, loadUserData }) => {
-
-  useEffect(() => {
-    loadUserData();
-    loadConfData();
-    // eslint-disable-next-line
-  }, []);
-
-  return (
-    schedule.groups.length === 0 ? (
-      <div></div>
-    ) : (
-      <IonApp className={`${darkMode ? 'dark-theme' : ''}`}>
-        <IonReactRouter>
-          <IonSplitPane contentId="main">
-            <Menu />
-            <IonRouterOutlet id="main">
-              {/*
-                We use IonRoute here to keep the tabs state intact,
-                which makes transitions between tabs and non tab pages smooth
-                */}
-              <Route path="/tabs" render={() => <MainTabs />} />
-              <Route path="/account" component={Account} />
-              <Route path="/login" component={Login} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/support" component={Support} />
-              <Route path="/tutorial" component={Tutorial} />
-              <Route path="/logout" render={() => {
-                return <RedirectToLogin
-                  setIsLoggedIn={setIsLoggedIn}
-                  setUsername={setUsername}
-                />;
-              }} />
-              <Route path="/" component={HomeOrTutorial} exact />
-            </IonRouterOutlet>
-          </IonSplitPane>
-        </IonReactRouter>
-      </IonApp>
-    )
-  )
-}
-
 export default App;
-
-const IonicAppConnected = connect<{}, StateProps, DispatchProps>({
-  mapStateToProps: (state) => ({
-    darkMode: state.user.darkMode,
-    schedule: state.data.schedule
-  }),
-  mapDispatchToProps: { loadConfData, loadUserData, setIsLoggedIn, setUsername },
-  component: IonicApp
-});
