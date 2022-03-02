@@ -1,16 +1,26 @@
-import { IonList } from "@ionic/react";
+import { IonList, IonListHeader } from "@ionic/react";
 import DiscoverListItem from "./DiscoverListItem";
 import { AttractionItem } from "../models/defaultModels";
 
 interface DiscoverListProps {
-  data: AttractionItem[];
+  attractions: AttractionItem[];
 }
 
-const DiscoverList: React.FC<DiscoverListProps> = ({ data }) => {
+const DiscoverList: React.FC<DiscoverListProps> = ({ attractions }) => {
+
+  if (attractions.length === 0 ) {
+    return (
+      <IonList>
+        <IonListHeader>
+          No results found
+        </IonListHeader>
+      </IonList>
+    );
+  }
   return (
     <IonList>
-      {data.map((item, index: number) => (
-        <DiscoverListItem data={item} key={`tourism-item-${index}`} />
+      {attractions.map((attraction, index: number) => (
+        <DiscoverListItem data={attraction} key={`attraction-item-${index}`} />
       ))}
     </IonList>
   );

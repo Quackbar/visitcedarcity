@@ -1,4 +1,4 @@
-enum AllCategories {
+export enum AllCategories {
   AsianIndian = "asian-indian",
   LocalEatery = "local-eatery",
   Alcohol = "alcohol",
@@ -25,7 +25,7 @@ enum AllCategories {
   Lodge = "lodge",
   SummerRental = "summer-rental",
   ShortTermRental = "short-term-rental",
-  VacationRental = "vacation=rental",
+  VacationRental = "vacation-rental",
   Tenting = "tenting",
   Resort = "resort",
   WhatsHappening = "whats-happening",
@@ -112,10 +112,22 @@ const Experiences = {
 };
 
 export const AttractionCategories = {
-  FoodAndDrink,
-  Events,
-  Lodging,
-  Experiences,
+  FoodAndDrink: {
+    label: "Food and Drink",
+    subcategories: FoodAndDrink,
+  },
+  Events: {
+    label: "Events",
+    subcategories: Events,
+  },
+  Lodging: {
+    label: "Lodging",
+    subcategories: Lodging,
+  },
+  Experiences: {
+    label: "Experiences",
+    subcategories: Experiences,
+  },
 };
 
 export enum AttractionLocations {
