@@ -2,11 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Ionic App</title>
+    <title>Ionic Conference App</title>
 
     <base href="/" />
-
-    <meta name="color-scheme" content="light dark" />
     <meta
       name="viewport"
       content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -20,11 +18,101 @@
 
     <!-- add to homescreen for ios -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Ionic App" />
+    <meta name="apple-mobile-web-app-title" content="Ionic Conference App" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   </head>
 
   <body>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBZA9u1NyUyA2aWEltYwguVMoVEry9gzlE",
+        authDomain: "visitcedarcity-backend.firebaseapp.com",
+        projectId: "visitcedarcity-backend",
+        storageBucket: "visitcedarcity-backend.appspot.com",
+        messagingSenderId: "449734764848",
+        appId: "1:449734764848:web:bbb05df8f855c0c69740f5",
+        measurementId: "G-3GWY8B1CE8"
+      };
+    
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+
+      const db = firebase.firestore();
+
+      var brianRef = db.collection("BrianHeadWeatherDayData").doc("current");
+
+      brianRef.get().then((doc) => {
+          if (doc.exists) {
+              console.log("Document data:", doc.data());
+              localStorage.setItem('BrianImg',doc.data().conditions)
+              localStorage.setItem('BrianTemp', doc.data().temp)
+          } else {
+              // doc.data() will be undefined in this case
+              console.log("No such document!");
+          }
+      }).catch((error) => {
+          console.log("Error getting document:", error);
+      });
+
+      var paroRef = db.collection("ParowanWeatherDayData").doc("current");
+
+      paroRef.get().then((doc) => {
+          if (doc.exists) {
+              console.log("Document data:", doc.data());
+              localStorage.setItem('ParoImg',doc.data().conditions)
+              localStorage.setItem('ParoTemp', doc.data().temp)
+          } else {
+              // doc.data() will be undefined in this case
+              console.log("No such document!");
+          }
+      }).catch((error) => {
+          console.log("Error getting document:", error);
+      });
+
+      var cedarRef = db.collection("CedarCityWeatherDayData").doc("current");
+
+      cedarRef.get().then((doc) => {
+          if (doc.exists) {
+              console.log("Document data:", doc.data());
+              localStorage.setItem('CedarImg',doc.data().conditions)
+              localStorage.setItem('CedarTemp', doc.data().temp)
+              localStorage.setItem('CedarUpdate', doc.data().Date)
+          } else {
+              // doc.data() will be undefined in this case
+              console.log("No such document!");
+          }
+      }).catch((error) => {
+          console.log("Error getting document:", error);
+      });
+
+      // let brianRef = db.collection("BrianHeadWeatherDayData");
+      // let paroRef = db.collection("ParowanWeatherDayData");
+      // let cedarRef = db.collection("CedarCityWeatherDayData");
+
+
+      // let brianDoc = await this.brianRef.doc("current").get();
+      // let paroDoc = await this.paroRef.doc("current").get();
+      // let cedarDoc = await this.cedarRef.doc("current").get();
+
+      localStorage.setItem('data','shakespeare')
+
+      // localStorage.setItem('CedarImg','https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01d.svg')
+      // localStorage.setItem('CedarTemp',['14F'])
+      // localStorage.setItem('ParoImg','https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01n.svg')
+      // localStorage.setItem('ParoTemp','30F')
+      // localStorage.setItem('BrianImg','https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01d.svg')
+      // localStorage.setItem('BrianTemp', "https://visitcedarcity-backend-default-rtdb.firebaseio.com/BrianHeadWeather/current/conditions")
+    </script>
     <div id="root"></div>
   </body>
 

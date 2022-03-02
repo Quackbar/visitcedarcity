@@ -42,6 +42,9 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 
+import './assets/scss/app.scss';
+
+
 setupIonicReact();
 
 const VisitCedarCity: React.FC = () => (

@@ -1,5 +1,8 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 
+import Weather from '../components/Weather';
+
+
 const Home: React.FC = () => {
     return (
         <IonPage id="home-page">
@@ -9,7 +12,7 @@ const Home: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-
+                <Weather/>
             </IonContent>
         </IonPage>
     )
