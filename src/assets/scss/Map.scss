@@ -2,14 +2,13 @@
   .map-container {
     height: 100%;
     .mapboxgl-canvas-container {
-      height: 100%;
+      height: 100vh;
+      width: auto;
 
       .mapboxgl-canvas {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100% !important;
-        width: 100% !important;
       }
     }
   }

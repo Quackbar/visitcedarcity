@@ -1,5 +1,5 @@
 import { AttractionItem } from "../models/defaultModels";
-import { AppState } from "./AppContext";
+import { AppState } from "./state";
 
 const getAttractionItems = (state: AppState) => state.attractionItems;
 
@@ -11,5 +11,7 @@ export const getAttractionItem = (state: AppState, props: any) => {
   const attractions = getAttractionItems(state);
   const id = getIdParam(state, props);
 
-  return attractions.find((a: AttractionItem) => {return a.id === id});
+  return attractions.find((a: AttractionItem) => {
+    return a.id === id;
+  });
 };
