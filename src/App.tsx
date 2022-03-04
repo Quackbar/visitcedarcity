@@ -41,9 +41,9 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
-import './assets/scss/app.scss';
+import "./assets/scss/app.scss";
 
-import Firebase from './assets/firebase/Firebase'
+import { getBrianHeadWeather } from "./assets/firebase/Firebase";
 
 setupIonicReact();
 
@@ -83,10 +83,9 @@ const VisitCedarCity: React.FC = () => (
 );
 
 const App: React.FC = () => {
-
-  Firebase.Firestore.getCedarCityWeather().then((data) => {
-    console.log(data)
-  })
+  getBrianHeadWeather().then((data) => {
+    console.log(data);
+  });
 
   return (
     <AppContextProvider>
