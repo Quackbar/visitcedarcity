@@ -41,6 +41,7 @@ export const initialState: AppState = {
       description: "Come ski at night",
       image:
         "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,h_1200,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/saltlake/cctb_logo0-29dc247c5056a36_29dc273d-5056-a36a-069774f0062eabe1.jpg",
+      categories: [AttractionCategories.Experiences.subcategories.Outdoor]
     },
   ],
   allAttractionFilters: Object.values(AllCategories),

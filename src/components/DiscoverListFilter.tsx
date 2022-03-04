@@ -17,9 +17,9 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { updateSelectedAttractionFilters } from "../data/AppContext";
 import { AllCategories, AttractionCategories } from "../models/defaultModels";
 import { connect } from "../data/connect";
+import { updateSelectedAttractionFilters } from "../data/actions";
 
 interface OwnProps {
   onDismissModal: () => void;
