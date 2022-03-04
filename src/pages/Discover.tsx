@@ -16,7 +16,7 @@ import DiscoverList from "../components/DiscoverList";
 import { filterCircleOutline } from "ionicons/icons";
 import { AppContext } from "../data/AppContext";
 import DiscoverListFilter from "../components/DiscoverListFilter";
-import { AllCategories, AttractionItem } from "../models/defaultModels";
+import { AttractionItem } from "../models/defaultModels";
 
 const Discover: React.FC = () => {
   const context = useContext(AppContext);
