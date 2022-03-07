@@ -25,7 +25,7 @@
   </head>
 
   <body>
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need
@@ -47,9 +47,57 @@
     
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-
-
       const db = firebase.firestore();
+
+      // var citiesRef = db.collection("mountainData");
+      //           // [START order_and_limit]
+      // citiesRef.get().then((doc) => {
+      //     if (doc.exists) {
+      //         console.log("mountain data:", doc.data());
+
+      //     } else {
+      //         // doc.data() will be undefined in this case
+      //         console.log("No such document!");
+      //     }
+      // }).catch((error) => {
+      //     console.log("Error getting document:", error);
+      // });
+      var mountainData = new Array();
+      const citiesRef = db.collection('mountainData');
+      const snapshot = await citiesRef.get();
+      snapshot.forEach(doc => {
+        
+        console.log(doc.id, '=>', doc.data());
+        var object =  {"Date" : doc.data().Date.toDate(),"BaseDepth" : doc.data().baseDepth};
+        mountainData.push(object)
+      });
+
+      mountainData.sort(function(a, b) {
+        var keyA = new Date(a.Date),
+          keyB = new Date(b.Date);
+        // Compare the 2 dates
+        if (keyA < keyB) return 1;
+        if (keyA > keyB) return -1;
+        return 0;
+      });
+      console.log("the stuff: ",mountainData)
+
+      localStorage.setItem('MountainData', mountainData)
+      let dates = new Array
+      let snowData = new Array
+
+      mountainData.forEach((element) => {
+          dates.push(element.Date)
+          snowData.push(element.BaseDepth)
+      });
+
+      localStorage.setItem('dates', dates)
+      localStorage.setItem('snowData', snowData)
+
+      console.log('dates', dates)
+      console.log('snowData', snowData)
+
+
 
       var brianRef = db.collection("BrianHeadWeatherDayData").doc("current");
 
@@ -113,7 +161,7 @@
       // localStorage.setItem('ParoImg','https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01n.svg')
       // localStorage.setItem('ParoTemp','30F')
       // localStorage.setItem('BrianImg','https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01d.svg')
-      // localStorage.setItem('BrianTemp', "https://visitcedarcity-backend-default-rtdb.firebaseio.com/BrianHeadWeather/current/conditions") -->
+      // localStorage.setItem('BrianTemp', "https://visitcedarcity-backend-default-rtdb.firebaseio.com/BrianHeadWeather/current/conditions")
     </script>
     <div id="root"></div>
   </body>

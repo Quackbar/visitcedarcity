@@ -1,6 +1,27 @@
 import { IonContent,IonText, IonHeader,IonList,IonListHeader,IonItem,IonCheckbox, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 
-import App from '../components/Chart';
+import Chart from '../components/Chart';
+
+import {Subscriptions} from '../models/defaultModels'
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+
+
+
+
+interface ChartData {
+  label: string;
+  data: string[];
+  backgroundColor: string;
+}
+
+interface ChartProps{
+  labels: string[];
+  datasets: ChartData[];
+}
+
+
 
 const Account: React.FC = () => {
     return (
@@ -14,75 +35,26 @@ const Account: React.FC = () => {
         <IonTitle class="centered">
           <br/>SEE HERE WHEN<br/>YOUR EVENTS ARE HAPPENING<br/>IN CEDAR CITY / BRIAN HEAD
         </IonTitle>
-        <App/>
+        <Chart/>
         <IonList>
           <IonListHeader>
             Subscriptions 
           </IonListHeader>
-          <IonItem>
-            <IonCheckbox>
-                   Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-                   Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub 
-            </IonText>
-          </IonItem>
+          {Subscriptions.map(Subscription => {
+              var key = Object.keys(Subscription)[0]
+              var values = Object.values(Subscription)[0]
+
+            return(
+              <IonItem >
+              <IonCheckbox class={"c" + values?.color.slice(1)}>
+              {values?.title}
+              </IonCheckbox>
+              <IonText >
+              &nbsp;{values?.title}
+              </IonText>
+            </IonItem>
+            );
+          })}
         </IonList>
 
       </IonContent>
