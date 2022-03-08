@@ -1,35 +1,22 @@
-import { IonContent,IonText, IonHeader,IonList,IonListHeader,IonItem,IonCheckbox, IonPage, IonTitle, IonToolbar } from "@ionic/react";
-import React, { useState, useRef } from 'react';
-
-import Chart from '../components/Chart';
-
-import {Subscriptions} from '../models/defaultModels'
-// import { theData } from "../components/Chart";
-
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+  IonCheckbox,
+  IonContent,
+  IonHeader,
+  IonItem,
+  IonPage,
+  IonText,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import { useState } from "react";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+import { BarChart } from "../components/Chart";
+import { Subscriptions } from "../models/defaultModels";
 
-export const options = {
+const chartOptions = {
   plugins: {
     legend: {
-      position: 'bottom' as const,
+      position: "bottom" as const,
     },
     title: {
       display: true,
@@ -37,14 +24,11 @@ export const options = {
     },
   },
   responsive: true,
-  barThickness: 'flex',
+  barThickness: "flex",
   scales: {
-  
     x: {
-      
-
       grid: {
-        display: false
+        display: false,
       },
       stacked: true,
     },
@@ -52,130 +36,279 @@ export const options = {
       display: false,
 
       grid: {
-        display: false
+        display: false,
       },
       stacked: true,
     },
   },
 };
 
+const labels = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
-
-const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-var datasets: { label: string | undefined; data: string[] | undefined; backgroundColor: string | undefined; }[] = [];
-const temp = Subscriptions.forEach(element => {
-  var key = Object.keys(element)[0]
-  var values = Object.values(element)[0]
-  console.log(values?.color)
+let datasets: {
+  label: string | undefined;
+  data: string[] | undefined;
+  backgroundColor: string | undefined;
+}[] = [];
+Subscriptions.forEach((element) => {
+  let key = Object.keys(element)[0];
+  let values = Object.values(element)[0];
   datasets.push({
     label: values?.title,
     data: values?.timing,
     backgroundColor: values?.color,
-  })
+  });
 });
 
-export let theData = {
-  labels,
-  datasets: datasets,
+const Account: React.FC = () => {
+  const [chartData, setChartData] = useState({
+    labels,
+    datasets: datasets,
+  });
+
+  function updateSubscription() {
+    setChartData({
+      labels,
+      datasets: []
+    })
+  }
+
+  return (
+    <IonPage id="account-page">
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Account</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <BarChart
+          propOptions={chartOptions}
+          propData={chartData}
+          propHeight={300}
+        />
+
+        {Subscriptions.map((subscription) => {
+          var key = Object.keys(subscription)[0];
+          var values = Object.values(subscription)[0];
+          var title = values?.title || "";
+          function getKey(val: string) {
+            if (chartData.datasets.map((e) => e.label).indexOf(val) >= 0) {
+              chartData.datasets.splice(
+                chartData.datasets.map((e) => e.label).indexOf(val),
+                1
+              );
+            } else {
+              const temp = Subscriptions.forEach((element) => {
+                var key = Object.keys(element)[0];
+                var values = Object.values(element)[0];
+                if (val === values?.title) {
+                  chartData.datasets.push({
+                    label: values?.title,
+                    data: values?.timing,
+                    backgroundColor: values?.color,
+                  });
+                }
+              });
+            }
+            return val;
+          }
+          return (
+            <IonItem key={key}>
+              <IonCheckbox
+                class={"c" + values?.color.slice(1)}
+                onClick={updateSubscription}
+                onIonChange={() => getKey(title)}
+              >
+                {values?.title}
+              </IonCheckbox>
+              <IonText>&nbsp;{values?.title}</IonText>
+            </IonItem>
+          );
+        })}
+      </IonContent>
+    </IonPage>
+  );
 };
 
-
-
-interface ChartData {
-  label: string;
-  data: string[];
-  backgroundColor: string;
-}
-
-interface ChartProps{
-  labels: string[];
-  datasets: ChartData[];
-}
-
-
-
-const Account: React.FC = () => {
-  const [data, setData] = useState(theData);
-
-  const updatePlot = () => {
-    setData(theData);
-  };
-  const chartRef = useRef();
-
-  function updateIt(){
-    return (  <Bar redraw ref={chartRef} options={options} data={data} height={300} /> 
-      )
-  }
-    return (
-        <IonPage id="account-page">
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>Account</IonTitle>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent>
-        <IonTitle class="centered">
-          <br/>EVENT SPREAD BY YEAR
-        </IonTitle>
-        {
-           
-        
-
-
-
-        } 
-        {updateIt()}
-       {/* <App/> */}
-        <IonList>
-          <IonListHeader>
-            Subscriptions 
-          </IonListHeader>
-          {Subscriptions.map(Subscription => {
-              var key = Object.keys(Subscription)[0]
-              var values = Object.values(Subscription)[0]
-              var title = values?.title || "";
-              function getKey(val:string) {
-
-                if(theData.datasets.map(e => e.label).indexOf(val)>=0){
-                  theData.datasets.splice(theData.datasets.map(e => e.label).indexOf(val), 1)
-                  console.log(theData.datasets)
-                  console.log(theData.datasets.map(e => e.label).indexOf(val));
-                }
-                else{
-                  const temp = Subscriptions.forEach(element => {
-                    var key = Object.keys(element)[0]
-                    var values = Object.values(element)[0]
-                    // console.log(values?.color)
-                    if(val === values?.title){
-                      theData.datasets.push({
-                        label: values?.title,
-                        data: values?.timing,
-                        backgroundColor: values?.color,
-                      })
-                    }
-                  });
-
-                }
-                return val;
-
-
-              }
-            return(
-              <IonItem >
-              <IonCheckbox class={"c" + values?.color.slice(1)} onClick={updateIt} onIonChange={() => getKey(title)}>
-              {values?.title}
-              </IonCheckbox>
-              <IonText >
-              &nbsp;{values?.title}
-              </IonText>
-            </IonItem>
-            );
-          })}
-        </IonList>
-
-      </IonContent>
-        </IonPage>
-    )
-}
 export default Account;
+
+// import { IonContent,IonText, IonHeader,IonList,IonListHeader,IonItem,IonCheckbox, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+// import React, { useState, useRef } from 'react';
+
+// import Chart from '../components/Chart';
+
+// import {Subscriptions} from '../models/defaultModels'
+// // import { theData } from "../components/Chart";
+
+// import {
+//   Chart as ChartJS,
+//   CategoryScale,
+//   LinearScale,
+//   BarElement,
+//   Title,
+//   Tooltip,
+//   Legend,
+// } from 'chart.js';
+// import { Bar } from 'react-chartjs-2';
+
+// ChartJS.register(
+//   CategoryScale,
+//   LinearScale,
+//   BarElement,
+//   Title,
+//   Tooltip,
+//   Legend
+// );
+
+// export const options = {
+//   plugins: {
+//     legend: {
+//       position: 'bottom' as const,
+//     },
+//     title: {
+//       display: true,
+//       text: "2022",
+//     },
+//   },
+//   responsive: true,
+//   barThickness: 'flex',
+//   scales: {
+
+//     x: {
+
+//       grid: {
+//         display: false
+//       },
+//       stacked: true,
+//     },
+//     y: {
+//       display: false,
+
+//       grid: {
+//         display: false
+//       },
+//       stacked: true,
+//     },
+//   },
+// };
+
+// const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// var datasets: { label: string | undefined; data: string[] | undefined; backgroundColor: string | undefined; }[] = [];
+// const temp = Subscriptions.forEach(element => {
+//   var key = Object.keys(element)[0]
+//   var values = Object.values(element)[0]
+//   console.log(values?.color)
+//   datasets.push({
+//     label: values?.title,
+//     data: values?.timing,
+//     backgroundColor: values?.color,
+//   })
+// });
+
+// export let theData = {
+//   labels,
+//   datasets: datasets,
+// };
+
+// interface ChartData {
+//   label: string;
+//   data: string[];
+//   backgroundColor: string;
+// }
+
+// interface ChartProps{
+//   labels: string[];
+//   datasets: ChartData[];
+// }
+
+// const Account: React.FC = () => {
+//   const [data, setData] = useState(theData);
+
+//   const updatePlot = () => {
+//     setData(theData);
+//   };
+//   const chartRef = useRef();
+
+//   function updateIt() {
+//     return (
+//       <Bar redraw ref={chartRef} options={options} data={data} height={300} />
+//     );
+//   }
+//   return (
+//     <IonPage id="account-page">
+//       <IonHeader>
+//         <IonToolbar>
+//           <IonTitle>Account</IonTitle>
+//         </IonToolbar>
+//       </IonHeader>
+//       <IonContent>
+//         <IonTitle class="centered">
+//           <br />
+//           EVENT SPREAD BY YEAR
+//         </IonTitle>
+//         {}
+//         {updateIt()}
+//         {/* <App/> */}
+//         <IonList>
+//           <IonListHeader>Subscriptions</IonListHeader>
+//           {Subscriptions.map((Subscription) => {
+//             var key = Object.keys(Subscription)[0];
+//             var values = Object.values(Subscription)[0];
+//             var title = values?.title || "";
+//             function getKey(val: string) {
+//               if (theData.datasets.map((e) => e.label).indexOf(val) >= 0) {
+//                 theData.datasets.splice(
+//                   theData.datasets.map((e) => e.label).indexOf(val),
+//                   1
+//                 );
+//                 console.log(theData.datasets);
+//                 console.log(theData.datasets.map((e) => e.label).indexOf(val));
+//               } else {
+//                 const temp = Subscriptions.forEach((element) => {
+//                   var key = Object.keys(element)[0];
+//                   var values = Object.values(element)[0];
+//                   // console.log(values?.color)
+//                   if (val === values?.title) {
+//                     theData.datasets.push({
+//                       label: values?.title,
+//                       data: values?.timing,
+//                       backgroundColor: values?.color,
+//                     });
+//                   }
+//                 });
+//               }
+//               return val;
+//             }
+//             return (
+//               <IonItem>
+//                 <IonCheckbox
+//                   class={"c" + values?.color.slice(1)}
+//                   onClick={updateIt}
+//                   onIonChange={() => getKey(title)}
+//                 >
+//                   {values?.title}
+//                 </IonCheckbox>
+//                 <IonText>&nbsp;{values?.title}</IonText>
+//               </IonItem>
+//             );
+//           })}
+//         </IonList>
+//       </IonContent>
+//     </IonPage>
+//   );
+// };
+// export default Account;
