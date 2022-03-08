@@ -2,8 +2,9 @@ import { IonCard, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@
 
 import Snowpack from '../components/SnowPack';
 import Weather from '../components/Weather';
+import MountainData from '../components/Mountaindata';
 
-import { getBrianHeadWeather, getCedarWeather, getParoWeather } from "../assets/firebase/Firebase";
+import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
 
 
@@ -13,12 +14,39 @@ let ParoImg = ""
 let ParoTemp = ""
 let BrianImg = ""
 let BrianTemp = ""
+let MDBaseDepth = ""
+let MDOneDay = ""
+let MDLiftsOpen = ""
+let MDTrailsOpen = ""
 
 type MyReturnTypeItem = {
     Date?: Timestamp;
     conditions?: string;
     temp?: string;
   }
+type MountainDataType = {
+    Date?: Timestamp;
+    baseDepth?: string;
+    conditions?: string;
+    onedaySnowfall?: string;
+    liftsOpen?: string;
+    trailsOpen?: string;
+    temp?: string;
+    wind?: string;
+  }
+
+getMountainData().then((data) => {
+    console.log('mountainData', data);
+    var x: MountainDataType = data
+    MDBaseDepth = x.baseDepth ?? 'unknown'
+    MDOneDay = x.onedaySnowfall ?? 'unknown'
+    MDLiftsOpen = x.liftsOpen ?? 'unknown'
+    MDTrailsOpen = x.trailsOpen ?? 'unknown'
+    localStorage.setItem("MDBaseDepth", x.baseDepth ?? 'unknown');
+    localStorage.setItem("MDOneDaySnowfall", x.onedaySnowfall ?? 'unknown');
+    localStorage.setItem("MDLiftsOpen", x.liftsOpen ?? 'unknown');
+    localStorage.setItem("MDTrailsOpen", x.trailsOpen ?? 'unknown');
+});
 
 getBrianHeadWeather().then((data) => {
     console.log('brian head', data);
@@ -26,7 +54,7 @@ getBrianHeadWeather().then((data) => {
     BrianImg = x.conditions ?? 'unknown'
     BrianTemp = x.temp ?? 'unknown'
     localStorage.setItem("BrianImg", x.conditions ?? 'unknown');
-    localStorage.setItem("BrianImg", x.temp ?? 'unknown');
+    localStorage.setItem("BrianTemp", x.temp ?? 'unknown');
     console.log('brian head', x.Date?.toDate().toLocaleDateString("en-US") );
 });
 getCedarWeather().then((data) => {
@@ -66,6 +94,10 @@ const Home: React.FC = () => {
                     <IonCard>
                         <Snowpack/>
                     </IonCard>
+                    <MountainData  BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
+                            OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
+                            LiftsOpen={MDLiftsOpen || String(localStorage.getItem("MDLiftsOpen"))}
+                            TrailsOpen={MDTrailsOpen || String(localStorage.getItem("MDTrailsOpen"))}/>
                 </IonContent>
             </IonPage>
         );

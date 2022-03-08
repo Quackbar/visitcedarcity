@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Subscriptions} from '../models/defaultModels'
 
 import {
@@ -37,9 +37,15 @@ export const options = {
   responsive: true,
   scales: {
     x: {
+      grid: {
+        display: false
+      },
       stacked: true,
     },
     y: {
+      grid: {
+        display: false
+      },
       stacked: true,
     },
   },
@@ -58,13 +64,20 @@ const temp = Subscriptions.forEach(element => {
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const data2 = JSON.stringify(localStorage.getItem('data'))
-export const data = {
+export const theData = {
   labels,
   datasets: datasets,
 };
 
+
 export default function Chart() {
-  return <Bar options={options} data={data}
+  const [data, setData] = useState(theData);
+
+  const updatePlot = () => {
+    setData(theData);
+  };
+
+  return <Bar options={options} data={data} onPaste={updatePlot} 
   height={300}
  />;
 }

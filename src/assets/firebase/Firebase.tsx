@@ -28,10 +28,21 @@ const f_db = getFirestore(firebaseApp);
 const brianDoc = doc(f_db, "BrianHeadWeatherDayData", "current");
 const paroDoc = doc(f_db, "ParowanWeatherDayData", "current");
 const cedarDoc = doc(f_db, "CedarCityWeatherDayData", "current");
+const mountainDoc = doc(f_db, "mountainData", "current");
+
 
 const mountainRef = collection(f_db, "mountainData");
 
-
+interface MountainDataType {
+  Date?: Timestamp;
+  baseDepth?: string;
+  conditions?: string;
+  oneDaySnowfall?: string;
+  liftsOpen?: string;
+  trailsOpen?: string;
+  temp?: string;
+  wind?: string;
+}
 type MyReturnTypeItem = {
   Date?: Timestamp;
   conditions?: string;
@@ -39,6 +50,19 @@ type MyReturnTypeItem = {
 }
 
 
+// firestore functions
+export async function getMountainData() : Promise<MountainDataType> {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(mountainDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        resolve(docSnap.data() as MountainDataType);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
 
 
 

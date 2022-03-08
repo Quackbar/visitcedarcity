@@ -59,7 +59,7 @@ const Discover: React.FC = () => {
   return (
     <IonPage ref={pageRef} id="discover-page">
       <IonContent fullscreen={true}>
-        <IonHeader collapse="condense">
+        <IonHeader>
           <IonToolbar>
             <IonTitle>Discover Cedar City</IonTitle>
             <IonButton
