@@ -1,4 +1,6 @@
 import React from 'react';
+import {Subscriptions} from '../models/defaultModels'
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -19,6 +21,7 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+
 
 
 
@@ -54,6 +57,17 @@ export const options = {
     },
   },
 };
+var datasets: { label: string | undefined; data: string[] | undefined; backgroundColor: string | undefined; }[] = [];
+const temp = Subscriptions.forEach(element => {
+  var key = Object.keys(element)[0]
+  var values = Object.values(element)[0]
+  console.log(values?.color)
+  datasets.push({
+    label: values?.title,
+    data: values?.timing,
+    backgroundColor: values?.color,
+  })
+});
 
 
 

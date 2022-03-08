@@ -17,6 +17,8 @@ import "../assets/scss/Map.scss";
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmVybmFyZGtpbnR6aW5nIiwiYSI6ImNrenpxc2UwejBjczAzYnMwOXhjeW1zMDEifQ.R_WjPk9TCgHbs-yKfPC1iQ";
 
+
+
 const Map: React.FC = () => {
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
 
@@ -66,6 +68,6 @@ const Map: React.FC = () => {
         />
       </IonContent>
     </IonPage>
-  );
-};
+  )
+}
 export default Map;

@@ -1,7 +1,28 @@
 import { IonContent,IonText, IonHeader,IonList,IonListHeader,IonItem,IonCheckbox, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 import {Subscriptions} from '../models/defaultModels'
 
-import App from '../components/Chart';
+import Chart from '../components/Chart';
+
+import {Subscriptions} from '../models/defaultModels'
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+
+
+
+
+interface ChartData {
+  label: string;
+  data: string[];
+  backgroundColor: string;
+}
+
+interface ChartProps{
+  labels: string[];
+  datasets: ChartData[];
+}
+
+
 
 const Account: React.FC = () => {
     return (
@@ -15,7 +36,7 @@ const Account: React.FC = () => {
         <IonTitle class="centered">
           <br/>SEE HERE WHEN<br/>YOUR EVENTS ARE HAPPENING<br/>IN CEDAR CITY / BRIAN HEAD
         </IonTitle>
-        <App/>
+        <Chart/>
         <IonList>
           <IonListHeader>
             Subscriptions 
