@@ -1,66 +1,157 @@
-import { IonContent,IonText, IonHeader,IonList,IonListHeader,IonItem,IonCheckbox, IonPage, IonTitle, IonToolbar } from "@ionic/react";
-import {Subscriptions} from '../models/defaultModels'
+import {
+  IonCheckbox,
+  IonContent,
+  IonHeader,
+  IonItem,
+  IonPage,
+  IonText,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import { useEffect, useState } from "react";
 
-import Chart from '../components/Chart';
+import { BarChart, chartDataType, datasetType } from "../components/Chart";
+import { updateSubscriptions } from "../data/AppContext";
+import { connect } from "../data/connect";
+import { SubscriptionItem } from "../models/defaultModels";
 
-import {Subscriptions} from '../models/defaultModels'
+const chartOptions = {
+  plugins: {
+    legend: {
+      position: "bottom" as const,
+    },
+    title: {
+      display: true,
+      text: "2022",
+    },
+  },
+  responsive: true,
+  barThickness: "flex",
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+      stacked: true,
+    },
+    y: {
+      display: false,
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      grid: {
+        display: false,
+      },
+      stacked: true,
+    },
+  },
+};
 
+const labels = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
-
-
-
-interface ChartData {
-  label: string;
-  data: string[];
-  backgroundColor: string;
+// let datasets: {
+//   label: string | undefined;
+//   data: string[] | undefined;
+//   backgroundColor: string | undefined;
+// }[] = [];
+// Subscriptions.forEach((element) => {
+//   let key = Object.keys(element)[0];
+//   let values = Object.values(element)[0];
+//   datasets.push({
+//     label: values?.title,
+//     data: values?.timing,
+//     backgroundColor: values?.color,
+//   });
+// });
+interface StateProps {
+  allSubscriptions: SubscriptionItem[];
+}
+interface DispatchProps {
+  updateSubscriptions: typeof updateSubscriptions;
 }
 
-interface ChartProps{
-  labels: string[];
-  datasets: ChartData[];
-}
+type AccountProps = StateProps & DispatchProps;
 
+const Account: React.FC<AccountProps> = ({
+  allSubscriptions,
+  updateSubscriptions,
+}) => {
+  const [chartData, setChartData] = useState<chartDataType>();
 
+  useEffect(() => {
+    let newChartDataSet: datasetType[] = [];
 
-const Account: React.FC = () => {
-    return (
-        <IonPage id="account-page">
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>Account</IonTitle>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent>
-        <IonTitle class="centered">
-          <br/>SEE HERE WHEN<br/>YOUR EVENTS ARE HAPPENING<br/>IN CEDAR CITY / BRIAN HEAD
-        </IonTitle>
-        <Chart/>
-        <IonList>
-          <IonListHeader>
-            Subscriptions 
-          </IonListHeader>
-          {Subscriptions.map(Subscription => {
-              var key = Object.keys(Subscription)[0]
-              var values = Object.values(Subscription)[0]
-              var title = values?.title || "";
+    allSubscriptions.forEach((subscription) => {
+      if (subscription.subscribed) {
+        newChartDataSet.push({
+          label: subscription.title,
+          data: subscription.timing,
+          backgroundColor: subscription.color,
+        });
+      }
+    });
 
-            return(
-              <IonItem >
-              <IonCheckbox class={"c" + values?.color.slice(1)}>
-              {values?.title}
-              </IonCheckbox>
-              <IonText >
-              &nbsp;{values?.title}
-              </IonText>
-            </IonItem>
-            );
-          })}
-        </IonList>
+    setChartData({
+      labels: labels,
+      datasets: newChartDataSet
+    })
 
+    // setChartData(newChartData);
+  }, [allSubscriptions]);
+
+  const didToggleCheckbox = (index: number) => {
+    // flip the subscription state
+    allSubscriptions[index].subscribed = !allSubscriptions[index].subscribed;
+    updateSubscriptions([...allSubscriptions]);
+  };
+
+  return (
+    <IonPage id="account-page">
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Account</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
+        <BarChart
+          propOptions={chartOptions}
+          propData={chartData}
+          propHeight={300}
+        />
+        {Object.values(allSubscriptions).map((subscription, index) => (
+          <IonItem key={index}>
+            <IonCheckbox
+              class={"c" + subscription.color.slice(1)}
+              onClick={() => didToggleCheckbox(index)}
+              checked={subscription.subscribed}
+            >
+              {subscription.title}
+            </IonCheckbox>
+            <IonText>&nbsp;{subscription.title}</IonText>
+          </IonItem>
+        ))}
       </IonContent>
-        </IonPage>
-    )
-}
-export default Account;
+    </IonPage>
+  );
+};
+
+export default connect<{}, StateProps, DispatchProps>({
+  mapStateToProps: (state) => ({
+    allSubscriptions: state.subscriptionItems,
+  }),
+  mapDispatchToProps: {
+    updateSubscriptions,
+  },
+  component: Account,
+});

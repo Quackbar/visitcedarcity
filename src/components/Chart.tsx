@@ -1,17 +1,14 @@
-import React from 'react';
-import {Subscriptions} from '../models/defaultModels'
-
 import {
   Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
   BarElement,
+  CategoryScale,
+  Legend,
+  LinearScale,
   Title,
   Tooltip,
-  Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-import {Subscriptions} from '../models/defaultModels'
+} from "chart.js";
+import React, { useEffect, useState } from "react";
+import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -22,13 +19,36 @@ ChartJS.register(
   Legend
 );
 
+interface optionsType {
+  plugins: {
+    legend: { position: "bottom" };
+    title: { display: boolean; text: string };
+  };
+  responsive: boolean;
+  scales: {
+    x: { grid: { display: boolean }; stacked: boolean };
+    y: { grid: { display: boolean }; stacked: boolean };
+  };
+}
+export interface datasetType {
+  label: string | undefined;
+  data: string[] | undefined;
+  backgroundColor: string | undefined;
+}
+export interface chartDataType {
+  labels: string[];
+  datasets: datasetType[];
+}
 
+const defaultData = {
+  labels: [] as string[],
+  datasets: [] as datasetType[],
+};
 
-
-export const options = {
+const defaultBarOptions = {
   plugins: {
     legend: {
-      position: 'bottom' as const,
+      position: "bottom" as const,
     },
     title: {
       display: true,
@@ -40,58 +60,53 @@ export const options = {
   scales: {
   
     x: {
-      
-
       grid: {
-        display: false
+        display: false,
       },
       stacked: true,
     },
     y: {
-      display: false,
-
       grid: {
-        display: false
+        display: false,
       },
       stacked: true,
     },
   },
 };
-var datasets: { label: string | undefined; data: string[] | undefined; backgroundColor: string | undefined; }[] = [];
-const temp = Subscriptions.forEach(element => {
-  var key = Object.keys(element)[0]
-  var values = Object.values(element)[0]
-  console.log(values?.color)
-  datasets.push({
-    label: values?.title,
-    data: values?.timing,
-    backgroundColor: values?.color,
-  })
-});
 
-
-
-const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-var datasets: { label: string | undefined; data: string[] | undefined; backgroundColor: string | undefined; }[] = [];
-const temp = Subscriptions.forEach(element => {
-  var key = Object.keys(element)[0]
-  var values = Object.values(element)[0]
-  console.log(values?.color)
-  datasets.push({
-    label: values?.title,
-    data: values?.timing,
-    backgroundColor: values?.color,
-  })
-});
-
-export let theData = {
-  labels,
-  datasets: datasets,
-};
-
-export default function App() {
-  return <Bar options={options} data={theData}
-  height={300}
- />;
+interface ChartProps {
+  propOptions?: optionsType;
+  propData?: chartDataType;
+  propHeight?: number;
 }
+
+export const BarChart: React.FC<ChartProps> = ({
+  propOptions,
+  propData,
+  propHeight,
+}) => {
+  const [data, setData] =
+    useState<{ labels: string[]; datasets: datasetType[] }>(defaultData);
+  const [options, setOptions] = useState(defaultBarOptions);
+  const [height, setHeight] = useState(300);
+
+  useEffect(() => {
+    if (propOptions) {
+      setOptions(propOptions);
+    }
+  }, [propOptions]);
+
+  useEffect(() => {
+    if (propData) {
+      setData(propData);
+    }
+  }, [propData]);
+
+  useEffect(() => {
+    if (propHeight) {
+      setHeight(propHeight);
+    }
+  }, [propHeight]);
+
+  return <Bar options={options} data={data} height={height} />;
+};
