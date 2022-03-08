@@ -7,13 +7,11 @@ import {
   IonContent,
   IonFooter,
   IonHeader,
-  IonIcon,
   IonItem,
   IonItemDivider,
   IonItemGroup,
   IonLabel,
   IonList,
-  IonListHeader,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
