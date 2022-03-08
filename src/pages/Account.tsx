@@ -1,4 +1,5 @@
 import { IonContent,IonText, IonHeader,IonList,IonListHeader,IonItem,IonCheckbox, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import {Subscriptions} from '../models/defaultModels'
 
 import App from '../components/Chart';
 
@@ -19,70 +20,22 @@ const Account: React.FC = () => {
           <IonListHeader>
             Subscriptions 
           </IonListHeader>
-          <IonItem>
-            <IonCheckbox>
-                   Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-                   Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub
-            </IonText>
-          </IonItem>
-          <IonItem>
-            <IonCheckbox>
-              Random Sub
-            </IonCheckbox>
-            <IonText>
-            &nbsp;Random Sub 
-            </IonText>
-          </IonItem>
+          {Subscriptions.map(Subscription => {
+              var key = Object.keys(Subscription)[0]
+              var values = Object.values(Subscription)[0]
+              var title = values?.title || "";
+
+            return(
+              <IonItem >
+              <IonCheckbox class={"c" + values?.color.slice(1)}>
+              {values?.title}
+              </IonCheckbox>
+              <IonText >
+              &nbsp;{values?.title}
+              </IonText>
+            </IonItem>
+            );
+          })}
         </IonList>
 
       </IonContent>

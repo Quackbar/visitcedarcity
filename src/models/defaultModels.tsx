@@ -111,6 +111,127 @@ const Experiences = {
   USA: AllCategories.USA,
 };
 
+export let Subscriptions = [
+  {
+    UtahShakespeareFestival: {
+      title: "Utah Shakespeare Festival",
+      schedule: "/assets/data/USF.json",
+      //12 months => 12 element array
+      timing: ["0","0","0","0","0","2","4","4","4","3","0","0"],
+      color: "#c3121e",
+    }
+  },
+  {
+    NeilSimonFestival: {
+      title: "Neil Simon Festival",
+      schedule: "/assets/data/NSF.json",
+      //12 months => 12 element array
+      timing: ["0","0","0","0","0","0","4","0","0","0","0","0"],
+      color: "#0000ff"
+    },
+  },
+  {
+    BrianHeadWinter: {
+      title: "Brian Head Winter",
+      schedule: "/assets/data/BHW.json",
+      //12 months => 12 element array
+      timing: ["2","2","2","1","0","0","0","0","0","0","1","2"],
+      color: "#2f4f4f"
+    },
+  },
+  {
+    BrianHeadSummer: {
+      title: "Brian Head Summer",
+      schedule: "/assets/data/BHS.json",
+      //12 months => 12 element array
+      timing: ["0","0","0","0","0","1","2","2","2","1","0","0"],
+      color: "#228b22"
+    },
+  },
+  {
+    RedRockFilmFestival: {
+      title: "Red Rock Film Festival",
+      schedule: "/assets/data/RRFF.json",
+      //12 months => 12 element array
+      timing: ["0","0","0","0","0","0","0","0","0","4","0","0"],
+      color: "#4b0082"
+    },
+  },
+  {
+    SUMA: {
+      title: "Southern Utah Museum of Art",
+      schedule: "/assets/data/SUMA.json",
+      //12 months => 12 element array
+      timing: ["1","1","1","1","1","1","1","1","1","1","1","1"],
+      color: "#ffe4c4"
+    },
+  },
+  {
+    SUUPerformingArts: {
+      title: "SUU Performing Arts",
+      schedule: "/assets/data/SUUPA.json",
+      //12 months => 12 element array
+      timing: ["1","2","2","2","0","0","0","0","0","1","2","2"],
+      color: "#ff0000"
+
+    },
+  },
+  {
+    OrchestraOfSouthernUtah: {
+      title: "Orchestra Of Southern Utah",
+      schedule: "/assets/data/OSA.json",
+      //12 months => 12 element array
+      timing: ["0","1","0","1","0","0","0","0","0","2","1","1"],
+      color: "#8b4513"
+    },
+  },
+  {
+    CedarCityMusicArts: {
+      title: "Cedar City Music Arts",
+      schedule: "/assets/data/CCMA.json",
+      //12 months => 12 element array
+      timing: ["0","1","1","1","1","0","0","0","0","0","1","1"],
+      color: "#00ffff"
+    },
+  },
+  {
+    CedarCityArtsCouncil: {
+      title: "Cedar City Arts Council",
+      schedule: "/assets/data/CCAC.json",
+      //12 months => 12 element array
+      timing: ["0","0","0","0","0","1","1","1","0","0","0","0"],
+      color: "#6495ed"
+    },
+  },
+  {
+    FrontierHomesteadStateParkMuseum: {
+      title: "Frontier Homestead State Park Museum",
+      schedule: "/assets/data/FHSPM.json",
+      //12 months => 12 element array
+      timing: ["1","0","1","1","1","1","2","2","2","2","1","0"],
+      color: "#000000"
+    },
+  },
+  {
+    CedarBreaksNationalMonument: {
+      title: "Cedar Breaks National Monument",
+      schedule: "/assets/data/CBNM.json",
+      //12 months => 12 element array
+      timing: ["1","1","1","0","1","2","2","2","2","1","0","0"],
+      color: "#ff69b4"
+    },
+  },
+  {
+    FarmersMarketAndFarms: {
+      title: "Farmers Market And Farms",
+      schedule: "/assets/data/FMAF.json",
+      //12 months => 12 element array
+      timing: ["1","1","1","1","1","1","2","2","2","2","1","1"],
+      color: "#00ff00"
+    },
+  }
+]
+
 export const AttractionCategories = {
   FoodAndDrink: {
     label: "Food and Drink",

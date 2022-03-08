@@ -4,7 +4,10 @@ import {
   collection,
   query,
   doc,
-  getDoc,
+  getDoc,  
+  Timestamp,
+  orderBy,
+
 } from "firebase/firestore";
 
 const config = {
@@ -25,14 +28,51 @@ const f_db = getFirestore(firebaseApp);
 const brianDoc = doc(f_db, "BrianHeadWeatherDayData", "current");
 const paroDoc = doc(f_db, "ParowanWeatherDayData", "current");
 const cedarDoc = doc(f_db, "CedarCityWeatherDayData", "current");
+const mountainDoc = doc(f_db, "mountainData", "current");
+
+
+const mountainRef = collection(f_db, "mountainData");
+
+interface MountainDataType {
+  Date?: Timestamp;
+  baseDepth?: string;
+  conditions?: string;
+  oneDaySnowfall?: string;
+  liftsOpen?: string;
+  trailsOpen?: string;
+  temp?: string;
+  wind?: string;
+}
+type MyReturnTypeItem = {
+  Date?: Timestamp;
+  conditions?: string;
+  temp?: string;
+}
+
 
 // firestore functions
-export async function getBrianHeadWeather() {
+export async function getMountainData() : Promise<MountainDataType> {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(mountainDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        resolve(docSnap.data() as MountainDataType);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
+
+
+// firestore functions
+export async function getBrianHeadWeather() : Promise<MyReturnTypeItem> {
   return new Promise(async (resolve, reject) => {
     await getDoc(brianDoc)
       .then((docSnap) => {
         // docSnap.data() will be undefined if document doesn't exist
-        resolve(docSnap.data());
+        resolve(docSnap.data() as MyReturnTypeItem);
       })
       .catch((error) => {
         reject(error);
@@ -41,12 +81,12 @@ export async function getBrianHeadWeather() {
 }
 
 
-export async function getParoWeather() {
+export async function getParoWeather() : Promise<MyReturnTypeItem>  {
   return new Promise(async (resolve, reject) => {
     await getDoc(paroDoc)
       .then((docSnap) => {
         // docSnap.data() will be undefined if document doesn't exist
-        resolve(docSnap.data());
+        resolve(docSnap.data() as MyReturnTypeItem);
       })
       .catch((error) => {
         reject(error);
@@ -55,12 +95,13 @@ export async function getParoWeather() {
 }
 
 
-export async function getCedarWeather() {
+export async function getCedarWeather() : Promise<MyReturnTypeItem>  {
   return new Promise(async (resolve, reject) => {
     await getDoc(cedarDoc)
-      .then((docSnap) => {
+      .then((doc) => {
         // docSnap.data() will be undefined if document doesn't exist
-        resolve(docSnap.data());
+
+        resolve(doc.data() as MyReturnTypeItem);
       })
       .catch((error) => {
         reject(error);
