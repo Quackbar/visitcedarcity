@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from "react";
 
 import { BarChart, chartDataType, datasetType } from "../components/Chart";
-import { updateSubscriptions } from "../data/AppContext";
+import { updateSubscriptions } from "../data/actions";
 import { connect } from "../data/connect";
 import { SubscriptionItem } from "../models/defaultModels";
 
@@ -60,20 +60,6 @@ const labels = [
   "Dec",
 ];
 
-// let datasets: {
-//   label: string | undefined;
-//   data: string[] | undefined;
-//   backgroundColor: string | undefined;
-// }[] = [];
-// Subscriptions.forEach((element) => {
-//   let key = Object.keys(element)[0];
-//   let values = Object.values(element)[0];
-//   datasets.push({
-//     label: values?.title,
-//     data: values?.timing,
-//     backgroundColor: values?.color,
-//   });
-// });
 interface StateProps {
   allSubscriptions: SubscriptionItem[];
 }

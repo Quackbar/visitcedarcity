@@ -9,5 +9,11 @@ export const reducers = (state: AppState, action: StateActions): AppState => {
         selectedAttractionFilters: action.selectedAttractionFilters,
       };
     }
+    case "update-subscription": {
+      return {
+        ...state,
+        subscriptionItems: action.subscriptionItems,
+      };
+    }
   }
 };

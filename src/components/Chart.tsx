@@ -56,9 +56,7 @@ const defaultBarOptions = {
     },
   },
   responsive: true,
-  barThickness: 'flex',
   scales: {
-  
     x: {
       grid: {
         display: false,

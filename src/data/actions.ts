@@ -1,4 +1,4 @@
-import { AllCategories } from "../models/defaultModels";
+import { AllCategories, SubscriptionItem } from "../models/defaultModels";
 import { ActionType } from "../util/types";
 
 export const updateSelectedAttractionFilters = (
@@ -9,4 +9,12 @@ export const updateSelectedAttractionFilters = (
     selectedAttractionFilters,
   } as const);
 
-export type StateActions = ActionType<typeof updateSelectedAttractionFilters>;
+export const updateSubscriptions = (subscriptionItems: SubscriptionItem[]) =>
+  ({
+    type: "update-subscription",
+    subscriptionItems,
+  } as const);
+
+export type StateActions =
+  | ActionType<typeof updateSelectedAttractionFilters>
+  | ActionType<typeof updateSubscriptions>
