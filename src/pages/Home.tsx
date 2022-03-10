@@ -1,4 +1,4 @@
-import { IonButton, IonLabel,IonItemSliding,  IonCard, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { IonButton,IonRow,IonCol,IonGrid,IonChip,IonIcon, IonRefresher, IonRefresherContent, IonLabel,IonItemSliding,  IonCard, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar, IonSlides, IonSlide } from "@ionic/react";
 
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
@@ -7,9 +7,13 @@ import ScheduleComp from '../components/Schedule'
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
 
+import { RefresherEventDetail } from '@ionic/core';
+
+
 import { Browser } from '@capacitor/browser';
 import React from "react";
 import {USFSchedule} from '../assets/data/USF'
+import { close , pin } from 'ionicons/icons';
 
 const openCapacitorSite = async () => {
   await Browser.open({ url: 'https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25' });
@@ -113,6 +117,15 @@ getParoWeather().then((data) => {
         }
    }
 
+   function doRefresh(event: CustomEvent<RefresherEventDetail>) {
+    console.log('Begin async operation');
+  
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.detail.complete();
+    }, 2000);
+  }
+
 const Home: React.FC = () => {
 
     return (
@@ -123,7 +136,6 @@ const Home: React.FC = () => {
                     </IonToolbar>
                 </IonHeader> */}
                 <IonContent>
-
 
                     <Weather CedarImg={CedarImg || String(localStorage.getItem("CedarImg"))}
                             CedarTemp={CedarTemp || String(localStorage.getItem("CedarTemp"))}

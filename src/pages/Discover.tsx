@@ -16,6 +16,7 @@ import DiscoverList from "../components/DiscoverList";
 import { filterCircleOutline } from "ionicons/icons";
 import { AppContext } from "../data/AppContext";
 import DiscoverListFilter from "../components/DiscoverListFilter";
+import CategorySlide from "../components/CategorySlide";
 import { AttractionItem } from "../models/defaultModels";
 
 const Discover: React.FC = () => {
@@ -84,6 +85,7 @@ const Discover: React.FC = () => {
         >
           <IonRefresherContent />
         </IonRefresher>
+        <CategorySlide/>
         <DiscoverList attractions={filteredAttractions} />
       </IonContent>
 
