@@ -104,17 +104,22 @@ const Account: React.FC<AccountProps> = ({
 
   return (
     <IonPage id="account-page">
-      <IonHeader>
+      {/* <IonHeader>
         <IonToolbar>
           <IonTitle>Account</IonTitle>
         </IonToolbar>
-      </IonHeader>
+      </IonHeader> */}
       <IonContent>
+      <IonTitle class="centered"><br/>Event Spread</IonTitle>
         <BarChart
           propOptions={chartOptions}
           propData={chartData}
           propHeight={300}
         />
+        <IonTitle>
+          <br/>
+          Subscriptions
+        </IonTitle>
         {Object.values(allSubscriptions).map((subscription, index) => (
           <IonItem key={index}>
             <IonCheckbox

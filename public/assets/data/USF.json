@@ -8,6 +8,7 @@
           "sessions": [
             {
               "name": "All's Well (P)",
+ "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -26,6 +27,7 @@
           "sessions": [
             {
               "name": "Sweeney(P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -44,6 +46,7 @@
           "sessions": [
             {
               "name": "Lear (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -62,6 +65,7 @@
           "sessions": [
             {
               "name": "Music (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -75,6 +79,7 @@
           "sessions": [
             {
               "name": "All's Well (0)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -93,6 +98,7 @@
           "sessions": [
             {
               "name": "Trouble (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -106,6 +112,7 @@
           "sessions": [
             {
               "name": "Sweeney (0)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -124,6 +131,7 @@
           "sessions": [
             {
               "name": "Clue (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -137,6 +145,7 @@
           "sessions": [
             {
               "name": "Lear (0)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -155,6 +164,7 @@
           "sessions": [
             {
               "name": "Trouble (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -168,6 +178,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -186,6 +197,7 @@
           "sessions": [
             {
               "name": "Clue (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -199,6 +211,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -217,6 +230,7 @@
           "sessions": [
             {
               "name": "Music (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -230,6 +244,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -248,6 +263,7 @@
           "sessions": [
             {
               "name": "Trouble (O)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -261,6 +277,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -279,6 +296,7 @@
           "sessions": [
             {
               "name": "Clue (O)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -292,6 +310,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -310,6 +329,7 @@
           "sessions": [
             {
               "name": "Music (O)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -323,6 +343,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -341,6 +362,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -354,6 +376,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -367,6 +390,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -385,6 +409,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -398,6 +423,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -411,6 +437,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -429,6 +456,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -442,6 +470,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -455,6 +484,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -473,6 +503,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -486,6 +517,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -499,6 +531,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -517,6 +550,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -530,6 +564,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -543,6 +578,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -561,6 +597,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -574,6 +611,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -587,6 +625,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -605,6 +644,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -618,6 +658,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -631,6 +672,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -649,6 +691,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -662,6 +705,7 @@
           "sessions": [
             {
               "name": "Tempest (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -675,6 +719,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -688,6 +733,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -706,6 +752,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -719,6 +766,7 @@
           "sessions": [
             {
               "name": "Tempest (O)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -732,6 +780,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -745,6 +794,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -763,6 +813,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -776,6 +827,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -789,6 +841,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -802,6 +855,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -820,6 +874,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -833,6 +888,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -846,6 +902,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -859,6 +916,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -877,6 +935,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -890,6 +949,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -903,6 +963,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -916,6 +977,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -934,6 +996,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -947,6 +1010,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -960,6 +1024,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -973,6 +1038,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -991,6 +1057,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1004,6 +1071,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1017,6 +1085,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1030,6 +1099,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1048,6 +1118,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1061,6 +1132,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1074,6 +1146,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1087,6 +1160,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1105,6 +1179,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1118,6 +1193,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1131,6 +1207,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1144,6 +1221,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1162,6 +1240,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1175,6 +1254,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1188,6 +1268,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1201,6 +1282,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1219,6 +1301,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1232,6 +1315,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1245,6 +1329,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1258,6 +1343,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1276,6 +1362,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1289,6 +1376,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1302,6 +1390,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1315,6 +1404,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1333,6 +1423,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1346,6 +1437,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1359,6 +1451,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1372,6 +1465,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1390,6 +1484,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1403,6 +1498,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1416,6 +1512,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1429,6 +1526,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1447,6 +1545,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1460,6 +1559,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1473,6 +1573,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1486,6 +1587,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1504,6 +1606,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1517,6 +1620,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1530,6 +1634,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1543,6 +1648,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1561,6 +1667,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1574,6 +1681,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1587,6 +1695,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1600,6 +1709,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1618,6 +1728,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1631,6 +1742,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1644,6 +1756,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1657,6 +1770,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1675,6 +1789,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1688,6 +1803,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1701,6 +1817,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1714,6 +1831,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1732,6 +1850,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1745,6 +1864,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1758,6 +1878,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1771,6 +1892,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1789,6 +1911,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1802,6 +1925,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1815,6 +1939,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1828,6 +1953,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1846,6 +1972,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1859,6 +1986,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1872,6 +2000,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1885,6 +2014,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1903,6 +2033,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1916,6 +2047,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1929,6 +2061,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1942,6 +2075,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -1960,6 +2094,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -1973,6 +2108,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -1986,6 +2122,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -1999,6 +2136,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2017,6 +2155,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2030,6 +2169,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2043,6 +2183,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2056,6 +2197,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2074,6 +2216,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2087,6 +2230,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2100,6 +2244,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2113,6 +2258,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2131,6 +2277,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2144,6 +2291,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2157,6 +2305,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2170,6 +2319,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2187,7 +2337,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -2201,6 +2352,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2214,6 +2366,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2227,6 +2380,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2240,6 +2394,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2257,7 +2412,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -2271,6 +2427,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2284,6 +2441,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2297,6 +2455,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2310,6 +2469,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2328,6 +2488,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2341,6 +2502,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2354,6 +2516,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2367,6 +2530,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2385,6 +2549,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2398,6 +2563,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2411,6 +2577,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2424,6 +2591,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2442,6 +2610,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2455,6 +2624,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2468,6 +2638,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2481,6 +2652,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2499,6 +2671,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2512,6 +2685,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2525,6 +2699,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2538,6 +2713,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2555,7 +2731,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -2569,6 +2746,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2582,6 +2760,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2595,6 +2774,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2608,6 +2788,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2625,7 +2806,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -2639,6 +2821,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2652,6 +2835,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2665,6 +2849,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2678,6 +2863,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2696,6 +2882,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2709,6 +2896,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2722,6 +2910,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2735,6 +2924,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2753,6 +2943,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2766,6 +2957,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2779,6 +2971,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2792,6 +2985,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2809,7 +3003,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -2823,6 +3018,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2836,6 +3032,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2849,6 +3046,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2862,6 +3060,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2880,7 +3079,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -2894,6 +3094,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2907,6 +3108,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2920,6 +3122,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -2933,6 +3136,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -2950,7 +3154,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -2964,6 +3169,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -2977,6 +3183,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -2990,6 +3197,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3003,6 +3211,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3020,7 +3229,8 @@
           "time": "9:30 am",
           "sessions": [
             {
-              "name": "W3:A",
+              "name": "W3",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "9:30 am",
               "timeEnd": "12:00 pm",
               "location": "Anes",
@@ -3034,6 +3244,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3047,6 +3258,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3060,6 +3272,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3073,6 +3286,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3091,6 +3305,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3104,6 +3319,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3117,6 +3333,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3130,6 +3347,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3148,6 +3366,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3161,6 +3380,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3174,6 +3394,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3187,6 +3408,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3205,6 +3427,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3218,6 +3441,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3231,6 +3455,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3244,6 +3469,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3262,6 +3488,7 @@
           "sessions": [
             {
               "name": "Trouble (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3275,6 +3502,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3288,6 +3516,7 @@
           "sessions": [
             {
               "name": "All's Well (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3306,6 +3535,7 @@
           "sessions": [
             {
               "name": "Clue (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3319,6 +3549,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3332,6 +3563,7 @@
           "sessions": [
             {
               "name": "Sweeney (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3345,6 +3577,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3363,6 +3596,7 @@
           "sessions": [
             {
               "name": "Music (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3376,6 +3610,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3389,6 +3624,7 @@
           "sessions": [
             {
               "name": "Lear (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3402,6 +3638,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3425,6 +3662,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3438,6 +3676,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3451,6 +3690,7 @@
           "sessions": [
             {
               "name": "All's Well",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3464,6 +3704,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3482,6 +3723,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3495,6 +3737,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3508,6 +3751,7 @@
           "sessions": [
             {
               "name": "Sweeney",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3521,6 +3765,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3539,6 +3784,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3552,6 +3798,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3565,6 +3812,7 @@
           "sessions": [
             {
               "name": "Lear",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3578,6 +3826,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3596,6 +3845,7 @@
           "sessions": [
             {
               "name": "Trouble",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3609,6 +3859,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3622,6 +3873,7 @@
           "sessions": [
             {
               "name": "All's Well (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3635,6 +3887,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3653,6 +3906,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3666,6 +3920,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3679,6 +3934,7 @@
           "sessions": [
             {
               "name": "Sweeney (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3692,6 +3948,7 @@
           "sessions": [
             {
               "name": "Trouble (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3710,6 +3967,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3736,6 +3994,7 @@
           "sessions": [
             {
               "name": "Lear (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Eng",
@@ -3749,6 +4008,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3767,6 +4027,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3780,6 +4041,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -3798,6 +4060,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3811,6 +4074,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3824,6 +4088,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3837,6 +4102,7 @@
           "sessions": [
             {
               "name": "Thurgood (P)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -3855,6 +4121,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3868,6 +4135,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3886,6 +4154,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -3899,6 +4168,7 @@
           "sessions": [
             {
               "name": "Thurgood (0)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3912,6 +4182,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3925,6 +4196,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -3956,6 +4228,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -3969,6 +4242,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -3982,6 +4256,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4000,6 +4275,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4013,6 +4289,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4031,6 +4308,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4044,6 +4322,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4057,6 +4336,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4070,6 +4350,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4088,6 +4369,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4101,6 +4383,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4119,6 +4402,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4132,6 +4416,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4145,6 +4430,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4158,6 +4444,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4176,6 +4463,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4189,6 +4477,7 @@
           "sessions": [
             {
               "name": "Tempest (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4202,6 +4491,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4215,6 +4505,7 @@
           "sessions": [
             {
               "name": "Thurgood (ADA)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4233,6 +4524,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4246,6 +4538,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4264,6 +4557,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4277,6 +4571,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4290,6 +4585,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4303,6 +4599,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4321,6 +4618,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4334,6 +4632,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4352,6 +4651,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4365,6 +4665,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4378,6 +4679,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4391,6 +4693,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4409,6 +4712,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4422,6 +4726,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4435,6 +4740,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4448,6 +4754,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4466,6 +4773,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4479,6 +4787,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4497,6 +4806,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4510,6 +4820,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4523,6 +4834,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4536,6 +4848,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4554,6 +4867,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4567,6 +4881,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4585,6 +4900,7 @@
           "sessions": [
             {
               "name": "Clue",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4598,6 +4914,7 @@
           "sessions": [
             {
               "name": "Thurgood",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4611,6 +4928,7 @@
           "sessions": [
             {
               "name": "Music",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4624,6 +4942,7 @@
           "sessions": [
             {
               "name": "Tempest",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",
@@ -4642,6 +4961,7 @@
           "sessions": [
             {
               "name": "Music (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Ran",
@@ -4655,6 +4975,7 @@
           "sessions": [
             {
               "name": "Tempest (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "2:00 pm",
               "timeEnd": "4:00 pm",
               "location": "Anes",
@@ -4668,6 +4989,7 @@
           "sessions": [
             {
               "name": "Clue (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Ran",
@@ -4681,6 +5003,7 @@
           "sessions": [
             {
               "name": "Thurgood (C)",
+      "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
               "timeStart": "8:00 pm",
               "timeEnd": "10:00 pm",
               "location": "Anes",

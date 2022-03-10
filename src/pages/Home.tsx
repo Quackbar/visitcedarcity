@@ -1,12 +1,20 @@
-import { IonCard, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { IonButton, IonLabel,IonItemSliding,  IonCard, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 
 // import Snowpack from '../components/SnowPack';
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
+import ScheduleComp from '../components/Schedule'
 
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
 
+import { Browser } from '@capacitor/browser';
+import React from "react";
+import {USFSchedule} from '../assets/data/USF'
+
+const openCapacitorSite = async () => {
+  await Browser.open({ url: 'https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25' });
+};
 
 let CedarImg = "";
 let CedarTemp = "";
@@ -34,6 +42,16 @@ type MountainDataType = {
     temp?: string;
     wind?: string;
   }
+
+  type todaystype = {
+        name: string;
+        url: string;
+        timeStart: string;
+        timeEnd: string;
+        location: string;
+        tracks: string[];
+        id: string;
+    }
 
 getMountainData().then((data) => {
     console.log('mountainData', data);
@@ -76,15 +94,38 @@ getParoWeather().then((data) => {
 
 });
 
+   let things: todaystype[] = []
+   const todays = USFSchedule.schedule.map(item => {
+       // var thisdate = new Date(item.date);
+       var formattedDate =  "2022-08-08"
+       if(item.date === formattedDate){
+           item.groups.map(group => {
+               console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+               console.log(group.sessions[0])
+               console.log(group.sessions[0].name)
+               things.push(group.sessions[0] as todaystype);
+           })
+       }
+   })
+
+   function checkSched(things: todaystype[]){
+        if(things.length === 0){
+            return (<ScheduleComp name="Sorry No Events Today" timeStart="" timeEnd="" thelocation="Please Check out our Discovery page" url="https://visitcedarcity.com/" /> );
+        }
+   }
+
 const Home: React.FC = () => {
+
     return (
             <IonPage id="home-page">
-                <IonHeader>
+                {/* <IonHeader>
                     <IonToolbar>
                         <IonTitle>Home</IonTitle>
                     </IonToolbar>
-                </IonHeader>
+                </IonHeader> */}
                 <IonContent>
+
+
                     <Weather CedarImg={CedarImg || String(localStorage.getItem("CedarImg"))}
                             CedarTemp={CedarTemp || String(localStorage.getItem("CedarTemp"))}
                             ParoImg={ParoImg || String(localStorage.getItem("ParoImg"))}
@@ -94,11 +135,31 @@ const Home: React.FC = () => {
                     <IonCard>
                         {/* <Snowpack/> */}
                     </IonCard>
-                    <MountainData  BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
+                                   <IonCard>
+                    <IonTitle class="centered">
+                        <br/>
+                        Your Daily Schedule
+                        <br/><br/>
+                    </IonTitle>
+                    
+                {
+                        things.map(event => {
+                            return (
+                                <ScheduleComp name={event.name} timeStart={event.timeStart} timeEnd={event.timeEnd} thelocation={event.location} url={event.url} /> 
+                            );
+                        })
+                }
+                {checkSched(things)}
+                
+            </IonCard>
+
+            <MountainData  BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
                             OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
                             LiftsOpen={MDLiftsOpen || String(localStorage.getItem("MDLiftsOpen"))}
                             TrailsOpen={MDTrailsOpen || String(localStorage.getItem("MDTrailsOpen"))}/>
-                </IonContent>
+                
+
+            </IonContent>
             </IonPage>
         );
 
