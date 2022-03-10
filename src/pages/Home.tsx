@@ -1,6 +1,5 @@
 import { IonButton, IonLabel,IonItemSliding,  IonCard, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 
-// import Snowpack from '../components/SnowPack';
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
 import ScheduleComp from '../components/Schedule'

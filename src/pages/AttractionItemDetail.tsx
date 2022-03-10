@@ -53,8 +53,6 @@ const AttractionItemDetail: React.FC<AttractionItemDetailProps> = ({
   );
 };
 
-// export default AttractionItemDetail;
-
 export default connect<OwnProps, StateProps>({
   mapStateToProps: (state, OwnProps) => ({
     attraction: getAttractionItem(state, OwnProps),

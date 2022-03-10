@@ -29,8 +29,6 @@ const brianDoc = doc(f_db, "BrianHeadWeatherDayData", "current");
 const paroDoc = doc(f_db, "ParowanWeatherDayData", "current");
 const cedarDoc = doc(f_db, "CedarCityWeatherDayData", "current");
 const mountainDoc = doc(f_db, "mountainData", "current");
-
-
 const mountainRef = collection(f_db, "mountainData");
 
 interface MountainDataType {
@@ -43,12 +41,12 @@ interface MountainDataType {
   temp?: string;
   wind?: string;
 }
+
 type MyReturnTypeItem = {
   Date?: Timestamp;
   conditions?: string;
   temp?: string;
 }
-
 
 // firestore functions
 export async function getMountainData() : Promise<MountainDataType> {
@@ -64,9 +62,6 @@ export async function getMountainData() : Promise<MountainDataType> {
   });
 }
 
-
-
-// firestore functions
 export async function getBrianHeadWeather() : Promise<MyReturnTypeItem> {
   return new Promise(async (resolve, reject) => {
     await getDoc(brianDoc)
@@ -80,7 +75,6 @@ export async function getBrianHeadWeather() : Promise<MyReturnTypeItem> {
   });
 }
 
-
 export async function getParoWeather() : Promise<MyReturnTypeItem>  {
   return new Promise(async (resolve, reject) => {
     await getDoc(paroDoc)
@@ -93,7 +87,6 @@ export async function getParoWeather() : Promise<MyReturnTypeItem>  {
       });
   });
 }
-
 
 export async function getCedarWeather() : Promise<MyReturnTypeItem>  {
   return new Promise(async (resolve, reject) => {

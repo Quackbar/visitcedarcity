@@ -93,7 +93,6 @@ const Account: React.FC<AccountProps> = ({
       datasets: newChartDataSet
     })
 
-    // setChartData(newChartData);
   }, [allSubscriptions]);
 
   const didToggleCheckbox = (index: number) => {

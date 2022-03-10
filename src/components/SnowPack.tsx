@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,8 +8,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -25,30 +25,24 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'bottom' as const,
+      position: "bottom" as const,
     },
     title: {
       display: true,
-      text: 'Brian Head Snow Data',
+      text: "Brian Head Snow Data",
     },
   },
 };
 
 type MyReturnTypeItem = {
-    Date?: Date;
-    BaseDepth?: string;
-  }
+  Date?: Date;
+  BaseDepth?: string;
+};
 
-const mountainData: any = localStorage.getItem("MountainData")
+const mountainData: any = localStorage.getItem("MountainData");
 
-
-let dates = new Array
-let snowData = new Array
-
-// mountainData.forEach((element: { Date: any; BaseDepth: any; }) => {
-//     dates.push(element.Date)
-//     snowData.push(element.BaseDepth)
-// });
+let dates = new Array();
+let snowData = new Array();
 
 const labels = dates;
 
@@ -58,9 +52,9 @@ export const data = {
     {
       label: "Base Depth",
       data: snowData,
-      borderColor: 'rgba(10,150,255,.5)',
-      backgroundColor: 'rgba(10,150,255, 0.2)',
-    }
+      borderColor: "rgba(10,150,255,.5)",
+      backgroundColor: "rgba(10,150,255, 0.2)",
+    },
   ],
 };
 
