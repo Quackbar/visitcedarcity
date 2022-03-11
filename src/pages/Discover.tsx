@@ -11,6 +11,8 @@ import {
   IonSearchbar,
   IonTitle,
   IonToolbar,
+  IonInfiniteScroll,
+  IonInfiniteScrollContent,
 } from "@ionic/react";
 import DiscoverList from "../components/DiscoverList";
 import { filterCircleOutline } from "ionicons/icons";
@@ -87,6 +89,14 @@ const Discover: React.FC = () => {
         </IonRefresher>
         <CategorySlide/>
         <DiscoverList attractions={filteredAttractions} />
+        <IonInfiniteScroll
+          threshold="100px"
+        >
+          <IonInfiniteScrollContent
+            loadingSpinner="bubbles"
+            loadingText="Loading more data..."
+          ></IonInfiniteScrollContent>
+        </IonInfiniteScroll>
       </IonContent>
 
       <IonModal

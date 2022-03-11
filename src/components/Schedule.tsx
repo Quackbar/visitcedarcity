@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-import { IonToolbar, IonContent, IonPage, IonButtons, IonTitle, IonMenuButton, IonSegment, IonSegmentButton, IonButton, IonIcon, IonSearchbar, IonRefresher, IonRefresherContent, IonToast, IonModal, IonHeader, getConfig, IonCard, IonItem, IonItemSliding, IonLabel } from '@ionic/react';
+import { IonToolbar, IonContent, IonSlide, IonPage, IonButtons, IonTitle, IonMenuButton, IonSegment, IonSegmentButton, IonButton, IonIcon, IonSearchbar, IonRefresher, IonRefresherContent, IonToast, IonModal, IonHeader, getConfig, IonCard, IonItem, IonItemSliding, IonLabel } from '@ionic/react';
 
 import { Schedule, Session } from '../models/Schedule';
 import { Browser } from '@capacitor/browser';
@@ -39,6 +39,8 @@ const ScheduleComp: React.FC<ScheduleProps> = ({ name, timeStart, timeEnd, thelo
 
             <IonItemSliding onClick={openSite}>
                 <IonItem>
+                    <IonSlide>
+
                     <IonLabel>
                     <h3>{name}</h3>
                     <p>
@@ -47,6 +49,7 @@ const ScheduleComp: React.FC<ScheduleProps> = ({ name, timeStart, timeEnd, thelo
                     {thelocation} 
                     </p>
                     </IonLabel>
+                    </IonSlide>
                 </IonItem>
             </IonItemSliding>
 

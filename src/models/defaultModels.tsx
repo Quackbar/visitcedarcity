@@ -47,6 +47,9 @@ export enum AllCategories {
   NationalParks = "national-parks",
   Outdoor = "outdoor",
   PressReleases = "press-release",
+  Biking = "biking",
+  Trails = "trails",
+  Drives = "drives",
   USA = "usa",
 }
 
@@ -109,6 +112,9 @@ const Experiences = {
   Outdoor: AllCategories.Outdoor,
   PressReleases: AllCategories.PressReleases,
   USA: AllCategories.USA,
+  Biking: AllCategories.Biking,
+  Trails: AllCategories.Trails,
+  Drives: AllCategories.Drives,
 };
 
 export const AttractionCategories = {

@@ -4,7 +4,7 @@ import {
   AttractionItem,
   SubscriptionItem,
 } from "../models/defaultModels";
-
+import {TrailItems} from './trails'
 
 export type AppState = {
   attractionItems: AttractionItem[];
@@ -46,7 +46,7 @@ export const initialState: AppState = {
         "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,h_1200,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/saltlake/cctb_logo0-29dc247c5056a36_29dc273d-5056-a36a-069774f0062eabe1.jpg",
       categories: [AttractionCategories.Experiences.subcategories.Outdoor]
     },
-  ],
+  ].concat(TrailItems),
   allAttractionFilters: Object.values(AllCategories),
   selectedAttractionFilters: Object.values(AllCategories),
   subscriptionItems: [
@@ -153,6 +153,14 @@ export const initialState: AppState = {
       schedule: "/assets/data/FMAF.json",
       timing: ["1", "1", "1", "1", "1", "1", "2", "2", "2", "2", "1", "1"],
       color: "#00ff00",
+      subscribed: true,
+    },
+    {
+      id: 13,
+      title: "Utah Midsummer Renaissance Faire",
+      schedule: "/assets/data/UMRF.json",
+      timing: ["0", "0", "0", "0", "0", "0", "2", "0", "0", "0", "0", "0"],
+      color: "#8c34eb",
       subscribed: true,
     },
   ],

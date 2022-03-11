@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonHeader,IonCardHeader, IonSlides, IonChip, IonSlide, IonIcon, IonLabel,IonItem,IonCardContent,IonAvatar, IonToolbar, IonTitle, IonContent, IonPage, IonButtons, IonMenuButton, IonGrid, IonRow, IonCol, IonMenuToggle, IonCard } from '@ionic/react';
 
-import { home , pin, fastFood, wine, trailSign, storefront, colorPalette, bed, shield, bonfire} from 'ionicons/icons';
+import { home , pin, fastFood, wine, trailSign, storefront, colorPalette, bed, shield, bonfire, telescope, ticket, carSport, fish} from 'ionicons/icons';
 
 import '../assets/scss/app.scss'
 
@@ -65,7 +65,27 @@ const CategorySlides: React.FC = ({ }) => {
 
 
                     </IonSlide>
+                    <IonSlide>    
+                    <IonChip>
+                                        <IonIcon icon={carSport} color="primary" />
+                                        <IonLabel>Drives</IonLabel>
+                                    </IonChip>
+                                    <IonChip>
+                                        <IonIcon icon={fish} color="primary" />
+                                        <IonLabel>Fishing</IonLabel>
+                                    </IonChip>
 
+                                    <IonChip>
+                                        <IonIcon icon={ticket} color="primary" />
+                                        <IonLabel>Shows</IonLabel>
+                                    </IonChip>
+
+                                    <IonChip>
+                                        <IonIcon icon={telescope} color="primary" />
+                                        <IonLabel>Lookouts</IonLabel>
+                                    </IonChip>
+
+                    </IonSlide>
                 </IonSlides>
         </>
 

@@ -1,10 +1,11 @@
+
 .centered{
     margin: auto;
     text-align: center;
     color: black;
 }
 .backgrounded{
-    background-image: url('../img/daybackground.png');
+    background-image: url('../img/nighbackground.png');
     background-size: cover;
 
 }
@@ -16,4 +17,7 @@
 .gray{
     background-color: #ffffffc9;
     padding: 10px;
+}
+.left{
+    float: left;
 }
