@@ -87,11 +87,9 @@ const Discover: React.FC = () => {
         >
           <IonRefresherContent />
         </IonRefresher>
-        <CategorySlide/>
+        <CategorySlide />
         <DiscoverList attractions={filteredAttractions} />
-        <IonInfiniteScroll
-          threshold="100px"
-        >
+        <IonInfiniteScroll threshold="100px">
           <IonInfiniteScrollContent
             loadingSpinner="bubbles"
             loadingText="Loading more data..."
