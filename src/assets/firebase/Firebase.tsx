@@ -4,11 +4,13 @@ import {
   collection,
   query,
   doc,
-  getDoc,  
+  getDoc, 
+  getDocs, 
   Timestamp,
   orderBy,
 
 } from "firebase/firestore";
+import { StringifyOptions } from "querystring";
 
 const config = {
   apiKey: "AIzaSyBZA9u1NyUyA2aWEltYwguVMoVEry9gzlE",
@@ -31,6 +33,8 @@ const cedarDoc = doc(f_db, "CedarCityWeatherDayData", "current");
 const mountainDoc = doc(f_db, "mountainData", "current");
 const mountainRef = collection(f_db, "mountainData");
 
+const q = query(collection(f_db, "mountainData"))
+
 interface MountainDataType {
   Date?: Timestamp;
   baseDepth?: string;
@@ -48,6 +52,56 @@ type MyReturnTypeItem = {
   temp?: string;
 }
 
+interface SnowOutput {
+  Date?: string[];
+  oneDaySnowfall?: string[];
+  baseDepth?: string[];
+}
+
+
+
+// const querySnapshot = await getDocs(q)
+
+
+export async function getSnowData() : Promise<SnowOutput> {
+  return new Promise(async (resolve, reject) => {
+    let oneDaySnowfall: string[] = [];
+    let baseDepth: string[] = [];
+    let dates: any[] = [];
+    let orderer: { date: any; oneDaySnowfall: any; baseDepth: any; }[] = [];
+    (await getDocs(q)).forEach((doc) => {
+      // console.log(doc.data())
+
+      orderer.push({date: new Date(doc.data().Date.toDate()), oneDaySnowfall: doc.data().onedaySnowfall.slice(0,-1), baseDepth: doc.data().baseDepth.slice(0,-1)})
+
+      // oneDaySnowfall.push(doc.data().onedaySnowfall.slice(0,-1))
+      // baseDepth.push(doc.data().baseDepth.slice(0,-1))
+      // dates.push(doc.data().Date.toDate().toLocaleDateString('en-US').slice(0,-5))
+    })
+
+    const sortedActivities = orderer.sort((a, b) => b.date - a.date).reverse()
+    console.log(sortedActivities)
+
+
+    sortedActivities.forEach((piece) => {
+      oneDaySnowfall.push(piece.oneDaySnowfall)
+      baseDepth.push(piece.baseDepth)
+      dates.push(piece.date.toLocaleDateString('en-US').slice(0, -5))
+    })
+    localStorage.setItem('oneDaySnowfall', JSON.stringify(oneDaySnowfall))
+    localStorage.setItem('baseDepth', JSON.stringify(baseDepth))
+    localStorage.setItem('dates', JSON.stringify(dates))
+    
+    console.log(localStorage.getItem('baseDepth'))
+    let rObject: SnowOutput = {
+      Date: dates,
+      oneDaySnowfall: oneDaySnowfall,
+      baseDepth: baseDepth,
+    }
+    resolve(rObject)
+  });
+}
+getSnowData()
 // firestore functions
 export async function getMountainData() : Promise<MountainDataType> {
   return new Promise(async (resolve, reject) => {
