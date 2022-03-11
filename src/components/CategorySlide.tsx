@@ -174,6 +174,7 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
                 <IonLabel>{slideCategoriesLabel[category].name}</IonLabel>
               </IonChip>
             ))}
+            <div style={{minWidth: '16px'}}></div>
           </IonSegment>
         </>
       )}
