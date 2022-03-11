@@ -7,6 +7,7 @@ import {
   IonText,
   IonTitle,
   IonToolbar,
+  IonIcon,
 } from "@ionic/react";
 import { useEffect, useState } from "react";
 
@@ -14,6 +15,10 @@ import { BarChart, chartDataType, datasetType } from "../components/Chart";
 import { updateSubscriptions } from "../data/actions";
 import { connect } from "../data/connect";
 import { SubscriptionItem } from "../models/defaultModels";
+
+import { informationCircle } from 'ionicons/icons';
+import { Browser } from "@capacitor/browser";
+
 
 const chartOptions = {
   plugins: {
@@ -119,8 +124,15 @@ const Account: React.FC<AccountProps> = ({
           <br/>
           Subscriptions
         </IonTitle>
-        {Object.values(allSubscriptions).map((subscription, index) => (
-          <IonItem key={index}>
+        {Object.values(allSubscriptions).map((subscription, index) => 
+        
+        {
+          const openSite = async () => {
+            await Browser.open({ url: subscription.url });
+          };
+        return (
+          <>
+          <IonItem key={index} class="ninety">
             <IonCheckbox
               class={"c" + subscription.color.slice(1)}
               onClick={() => didToggleCheckbox(index)}
@@ -129,8 +141,12 @@ const Account: React.FC<AccountProps> = ({
               {subscription.title}
             </IonCheckbox>
             <IonText>&nbsp;{subscription.title}</IonText>
+            
           </IonItem>
-        ))}
+          
+          <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
+          </>
+        )})}
       </IonContent>
     </IonPage>
   );

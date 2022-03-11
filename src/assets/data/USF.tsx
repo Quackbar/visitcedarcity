@@ -7,11 +7,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well (P)",
+                "name": "ALL'S WELL THAT ENDS WELL (P)",
                 "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "1"
               }
@@ -26,11 +26,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney(P)",
+                "name": "SWEENEY TODD(P)",
                 "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "2"
               }
@@ -45,11 +45,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear (P)",
+                "name": "KING LEAR (P)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "3"
               }
@@ -64,11 +64,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music (P)",
+                "name": "THE SOUND OF MUSIC (P)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "4"
               }
@@ -78,11 +78,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well (0)",
+                "name": "ALL'S WELL THAT ENDS WELL (0)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "5"
               }
@@ -97,11 +97,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble (P)",
+                "name": "TROUBLE IN MIND (P)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "6"
               }
@@ -111,11 +111,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney (0)",
+                "name": "SWEENEY TODD (0)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "7"
               }
@@ -134,7 +134,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "8"
               }
@@ -144,11 +144,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear (0)",
+                "name": "KING LEAR (0)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "9"
               }
@@ -163,11 +163,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble (P)",
+                "name": "TROUBLE IN MIND (P)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "10"
               }
@@ -177,11 +177,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
                 "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "11"
               }
@@ -200,7 +200,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "12"
               }
@@ -210,11 +210,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "13"
               }
@@ -229,11 +229,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music (P)",
+                "name": "THE SOUND OF MUSIC (P)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "14"
               }
@@ -243,11 +243,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "15"
               }
@@ -262,11 +262,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble (O)",
+                "name": "TROUBLE IN MIND (O)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "16"
               }
@@ -276,11 +276,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "17"
               }
@@ -299,7 +299,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "18"
               }
@@ -309,11 +309,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "19"
               }
@@ -328,11 +328,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music (O)",
+                "name": "THE SOUND OF MUSIC (O)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "20"
               }
@@ -342,11 +342,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "21"
               }
@@ -361,11 +361,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "22"
               }
@@ -375,11 +375,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "23"
               }
@@ -389,11 +389,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "24"
               }
@@ -412,7 +412,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "25"
               }
@@ -422,11 +422,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "26"
               }
@@ -436,11 +436,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "27"
               }
@@ -455,11 +455,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "28"
               }
@@ -469,11 +469,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "29"
               }
@@ -487,7 +487,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "30"
               }
@@ -502,11 +502,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "31"
               }
@@ -516,11 +516,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "32"
               }
@@ -530,11 +530,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "33"
               }
@@ -553,7 +553,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "34"
               }
@@ -563,11 +563,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "35"
               }
@@ -577,11 +577,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "36"
               }
@@ -596,11 +596,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "37"
               }
@@ -610,11 +610,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "38"
               }
@@ -628,7 +628,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "39"
               }
@@ -643,11 +643,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "40"
               }
@@ -657,11 +657,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "41"
               }
@@ -671,11 +671,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "42"
               }
@@ -694,7 +694,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "43"
               }
@@ -704,11 +704,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest (P)",
+                "name": "THE TEMPEST (P)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "44"
               }
@@ -718,11 +718,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "45"
               }
@@ -732,11 +732,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "46"
               }
@@ -751,11 +751,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "47"
               }
@@ -765,11 +765,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest (O)",
+                "name": "THE TEMPEST (O)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "48"
               }
@@ -779,11 +779,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "49"
               }
@@ -797,7 +797,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "50"
               }
@@ -812,11 +812,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "51"
               }
@@ -826,11 +826,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "52"
               }
@@ -840,11 +840,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "53"
               }
@@ -854,11 +854,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "54"
               }
@@ -873,11 +873,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "51"
               }
@@ -887,11 +887,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "52"
               }
@@ -901,11 +901,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "53"
               }
@@ -915,11 +915,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "54"
               }
@@ -934,11 +934,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -948,11 +948,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -962,11 +962,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -980,7 +980,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -995,11 +995,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -1009,11 +1009,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -1023,11 +1023,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -1037,11 +1037,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -1060,7 +1060,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -1070,11 +1070,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -1084,11 +1084,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -1098,11 +1098,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -1117,11 +1117,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -1131,11 +1131,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -1145,11 +1145,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -1163,7 +1163,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -1178,11 +1178,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1192,11 +1192,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1206,11 +1206,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -1220,11 +1220,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -1243,7 +1243,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1253,11 +1253,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1267,11 +1267,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -1281,11 +1281,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -1300,11 +1300,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1314,11 +1314,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1328,11 +1328,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -1346,7 +1346,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -1361,11 +1361,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -1375,11 +1375,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -1389,11 +1389,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -1403,11 +1403,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -1426,7 +1426,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -1436,11 +1436,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -1450,11 +1450,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -1464,11 +1464,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -1483,11 +1483,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -1497,11 +1497,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -1511,11 +1511,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -1529,7 +1529,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -1544,11 +1544,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1558,11 +1558,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1572,11 +1572,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -1586,11 +1586,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -1609,7 +1609,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1619,11 +1619,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1633,11 +1633,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -1647,11 +1647,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -1666,11 +1666,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1680,11 +1680,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1694,11 +1694,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -1712,7 +1712,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -1727,11 +1727,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -1741,11 +1741,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -1755,11 +1755,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -1769,11 +1769,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -1792,7 +1792,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -1802,11 +1802,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -1816,11 +1816,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -1830,11 +1830,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -1849,11 +1849,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -1863,11 +1863,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -1877,11 +1877,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -1895,7 +1895,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -1910,11 +1910,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1924,11 +1924,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1938,11 +1938,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -1952,11 +1952,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -1975,7 +1975,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -1985,11 +1985,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -1999,11 +1999,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2013,11 +2013,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2032,11 +2032,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2046,11 +2046,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -2060,11 +2060,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2078,7 +2078,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2093,11 +2093,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -2107,11 +2107,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -2121,11 +2121,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -2135,11 +2135,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -2158,7 +2158,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -2168,11 +2168,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -2182,11 +2182,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -2196,11 +2196,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -2215,11 +2215,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -2229,11 +2229,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -2243,11 +2243,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -2261,7 +2261,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -2276,11 +2276,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2290,11 +2290,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -2304,11 +2304,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2318,11 +2318,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2337,11 +2337,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2355,7 +2355,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2365,11 +2365,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -2379,11 +2379,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2393,11 +2393,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2412,11 +2412,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2426,11 +2426,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2440,11 +2440,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -2454,11 +2454,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2472,7 +2472,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2487,11 +2487,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -2501,11 +2501,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -2515,11 +2515,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -2529,11 +2529,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -2552,7 +2552,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -2562,11 +2562,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -2576,11 +2576,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -2590,11 +2590,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -2609,11 +2609,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -2623,11 +2623,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -2637,11 +2637,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -2655,7 +2655,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -2670,11 +2670,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2684,11 +2684,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -2698,11 +2698,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2712,11 +2712,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2731,11 +2731,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2749,7 +2749,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2759,11 +2759,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -2773,11 +2773,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2787,11 +2787,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2806,11 +2806,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2820,11 +2820,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -2834,11 +2834,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -2848,11 +2848,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -2866,7 +2866,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -2881,11 +2881,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -2895,11 +2895,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -2909,11 +2909,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -2923,11 +2923,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -2946,7 +2946,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -2956,11 +2956,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -2970,11 +2970,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -2984,11 +2984,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -3003,11 +3003,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3017,11 +3017,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -3031,11 +3031,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -3045,11 +3045,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -3063,7 +3063,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -3079,11 +3079,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3093,11 +3093,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3107,11 +3107,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3121,11 +3121,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3135,11 +3135,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -3154,11 +3154,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3172,7 +3172,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3182,11 +3182,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3196,11 +3196,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3210,11 +3210,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -3229,11 +3229,11 @@ export const USFSchedule = {
             "time": "9:30 am",
             "sessions": [
               {
-                "name": "W3",
+                "name": "WORDS CUBED",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=8D6F934A-C250-4843-AB02-FD73D36D87F6&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "9:30 am",
                 "timeEnd": "12:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3243,11 +3243,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3257,11 +3257,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3271,11 +3271,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3289,7 +3289,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -3304,11 +3304,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -3318,11 +3318,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -3332,11 +3332,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -3346,11 +3346,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -3369,7 +3369,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -3379,11 +3379,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -3393,11 +3393,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -3407,11 +3407,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -3426,11 +3426,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -3440,11 +3440,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -3454,11 +3454,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -3472,7 +3472,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -3487,11 +3487,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble (ADA)",
+                "name": "TROUBLE IN MIND (ADA)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3501,11 +3501,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3515,11 +3515,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well (ADA)",
+                "name": "ALL'S WELL THAT ENDS WELL (ADA)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3538,7 +3538,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3548,11 +3548,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3562,11 +3562,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney (ADA)",
+                "name": "SWEENEY TODD (ADA)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3576,11 +3576,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -3595,11 +3595,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music (ADA)",
+                "name": "THE SOUND OF MUSIC (ADA)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3609,11 +3609,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3623,11 +3623,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear (ADA)",
+                "name": "KING LEAR (ADA)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3641,7 +3641,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -3661,11 +3661,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "55"
               }
@@ -3675,11 +3675,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "56"
               }
@@ -3689,11 +3689,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well",
+                "name": "ALL'S WELL THAT ENDS WELL",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "57"
               }
@@ -3703,11 +3703,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "58"
               }
@@ -3726,7 +3726,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "59"
               }
@@ -3736,11 +3736,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "60"
               }
@@ -3750,11 +3750,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney",
+                "name": "SWEENEY TODD",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "61"
               }
@@ -3764,11 +3764,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "62"
               }
@@ -3783,11 +3783,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "63"
               }
@@ -3797,11 +3797,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "64"
               }
@@ -3811,11 +3811,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear",
+                "name": "KING LEAR",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "65"
               }
@@ -3829,7 +3829,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "66"
               }
@@ -3844,11 +3844,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Trouble",
+                "name": "TROUBLE IN MIND",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3858,11 +3858,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3872,11 +3872,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "All's Well (C)",
+                "name": "ALL'S WELL THAT ENDS WELL (C)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3886,11 +3886,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -3909,7 +3909,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3919,11 +3919,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3933,11 +3933,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Sweeney (C)",
+                "name": "SWEENEY TODD (C)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=C1645FD7-4575-4745-B5B3-5DC232F420DB&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -3947,11 +3947,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Trouble (C)",
+                "name": "TROUBLE IN MIND (C)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=D2762BDE-A6A2-4855-A311-8D3DEA3917AF&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -3966,11 +3966,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -3980,12 +3980,12 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest (SF)",
+                "name": "THE TEMPEST (SF)",
                 "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
 
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -3995,11 +3995,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Lear (C)",
+                "name": "KING LEAR (C)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=B81FCE1C-2CA2-4790-B3DD-750E56F179E8&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Eng",
+                "location": "Engelstad Shakespeare Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4013,7 +4013,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4028,11 +4028,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4042,11 +4042,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4065,7 +4065,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4075,11 +4075,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4089,11 +4089,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4107,7 +4107,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4122,11 +4122,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4140,7 +4140,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4159,7 +4159,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4173,7 +4173,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4183,11 +4183,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4197,11 +4197,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4216,12 +4216,12 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music (SF)",
+                "name": "THE SOUND OF MUSIC (SF)",
                 "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
 
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4231,11 +4231,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4249,7 +4249,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4263,7 +4263,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4278,11 +4278,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4292,11 +4292,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4315,7 +4315,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4325,11 +4325,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4339,11 +4339,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4357,7 +4357,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4372,11 +4372,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4390,7 +4390,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4409,7 +4409,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4423,7 +4423,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4433,11 +4433,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4447,11 +4447,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4466,11 +4466,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4480,11 +4480,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest (ADA)",
+                "name": "THE TEMPEST (ADA)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4498,7 +4498,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4512,7 +4512,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4527,11 +4527,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4541,11 +4541,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4564,7 +4564,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4574,11 +4574,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4588,11 +4588,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4606,7 +4606,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4621,11 +4621,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4639,7 +4639,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4658,7 +4658,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4672,7 +4672,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4682,11 +4682,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4696,11 +4696,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4715,11 +4715,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4729,11 +4729,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4747,7 +4747,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4761,7 +4761,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4776,11 +4776,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4790,11 +4790,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4813,7 +4813,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4823,11 +4823,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4837,11 +4837,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4855,7 +4855,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4870,11 +4870,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4888,7 +4888,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4907,7 +4907,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4921,7 +4921,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4931,11 +4931,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Music",
+                "name": "THE SOUND OF MUSIC",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -4945,11 +4945,11 @@ export const USFSchedule = {
             "time": "8:00 pm",
             "sessions": [
               {
-                "name": "Tempest",
+                "name": "THE TEMPEST",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }
@@ -4964,11 +4964,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Music (C)",
+                "name": "THE SOUND OF MUSIC (C)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=16BA8DB6-9597-4310-907A-0834013C0B06&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "67"
               }
@@ -4978,11 +4978,11 @@ export const USFSchedule = {
             "time": "2:00 pm",
             "sessions": [
               {
-                "name": "Tempest (C)",
+                "name": "THE TEMPEST (C)",
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=1E27D6E8-9D06-4249-8B36-AC8C7DFAF198&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "68"
               }
@@ -4996,7 +4996,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=3D6372C0-3A06-4617-A62B-055F6ADECDB7&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Ran",
+                "location": "Randall L. Jones Theatre",
                 "tracks": ["Theatre"],
                 "id": "69"
               }
@@ -5010,7 +5010,7 @@ export const USFSchedule = {
         "url": "https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=56B0667D-B264-4EEF-91B8-83ABDD0154CE&menu_id=8BE5D33B-1721-464C-ABF0-CA24E180CA6B",
                 "timeStart": "8:00 pm",
                 "timeEnd": "10:00 pm",
-                "location": "Anes",
+                "location": "Eileen and Allen Anes Studio Theatre",
                 "tracks": ["Theatre"],
                 "id": "70"
               }

@@ -39,8 +39,6 @@ const ScheduleComp: React.FC<ScheduleProps> = ({ name, timeStart, timeEnd, thelo
 
             <IonItemSliding onClick={openSite}>
                 <IonItem>
-                    <IonSlide>
-
                     <IonLabel>
                     <h3>{name}</h3>
                     <p>
@@ -49,7 +47,6 @@ const ScheduleComp: React.FC<ScheduleProps> = ({ name, timeStart, timeEnd, thelo
                     {thelocation} 
                     </p>
                     </IonLabel>
-                    </IonSlide>
                 </IonItem>
             </IonItemSliding>
 

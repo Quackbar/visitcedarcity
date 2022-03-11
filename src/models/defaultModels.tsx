@@ -161,5 +161,6 @@ export interface SubscriptionItem {
   schedule: string;
   timing: string[];
   color: string;
+  url: string;
   subscribed: boolean;
 }
