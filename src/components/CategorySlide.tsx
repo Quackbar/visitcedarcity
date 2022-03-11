@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   IonSlides,
   IonChip,
@@ -6,6 +6,7 @@ import {
   IonIcon,
   IonLabel,
   IonSegment,
+  IonSegmentButton,
 } from "@ionic/react";
 import {
   fastFood,
@@ -20,6 +21,7 @@ import {
   ticket,
   carSport,
   fish,
+  close,
 } from "ionicons/icons";
 import { updateSelectedAttractionFilters } from "../data/actions";
 import { connect } from "../data/connect";
@@ -94,16 +96,9 @@ slideCategoriesLabel[slideCategories.trails] = {
   icon: trailSign,
 };
 
-let selectedSlideCategory: AllCategories[] | undefined = undefined;
-
-const slideOptions = {
-  direction: "horizontal",
-  observeSlideChildren: true,
-  observer: true,
-};
-
 interface StateProps {
   selectedFilters: AllCategories[];
+  allFilters: AllCategories[];
 }
 
 interface DispatchProps {
@@ -114,47 +109,81 @@ type CategorySlidesProps = {} & StateProps & DispatchProps;
 
 const CategorySlides: React.FC<CategorySlidesProps> = ({
   selectedFilters,
+  allFilters,
   updateSelectedAttractionFilters,
 }) => {
+  const [selectedSlideCategory, setSelectedSlideCategory] = useState<
+    string | undefined
+  >(undefined);
+
   useEffect(() => {
-    selectedSlideCategory = undefined;
-    Object.values(slideCategoriesData).forEach((c, index: number) => {
-      console.log(c);
-      if (c === selectedFilters) {
-        selectedSlideCategory = c;
+    setSelectedSlideCategory(undefined);
+    Object.keys(slideCategoriesData).forEach((key, _: number) => {
+      if (slideCategoriesData[key] === selectedFilters) {
+        setSelectedSlideCategory(key);
       }
     });
   }, [selectedFilters]);
 
+  const selectFilterGroup = (category: string) => {
+    setSelectedSlideCategory(category);
+    updateSelectedAttractionFilters(slideCategoriesData[category]);
+  };
+
+  const deselectFilterGroup = () => {
+    setSelectedSlideCategory(undefined);
+    updateSelectedAttractionFilters([...allFilters]);
+  };
+
   return (
     <>
-      <br />
-      <IonSegment
-        className={"hide-scrollbar"}
-        scrollable={true}
-        draggable={true}
-      >
-        {Object.values(slideCategories).map((category, index) => (
-          <IonChip
-            key={index}
-            onClick={() =>
-              updateSelectedAttractionFilters(slideCategoriesData[category])
-            }
+      {selectedSlideCategory !== undefined ? (
+        <>
+          <IonSegment id="categorySlideSegment">
+            <IonChip color="primary">
+              <IonIcon
+                icon={slideCategoriesLabel[selectedSlideCategory].icon}
+                color="primary"
+              />
+              <IonLabel>
+                {slideCategoriesLabel[selectedSlideCategory].name}
+              </IonLabel>
+            </IonChip>
+            <IonSegmentButton
+              onClick={() => deselectFilterGroup()}
+              layout="icon-start"
+            >
+              <IonIcon icon={close} />
+            </IonSegmentButton>
+          </IonSegment>
+        </>
+      ) : (
+        <>
+          <IonSegment
+            id="categorySlideSegment"
+            className={"hide-scrollbar"}
+            scrollable={true}
+            draggable={true}
           >
-            <IonIcon
-              icon={slideCategoriesLabel[category].icon}
-              color="primary"
-            />
-            <IonLabel>{slideCategoriesLabel[category].name}</IonLabel>
-          </IonChip>
-        ))}
-      </IonSegment>
+            {Object.values(slideCategories).map((category, index) => (
+              <IonChip key={index} onClick={() => selectFilterGroup(category)}>
+                <IonIcon
+                  icon={slideCategoriesLabel[category].icon}
+                  color="primary"
+                />
+                <IonLabel>{slideCategoriesLabel[category].name}</IonLabel>
+              </IonChip>
+            ))}
+          </IonSegment>
+        </>
+      )}
     </>
   );
 };
 
 export default connect<{}, {}, DispatchProps>({
   mapStateToProps: (state) => ({
+    allFilters: state.allAttractionFilters,
     selectedFilters: state.selectedAttractionFilters,
   }),
   mapDispatchToProps: {

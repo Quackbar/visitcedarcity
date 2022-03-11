@@ -42,3 +42,15 @@
 ion-chip {
   min-width: fit-content;
 }
+#categorySlideSegment {
+    padding-left: 16px;
+    justify-content: flex-start;
+}
+#categorySlideSegment {
+    --background: #00000000;
+    --background-checked: #00000000;
+}
+
+#categorySlideSegment ion-segment-button {
+    max-width: fit-content;
+}
