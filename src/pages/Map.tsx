@@ -2,14 +2,21 @@ import React, { useRef, useEffect, useState } from "react";
 
 import {
   IonContent,
-  IonHeader,
+  IonFab,
+  IonFabButton,
+  IonFabList,
+  IonIcon,
   IonPage,
-  IonTitle,
-  IonToolbar,
 } from "@ionic/react";
+import {
+  layersOutline,
+  mapOutline,
+  navigateOutline,
+  carSportOutline,
+} from "ionicons/icons";
 
 // @ts-ignore
-import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../assets/scss/Map.scss";
@@ -17,25 +24,24 @@ import "../assets/scss/Map.scss";
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmVybmFyZGtpbnR6aW5nIiwiYSI6ImNrenpxc2UwejBjczAzYnMwOXhjeW1zMDEifQ.R_WjPk9TCgHbs-yKfPC1iQ";
 
-
-
 const Map: React.FC = () => {
+  const [map, setMap] = useState<MapDataType>();
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
 
-  // this is where all of our map logic is going to live
-  // adding the empty dependency array ensures that the map
-  // is only created once
   useEffect(() => {
-    // create the map and configure it
-    // check out the API reference for more options
-    // https://docs.mapbox.com/mapbox-gl-js/api/map/
-    const map = new mapboxgl.Map({
-      container: "map",
-      style: "mapbox://styles/mapbox/satellite-streets-v11",
-      center: [-113.061305, 37.683057],
-      zoom: 9,
-      pitch: 0,
-    });
+    setMap(
+      new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/satellite-streets-v11",
+        center: [-113.061305, 37.683057],
+        zoom: 9,
+        pitch: 0,
+      })
+    );
+  }, []);
+
+  useEffect(() => {
+    if (map === undefined) return;
 
     map.on("load", () => {
       map.resize();
@@ -56,10 +62,35 @@ const Map: React.FC = () => {
         },
       });
     });
-  }, []);
+  }, [map]);
+
+  const centerMap = () => {};
+  const setSatelliteStyle = () => {
+    map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
+  };
+  const setStreetStyle = () => {
+    map.setStyle("mapbox://styles/mapbox/streets-v11");
+  };
 
   return (
     <IonPage id="map-page">
+      <IonFab slot="fixed" vertical="top" horizontal="end">
+        <IonFabButton size="small">
+          <IonIcon icon={layersOutline}></IonIcon>
+        </IonFabButton>
+        <IonFabList side="bottom">
+          <IonFabButton onClick={() => centerMap()}>
+            <IonIcon icon={navigateOutline}></IonIcon>
+          </IonFabButton>
+          <IonFabButton onClick={() => setSatelliteStyle()}>
+            <IonIcon icon={mapOutline}></IonIcon>
+          </IonFabButton>
+          <IonFabButton onClick={() => setStreetStyle()}>
+            <IonIcon icon={carSportOutline}></IonIcon>˝
+          </IonFabButton>
+        </IonFabList>
+      </IonFab>
+
       <IonContent scrollY={false}>
         <div
           id="map"
@@ -68,6 +99,6 @@ const Map: React.FC = () => {
         />
       </IonContent>
     </IonPage>
-  )
-}
+  );
+};
 export default Map;
