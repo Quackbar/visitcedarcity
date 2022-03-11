@@ -1,4 +1,4 @@
-import { IonButton,IonRow,IonCol,IonGrid,IonChip,IonIcon, IonRefresher, IonRefresherContent, IonLabel,IonItemSliding,  IonCard, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar, IonSlides, IonSlide } from "@ionic/react";
+import { IonButton,IonRow,IonModal,IonDatetime,IonCol,IonGrid,IonChip,IonIcon, IonRefresher, IonRefresherContent, IonLabel,IonItemSliding,  IonCard, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar, IonSlides, IonSlide, IonPopover, IonText } from "@ionic/react";
 
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
@@ -12,9 +12,10 @@ import { RefresherEventDetail } from '@ionic/core';
 
 
 import { Browser } from '@capacitor/browser';
-import React from "react";
+import React, { useState, useRef } from 'react';
 import {USFSchedule} from '../assets/data/USF'
 import { close , pin } from 'ionicons/icons';
+import { format, parseISO } from 'date-fns';
 
 const openCapacitorSite = async () => {
   await Browser.open({ url: 'https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25' });
@@ -118,19 +119,7 @@ getParoWeather().then((data) => {
 
 });
 
-   let things: todaystype[] = []
-   const todays = USFSchedule.schedule.map(item => {
-       // var thisdate = new Date(item.date);
-       var formattedDate =  "2022-08-08"
-       if(item.date === formattedDate){
-           item.groups.map(group => {
-               console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-               console.log(group.sessions[0])
-               console.log(group.sessions[0].name)
-               things.push(group.sessions[0] as todaystype);
-           })
-       }
-   })
+
 
    function checkSched(things: todaystype[]){
         if(things.length === 0){
@@ -138,7 +127,7 @@ getParoWeather().then((data) => {
         }
    }
 
-   function doRefresh(event: CustomEvent<RefresherEventDetail>) {
+function doRefresh(event: CustomEvent<RefresherEventDetail>) {
     console.log('Begin async operation');
   
     setTimeout(() => {
@@ -148,6 +137,44 @@ getParoWeather().then((data) => {
   }
 
 const Home: React.FC = () => {
+    const formatDate = (value: string) => {
+        return format(parseISO(value), 'MMM dd yyyy');
+    };
+    const today = new Date();
+    const [selectedDate, setSelectedDate] = useState(new Date);
+    const [popoverDate, setPopoverDate] = useState(today.toDateString());
+    const [popoverDate2, setPopoverDate2] = useState('');
+    let things: todaystype[] = []
+    function setSched(){
+        things = [];
+        USFSchedule.schedule.map(item => {
+            // var thisdate = new Date(item.date);
+            var formattedDate =  "2022-08-08"
+            if(item.date === formattedDate){
+                item.groups.map(group => {
+                    console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+                    console.log(group.sessions[0])
+                    console.log(group.sessions[0].name)
+                    things.push(group.sessions[0] as todaystype);
+                })
+            }
+        })
+    }setSched()
+
+
+    const customDatetime = useRef();
+    const confirm = () => {
+      if (customDatetime === undefined) return;
+      
+    //   customDatetime.confirm();
+    };
+    
+    const reset = () => {
+      if (customDatetime === undefined) return;
+      
+    //   customDatetime.reset();
+    };
+  
 
     return (
             <IonPage id="home-page">
@@ -173,6 +200,25 @@ const Home: React.FC = () => {
                         Your Daily Schedule
                         <br/><br/>
                     </IonTitle>
+                          {/* Datetime in overlay */}
+                    {/* <IonButton  class="centered" id="open-modal">Choose Custom Date</IonButton> */}
+                    <IonModal trigger="open-modal">
+                        <IonContent>
+                        <IonDatetime></IonDatetime>
+                        </IonContent>
+                    </IonModal>
+
+                    {/* Datetime in popover with cover element */}
+                    <IonItem button={true} id="open-date-input">
+                        <IonLabel>Date</IonLabel>
+                        <IonText slot="end">{popoverDate}</IonText>
+                        <IonPopover trigger="open-date-input" showBackdrop={false}>
+                        <IonDatetime
+                            presentation="date"
+                            onIonChange={ev => {setPopoverDate(formatDate(ev.detail.value!));setSched()}}
+                        />
+                        </IonPopover>
+                    </IonItem>
                     
                 {
                         things.map(event => {
@@ -192,9 +238,15 @@ const Home: React.FC = () => {
 
             <IonCard>
                 <IonTitle class="centered">
+                <br/>
+
                     Brian Head Snowpack
+                    <br/>
                 </IonTitle>
-                <SnowPack theDates={JSON.parse(String(localStorage.getItem("dates")))} baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))} oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))}/>
+                <SnowPack  theDates={JSON.parse(String(localStorage.getItem("dates")))} 
+                           baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))}
+                           oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))} 
+                           temps={JSON.parse(String(localStorage.getItem("temps")))}/>
             </IonCard>
                 
 

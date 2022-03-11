@@ -54,6 +54,7 @@ type MyReturnTypeItem = {
 
 interface SnowOutput {
   Date?: string[];
+  temp?: string[];
   oneDaySnowfall?: string[];
   baseDepth?: string[];
 }
@@ -67,12 +68,13 @@ export async function getSnowData() : Promise<SnowOutput> {
   return new Promise(async (resolve, reject) => {
     let oneDaySnowfall: string[] = [];
     let baseDepth: string[] = [];
+    let temps: string[] = [];
     let dates: any[] = [];
-    let orderer: { date: any; oneDaySnowfall: any; baseDepth: any; }[] = [];
+    let orderer: { date: any; oneDaySnowfall: any; baseDepth: any; temps: any; }[] = [];
     (await getDocs(q)).forEach((doc) => {
       // console.log(doc.data())
 
-      orderer.push({date: new Date(doc.data().Date.toDate()), oneDaySnowfall: doc.data().onedaySnowfall.slice(0,-1), baseDepth: doc.data().baseDepth.slice(0,-1)})
+      orderer.push({date: new Date(doc.data().Date.toDate()), oneDaySnowfall: doc.data().onedaySnowfall.slice(0,-1), baseDepth: doc.data().baseDepth.slice(0,-1), temps: doc.data().temp.slice(0,-2)})
 
       // oneDaySnowfall.push(doc.data().onedaySnowfall.slice(0,-1))
       // baseDepth.push(doc.data().baseDepth.slice(0,-1))
@@ -86,16 +88,19 @@ export async function getSnowData() : Promise<SnowOutput> {
     sortedActivities.forEach((piece) => {
       oneDaySnowfall.push(piece.oneDaySnowfall)
       baseDepth.push(piece.baseDepth)
+      temps.push(piece.temps)
       dates.push(piece.date.toLocaleDateString('en-US').slice(0, -5))
     })
     localStorage.setItem('oneDaySnowfall', JSON.stringify(oneDaySnowfall))
     localStorage.setItem('baseDepth', JSON.stringify(baseDepth))
     localStorage.setItem('dates', JSON.stringify(dates))
+    localStorage.setItem('temps', JSON.stringify(temps))
     
     console.log(localStorage.getItem('baseDepth'))
     let rObject: SnowOutput = {
       Date: dates,
       oneDaySnowfall: oneDaySnowfall,
+      temp: temps,
       baseDepth: baseDepth,
     }
     resolve(rObject)
