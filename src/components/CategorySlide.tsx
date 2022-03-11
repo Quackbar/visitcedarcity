@@ -129,19 +129,24 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
   return (
     <>
       <br />
-      <IonSegment className={'hide-scrollbar'}scrollable={true} draggable={true}>
+      <IonSegment
+        className={"hide-scrollbar"}
+        scrollable={true}
+        draggable={true}
+      >
         {Object.values(slideCategories).map((category, index) => (
-            <IonChip
-              onClick={() =>
-                updateSelectedAttractionFilters(slideCategoriesData[category])
-              }
-            >
-              <IonIcon
-                icon={slideCategoriesLabel[category].icon}
-                color="primary"
-              />
-              <IonLabel>{slideCategoriesLabel[category].name}</IonLabel>
-            </IonChip>
+          <IonChip
+            key={index}
+            onClick={() =>
+              updateSelectedAttractionFilters(slideCategoriesData[category])
+            }
+          >
+            <IonIcon
+              icon={slideCategoriesLabel[category].icon}
+              color="primary"
+            />
+            <IonLabel>{slideCategoriesLabel[category].name}</IonLabel>
+          </IonChip>
         ))}
       </IonSegment>
     </>
