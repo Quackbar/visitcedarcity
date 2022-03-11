@@ -129,21 +129,17 @@ getParoWeather().then((data) => {
 
 function doRefresh(event: CustomEvent<RefresherEventDetail>) {
     console.log('Begin async operation');
-  
-    setTimeout(() => {
-      console.log('Async operation has ended');
-      event.detail.complete();
-    }, 2000);
+    window.location.reload();
   }
 
 const Home: React.FC = () => {
     const formatDate = (value: string) => {
         return format(parseISO(value), 'MMM dd yyyy');
     };
+
+
     const today = new Date();
-    const [selectedDate, setSelectedDate] = useState(new Date);
     const [popoverDate, setPopoverDate] = useState(today.toDateString());
-    const [popoverDate2, setPopoverDate2] = useState('');
     let things: todaystype[] = []
     function setSched(){
         things = [];
@@ -184,6 +180,9 @@ const Home: React.FC = () => {
                     </IonToolbar>
                 </IonHeader> */}
                 <IonContent>
+                <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
+                    <IonRefresherContent></IonRefresherContent>
+                </IonRefresher>
 
                     <Weather CedarImg={CedarImg || String(localStorage.getItem("CedarImg"))}
                             CedarTemp={CedarTemp || String(localStorage.getItem("CedarTemp"))}

@@ -67,6 +67,7 @@ const Map: React.FC = () => {
   const centerMap = () => {};
   const setSatelliteStyle = () => {
     map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
+    map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
   };
   const setStreetStyle = () => {
     map.setStyle("mapbox://styles/mapbox/streets-v11");

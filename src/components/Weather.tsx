@@ -14,6 +14,23 @@ interface WeatherProps {
     BrianTemp: string;
 }
 
+var day = true
+
+const sunrise = [7, 23]
+const sunset = [19, 29];
+
+var sunrise_m = sunrise[0] * 60 + sunrise[1]
+var sunset_m = sunset[0] * 60 + sunset[1]
+
+var now = new Date()
+var now_m = now.getHours() * 60 + now.getMinutes()
+
+if (now_m > sunrise_m + 60 && now_m <= sunset_m - 60) {
+    day = true
+} else {
+    day = false
+}
+
 const Weather: React.FC<WeatherProps> = ({ CedarImg,
                                                 CedarTemp,
                                                 ParoImg,
@@ -30,11 +47,12 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg,
     }
     else{
 
+
     
 
     return (
         <>
-        <IonCard class="backgrounded">
+        <IonCard class={ day ? "dayback" : "nightback"}>
             
                 <IonCardHeader class="centered" >
                 <IonCard class="gray">

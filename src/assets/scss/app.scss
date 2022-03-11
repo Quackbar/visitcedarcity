@@ -3,8 +3,12 @@
   text-align: center;
   color: black;
 }
-.backgrounded {
+.nightback {
   background-image: url("../img/nighbackground.png");
+  background-size: cover;
+}
+.dayback {
+  background-image: url("../img/daybackground.png");
   background-size: cover;
 }
 .wintermountainbackground {
