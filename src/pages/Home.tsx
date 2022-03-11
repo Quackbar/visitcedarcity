@@ -3,8 +3,9 @@ import { IonButton,IonRow,IonCol,IonGrid,IonChip,IonIcon, IonRefresher, IonRefre
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
 import ScheduleComp from '../components/Schedule'
+import SnowPack from "../components/SnowPack"
 
-import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
+import { getBrianHeadWeather, getSnowData, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
 
 import { RefresherEventDetail } from '@ionic/core';
@@ -30,6 +31,7 @@ let MDOneDay = ""
 let MDLiftsOpen = ""
 let MDTrailsOpen = ""
 
+
 type MyReturnTypeItem = {
     Date?: Timestamp;
     conditions?: string;
@@ -46,6 +48,12 @@ type MountainDataType = {
     wind?: string;
   }
 
+  interface SnowOutput {
+    Date?: string[];
+    oneDaySnowfall?: string[];
+    baseDepth?: string[];
+  }
+
   type todaystype = {
         name: string;
         url: string;
@@ -55,6 +63,19 @@ type MountainDataType = {
         tracks: string[];
         id: string;
     }
+
+    let theDates: string[] = []
+let baseDepth: string[] = []
+let oneDaySnowfall: string[] = []
+
+getSnowData().then((data) => {
+    console.log('mountainData', data);
+    var x: SnowOutput = data
+    theDates = x.Date ?? ['unknown']
+    baseDepth = x.baseDepth ?? []
+    oneDaySnowfall = x.oneDaySnowfall ?? ['unknown']
+    console.log("this thing here",JSON.parse(String(localStorage.getItem("baseDepth"))))
+});
 
 getMountainData().then((data) => {
     console.log('mountainData', data);
@@ -146,7 +167,7 @@ const Home: React.FC = () => {
                     <IonCard>
                         {/* <Snowpack/> */}
                     </IonCard>
-                                   <IonCard>
+            <IonCard>
                     <IonTitle class="centered">
                         <br/>
                         Your Daily Schedule
@@ -168,6 +189,13 @@ const Home: React.FC = () => {
                             OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
                             LiftsOpen={MDLiftsOpen || String(localStorage.getItem("MDLiftsOpen"))}
                             TrailsOpen={MDTrailsOpen || String(localStorage.getItem("MDTrailsOpen"))}/>
+
+            <IonCard>
+                <IonTitle class="centered">
+                    Brian Head Snowpack
+                </IonTitle>
+                <SnowPack theDates={JSON.parse(String(localStorage.getItem("dates")))} baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))} oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))}/>
+            </IonCard>
                 
 
             </IonContent>
