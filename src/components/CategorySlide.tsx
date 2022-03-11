@@ -1,5 +1,12 @@
-import React from "react";
-import { IonSlides, IonChip, IonSlide, IonIcon, IonLabel } from "@ionic/react";
+import React, { useEffect } from "react";
+import {
+  IonSlides,
+  IonChip,
+  IonSlide,
+  IonIcon,
+  IonLabel,
+  IonSegment,
+} from "@ionic/react";
 import {
   fastFood,
   wine,
@@ -18,104 +25,133 @@ import { updateSelectedAttractionFilters } from "../data/actions";
 import { connect } from "../data/connect";
 import { AllCategories, AttractionCategories } from "../models/defaultModels";
 
-const slideCategories: { [id: string]: AllCategories[] } = {
-  food: [],
-  parks: [],
-  lodging: [],
-  shops: [],
-  arts: [],
-  drinks: [],
-  camping: [],
-  drives: [],
-  shows: [],
-  lookouts: [],
-  trails: [
-    AttractionCategories.Experiences.subcategories.Outdoor,
-    AttractionCategories.Experiences.subcategories.CedarCityWalks,
-    AttractionCategories.Experiences.subcategories.Trails,
-  ],
+enum slideCategories {
+  food = "food",
+  parks = "parks",
+  lodging = "lodging",
+  shops = "shops",
+  arts = "arts",
+  drinks = "drinks",
+  camping = "camping",
+  drives = "drives",
+  fishing = "fishing",
+  shows = "shows",
+  lookouts = "lookouts",
+  trails = "trails",
+}
+
+const slideCategoriesData: { [id: string]: AllCategories[] } = {};
+slideCategoriesData[slideCategories.food] = [];
+slideCategoriesData[slideCategories.parks] = [];
+slideCategoriesData[slideCategories.lodging] = [];
+slideCategoriesData[slideCategories.shops] = [];
+slideCategoriesData[slideCategories.arts] = [];
+slideCategoriesData[slideCategories.drinks] = [];
+slideCategoriesData[slideCategories.camping] = [];
+slideCategoriesData[slideCategories.drives] = [];
+slideCategoriesData[slideCategories.shows] = [];
+slideCategoriesData[slideCategories.fishing] = [];
+slideCategoriesData[slideCategories.lookouts] = [];
+slideCategoriesData[slideCategories.trails] = [
+  AttractionCategories.Experiences.subcategories.Outdoor,
+  AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  AttractionCategories.Experiences.subcategories.Trails,
+];
+
+const slideCategoriesLabel: { [id: string]: { name: string; icon: string } } =
+  {};
+slideCategoriesLabel[slideCategories.food] = { name: "Food", icon: fastFood };
+slideCategoriesLabel[slideCategories.parks] = {
+  name: "National\xa0Parks",
+  icon: shield,
 };
+slideCategoriesLabel[slideCategories.lodging] = { name: "Lodging", icon: bed };
+slideCategoriesLabel[slideCategories.shops] = {
+  name: "Shops",
+  icon: storefront,
+};
+slideCategoriesLabel[slideCategories.arts] = {
+  name: "Art",
+  icon: colorPalette,
+};
+slideCategoriesLabel[slideCategories.drinks] = { name: "Drinks", icon: wine };
+slideCategoriesLabel[slideCategories.camping] = {
+  name: "Camping\xa0Grounds",
+  icon: bonfire,
+};
+slideCategoriesLabel[slideCategories.drives] = {
+  name: "Drives",
+  icon: carSport,
+};
+slideCategoriesLabel[slideCategories.shows] = { name: "Shows", icon: ticket };
+slideCategoriesLabel[slideCategories.fishing] = { name: "Fishing", icon: fish };
+slideCategoriesLabel[slideCategories.lookouts] = {
+  name: "Lookouts",
+  icon: telescope,
+};
+slideCategoriesLabel[slideCategories.trails] = {
+  name: "Trails",
+  icon: trailSign,
+};
+
+let selectedSlideCategory: AllCategories[] | undefined = undefined;
+
+const slideOptions = {
+  direction: "horizontal",
+  observeSlideChildren: true,
+  observer: true,
+};
+
+interface StateProps {
+  selectedFilters: AllCategories[];
+}
 
 interface DispatchProps {
   updateSelectedAttractionFilters: typeof updateSelectedAttractionFilters;
 }
 
-type CategorySlidesProps = {} & {} & DispatchProps;
+type CategorySlidesProps = {} & StateProps & DispatchProps;
 
 const CategorySlides: React.FC<CategorySlidesProps> = ({
+  selectedFilters,
   updateSelectedAttractionFilters,
 }) => {
+  useEffect(() => {
+    selectedSlideCategory = undefined;
+    Object.values(slideCategoriesData).forEach((c, index: number) => {
+      console.log(c);
+      if (c === selectedFilters) {
+        selectedSlideCategory = c;
+      }
+    });
+  }, [selectedFilters]);
 
   return (
     <>
       <br />
-      <IonSlides pager={false} scrollbar={false}>
-        <IonSlide>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.food)}>
-            <IonIcon icon={fastFood} color="primary" />
-            <IonLabel>Food</IonLabel>
-          </IonChip>
-
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.parks)}>
-            <IonIcon icon={shield} color="primary" />
-            <IonLabel>National&nbsp;Parks</IonLabel>
-          </IonChip>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.lodging)}>
-            <IonIcon icon={bed} color="primary" />
-            <IonLabel>Lodging</IonLabel>
-          </IonChip>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.trails)}>
-            <IonIcon icon={trailSign} color="primary" />
-            <IonLabel>Trails</IonLabel>
-          </IonChip>
-        </IonSlide>
-        <IonSlide>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.shops)}>
-            <IonIcon icon={storefront} color="primary" />
-            <IonLabel>Shops</IonLabel>
-          </IonChip>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.art)}>
-            <IonIcon icon={colorPalette} color="primary" />
-            <IonLabel>Art</IonLabel>
-          </IonChip>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.drinks)}>
-            <IonIcon icon={wine} color="primary" />
-            <IonLabel>Drinks</IonLabel>
-          </IonChip>
-
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.camping)}>
-            <IonIcon icon={bonfire} color="primary" />
-            <IonLabel>Camping&nbsp;Grounds</IonLabel>
-          </IonChip>
-        </IonSlide>
-        <IonSlide>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.drives)}>
-            <IonIcon icon={carSport} color="primary" />
-            <IonLabel>Drives</IonLabel>
-          </IonChip>
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.fishing)}>
-            <IonIcon icon={fish} color="primary" />
-            <IonLabel>Fishing</IonLabel>
-          </IonChip>
-
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.shows)}>
-            <IonIcon icon={ticket} color="primary" />
-            <IonLabel>Shows</IonLabel>
-          </IonChip>
-
-          <IonChip onClick={() => updateSelectedAttractionFilters(slideCategories.lookouts)}>
-            <IonIcon icon={telescope} color="primary" />
-            <IonLabel>Lookouts</IonLabel>
-          </IonChip>
-        </IonSlide>
-      </IonSlides>
+      <IonSegment className={'hide-scrollbar'}scrollable={true} draggable={true}>
+        {Object.values(slideCategories).map((category, index) => (
+            <IonChip
+              onClick={() =>
+                updateSelectedAttractionFilters(slideCategoriesData[category])
+              }
+            >
+              <IonIcon
+                icon={slideCategoriesLabel[category].icon}
+                color="primary"
+              />
+              <IonLabel>{slideCategoriesLabel[category].name}</IonLabel>
+            </IonChip>
+        ))}
+      </IonSegment>
     </>
   );
 };
-// export default CategorySlides;
 
 export default connect<{}, {}, DispatchProps>({
-  mapStateToProps: (state) => ({}),
+  mapStateToProps: (state) => ({
+    selectedFilters: state.selectedAttractionFilters,
+  }),
   mapDispatchToProps: {
     updateSelectedAttractionFilters,
   },
