@@ -68,7 +68,7 @@ getBrianHeadWeather().then((data) => {
     BrianImg = x.conditions ?? 'unknown'
     BrianTemp = x.temp ?? 'unknown'
     localStorage.setItem("BrianImg", x.conditions ?? 'unknown');
-    localStorage.setItem("BrianImg", x.temp ?? 'unknown');
+    localStorage.setItem("BrianTemp", x.temp ?? 'unknown');
     
 });
 getCedarWeather().then((data) => {

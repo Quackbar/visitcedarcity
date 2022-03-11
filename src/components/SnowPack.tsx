@@ -67,11 +67,12 @@ interface WeatherProps {
   theDates: string[];
   baseDepth: string[];
   oneDaySnowfall: string[];
-
+  temps: string[];
 }
 const SnowPack: React.FC<WeatherProps> = ({ theDates,
   baseDepth,
-  oneDaySnowfall}) => {
+  oneDaySnowfall,
+  temps}) => {
 
     const labels = theDates;
     const data = {
@@ -79,15 +80,28 @@ const SnowPack: React.FC<WeatherProps> = ({ theDates,
       datasets: [
         {
           type: 'line' as const,
-          label: "Base Depth",
+          label: "BaseDepth(in.)",
           data: baseDepth,
           borderColor: "rgba(10,150,255,.5)",
           backgroundColor: "rgba(10,150,255, 0.2)",
+          tension: .3,
+          pointRadius: .1,
+          fill: true,
+        },
+        {
+          type: 'line' as const,
+          label: "Temp(F)",
+          data: temps,
+          borderColor: "rgba(250,50,55,.5)",
+          backgroundColor: "rgba(250,50,55, 0.2)",
+          tension: .3,
+          pointRadius: .1,
+
           fill: true,
         },
         {
           type: 'bar' as const,
-          label: "One Day Snowfall",
+          label: "24hrSnowfall(in.)",
           data: oneDaySnowfall,
           borderColor: "rgba(10,10,255,.5)",
           backgroundColor: "rgba(10,10,255, 0.2)",
