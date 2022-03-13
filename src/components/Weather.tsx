@@ -1,7 +1,6 @@
 import React from 'react';
-import { IonHeader,IonCardHeader,IonLabel,IonItem,IonCardContent,IonAvatar, IonToolbar, IonTitle, IonContent, IonPage, IonButtons, IonMenuButton, IonGrid, IonRow, IonCol, IonMenuToggle, IonCard } from '@ionic/react';
+import { IonCardHeader,IonCardContent,IonGrid, IonRow, IonCol, IonCard } from '@ionic/react';
 
-import { getBrianHeadWeather, getCedarWeather, getParoWeather } from "../assets/firebase/Firebase";
 
 import '../assets/scss/app.scss'
 
@@ -56,7 +55,7 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg,
             
                 <IonCardHeader class="centered" >
                 <IonCard class="gray">
-                <h1>Cedar City</h1>
+                <h1  className="weatherheadbig">Cedar City</h1>
                         
                         <img src={CedarImg}/>
 
@@ -64,13 +63,13 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg,
                         {/* <h6>Last Updated: {CedarUpdate}</h6> */}
                         </IonCard>
                 </IonCardHeader>
-                <IonCardContent>
+                <IonCardHeader>
                 <IonGrid fixed>
                     <IonRow>
                     
-                        <IonCol size="6" size-md="2" class="centered">
+                        <IonCol size="6" size-md="1" class="centered">
                         <IonCard class="gray">
-                        <h1>Parowan</h1>
+                        <h1 className="weatherhead">Parowan</h1>
 
                             <img src={ParoImg} />
                             <h2>{ParoTemp}</h2>
@@ -78,9 +77,9 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg,
                         </IonCol>
                         
                         
-                        <IonCol size="6" size-md="2" class="centered">
+                        <IonCol size="6" size-md="1" class="centered">
                         <IonCard class="gray">
-                        <h1>Brian Head</h1>
+                        <h1 className="weatherhead">Brian Head</h1>
 
                             <img src={BrianImg}/>
 
@@ -90,7 +89,7 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg,
                         
                     </IonRow>
                 </IonGrid>
-                </IonCardContent>
+                </IonCardHeader>
                 </IonCard>
         </>
 

@@ -1,25 +1,20 @@
-import { IonButton,IonRow,IonModal,IonDatetime,IonCol,IonGrid,IonChip,IonIcon, IonRefresher, IonRefresherContent, IonLabel,IonItemSliding,  IonCard, IonContent, IonHeader, IonItem, IonPage, IonTitle, IonToolbar, IonSlides, IonSlide, IonPopover, IonText } from "@ionic/react";
+import { IonModal,IonDatetime,IonRefresher, IonRefresherContent, IonLabel,IonCard, IonContent, IonItem, IonPage, IonTitle, IonPopover, IonText } from "@ionic/react";
 
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
 import ScheduleComp from '../components/Schedule'
 import SnowPack from "../components/SnowPack"
 
-import { getBrianHeadWeather, getSnowData, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
+import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
 
 import { RefresherEventDetail } from '@ionic/core';
 
 
-import { Browser } from '@capacitor/browser';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import {USFSchedule} from '../assets/data/USF'
-import { close , pin } from 'ionicons/icons';
 import { format, parseISO } from 'date-fns';
 
-const openCapacitorSite = async () => {
-  await Browser.open({ url: 'https://secure.bard.org/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=38AC2AAF-6F57-4A9F-8DC1-53F84A050D25' });
-};
 
 let CedarImg = "";
 let CedarTemp = "";
@@ -49,11 +44,6 @@ type MountainDataType = {
     wind?: string;
   }
 
-  interface SnowOutput {
-    Date?: string[];
-    oneDaySnowfall?: string[];
-    baseDepth?: string[];
-  }
 
   type todaystype = {
         name: string;
@@ -65,18 +55,7 @@ type MountainDataType = {
         id: string;
     }
 
-    let theDates: string[] = []
-let baseDepth: string[] = []
-let oneDaySnowfall: string[] = []
 
-getSnowData().then((data) => {
-    console.log('mountainData', data);
-    var x: SnowOutput = data
-    theDates = x.Date ?? ['unknown']
-    baseDepth = x.baseDepth ?? []
-    oneDaySnowfall = x.oneDaySnowfall ?? ['unknown']
-    console.log("this thing here",JSON.parse(String(localStorage.getItem("baseDepth"))))
-});
 
 getMountainData().then((data) => {
     console.log('mountainData', data);
@@ -141,35 +120,22 @@ const Home: React.FC = () => {
     const today = new Date();
     const [popoverDate, setPopoverDate] = useState(today.toDateString());
     let things: todaystype[] = []
-    function setSched(){
-        things = [];
-        USFSchedule.schedule.map(item => {
-            // var thisdate = new Date(item.date);
-            var formattedDate =  "2022-08-08"
-            if(item.date === formattedDate){
-                item.groups.map(group => {
-                    console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-                    console.log(group.sessions[0])
-                    console.log(group.sessions[0].name)
-                    things.push(group.sessions[0] as todaystype);
-                })
-            }
-        })
-    }setSched()
+    things = [];
+    USFSchedule.schedule.map(item => {
+        // var thisdate = new Date(item.date);
+        var formattedDate =  "2022-08-08"
+        if(item.date === formattedDate){
+            item.groups.map(group => {
+                console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+                console.log(group.sessions[0])
+                console.log(group.sessions[0].name)
+                things.push(group.sessions[0] as todaystype);
+            })
+        }
+    })
 
 
-    const customDatetime = useRef();
-    const confirm = () => {
-      if (customDatetime === undefined) return;
-      
-    //   customDatetime.confirm();
-    };
     
-    const reset = () => {
-      if (customDatetime === undefined) return;
-      
-    //   customDatetime.reset();
-    };
   
 
     return (
@@ -214,7 +180,7 @@ const Home: React.FC = () => {
                         <IonPopover trigger="open-date-input" showBackdrop={false}>
                         <IonDatetime
                             presentation="date"
-                            onIonChange={ev => {setPopoverDate(formatDate(ev.detail.value!));setSched()}}
+                            onIonChange={ev => {setPopoverDate(formatDate(ev.detail.value!))}}
                         />
                         </IonPopover>
                     </IonItem>

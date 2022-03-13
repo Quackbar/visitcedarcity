@@ -1,15 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, {  } from 'react';
 
-import { IonToolbar, IonContent, IonSlide, IonPage, IonButtons, IonTitle, IonMenuButton, IonSegment, IonSegmentButton, IonButton, IonIcon, IonSearchbar, IonRefresher, IonRefresherContent, IonToast, IonModal, IonHeader, getConfig, IonCard, IonItem, IonItemSliding, IonLabel } from '@ionic/react';
+import { IonItem, IonItemSliding, IonLabel } from '@ionic/react';
 
-import { Schedule, Session } from '../models/Schedule';
 import { Browser } from '@capacitor/browser';
 
-import {USFSchedule} from '../assets/data/USF'
 
-const openVisitSite = async () => {
-    await Browser.open({ url: 'https://visitcedarcity.com/' });
-  };
   
 
 
@@ -21,9 +16,6 @@ interface ScheduleProps {
     url: string;
 }
 
-function pad2(n: number) {
-    return (n < 10 ? '0' : '') + n;
-}
 
 const ScheduleComp: React.FC<ScheduleProps> = ({ name, timeStart, timeEnd, thelocation, url }) => {
 
@@ -33,7 +25,6 @@ const ScheduleComp: React.FC<ScheduleProps> = ({ name, timeStart, timeEnd, thelo
     const openSite = async () => {
         await Browser.open({ url: url });
       };
-    var formattedDate =  "2022-06-20"// || year+"-"+month+"-"+day;
     return (
         <>
 

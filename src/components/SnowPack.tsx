@@ -9,9 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Chart } from "react-chartjs-2";
-import {getSnowData} from "../assets/firebase/Firebase"
-import { IonText } from "@ionic/react";
+import { Line } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -36,32 +34,7 @@ export const options = {
   },
 };
 
-getSnowData().then((data) => {
-  const labels = data.Date;
-})
 
-type MyReturnTypeItem = {
-  Date?: Date;
-  BaseDepth?: string;
-};
-
-const mountainData: any = localStorage.getItem("MountainData");
-
-let dates = new Array();
-let snowData = new Array();
-
-
-// export const data = {
-//   labels,
-//   datasets: [
-//     {
-//       label: "Base Depth",
-//       data: snowData,
-//       borderColor: "rgba(10,150,255,.5)",
-//       backgroundColor: "rgba(10,150,255, 0.2)",
-//     },
-//   ],
-// };
 
 interface WeatherProps {
   theDates: string[];
@@ -79,7 +52,6 @@ const SnowPack: React.FC<WeatherProps> = ({ theDates,
       labels,
       datasets: [
         {
-          type: 'line' as const,
           label: "BaseDepth(in.)",
           data: baseDepth,
           borderColor: "rgba(10,150,255,.5)",
@@ -89,7 +61,6 @@ const SnowPack: React.FC<WeatherProps> = ({ theDates,
           fill: true,
         },
         {
-          type: 'line' as const,
           label: "Temp(F)",
           data: temps,
           borderColor: "rgba(250,50,55,.5)",
@@ -100,17 +71,19 @@ const SnowPack: React.FC<WeatherProps> = ({ theDates,
           fill: true,
         },
         {
-          type: 'bar' as const,
           label: "24hrSnowfall(in.)",
           data: oneDaySnowfall,
-          borderColor: "rgba(10,10,255,.5)",
-          backgroundColor: "rgba(10,10,255, 0.2)",
+          borderColor: "rgba(10,10,255,.2)",
+          backgroundColor: "rgba(10,10,255, 0.1)",
+          tension: .3,
+          pointRadius: .1,
+          fill: true,
         },
       ],
     };
 
-    return <Chart type='bar' data={data} />;
+    // return <Chart type='bar' data={data} />;
 
-  // return <Line options={options} data={data} />;
+  return <Line options={options} data={data} />;
 }
 export default SnowPack;

@@ -1,12 +1,10 @@
 import {
   IonCheckbox,
   IonContent,
-  IonHeader,
   IonItem,
   IonPage,
   IonText,
   IonTitle,
-  IonToolbar,
   IonIcon,
 } from "@ionic/react";
 import { useEffect, useState } from "react";

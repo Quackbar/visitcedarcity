@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { IonContent, IonPage, IonHeader, IonToolbar, IonButtons, IonButton, IonIcon, useIonViewWillEnter, IonLabel, IonSegment, IonSegmentButton, IonTitle, IonGrid, IonRow } from '@ionic/react';
+import { IonContent, IonPage, IonHeader, IonToolbar, IonButtons, IonButton, IonIcon, IonLabel, IonSegment, IonSegmentButton, IonGrid, IonRow } from '@ionic/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper';
-import { arrowForward, heart, thumbsDown, thumbsUp } from 'ionicons/icons';
+import { arrowForward, chevronForward, heart, thumbsDown, thumbsUp } from 'ionicons/icons';
 import { setHasSeenTutorial } from '../data/user/user.actions';
 import '@ionic/react/css/ionic-swiper.css';
 import { connect } from '../data/connect';
@@ -46,13 +46,56 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
       </IonHeader>
       <IonContent fullscreen>
 
-        <Swiper onSwiper={setSwiper} onSlideChangeTransitionStart={handleSlideChangeStart}>
+        <Swiper pagination={true} onSwiper={setSwiper} onSlideChangeTransitionStart={handleSlideChangeStart}>
+
+        <SwiperSlide>
+        <IonGrid>
+            <IonRow>
+              {/* <IonTitle color="primary"> */}
+              <h1 className="centered">
+              <br/>
+                <br/>
+              </h1>
+              {/* </IonTitle> */}
+            </IonRow>
+            <IonRow class="centered">
+            <img className="centered" src="https://visitcedarcity.com/wp-content/uploads/2021/07/Website-Logo-resized.png" alt=""/>
+            </IonRow>
+            <IonRow>
+              {/* <IonTitle color="primary"> */}
+              <h1 className="centered"><br/>
+                Let Wonder Be
+                <br/><br/>
+                Your Guide
+              </h1>
+              {/* </IonTitle> */}
+            </IonRow>
+            <IonRow>
+              {/* <IonTitle color="primary"> */}
+              <IonLabel className="centered">
+              <h3 className="centered"><br/>
+              <br/><br/>
+                <br/><br/>
+                Swipe to help us<br/> get to know you...
+                <br/><br/>
+              </h3>
+              <IonIcon icon={chevronForward} slot="icon-only" />
+              <IonIcon icon={chevronForward} slot="icon-only" />
+              <IonIcon icon={chevronForward} slot="icon-only" />
+              <IonIcon icon={chevronForward} slot="icon-only" />
+              </IonLabel>
+              {/* </IonTitle> */}
+            </IonRow>
+            </IonGrid>
+          </SwiperSlide>
+
+
           <SwiperSlide >
             {/*-- Segment with secondary color --*/}
             <IonGrid class="centered">
             <IonRow>
               {/* <IonTitle color="primary"> */}
-              <h1 className="centered">
+              <h1 className="centered"><br/>
                 Help Us Get to Know You
                 <br/>
               </h1>
@@ -205,58 +248,27 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
                 </IonSegmentButton>
               </IonSegment>
               </IonRow>
-
-
               <IonRow>
                 <h3 className="centered"><br/>
-                              How Do You Feel About Music?    
+                <br/>  
                   </h3>
 
-              </IonRow>
-              <IonRow>
-              <IonSegment value="hybrid"  onIonChange={e => console.log('Segment selected', e.detail.value)} color="warning">
-                <IonSegmentButton value="standard">
-                  <IonLabel>
-                     
-                    
-                    <IonIcon icon={thumbsDown} slot="icon-only" />
-                  </IonLabel>
-                
-                </IonSegmentButton>
-                <IonSegmentButton value="hybrid">
-                <IonLabel>
-                
-                  <IonIcon icon={thumbsUp} slot="icon-only" />
-                </IonLabel>
-                </IonSegmentButton>
-                <IonSegmentButton value="sat">
-                <IonLabel>
-                
-                  <IonIcon icon={heart} slot="icon-only" />
-                </IonLabel>
-                </IonSegmentButton>
-              </IonSegment>
               </IonRow>
             </IonGrid>
           </SwiperSlide>
 
           <SwiperSlide>
-            <img src="assets/img/ica-slidebox-img-2.png" alt="" className="slide-image" />
-
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src="assets/img/ica-slidebox-img-3.png" alt="" className="slide-image" />
-
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img src="assets/img/ica-slidebox-img-4.png" alt="" className="slide-image" />
-
-            <IonButton fill="clear" onClick={startApp}>
-              Continue
-              <IonIcon slot="end" icon={arrowForward} />
-            </IonButton>
+            <IonGrid>
+              <IonRow>
+              <img src="assets/img/ica-slidebox-img-4.png" alt="" className="slide-image" />
+              </IonRow>
+              <IonRow>
+              <IonButton fill="clear" class="centered" onClick={startApp}>
+                  Continue
+                  <IonIcon slot="end" icon={arrowForward} />
+              </IonButton>
+              </IonRow>
+            </IonGrid>
           </SwiperSlide>
         </Swiper>
       </IonContent>

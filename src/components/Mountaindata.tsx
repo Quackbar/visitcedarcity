@@ -1,21 +1,6 @@
 import React from "react";
 import {
-  IonHeader,
   IonCardHeader,
-  IonLabel,
-  IonItem,
-  IonCardContent,
-  IonAvatar,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-  IonPage,
-  IonButtons,
-  IonMenuButton,
-  IonGrid,
-  IonRow,
-  IonCol,
-  IonMenuToggle,
   IonCard,
 } from "@ionic/react";
 
@@ -47,20 +32,16 @@ const MountainData: React.FC<MountainProps> = ({
   } else {
     return (
       <>
-        <IonCard class="wintermountainbackground">
-          <IonCardHeader class="">
             <IonCard class="gray">
-              <h1 className="centered">Brian Head Winter Mountain Data</h1>
+              <h1 className="centered">Brian Head Winter<br/> Mountain Data</h1>
 
-              <h2>Base Snow Depth: {BaseDepth}</h2>
-              <h2>One Day Snowfall: {OneDaySnowfall}</h2>
-              <h2>Trails Open: {TrailsOpen}</h2>
-              <h2>Lifts Open: {LiftsOpen}</h2>
+              <h2>&emsp;Base Snow Depth: {BaseDepth}</h2>
+              <h2>&emsp;One Day Snowfall: {OneDaySnowfall}</h2>
+              <h2>&emsp;Trails Open: {TrailsOpen}</h2>
+              <h2>&emsp;Lifts Open: {LiftsOpen}</h2>
 
               {/* <h6>Last Updated: {CedarUpdate}</h6> */}
             </IonCard>
-          </IonCardHeader>
-        </IonCard>
       </>
     );
   }

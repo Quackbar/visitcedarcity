@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  IonSlides,
   IonChip,
-  IonSlide,
   IonIcon,
   IonLabel,
   IonSegment,
@@ -50,12 +48,13 @@ slideCategoriesData[slideCategories.shops] = [];
 slideCategoriesData[slideCategories.arts] = [];
 slideCategoriesData[slideCategories.drinks] = [];
 slideCategoriesData[slideCategories.camping] = [];
-slideCategoriesData[slideCategories.drives] = [];
+slideCategoriesData[slideCategories.drives] = [  
+  AttractionCategories.Experiences.subcategories.Drives,
+];
 slideCategoriesData[slideCategories.shows] = [];
 slideCategoriesData[slideCategories.fishing] = [];
 slideCategoriesData[slideCategories.lookouts] = [];
 slideCategoriesData[slideCategories.trails] = [
-  AttractionCategories.Experiences.subcategories.Outdoor,
   AttractionCategories.Experiences.subcategories.CedarCityWalks,
   AttractionCategories.Experiences.subcategories.Trails,
 ];

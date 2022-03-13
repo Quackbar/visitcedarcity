@@ -12,11 +12,11 @@
   background-size: cover;
 }
 .wintermountainbackground {
-  background-image: url("https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/268797227_4760445950668257_3695165358285338236_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=a26aad&_nc_ohc=5ezA1noX3R0AX_XMbO_&_nc_oc=AQnMQ9n3DpHjm8SnHjuIlt8ww_-gnaoxmRa0SybTugQpEdBncHwR3Qdm_EuEDHs2hEc&_nc_ht=scontent-lax3-2.xx&oh=00_AT88dUE5GcBA3eY8vhaf4B4YGwHJhxiqxuRUSL9Qhs2Mvw&oe=622B3499");
+  background-color: #c9dce4;
   background-size: cover;
 }
 .gray {
-  background-color: #ffffffc9;
+  background-color: #ffffffd8;
   padding: 10px;
 }
 .right {
@@ -25,6 +25,16 @@
 .ninety {
   width: 89vw;
   float: left;
+}
+
+.weatherhead{
+  font-size: larger;
+  color: #000000;
+}
+
+.weatherheadbig{
+  font-size: xx-large;
+  color: #000000;
 }
 
 .ten {
@@ -64,3 +74,4 @@ ion-chip {
 #categorySlideSegment ion-segment-button {
     max-width: fit-content;
 }
+

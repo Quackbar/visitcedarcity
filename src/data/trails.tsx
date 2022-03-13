@@ -296,7 +296,7 @@ export const TrailItems = [
             "https://www.visitbrianhead.org/file/image/m/300/200/d8c9c3fe-29ee-4e2e-b2d1-6817027910d3",
         categories: [
         AttractionCategories.Experiences.subcategories.Outdoor,
-        AttractionCategories.Experiences.subcategories.CedarCityWalks,
+        AttractionCategories.Experiences.subcategories.Drives,
         AttractionCategories.Experiences.subcategories.Trails,
         ],
     },
@@ -309,7 +309,7 @@ export const TrailItems = [
             "https://www.visitbrianhead.org/file/image/m/300/168/6eb1b0de-9e5f-4207-89ef-0a18e6ac45df",
         categories: [
         AttractionCategories.Experiences.subcategories.Outdoor,
-        AttractionCategories.Experiences.subcategories.CedarCityWalks,
+        AttractionCategories.Experiences.subcategories.Drives,
         AttractionCategories.Experiences.subcategories.Trails,
         ],
     },
@@ -348,7 +348,7 @@ export const TrailItems = [
             "https://www.visitbrianhead.org/file/image/m/300/120/410743a0-1a98-4df5-97ee-27ecd1aaf2f1",
         categories: [
         AttractionCategories.Experiences.subcategories.Outdoor,
-        AttractionCategories.Experiences.subcategories.CedarCityWalks,
+        AttractionCategories.Experiences.subcategories.Drives,
         AttractionCategories.Experiences.subcategories.Trails,
         ],
     },
