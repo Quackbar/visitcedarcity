@@ -20,6 +20,7 @@ import {
   carSport,
   fish,
   close,
+  sunny,
 } from "ionicons/icons";
 import { updateSelectedAttractionFilters } from "../data/actions";
 import { connect } from "../data/connect";
@@ -29,6 +30,7 @@ enum slideCategories {
   food = "food",
   parks = "parks",
   lodging = "lodging",
+  familyfun = "familyfun",
   shops = "shops",
   arts = "arts",
   drinks = "drinks",
@@ -41,19 +43,52 @@ enum slideCategories {
 }
 
 const slideCategoriesData: { [id: string]: AllCategories[] } = {};
-slideCategoriesData[slideCategories.food] = [];
-slideCategoriesData[slideCategories.parks] = [];
-slideCategoriesData[slideCategories.lodging] = [];
+slideCategoriesData[slideCategories.food] = [
+  AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+  AttractionCategories.FoodAndDrink.subcategories.Specialty,
+  AttractionCategories.FoodAndDrink.subcategories.Mexican,
+
+];
+
+slideCategoriesData[slideCategories.parks] = [
+  AttractionCategories.Experiences.subcategories.NationalParks,
+
+];
+slideCategoriesData[slideCategories.lodging] = [
+  AttractionCategories.Lodging.subcategories.Lodge,
+  AttractionCategories.Lodging.subcategories.HotelMotel,
+  AttractionCategories.Lodging.subcategories.BedAndBreakfast,
+  AttractionCategories.Lodging.subcategories.Resort,
+
+
+];
+slideCategoriesData[slideCategories.familyfun] = [
+  AttractionCategories.Experiences.subcategories.FamilyFun,
+  AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
+
+];
 slideCategoriesData[slideCategories.shops] = [];
-slideCategoriesData[slideCategories.arts] = [];
-slideCategoriesData[slideCategories.drinks] = [];
+slideCategoriesData[slideCategories.arts] = [
+  AttractionCategories.Experiences.subcategories.CedarCityArts,
+
+];
+slideCategoriesData[slideCategories.drinks] = [
+  AttractionCategories.FoodAndDrink.subcategories.Alcohol,
+  AttractionCategories.FoodAndDrink.subcategories.Coffee,
+];
 slideCategoriesData[slideCategories.camping] = [];
 slideCategoriesData[slideCategories.drives] = [  
   AttractionCategories.Experiences.subcategories.Drives,
 ];
 slideCategoriesData[slideCategories.shows] = [];
-slideCategoriesData[slideCategories.fishing] = [];
-slideCategoriesData[slideCategories.lookouts] = [];
+slideCategoriesData[slideCategories.fishing] = [
+  AttractionCategories.Experiences.subcategories.Fishing,
+
+];
+slideCategoriesData[slideCategories.lookouts] = [
+  AttractionCategories.Experiences.subcategories.DarkSkies,
+
+];
 slideCategoriesData[slideCategories.trails] = [
   AttractionCategories.Experiences.subcategories.CedarCityWalks,
   AttractionCategories.Experiences.subcategories.Trails,
@@ -67,6 +102,8 @@ slideCategoriesLabel[slideCategories.parks] = {
   icon: shield,
 };
 slideCategoriesLabel[slideCategories.lodging] = { name: "Lodging", icon: bed };
+slideCategoriesLabel[slideCategories.familyfun] = { name: "Family\xa0Fun", icon: sunny };
+
 slideCategoriesLabel[slideCategories.shops] = {
   name: "Shops",
   icon: storefront,

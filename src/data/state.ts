@@ -3,7 +3,7 @@ import {
   AttractionItem,
   SubscriptionItem,
 } from "../models/defaultModels";
-import {TrailItems} from './trails'
+import {OutdoorItems, CityItems} from './attractions'
 
 export type AppState = {
   attractionItems: AttractionItem[];
@@ -12,9 +12,21 @@ export type AppState = {
   subscriptionItems: SubscriptionItem[];
 };
 
+function shuffle(array: Array<any>) {
+  let currentIndex = array.length,  randomIndex;
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+const allAttractionItems = OutdoorItems.concat(shuffle(CityItems))
+
 export const initialState: AppState = {
   // needs to be replaced with real data
-  attractionItems: TrailItems,
+  attractionItems: shuffle(allAttractionItems),
   allAttractionFilters: Object.values(AllCategories),
   selectedAttractionFilters: Object.values(AllCategories),
   subscriptionItems: [

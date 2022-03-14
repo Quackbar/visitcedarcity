@@ -67,7 +67,7 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg,
                 <IonGrid fixed>
                     <IonRow>
                     
-                        <IonCol size="6" size-md="1" class="centered">
+                        <IonCol size="6" size-md="6" class="centered">
                         <IonCard class="gray">
                         <h1 className="weatherhead">Parowan</h1>
 
@@ -77,7 +77,7 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg,
                         </IonCol>
                         
                         
-                        <IonCol size="6" size-md="1" class="centered">
+                        <IonCol size="6" size-md="6" class="centered">
                         <IonCard class="gray">
                         <h1 className="weatherhead">Brian Head</h1>
 

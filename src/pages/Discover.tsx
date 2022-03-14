@@ -34,8 +34,11 @@ const Discover: React.FC = () => {
 
   const refreshDiscover = () => {
     // TODO: refresh data
+    window.location.reload();
+
     refresherRef.current!.complete();
   };
+
 
   const searchDiscover = (text?: string) => {
     // TODO: search data

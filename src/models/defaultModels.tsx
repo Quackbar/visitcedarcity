@@ -50,6 +50,7 @@ export enum AllCategories {
   Biking = "biking",
   Trails = "trails",
   Drives = "drives",
+  Fishing = "fishing",
   USA = "usa",
 }
 
@@ -115,6 +116,8 @@ const Experiences = {
   Biking: AllCategories.Biking,
   Trails: AllCategories.Trails,
   Drives: AllCategories.Drives,
+  Fishing: AllCategories.Fishing,
+
 };
 
 export const AttractionCategories = {
@@ -151,6 +154,7 @@ export interface AttractionItem {
   subtitle: string;
   description: string;
   image: string;
+  url: string;
   categories?: AllCategories[];
   location?: AttractionLocations;
 }

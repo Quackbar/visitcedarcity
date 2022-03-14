@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonContent, IonPage, IonHeader, IonToolbar, IonButtons, IonButton, IonIcon, IonLabel, IonSegment, IonSegmentButton, IonGrid, IonRow } from '@ionic/react';
+import { IonContent, IonPage, IonHeader, IonToolbar, IonButtons, IonButton, IonIcon, IonLabel, IonSegment, IonSegmentButton, IonGrid, IonRow, IonCard } from '@ionic/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper';
 import { arrowForward, chevronForward, heart, thumbsDown, thumbsUp } from 'ionicons/icons';
@@ -37,18 +37,13 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
 
   return (
     <IonPage id="tutorial-page">
-      <IonHeader no-border>
-        <IonToolbar>
-          <IonButtons slot="end">
-            {showSkip && <IonButton color='primary' onClick={startApp}>Skip</IonButton>}
-          </IonButtons>
-        </IonToolbar>
-      </IonHeader>
+
       <IonContent fullscreen>
 
         <Swiper pagination={true} onSwiper={setSwiper} onSlideChangeTransitionStart={handleSlideChangeStart}>
 
         <SwiperSlide>
+          <IonCard class="yellow">
         <IonGrid>
             <IonRow>
               {/* <IonTitle color="primary"> */}
@@ -56,16 +51,16 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
               <br/>
                 <br/>
               </h1>
+
+              <img className="centered" src="assets/img/cover.png" alt=""/>
               {/* </IonTitle> */}
             </IonRow>
-            <IonRow class="centered">
-            <img className="centered" src="https://visitcedarcity.com/wp-content/uploads/2021/07/Website-Logo-resized.png" alt=""/>
-            </IonRow>
+
             <IonRow>
               {/* <IonTitle color="primary"> */}
-              <h1 className="centered"><br/>
+              <h1 className="centered"><br/><br/><br/>
                 Let Wonder Be
-                <br/><br/>
+                <br/>
                 Your Guide
               </h1>
               {/* </IonTitle> */}
@@ -75,7 +70,6 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
               <IonLabel className="centered">
               <h3 className="centered"><br/>
               <br/><br/>
-                <br/><br/>
                 Swipe to help us<br/> get to know you...
                 <br/><br/>
               </h3>
@@ -87,10 +81,13 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
               {/* </IonTitle> */}
             </IonRow>
             </IonGrid>
+            </IonCard>
           </SwiperSlide>
 
 
           <SwiperSlide >
+          <IonCard class="yellow">
+
             {/*-- Segment with secondary color --*/}
             <IonGrid class="centered">
             <IonRow>
@@ -248,16 +245,15 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
                 </IonSegmentButton>
               </IonSegment>
               </IonRow>
-              <IonRow>
-                <h3 className="centered"><br/>
-                <br/>  
-                  </h3>
-
-              </IonRow>
             </IonGrid>
+            <h1><br/></h1>
+
+            </IonCard>
           </SwiperSlide>
 
           <SwiperSlide>
+          <IonCard class="yellow">
+
             <IonGrid>
               <IonRow>
               <img src="assets/img/ica-slidebox-img-4.png" alt="" className="slide-image" />
@@ -269,6 +265,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
               </IonButton>
               </IonRow>
             </IonGrid>
+            </IonCard>
           </SwiperSlide>
         </Swiper>
       </IonContent>
