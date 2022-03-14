@@ -112,16 +112,16 @@ const Account: React.FC<AccountProps> = ({
         </IonToolbar>
       </IonHeader> */}
       <IonContent>
-      <IonTitle class="centered"><br/>Event Spread</IonTitle>
+      <h1 className="centered"><br/>Event Spread</h1>
         <BarChart
           propOptions={chartOptions}
           propData={chartData}
           propHeight={300}
         />
-        <IonTitle>
+        <h1>
           <br/>
-          Subscriptions
-        </IonTitle>
+          &nbsp;Subscriptions
+        </h1>
         {Object.values(allSubscriptions).map((subscription, index) => 
         
         {

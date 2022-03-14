@@ -22,7 +22,7 @@ ChartJS.register(
 );
 
 export const options = {
-  responsive: true,
+  responsive: false,
   plugins: {
     legend: {
       position: "bottom" as const,
@@ -84,6 +84,6 @@ const SnowPack: React.FC<WeatherProps> = ({ theDates,
 
     // return <Chart type='bar' data={data} />;
 
-  return <Line options={options} data={data} />;
+  return <Line options={options} data={data} height="400" className="centered"/>;
 }
 export default SnowPack;

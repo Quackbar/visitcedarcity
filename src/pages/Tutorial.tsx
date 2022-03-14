@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonContent, IonPage, IonHeader, IonToolbar, IonButtons, IonButton, IonIcon, IonLabel, IonSegment, IonSegmentButton, IonGrid, IonRow, IonCard } from '@ionic/react';
+import { IonContent, IonPage, IonHeader, IonToolbar, IonButtons, IonButton, IonIcon, IonLabel, IonSegment, IonSegmentButton, IonGrid, IonRow, IonCard, IonTitle, IonCol, IonText } from '@ionic/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper';
 import { arrowForward, chevronForward, heart, thumbsDown, thumbsUp } from 'ionicons/icons';
@@ -86,7 +86,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
 
 
           <SwiperSlide >
-          <IonCard class="yellow">
+          <IonCard class="gray">
 
             {/*-- Segment with secondary color --*/}
             <IonGrid class="centered">
@@ -252,15 +252,69 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
           </SwiperSlide>
 
           <SwiperSlide>
-          <IonCard class="yellow">
+          <IonCard class="gray">
 
             <IonGrid>
-              <IonRow>
-              <img src="assets/img/ica-slidebox-img-4.png" alt="" className="slide-image" />
+            <IonRow  class="centered">
+              {/* <IonTitle> */}
+                <h1 className="centered">
+                  What Our App Can<br/> Do For You
+                </h1>
+              {/* </IonTitle> */}
+
+              </IonRow>
+              <IonRow class="centered">
+                <IonCol>
+              <img src="assets/img/home.png" alt="" className="half-image" />
+              </IonCol>
+              <IonCol>
+              <img src="assets/img/discover.png" alt="" className="half-image" />
+              </IonCol>
               </IonRow>
               <IonRow>
+              <IonCol>
+              <IonText>
+                <p>
+                  Get informed and prepared for the day to come at a glance with our customizable home screen.
+                </p>
+              </IonText>
+              </IonCol>
+              <IonCol>
+              <IonText>
+                <p>
+                  Find your new favorite spots with our discover page.
+                </p>
+              </IonText>
+              </IonCol>
+              </IonRow>
+              <IonRow>
+              <IonCol>
+              <img src="assets/img/map.png" alt="" className="half-image" />
+              </IonCol>
+              <IonCol>
+              <img src="assets/img/account.png" alt="" className="half-image" />
+              </IonCol>
+              </IonRow>
+              <IonRow>
+              <IonCol>
+              <IonText>
+                <p>
+                  Scout out the terrain before it hasa chance to suprise you.
+                </p>
+                </IonText>
+              </IonCol>
+              <IonCol>
+              <IonText>
+                <p>
+                  See when the events you love are in season and plan your trip knowing you'll have a good time.
+                </p>
+              </IonText>
+              </IonCol>
+              </IonRow>
+
+              <IonRow>
               <IonButton fill="clear" class="centered" onClick={startApp}>
-                  Continue
+                  Get Started
                   <IonIcon slot="end" icon={arrowForward} />
               </IonButton>
               </IonRow>

@@ -202,12 +202,12 @@ const Home: React.FC = () => {
                             TrailsOpen={MDTrailsOpen || String(localStorage.getItem("MDTrailsOpen"))}/>
 
             <IonCard  class="gray">
-                <IonTitle class="centered">
+                <h1 className="centered">
                 <br/>
-
+                    
                     Brian Head Snowpack
                     <br/>
-                </IonTitle>
+                </h1>
                 <SnowPack  theDates={JSON.parse(String(localStorage.getItem("dates")))} 
                            baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))}
                            oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))} 
