@@ -82,7 +82,7 @@ export async function getSnowData() : Promise<SnowOutput> {
     })
 
     const sortedActivities = orderer.sort((a, b) => b.date - a.date).reverse()
-    console.log(sortedActivities)
+    // console.log(sortedActivities)
 
 
     sortedActivities.forEach((piece) => {
@@ -96,7 +96,7 @@ export async function getSnowData() : Promise<SnowOutput> {
     localStorage.setItem('dates', JSON.stringify(dates))
     localStorage.setItem('temps', JSON.stringify(temps))
     
-    console.log(localStorage.getItem('baseDepth'))
+    // console.log(localStorage.getItem('baseDepth'))
     let rObject: SnowOutput = {
       Date: dates,
       oneDaySnowfall: oneDaySnowfall,

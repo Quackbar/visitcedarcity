@@ -4,6 +4,7 @@ import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
 import ScheduleComp from '../components/Schedule'
 import SnowPack from "../components/SnowPack"
+import SkyData from "../components/SkyData"
 
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
@@ -14,6 +15,11 @@ import { RefresherEventDetail } from '@ionic/core';
 import React, { useState } from 'react';
 import {USFSchedule} from '../assets/data/USF'
 import { format, parseISO } from 'date-fns';
+
+// import { Moon } from "lunarphase-js";
+
+
+
 
 
 let CedarImg = "";
@@ -58,7 +64,7 @@ type MountainDataType = {
 
 
 getMountainData().then((data) => {
-    console.log('mountainData', data);
+    // console.log('mountainData', data);
     var x: MountainDataType = data
     MDBaseDepth = x.baseDepth ?? 'unknown'
     MDOneDay = x.onedaySnowfall ?? 'unknown'
@@ -71,16 +77,16 @@ getMountainData().then((data) => {
 });
 
 getBrianHeadWeather().then((data) => {
-    console.log('brian head', data);
+    // console.log('brian head', data);
     var x: MyReturnTypeItem = data
     BrianImg = x.conditions ?? 'unknown'
     BrianTemp = x.temp ?? 'unknown'
     localStorage.setItem("BrianImg", x.conditions ?? 'unknown');
     localStorage.setItem("BrianTemp", x.temp ?? 'unknown');
-    console.log('brian head', x.Date?.toDate().toLocaleDateString("en-US") );
+    // console.log('brian head', x.Date?.toDate().toLocaleDateString("en-US") );
 });
 getCedarWeather().then((data) => {
-    console.log('cedar',data);
+    // console.log('cedar',data);
     var x: MyReturnTypeItem = data
     CedarImg = x.conditions ?? 'unknown'
     CedarTemp = x.temp ?? 'unknown'
@@ -89,7 +95,7 @@ getCedarWeather().then((data) => {
 
 });
 getParoWeather().then((data) => {
-    console.log('paro',data);
+    // console.log('paro',data);
     var x: MyReturnTypeItem = data
     ParoImg = x.conditions ?? 'unknown'
     ParoTemp = x.temp ?? 'unknown'
@@ -107,7 +113,7 @@ getParoWeather().then((data) => {
    }
 
 function doRefresh(event: CustomEvent<RefresherEventDetail>) {
-    console.log('Begin async operation');
+    // console.log('Begin async operation');
     window.location.reload();
   }
 
@@ -126,9 +132,9 @@ const Home: React.FC = () => {
         var formattedDate =  "2022-08-08"
         if(item.date === formattedDate){
             item.groups.map(group => {
-                console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-                console.log(group.sessions[0])
-                console.log(group.sessions[0].name)
+                // console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
+                // console.log(group.sessions[0])
+                // console.log(group.sessions[0].name)
                 things.push(group.sessions[0] as todaystype);
             })
         }
@@ -212,6 +218,9 @@ const Home: React.FC = () => {
                            baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))}
                            oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))} 
                            temps={JSON.parse(String(localStorage.getItem("temps")))}/>
+            </IonCard>
+            <IonCard>
+                <SkyData/>
             </IonCard>
                 
 

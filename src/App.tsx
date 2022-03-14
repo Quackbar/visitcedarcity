@@ -63,7 +63,7 @@ type MyReturnTypeItem = {
   }
 
 getBrianHeadWeather().then((data) => {
-    console.log('brian head', data);
+    // console.log('brian head', data);
     var x: MyReturnTypeItem = data
     BrianImg = x.conditions ?? 'unknown'
     BrianTemp = x.temp ?? 'unknown'
@@ -72,7 +72,7 @@ getBrianHeadWeather().then((data) => {
     
 });
 getCedarWeather().then((data) => {
-    console.log('cedar',data);
+    // console.log('cedar',data);
     var x: MyReturnTypeItem = data
     CedarImg = x.conditions ?? 'unknown'
     CedarTemp = x.temp ?? 'unknown'
@@ -81,7 +81,7 @@ getCedarWeather().then((data) => {
 
 });
 getParoWeather().then((data) => {
-    console.log('paro',data);
+    // console.log('paro',data);
     var x: MyReturnTypeItem = data
     ParoImg = x.conditions ?? 'unknown'
     ParoTemp = x.temp ?? 'unknown'

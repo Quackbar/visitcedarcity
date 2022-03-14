@@ -6,6 +6,7 @@ import {
   IonText,
   IonTitle,
   IonIcon,
+  IonButton,
 } from "@ionic/react";
 import { useEffect, useState } from "react";
 
@@ -120,7 +121,7 @@ const Account: React.FC<AccountProps> = ({
         />
         <h1>
           <br/>
-          &nbsp;Subscriptions
+          &emsp;Subscriptions
         </h1>
         {Object.values(allSubscriptions).map((subscription, index) => 
         
@@ -145,6 +146,29 @@ const Account: React.FC<AccountProps> = ({
           <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
           </>
         )})}
+        <h1>
+        &emsp;&emsp;Account Settings
+        </h1>
+        <IonItem>
+          <IonButton>
+            Sign In
+          </IonButton>
+        </IonItem>
+        <IonItem>
+          <IonButton>
+            Create Account
+          </IonButton>
+        </IonItem>
+        <IonItem>
+          <IonButton>
+            See Tutorial
+          </IonButton>
+        </IonItem>
+        <IonItem>
+          <IonButton>
+            Get Help
+          </IonButton>
+        </IonItem>
       </IonContent>
     </IonPage>
   );
