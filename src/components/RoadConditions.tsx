@@ -6,7 +6,6 @@ import {
   IonCol,
 } from "@ionic/react";
 
-import "../assets/scss/app.scss";
 
 
 

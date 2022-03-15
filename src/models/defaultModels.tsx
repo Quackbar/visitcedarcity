@@ -52,6 +52,8 @@ export enum AllCategories {
   Drives = "drives",
   Fishing = "fishing",
   USA = "usa",
+  Shows = "shows",
+  Shop = "shop",
 }
 
 const FoodAndDrink = {
@@ -117,7 +119,8 @@ const Experiences = {
   Trails: AllCategories.Trails,
   Drives: AllCategories.Drives,
   Fishing: AllCategories.Fishing,
-
+  Shows: AllCategories.Shows,
+  Shop: AllCategories.Shop,
 };
 
 export const AttractionCategories = {

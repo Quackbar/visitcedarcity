@@ -67,7 +67,10 @@ slideCategoriesData[slideCategories.familyfun] = [
   AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
 
 ];
-slideCategoriesData[slideCategories.shops] = [];
+slideCategoriesData[slideCategories.shops] = [
+  AttractionCategories.Experiences.subcategories.Shop,
+
+];
 slideCategoriesData[slideCategories.arts] = [
   AttractionCategories.Experiences.subcategories.CedarCityArts,
 
@@ -88,7 +91,9 @@ slideCategoriesData[slideCategories.camping] = [
 slideCategoriesData[slideCategories.drives] = [  
   AttractionCategories.Experiences.subcategories.Drives,
 ];
-slideCategoriesData[slideCategories.shows] = [];
+slideCategoriesData[slideCategories.shows] = [
+  AttractionCategories.Experiences.subcategories.Shows,
+];
 slideCategoriesData[slideCategories.fishing] = [
   AttractionCategories.Experiences.subcategories.Fishing,
 

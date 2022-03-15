@@ -534,7 +534,7 @@ url: "https://www.centropizzeria.com/",
 url: "https://policykingsbrewery.com/",
         description: "One pint at a time, we are waking up the pallets of our Community through creative & innovative sessionable style beers. From our signature tea beers, to our classic Westcoast IPAs, our main goal is to always deliver a crushable beer.",
         image:
-            "https://lh5.googleusercontent.com/p/AF1QipOp_n-CjtzuDDSGS77PPCPuwEDqvwL1DWaGpAWv=w203-h152-k-no",
+            "https://policykingsbrewery.com/wp-content/uploads/2021/01/24556.jpeg",
         categories: [
             AttractionCategories.FoodAndDrink.subcategories.Alcohol,
         ],
@@ -547,7 +547,7 @@ url: "https://policykingsbrewery.com/",
 url: "https://calvarios-family-restaurant.business.site/",
         description: "Family owned and ran business, we specialize in Mexican American cuisine. If it's not on the menu and we can make it we will. Here you are family!",
         image:
-            "https://lh3.googleusercontent.com/p/AF1QipNFOhtwlOGPUv9If7dBkMxqHi6f-GsptHJs067x=w1080-h608-p-no-v0",
+            "https://lh5.googleusercontent.com/p/AF1QipNFOhtwlOGPUv9If7dBkMxqHi6f-GsptHJs067x=s798-k-no",
         categories: [
             AttractionCategories.FoodAndDrink.subcategories.Mexican,
             AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
@@ -663,6 +663,84 @@ url: "https://www.drylakesranchbeef.com/",
 
             AttractionCategories.FoodAndDrink.subcategories.Specialty,
 
+
+        ],
+    },
+    {
+        id: 13,
+        title: "Megaplex Theatre Cedar City",
+        subtitle: "Cedar City Movie Theatre",
+url: "https://www.megaplextheatres.com/cedarcity",
+        description: "Visit Megaplex's Cedar City theatre in Cedar City, UT 84720. Check out new films, movie trailers, showtimes, and buy movie tickets for your ultimate cinema experience.",
+        image:
+            "https://media.megaplextheatres.com/theatres/cedarcity/header-mobile.jpg",
+        categories: [
+
+            AttractionCategories.Experiences.subcategories.Shows,
+
+
+        ],
+    },
+    {
+        id: 14,
+        title: "Grind Coffee House",
+        subtitle: "Cedar City Coffee House",
+url: "https://grindcoffeehouse.business.site/",
+        description: "The Grind Coffeehouse Cafe is a family owned coffeehouse in scenic Southern Utah. We sell Caffe Ibis coffee and delicious breakfast and lunch items. We have recently introduced more Gluten Free and Vegan/Vegetarian options, to better accommodate everyone's needs! Located in Historic Downtown Cedar City, Utah, we are surrounded by Utah's beautiful National Parks. Come check us out!",
+        image:
+            "https://lh3.googleusercontent.com/-Xt2ZvykFyH0/X-PNAoaIIMI/AAAAAAAAA84/Zk-E5NecNAUkPjLm91h_sGoF1MLhrfuKQCJUFGAYYCw/w768-h768-n-o-k-v1/",
+        categories: [
+
+            AttractionCategories.FoodAndDrink.subcategories.Coffee,
+            AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+
+
+
+        ],
+    },
+    {
+        id: 15,
+        title: "Utah Shakespeare Festival",
+        subtitle: "Cedar City Theatre Festival",
+url: "https://www.bard.org/",
+        description: "Tony Award-winning theater at the Utah Shakespeare Festival in Cedar City, Utah.",
+        image:
+            "https://www.bard.org/assets/images/Engelstad_StarryNight.jpg",
+        categories: [
+
+            AttractionCategories.Experiences.subcategories.Shows,
+            AttractionCategories.Experiences.subcategories.FamilyFun,
+            AttractionCategories.Experiences.subcategories.FestivalCity,
+
+
+
+        ],
+    },
+    {
+        id: 16,
+        title: "Main Street Books Cedar City",
+        subtitle: "Cedar City Book Shop",
+url: "https://www.facebook.com/mainstreetbookscedarcity/",
+        description: "Cedar City's only independent bookstore. We carry new, used, and collectible. Exchange books for store credit and take home a new adventure!",
+        image:
+            "https://lh5.googleusercontent.com/p/AF1QipMLfnQf2LJQ_O0wWEpeq1koxBRMgk8Yl1Cdb9qd=s686-k-no",
+        categories: [
+
+            AttractionCategories.Experiences.subcategories.Shop,
+
+        ],
+    },
+    {
+        id: 17,
+        title: "The Navajo Crafting Co.",
+        subtitle: "Cedar City Shop",
+url: "https://www.navajocraftingco.com/",
+        description: "Carrying on tradition with authentic + hand-crafted Navajo jewelry",
+        image:
+            "https://www.navajocraftingco.com/uploads/b/89153bea32d5164d8f26027c80d1047874b99cb71021deb18d1b56438dc2aee6/2020-11-18_20-51-02_1605757880.jpg?width=400",
+        categories: [
+
+            AttractionCategories.Experiences.subcategories.Shop,
 
         ],
     },

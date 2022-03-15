@@ -137,6 +137,7 @@ export async function getRoadConditions() {
           localStorage.setItem('NevadaText', docSnap.data().NevadaText)
           localStorage.setItem('ParowanText', docSnap.data().ParowanText)
           console.log(docSnap.data().BrianText.split("<td>")[1].slice(0,-5))
+          resolve(true);
         }
       })
       .catch((error) => {
