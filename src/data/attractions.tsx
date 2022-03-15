@@ -468,6 +468,20 @@ url: "https://www.visitbrianhead.org/Attractions",
             AttractionCategories.Experiences.subcategories.Fishing,
         ],
     },
+    {
+        id: 31,
+        title: "Point Supreme Campground",
+        subtitle: "National Parks and Monuments",
+url: "https://www.nps.gov/cebr/planyourvisit/psc.htm",
+        description: "Point Supreme Campground is surrounded by meadows of wildflowers in the summer! At 10,000 feet elevation, it is a comfortable place to camp during the hotter summer months. The Point Supreme Campground has 25 campsites and accommodates both tents and RVs. Camping is available from mid-June to mid-September. Note that the campground opening and closing dates may be vary & are subject to favorable weather.",
+        image:
+            "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/IMG_2811_DAF3FBE9-5056-A36F-230F3FDD8CB0BEB3-daf3f91a5056a36_daf3fc45-5056-a36f-230323817e9fcb42.jpg",
+        categories: [
+            AttractionCategories.Lodging.subcategories.Campground,
+            AttractionCategories.Lodging.subcategories.Tenting,
+
+        ],
+    },
 ]
 
 export const CityItems = [

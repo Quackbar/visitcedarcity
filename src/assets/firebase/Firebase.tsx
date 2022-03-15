@@ -31,6 +31,8 @@ const brianDoc = doc(f_db, "BrianHeadWeatherDayData", "current");
 const paroDoc = doc(f_db, "ParowanWeatherDayData", "current");
 const cedarDoc = doc(f_db, "CedarCityWeatherDayData", "current");
 const mountainDoc = doc(f_db, "mountainData", "current");
+const RoadConDoc = doc(f_db, "RoadConditions", "current");
+
 const mountainRef = collection(f_db, "mountainData");
 
 const q = query(collection(f_db, "mountainData"))
@@ -120,6 +122,28 @@ export async function getMountainData() : Promise<MountainDataType> {
       });
   });
 }
+
+export async function getRoadConditions() {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(RoadConDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        // resolve(docSnap.data() as MountainDataType);
+
+        if (docSnap.exists()) {
+          localStorage.setItem('BrianText', docSnap.data().BrianText)
+          localStorage.setItem('CedarText', docSnap.data().CedarText)
+          localStorage.setItem('LongValText', docSnap.data().LongValText)
+          localStorage.setItem('NevadaText', docSnap.data().NevadaText)
+          localStorage.setItem('ParowanText', docSnap.data().ParowanText)
+          console.log(docSnap.data().BrianText.split("<td>")[1].slice(0,-5))
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}getRoadConditions()
 
 export async function getBrianHeadWeather() : Promise<MyReturnTypeItem> {
   return new Promise(async (resolve, reject) => {

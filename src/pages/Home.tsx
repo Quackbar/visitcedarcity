@@ -5,6 +5,7 @@ import MountainData from '../components/Mountaindata';
 import ScheduleComp from '../components/Schedule'
 import SnowPack from "../components/SnowPack"
 import SkyData from "../components/SkyData"
+import RoadConditions from "../components/RoadConditions"
 
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
@@ -201,7 +202,10 @@ const Home: React.FC = () => {
                 {checkSched(things)}
                 
             </IonCard>
-
+            <IonCard>
+                <SkyData/>
+            </IonCard>
+            <RoadConditions/>
             <MountainData  BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
                             OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
                             LiftsOpen={MDLiftsOpen || String(localStorage.getItem("MDLiftsOpen"))}
@@ -219,9 +223,7 @@ const Home: React.FC = () => {
                            oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))} 
                            temps={JSON.parse(String(localStorage.getItem("temps")))}/>
             </IonCard>
-            <IonCard>
-                <SkyData/>
-            </IonCard>
+
                 
 
             </IonContent>

@@ -6,7 +6,7 @@ import { getSunrise, getSunset } from 'sunrise-sunset-js';
 import {Simple} from '@lab-code/moonphase';
 
 const today = new Date();
-console.log(today.toLocaleDateString());
+// console.log(today.toLocaleDateString());
 const sepDate = today.toLocaleDateString().split("/")
 
 
@@ -29,9 +29,9 @@ function getMoon(){
     }
 }
 
-console.log(getMoon());
-console.log(sunrise)
-console.log(sunset)
+// console.log(getMoon());
+// console.log(sunrise)
+// console.log(sunset)
 
 const SkyData: React.FC = () => {
 

@@ -76,7 +76,15 @@ slideCategoriesData[slideCategories.drinks] = [
   AttractionCategories.FoodAndDrink.subcategories.Alcohol,
   AttractionCategories.FoodAndDrink.subcategories.Coffee,
 ];
-slideCategoriesData[slideCategories.camping] = [];
+slideCategoriesData[slideCategories.camping] = [
+  AttractionCategories.Lodging.subcategories.Campground,
+  AttractionCategories.Lodging.subcategories.Tenting,
+  AttractionCategories.Lodging.subcategories.RVSite,
+  AttractionCategories.Lodging.subcategories.Cabin,
+  AttractionCategories.Lodging.subcategories.Cabinettes,
+
+
+];
 slideCategoriesData[slideCategories.drives] = [  
   AttractionCategories.Experiences.subcategories.Drives,
 ];
