@@ -160,7 +160,7 @@ const Account: React.FC<AccountProps> = ({
           </IonButton>
         </IonItem>
         <IonItem>
-          <IonButton>
+          <IonButton href="/tutorial">
             See Tutorial
           </IonButton>
         </IonItem>

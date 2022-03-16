@@ -1,4 +1,4 @@
-import { IonModal,IonDatetime,IonRefresher, IonRefresherContent, IonLabel,IonCard, IonContent, IonItem, IonPage, IonTitle, IonPopover, IonText } from "@ionic/react";
+import { IonModal,IonDatetime,IonRefresher, IonRefresherContent, IonLabel,IonCard, IonContent, IonItem, IonPage, IonTitle, IonPopover, IonText, IonButton } from "@ionic/react";
 
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
@@ -13,9 +13,10 @@ import { Timestamp } from "@firebase/firestore";
 import { RefresherEventDetail } from '@ionic/core';
 
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {USFSchedule} from '../assets/data/USF'
 import { format, parseISO } from 'date-fns';
+import { Browser } from "@capacitor/browser";
 
 // import { Moon } from "lunarphase-js";
 
@@ -105,7 +106,9 @@ getParoWeather().then((data) => {
 
 });
 
-
+const openSite = async () => {
+    await Browser.open({ url: "https://visitcedarcity.com/events/" });
+  };
 
    function checkSched(things: todaystype[]){
         if(things.length === 0){
@@ -123,7 +126,10 @@ const Home: React.FC = () => {
         return format(parseISO(value), 'MMM dd yyyy');
     };
 
+    const pageRef = useRef<HTMLElement>(null);
 
+    const [showFilterModal, setShowFilterModal] = useState(false);
+    
     const today = new Date();
     const [popoverDate, setPopoverDate] = useState(today.toDateString());
     let things: todaystype[] = []
@@ -166,7 +172,7 @@ const Home: React.FC = () => {
                     <IonCard>
                         {/* <Snowpack/> */}
                     </IonCard>
-            <IonCard class="gray">
+            <IonCard class="gray basiccentered">
                     <IonTitle class="centered">
                         <br/>
                         Your Daily Schedule
@@ -200,6 +206,10 @@ const Home: React.FC = () => {
                         })
                 }
                 {checkSched(things)}
+                <IonButton onClick={openSite}>
+                    See Extended Events Calendar
+                </IonButton>
+
                 
             </IonCard>
             <IonCard>
@@ -223,10 +233,24 @@ const Home: React.FC = () => {
                            oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))} 
                            temps={JSON.parse(String(localStorage.getItem("temps")))}/>
             </IonCard>
+            <IonCard class="basiccentered">
+            <IonButton onClick={() => setShowFilterModal(true)}>
+                Customize
+            </IonButton>
+            </IonCard>
 
                 
 
             </IonContent>
+
+
+            <IonModal
+                isOpen={showFilterModal}
+                onDidDismiss={() => setShowFilterModal(false)}
+                swipeToClose={true}
+                presentingElement={pageRef.current!}
+            >
+            </IonModal>
             </IonPage>
         );
 
