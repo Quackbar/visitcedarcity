@@ -44,9 +44,7 @@ const DiscoverListFilter: React.FC<DiscoverListFilterProps> = ({
 
   const toggleAttractionFilter = (filter: AllCategories) => {
     if (selectedFilters.indexOf(filter) > -1) {
-      updateSelectedAttractionFilters(
-        selectedFilters.filter((x) => x !== filter)
-      );
+      updateSelectedAttractionFilters(selectedFilters.filter((x) => x !== filter));
     } else {
       updateSelectedAttractionFilters([...selectedFilters, filter]);
     }
@@ -81,28 +79,25 @@ const DiscoverListFilter: React.FC<DiscoverListFilterProps> = ({
 
       <IonContent className="session-list-filter">
         <IonList lines={ios ? "inset" : "full"}>
-          {Object.values(AttractionCategories).map(
-            (category, categoryIndex) => (
-              <IonItemGroup key={`category-${categoryIndex}`}>
-                <IonItemDivider sticky>
-                  <IonLabel>{category.label}</IonLabel>
-                </IonItemDivider>
-                {Object.values(category.subcategories).map(
-                  (subcategory, subcategoryIndex) => (
-                    <IonItem key={`subcategory-${subcategoryIndex}`}>
-                      <IonLabel>{subcategory}</IonLabel>
-                      <IonCheckbox
-                        onClick={() => toggleAttractionFilter(subcategory)}
-                        checked={selectedFilters.indexOf(subcategory) !== -1}
-                        color="primary"
-                        value={subcategory}
-                      ></IonCheckbox>
-                    </IonItem>
-                  )
-                )}
-              </IonItemGroup>
-            )
-          )}
+          {Object.values(AttractionCategories).map((category, categoryIndex) => (
+            <IonItemGroup key={`category-${categoryIndex}`}>
+              <IonItemDivider sticky>
+                <IonLabel>{category.label}</IonLabel>
+              </IonItemDivider>
+              {Object.values(category.subcategories).map((subcategory, subcategoryIndex) => (
+                <IonItem key={`subcategory-${subcategoryIndex}`}>
+                  <IonLabel>{subcategory}</IonLabel>
+                  {console.log(subcategory)}
+                  <IonCheckbox
+                    onClick={() => toggleAttractionFilter(subcategory)}
+                    checked={selectedFilters.indexOf(subcategory) !== -1}
+                    color="primary"
+                    value={subcategory}
+                  ></IonCheckbox>
+                </IonItem>
+              ))}
+            </IonItemGroup>
+          ))}
         </IonList>
       </IonContent>
 

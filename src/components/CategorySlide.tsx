@@ -186,6 +186,7 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
 
   return (
     <>
+    <br/>
       {selectedSlideCategory !== undefined ? (
         <>
           <IonSegment id="categorySlideSegment">
