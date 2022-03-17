@@ -11,12 +11,6 @@ const DiscoverList: React.FC<DiscoverListProps> = ({ attractions }) => {
   const [isInfiniteDisabled, setInfiniteDisabled] = useState(false);
   const [listData, setListData] = useState<AttractionItem[]>([]);
 
-  useEffect(() => {
-    if (listData.length === attractions.length) {
-      setInfiniteDisabled(true);
-    }
-  }, [attractions.length, listData]);
-
   const pushData = () => {
     const start = listData.length;
     const end = listData.length + Math.min(20, attractions.length - listData.length);
@@ -37,6 +31,20 @@ const DiscoverList: React.FC<DiscoverListProps> = ({ attractions }) => {
   useIonViewWillEnter(() => {
     pushData();
   });
+
+  useEffect(() => {
+    if (listData.length === attractions.length) {
+      setInfiniteDisabled(true);
+    }
+  }, [attractions.length, listData]);
+
+  useEffect(() => {
+    setListData([]);
+  }, [attractions]);
+  useEffect(() => {
+    if(listData.length === 0) {
+    pushData();}
+  }, [listData]);
 
   if (attractions.length === 0) {
     return (
