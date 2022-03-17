@@ -493,7 +493,7 @@ export const CityItems = [
     subtitle: "Cedar City Dining",
     url: "https://www.centropizzeria.com/",
     description:
-      "THE PIZZA AT CENTRO WOODFIRED PIZZERIA IS INSPIRED BY TRADITIONAL ITALIAN COOKING TECHNIQUES AND PROVEN FAMILY RECIPES HANDED DOWN OVER GENERATIONS. IN ADDITION TO GREAT PIZZA, THE RESTAURANT OFFERS A VARIETY OF SALADS AND STARTERS, FEATURING LOCAL SEASONAL PRODUCE DELIVERED TO THE RESTAURANT BY OUR NETWORK OF FARMERS. THE RESTAURANT ALSO OFFERS FOUR BEERS ON TAP AND SEVERAL CRAFT BOTTLED SELECTIONS INCLUDING MANY FROM LOCAL PRODUCERS. THE RESTAURANT WINE LIST FEATURES A VARIETY OF LOCAL, REGIONAL AND INTERNATIONAL WINES WITH MANY SELECTIONS BEING OFFERED BY THE GLASS.",
+      "The pizza at centro woodfired pizzeria is inspired by traditional italian cooking techniques and proven family recipes handed down over generations. In addition to great pizza, the restaurant offers a variety of salads and starters, featuring local seasonal produce delivered to the restaurant by our network of farmers. The restaurant also offers four beers on tap and several craft bottled selections including many from local producers. The restaurant wine list features a variety of local, regional and international wines with many selections being offered by the glass.",
     image:
       "https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w",
     categories: [
@@ -560,7 +560,7 @@ export const CityItems = [
     subtitle: "Brian Head Lodging",
     url: "https://bwpbrianheadhotel.com/",
     description:
-      "The BEST WESTERN PREMIER Brian Head is located in the beautiful ski resort town of Brian Head, Utah. Surrounded by breathtaking views and magnificent scenery, we are the perfect location for lovers of the great outdoors. Discover the local area by visiting Brian Head Ski Resort for skiing, snowboarding, tubing, and snowmobiling. In the summer, guests can enjoy endless hiking, mountain biking, and ATV trails as well as great fishing spots.",
+      "The Best Western Premier Brian Head is located in the beautiful ski resort town of Brian Head, Utah. Surrounded by breathtaking views and magnificent scenery, we are the perfect location for lovers of the great outdoors. Discover the local area by visiting Brian Head Ski Resort for skiing, snowboarding, tubing, and snowmobiling. In the summer, guests can enjoy endless hiking, mountain biking, and ATV trails as well as great fishing spots.",
     image:
       "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Hotel-Exterior-Twilight_7F122E41-5056-A36F-239064A297FE3347-7f122cc45056a36_7f122e95-5056-a36f-2395e5169d8aec44.jpg",
     categories: [
