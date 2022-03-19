@@ -675,4 +675,16 @@ export const CityItems = [
       "https://www.navajocraftingco.com/uploads/b/89153bea32d5164d8f26027c80d1047874b99cb71021deb18d1b56438dc2aee6/2020-11-18_20-51-02_1605757880.jpg?width=400",
     categories: [AttractionCategories.Experiences.subcategories.Shop],
   },
+  {
+    id: 18,
+    title: "Artisans Gallery",
+    subtitle: "Cedar City Shop",
+    url: "https://www.facebook.com/pages/category/Artist/Artisans-Gallery-134547949914392/",
+    description: "Established in 2009, offering local art and handcrafted items. Artisans offers an online gallery for local artists and artisans to showcase and sell their artwork as well as a physical art gallery located in the quaint downtown district of Cedar City and just one block east of Southern Utah University and the Utah Shakespearean Festival.",
+    image:
+      "https://scontent-lax3-1.xx.fbcdn.net/v/t31.18172-8/10700637_754836944552153_6950922609931521472_o.jpg?stp=dst-jpg_s2048x2048&_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xtk_why8ZmUAX_Uwd2Y&_nc_ht=scontent-lax3-1.xx&oh=00_AT-0pwHzOtU6zkbbAIJGWNw8tewVbNv_nXu2sgPfg5bWEw&oe=625AF82E",
+    categories: [AttractionCategories.Experiences.subcategories.Shop,
+                 AttractionCategories.Experiences.subcategories.CedarCityArts
+                ],
+  },
 ];

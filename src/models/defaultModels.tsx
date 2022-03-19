@@ -169,5 +169,6 @@ export interface SubscriptionItem {
   timing: string[];
   color: string;
   url: string;
+  furl: string;
   subscribed: boolean;
 }

@@ -13,7 +13,7 @@ const DiscoverList: React.FC<DiscoverListProps> = ({ attractions }) => {
 
   const pushData = () => {
     const start = listData.length;
-    const end = listData.length + Math.min(20, attractions.length - listData.length);
+    const end = listData.length + Math.min(5, attractions.length - listData.length);
 
     const newData: AttractionItem[] = [];
     for (let i = start; i < end; i++) {

@@ -6,11 +6,11 @@ import {
   IonFabButton,
   IonFabList,
   IonIcon,
+  IonLabel,
   IonPage,
 } from "@ionic/react";
 import {
   layersOutline,
-  mapOutline,
   navigateOutline,
   carSportOutline,
   prismOutline,
@@ -27,7 +27,6 @@ import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-lin
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../assets/scss/Map.scss";
-import { AnyRecord } from "dns";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmVybmFyZGtpbnR6aW5nIiwiYSI6ImNrenpxc2UwejBjczAzYnMwOXhjeW1zMDEifQ.R_WjPk9TCgHbs-yKfPC1iQ";
@@ -40,7 +39,7 @@ const Map: React.FC = () => {
     setMap(
       new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
+        style: "mapbox://styles/mapbox/satellite-streets-v11",
         center: [-113.061305, 37.683057],
         zoom: 9,
         pitch: 0,
@@ -76,6 +75,7 @@ const Map: React.FC = () => {
           "sky-atmosphere-sun-intensity": 15,
         },
       });
+
       });
   }, [map]);
 
@@ -98,8 +98,30 @@ const Map: React.FC = () => {
       [-113.061297, 37.680767],
     ],
   }
-
-
+  const lookouts: mapMarker = {
+    color: "#4444ff",
+    coords: [
+      [-113.0679, 37.6819],
+      [-113.0857, 37.2941],
+      [-113.0297, 37.680767],
+    ],
+  }
+  const ar: mapMarker = {
+    color: "#dddddd",
+    coords: [
+      [-113.06179, 37.68197],
+      [-113.085447, 37.62941],
+      [-113.0612, 37.68767],
+    ],
+  }
+  const picture: mapMarker = {
+    color: "#55ff55",
+    coords: [
+      [-113.06199, 37.81917],
+      [-113.08547, 37.65241],
+      [-113.06297, 37.60767],
+    ],
+  }
 
   type mapMarker = {
     color: string;
@@ -116,11 +138,16 @@ const Map: React.FC = () => {
       }
     }
     let color = val.color
+
     val.coords.forEach(coord => {
+      const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+        'Example'
+        );
       var oneMarker = new mapboxgl.Marker({
         color: color,
         draggable: false
         }).setLngLat(coord)
+        .setPopup(popup)
         .addTo(map);
 
         currentMarkers.push(oneMarker);
@@ -153,7 +180,7 @@ const Map: React.FC = () => {
             <IonIcon icon={navigateOutline}></IonIcon>
           </IonFabButton>
           <IonFabButton onClick={() => setSatelliteStyle()}>
-            <IonIcon icon={prismOutline}>3D</IonIcon>
+            <IonIcon icon={prismOutline}></IonIcon>
           </IonFabButton>
           <IonFabButton onClick={() => setStreetStyle()}>
             <IonIcon icon={carSportOutline}></IonIcon>
@@ -171,13 +198,13 @@ const Map: React.FC = () => {
           <IonFabButton onClick={() => makeMarkers(food)}>
             <IonIcon icon={fastFoodOutline}></IonIcon>
           </IonFabButton>
-          <IonFabButton onClick={() => setStreetStyle()}>
+          <IonFabButton onClick={() => makeMarkers(lookouts)}>
             <IonIcon icon={telescopeOutline}></IonIcon>
           </IonFabButton>
-          <IonFabButton onClick={() => setStreetStyle()}>
+          <IonFabButton onClick={() => makeMarkers(ar)}>
             <IonIcon icon={logoAppleAr}></IonIcon>
           </IonFabButton>
-          <IonFabButton onClick={() => setStreetStyle()}>
+          <IonFabButton onClick={() => makeMarkers(picture)}>
             <IonIcon icon={cameraOutline}></IonIcon>
           </IonFabButton>
         </IonFabList>

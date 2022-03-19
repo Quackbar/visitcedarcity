@@ -37,6 +37,7 @@ export const initialState: AppState = {
       timing: ["0", "0", "0", "0", "0", "2", "4", "4", "4", "3", "0", "0"],
       color: "#c3121e",
       url: "https://www.bard.org/",
+      furl: "https://www.facebook.com/utahshakespeare",
       subscribed: true,
     },
     {
@@ -47,6 +48,7 @@ export const initialState: AppState = {
       timing: ["0", "0", "0", "0", "0", "0", "4", "0", "0", "0", "0", "0"],
       color: "#0000ff",
       url: "https://simonfest.org/",
+      furl: "https://www.facebook.com/SimonFestTheatre",
       subscribed: true,
     },
     {
@@ -56,6 +58,7 @@ export const initialState: AppState = {
       timing: ["2", "2", "2", "1", "0", "0", "0", "0", "0", "0", "1", "2"],
       color: "#2f4f4f",
       url: "https://www.brianhead.com/",
+      furl: "https://www.facebook.com/brianheadresort",
       subscribed: true,
     },
     {
@@ -65,6 +68,7 @@ export const initialState: AppState = {
       timing: ["0", "0", "0", "0", "0", "1", "2", "2", "2", "1", "0", "0"],
       color: "#228b22",
       url: "https://www.brianhead.com/",
+      furl: "https://www.facebook.com/brianheadresort",
       subscribed: true,
     },
     {
@@ -74,6 +78,7 @@ export const initialState: AppState = {
       timing: ["0", "0", "0", "0", "0", "0", "0", "0", "0", "4", "0", "0"],
       color: "#4b0082",
       url: "https://www.redrockfilmfestival.com/index.html",
+      furl: "https://www.facebook.com/RedRockFilmFestival",
       subscribed: true,
     },
     {
@@ -83,6 +88,7 @@ export const initialState: AppState = {
       timing: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
       color: "#ffe4c4",
       url: "https://www.suu.edu/suma/",
+      furl: "https://www.facebook.com/SUMACC",
       subscribed: true,
     },
     {
@@ -92,6 +98,7 @@ export const initialState: AppState = {
       timing: ["1", "2", "2", "2", "0", "0", "0", "0", "0", "1", "2", "2"],
       color: "#ff0000",
       url: "https://www.suu.edu/pva/",
+      furl: "https://www.facebook.com/SUUTBirds",
       subscribed: true,
     },
     {
@@ -101,6 +108,7 @@ export const initialState: AppState = {
       timing: ["0", "1", "0", "1", "0", "0", "0", "0", "0", "2", "1", "1"],
       color: "#8b4513",
       url: "https://www.myosu.org/",
+      furl: "https://www.facebook.com/OSUCedarCity/",
       subscribed: true,
     },
     {
@@ -110,6 +118,7 @@ export const initialState: AppState = {
       timing: ["0", "1", "1", "1", "1", "0", "0", "0", "0", "0", "1", "1"],
       color: "#00ffff",
       url: "https://www.cedarcitymusicarts.org/",
+      furl: "https://www.facebook.com/CedarCityMusicArts",
       subscribed: true,
     },
     {
@@ -119,6 +128,7 @@ export const initialState: AppState = {
       timing: ["0", "0", "0", "0", "0", "1", "1", "1", "0", "0", "0", "0"],
       color: "#6495ed",
       url: "https://www.cedarcityartscouncil.org/advocacy/arts-event-calendars/",
+      furl: "https://www.facebook.com/CedarCityArts",
       subscribed: true,
     },
     {
@@ -128,6 +138,7 @@ export const initialState: AppState = {
       timing: ["1", "0", "1", "1", "1", "1", "2", "2", "2", "2", "1", "0"],
       color: "#000000",
       url: "https://frontierhomestead.org/",
+      furl: "https://www.facebook.com/FriendsoftheFrontierHomestead",
       subscribed: true,
     },
     {
@@ -137,6 +148,7 @@ export const initialState: AppState = {
       timing: ["1", "1", "1", "0", "1", "2", "2", "2", "2", "1", "0", "0"],
       color: "#ff69b4",
       url: "https://www.nps.gov/cebr/index.htm",
+      furl: "https://www.facebook.com/nationalparkservice",
       subscribed: true,
     },
     {
@@ -146,6 +158,7 @@ export const initialState: AppState = {
       timing: ["1", "1", "1", "1", "1", "1", "2", "2", "2", "2", "1", "1"],
       color: "#00ff00",
       url: "https://www.facebook.com/groups/CedarSaturdayFarmersMarket/",
+      furl: "https://www.facebook.com/groups/CedarSaturdayFarmersMarket/",
       subscribed: true,
     },
     {
@@ -155,6 +168,7 @@ export const initialState: AppState = {
       timing: ["0", "0", "0", "0", "0", "0", "2", "0", "0", "0", "0", "0"],
       color: "#8c34eb",
       url: "http://www.umrf.net/",
+      furl: "https://www.facebook.com/umrf21",
       subscribed: true,
     },
   ],

@@ -15,7 +15,7 @@ import { updateSubscriptions } from "../data/actions";
 import { connect } from "../data/connect";
 import { SubscriptionItem } from "../models/defaultModels";
 
-import { informationCircle } from 'ionicons/icons';
+import { informationCircle, logoFacebook } from 'ionicons/icons';
 import { Browser } from "@capacitor/browser";
 
 
@@ -129,6 +129,9 @@ const Account: React.FC<AccountProps> = ({
           const openSite = async () => {
             await Browser.open({ url: subscription.url });
           };
+          const openFacebook = async () => {
+            await Browser.open({ url: subscription.furl });
+          };
         return (
           <>
           <IonItem key={index} class="ninety">
@@ -144,6 +147,7 @@ const Account: React.FC<AccountProps> = ({
           </IonItem>
           
           <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
+          <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
           </>
         )})}
         <h1>
