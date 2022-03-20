@@ -171,5 +171,15 @@ export const initialState: AppState = {
       furl: "https://www.facebook.com/umrf21",
       subscribed: true,
     },
+    {
+      id: 14,
+      title: "Utah Wine Festival",
+      schedule: "/assets/data/UWF.json",
+      timing: ["0", "0", "0", "0", "0", "0", "0", "0", "4", "0", "0", "0"],
+      color: "#7f1545",
+      url: "https://utahwinefest.com/",
+      furl: "https://www.facebook.com/utahwinefest/",
+      subscribed: true,
+    },
   ],
 };

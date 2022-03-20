@@ -6,6 +6,7 @@ import ScheduleComp from '../components/Schedule'
 import SnowPack from "../components/SnowPack"
 import SkyData from "../components/SkyData"
 import RoadConditions from "../components/RoadConditions"
+import FestivalFood from "../components/FestivalFood"
 
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
@@ -212,9 +213,11 @@ const Home: React.FC = () => {
 
                 
             </IonCard>
+            <FestivalFood/>
             <IonCard>
                 <SkyData/>
             </IonCard>
+            
             <RoadConditions/>
             <MountainData  BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
                             OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
