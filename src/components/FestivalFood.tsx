@@ -15,7 +15,7 @@ const breakStart = new Date()
 breakStart.setHours(7, 0, 0)
 
 const dinnerEnd = new Date()
-dinnerEnd.setHours(22, 0, 0)
+dinnerEnd.setHours(21, 0, 0)
 
 
 const breakfast = rn.getHours() >= breakStart.getHours() && rn.getHours() < lunchStart.getHours()
@@ -36,9 +36,9 @@ function firstChoice(){
         return (
             
                 <IonCard class="centered">
-                    <img src="https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w" />
+                    <img src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/54514215_608479516242321_562273564791668736_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=0ZzAld2Gs80AX8Fn1Iv&_nc_ht=scontent-lax3-2.xx&oh=00_AT__NHUJNrHzwD1xQHHjw3VxxktvbPP9jC8JxSNVYRzbgg&oe=625CFA03" />
                     <h1>
-                    Centro Woodfired Pizzaria
+                    Bunnisa's Thai Cuisine
                     </h1>
                 </IonCard>
             
@@ -47,10 +47,10 @@ function firstChoice(){
     }else if(dinner){
         return (
                 <IonCard class="centered">
-                <img src="https://secureservercdn.net/198.71.233.83/lzw.0ad.myftpupload.com/wp-content/uploads/IMG-9047-1-scaled-1.jpg" />
+                <img src="https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w" />
 
                 <h1>
-                Pastry Pub
+                Centro Woodfired Pizzaria
                 </h1>
                 </IonCard>
         )
@@ -63,6 +63,7 @@ function firstChoice(){
                     <h1>
                         Everythings Closed
                     </h1>
+                    <p>Sorry but its likely that most things are closed within walking distance. Please do check for yourself though as this could be out of date.</p>
                 </IonCard>
         )
     }
@@ -109,9 +110,7 @@ function secondChoice(){
 
     }else{
         return (
-            <>
-                
-            </>
+            <></>
         )
     }
 }
@@ -169,6 +168,9 @@ function titleMeal(){
     returnable += breakfast ? "Breakfast" : "";
     returnable += lunch ? "Lunch" : "";
     returnable += dinner ? "Dinner" : "";
+    if(returnable === ""){
+        returnable = "the night"
+    }
     return returnable;
 }
 
