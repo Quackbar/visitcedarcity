@@ -12,7 +12,7 @@ const DiscoverListItem: React.FC<DiscoverListItemProps> = ({ data }) => {
     await Browser.open({ url: data.url });
   };
   return (
-    <IonCard class="gray" onClick={openSite}>
+    <IonCard onClick={openSite}>
       <IonImg src={data.image} />
       <IonCardHeader>
         <IonCardSubtitle>{data.subtitle}</IonCardSubtitle>

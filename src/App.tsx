@@ -89,8 +89,25 @@ getParoWeather().then((data) => {
     localStorage.setItem("ParoTemp", x.temp ?? 'unknown');
 });
 
+var darkMode = true
+
+const sunrise = [7, 23]
+const sunset = [19, 29];
+
+var sunrise_m = sunrise[0] * 60 + sunrise[1]
+var sunset_m = sunset[0] * 60 + sunset[1]
+
+var now = new Date()
+var now_m = now.getHours() * 60 + now.getMinutes()
+
+if (now_m > sunrise_m + 60 && now_m <= sunset_m - 60) {
+  darkMode = true
+} else {
+  darkMode = false
+}
+
 const VisitCedarCity: React.FC = () => (
-  <IonApp>
+  <IonApp className={`${darkMode ? '' : 'dark-theme'}`}>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>

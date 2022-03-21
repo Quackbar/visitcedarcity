@@ -8,7 +8,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Almost, Maine",
-                "url": "https://app.arts-people.com/index.php?actions=4&p=2",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -27,7 +27,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -46,7 +46,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -65,7 +65,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Love Letters",
-                "url": "https://app.arts-people.com/index.php?actions=13&p=42",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -84,7 +84,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Almost, Maine",
-                "url": "https://app.arts-people.com/index.php?actions=4&p=2",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -98,7 +98,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -117,7 +117,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -131,7 +131,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Love Letters",
-                "url": "https://app.arts-people.com/index.php?actions=13&p=42",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -150,7 +150,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Almost, Maine",
-                "url": "https://app.arts-people.com/index.php?actions=4&p=2",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -164,7 +164,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -183,7 +183,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -197,7 +197,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Love Letters",
-                "url": "https://app.arts-people.com/index.php?actions=13&p=42",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -216,7 +216,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -235,7 +235,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -249,7 +249,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Love Letters",
-                "url": "https://app.arts-people.com/index.php?actions=13&p=42",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -268,7 +268,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Almost, Maine",
-                "url": "https://app.arts-people.com/index.php?actions=4&p=2",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -282,7 +282,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -301,7 +301,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -315,7 +315,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Love Letters",
-                "url": "https://app.arts-people.com/index.php?actions=13&p=42",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -334,7 +334,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Almost, Maine",
-                "url": "https://app.arts-people.com/index.php?actions=4&p=2",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -348,7 +348,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -367,7 +367,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -386,7 +386,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Almost, Maine",
-                "url": "https://app.arts-people.com/index.php?actions=4&p=2",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -400,7 +400,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -419,7 +419,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -433,7 +433,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Love Letters",
-                "url": "https://app.arts-people.com/index.php?actions=13&p=42",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -452,7 +452,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Almost, Maine",
-                "url": "https://app.arts-people.com/index.php?actions=4&p=2",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -466,7 +466,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Man of La Mancha",
-                "url": "https://app.arts-people.com/index.php?actions=7&p=17",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",
@@ -485,7 +485,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "EVITA",
-                "url": "https://app.arts-people.com/index.php?actions=10&p=30",
+                "url": "https://simonfest.org/",
                 "timeStart": "7:00 pm",
                 "timeEnd": "9:00 pm",
                 "location": "The Heritage Center Theater",
@@ -499,7 +499,7 @@ export const NSFSchedule = {
             "sessions": [
               {
                 "name": "Love Letters",
-                "url": "https://app.arts-people.com/index.php?actions=13&p=42",
+                "url": "https://simonfest.org/",
                 "timeStart": "2:00 pm",
                 "timeEnd": "4:00 pm",
                 "location": "The Heritage Center Theater",

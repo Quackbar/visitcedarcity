@@ -190,7 +190,7 @@ const Home: React.FC = () => {
                     <IonCard>
                         {/* <Snowpack/> */}
                     </IonCard>
-            <IonCard class="gray basiccentered">
+            <IonCard class="basiccentered">
                     <IonTitle class="centered">
                         <br/>
                         Your Daily Schedule
@@ -245,7 +245,7 @@ const Home: React.FC = () => {
                             LiftsOpen={MDLiftsOpen || String(localStorage.getItem("MDLiftsOpen"))}
                             TrailsOpen={MDTrailsOpen || String(localStorage.getItem("MDTrailsOpen"))}/>
 
-            <IonCard  class="gray">
+            <IonCard>
                 <h1 className="centered">
                 <br/>
                     

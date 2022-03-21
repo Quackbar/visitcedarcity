@@ -13,7 +13,7 @@ const RoadConditions: React.FC = ({}) => {
 
     return (
       <>
-            <IonCard class="gray">
+            <IonCard>
               <h1 className="centered">Road Conditions</h1>
               <IonGrid>
                 <IonRow>

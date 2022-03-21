@@ -32,7 +32,7 @@ const MountainData: React.FC<MountainProps> = ({
   } else {
     return (
       <>
-            <IonCard class="gray">
+            <IonCard>
               <h1 className="centered">Brian Head Winter<br/> Mountain Data</h1>
 
               <h2>&emsp;Base Snow Depth: {BaseDepth}</h2>

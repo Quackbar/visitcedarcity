@@ -86,7 +86,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
 
 
           <SwiperSlide >
-          <IonCard class="gray">
+          <IonCard>
 
             {/*-- Segment with secondary color --*/}
             <IonGrid class="centered">
@@ -252,7 +252,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
           </SwiperSlide>
 
           <SwiperSlide>
-          <IonCard class="gray">
+          <IonCard>
 
             <IonGrid>
             <IonRow  class="centered">
