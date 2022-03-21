@@ -30,6 +30,7 @@ function firstChoice(){
                     <h1>
                     Grind Coffee House
                     </h1>
+                    <p>$</p>
                 </IonCard>
         )
     }else if(lunch){
@@ -40,6 +41,7 @@ function firstChoice(){
                     <h1>
                     Bunnisa's Thai Cuisine
                     </h1>
+                    <p>$$</p>
                 </IonCard>
             
         )
@@ -52,6 +54,7 @@ function firstChoice(){
                 <h1>
                 Centro Woodfired Pizzaria
                 </h1>
+                <p>$$</p>
                 </IonCard>
         )
 
@@ -79,6 +82,7 @@ function secondChoice(){
                     <h1>
                         Bristlecone Coffee
                     </h1>
+                    <p>$</p>
                 </IonCard>
             </>
         )
@@ -91,6 +95,7 @@ function secondChoice(){
                     <h1>
                     Pastry Pub
                     </h1>
+                    <p>$$</p>
                 </IonCard>
             </>
         )
@@ -104,6 +109,7 @@ function secondChoice(){
                     <h1>
                     Bunnisa's Thai Cuisine
                     </h1>
+                    <p>$$</p>
                 </IonCard> 
             </>
         )
@@ -182,11 +188,8 @@ const FestivalFood: React.FC = ({}) => {
                 <IonCardHeader>
                 <IonTitle class="centered">
                     <h1>
-                        Walking Distance From<br/> the Shakespeare Festival
+                        Walking Distance From<br/> the Shakespeare Festival<br/>for {titleMeal()}
                     </h1>
-                    <h2>
-                       for {titleMeal()}
-                    </h2>
                 </IonTitle>
 
                 {firstChoice()}

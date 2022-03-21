@@ -1,4 +1,4 @@
-export const Schedule = {
+export const NSFSchedule = {
     "schedule": [
       {
         "date": "2022-06-07",

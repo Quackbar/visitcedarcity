@@ -1,4 +1,4 @@
-export const Schedule = {
+export const OSUSchedule = {
     "schedule": [
       {
         "date": "2022-04-07",

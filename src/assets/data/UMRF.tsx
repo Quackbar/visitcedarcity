@@ -1,4 +1,4 @@
-export const Schedule = {
+export const UMRFSchedule = {
     "schedule": [
       {
         "date": "2022-07-13",

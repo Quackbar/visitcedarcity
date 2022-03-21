@@ -16,6 +16,11 @@ import { RefresherEventDetail } from '@ionic/core';
 
 import React, { useRef, useState } from 'react';
 import {USFSchedule} from '../assets/data/USF'
+import {UMRFSchedule} from '../assets/data/UMRF'
+import {CCMASchedule} from '../assets/data/CCMA'
+import {NSFSchedule} from '../assets/data/NSF'
+import {OSUSchedule} from '../assets/data/OSU'
+
 import { format, parseISO } from 'date-fns';
 import { Browser } from "@capacitor/browser";
 
@@ -127,6 +132,7 @@ const Home: React.FC = () => {
         return format(parseISO(value), 'MMM dd yyyy');
     };
 
+
     const pageRef = useRef<HTMLElement>(null);
 
     const [showFilterModal, setShowFilterModal] = useState(false);
@@ -135,9 +141,20 @@ const Home: React.FC = () => {
     const [popoverDate, setPopoverDate] = useState(today.toDateString());
     let things: todaystype[] = []
     things = [];
-    USFSchedule.schedule.map(item => {
-        // var thisdate = new Date(item.date);
-        var formattedDate =  "2022-08-08"
+    const [formattedDate, setFormattedDate] = useState(new Date().toISOString().slice(0, 10));
+
+    const yourSchedule = USFSchedule.schedule.concat(
+        UMRFSchedule.schedule.concat(
+            CCMASchedule.schedule.concat(
+                NSFSchedule.schedule.concat(
+                    OSUSchedule.schedule.concat()
+                )
+            )
+        ))
+
+    yourSchedule.map(item => {
+
+        // var formattedDate =  "2022-08-08"
         if(item.date === formattedDate){
             item.groups.map(group => {
                 // console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
@@ -183,7 +200,7 @@ const Home: React.FC = () => {
                     {/* <IonButton  class="centered" id="open-modal">Choose Custom Date</IonButton> */}
                     <IonModal trigger="open-modal">
                         <IonContent>
-                        <IonDatetime></IonDatetime>
+                        <IonDatetime ></IonDatetime>
                         </IonContent>
                     </IonModal>
 
@@ -194,7 +211,11 @@ const Home: React.FC = () => {
                         <IonPopover trigger="open-date-input" showBackdrop={false}>
                         <IonDatetime
                             presentation="date"
-                            onIonChange={ev => {setPopoverDate(formatDate(ev.detail.value!))}}
+                            onIonChange={ev => {
+                                setPopoverDate(formatDate(ev.detail.value!))
+                                // console.log(ev.detail.value!)
+                                setFormattedDate(ev.detail.value!.slice(0,-15))
+                            }}
                         />
                         </IonPopover>
                     </IonItem>

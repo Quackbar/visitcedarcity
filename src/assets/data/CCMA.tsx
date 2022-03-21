@@ -1,4 +1,4 @@
-export const Schedule = {
+export const CCMASchedule = {
     "schedule": [
       {
         "date": "2022-04-13",
