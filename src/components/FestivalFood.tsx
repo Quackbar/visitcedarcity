@@ -186,11 +186,9 @@ const FestivalFood: React.FC = ({}) => {
     return (
             <IonCard>
                 <IonCardHeader>
-                <IonTitle class="centered">
-                    <h1>
-                        Walking Distance From<br/> the Shakespeare Festival<br/>for {titleMeal()}
+                    <h1 className="centered">
+                        Walking Distance From<br/>Shakespeare Festival<br/>for {titleMeal()}
                     </h1>
-                </IonTitle>
 
                 {firstChoice()}
                 <IonText class="centered">
