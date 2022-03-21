@@ -1,4 +1,4 @@
-import { IonModal,IonDatetime,IonRefresher, IonRefresherContent, IonLabel,IonCard, IonContent, IonItem, IonPage, IonTitle, IonPopover, IonText, IonButton } from "@ionic/react";
+import { IonModal,IonDatetime,IonRefresher, IonRefresherContent, IonLabel,IonCard, IonContent, IonItem, IonPage, IonTitle, IonPopover, IonText, IonButton, IonGrid } from "@ionic/react";
 
 import Weather from '../components/Weather';
 import MountainData from '../components/Mountaindata';
@@ -231,6 +231,7 @@ const Home: React.FC = () => {
                 <IonButton onClick={openSite}>
                     See Extended Events Calendar
                 </IonButton>
+                <p></p>
 
                 
             </IonCard>
@@ -257,11 +258,11 @@ const Home: React.FC = () => {
                            oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))} 
                            temps={JSON.parse(String(localStorage.getItem("temps")))}/>
             </IonCard>
-            <IonCard class="basiccentered">
+            <IonGrid class="basiccentered">
             <IonButton onClick={() => setShowFilterModal(true)}>
                 Customize
             </IonButton>
-            </IonCard>
+            </IonGrid>
 
                 
 
