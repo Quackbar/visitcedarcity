@@ -176,7 +176,7 @@ const Account: React.FC<AccountProps> = ({
   };
 
   return (
-    <IonPage id="account-page">
+    <IonPage id="account-page"  onLoad={register}>
       {/* <IonHeader>
         <IonToolbar>
           <IonTitle>Account</IonTitle>
@@ -221,7 +221,8 @@ const Account: React.FC<AccountProps> = ({
           </>
         )})}
         <h1>
-        &emsp;&emsp;Account Settings
+          <br/>
+        &nbsp;&emsp;&emsp;&emsp;Account Settings
         </h1>
         <IonItem>
           <IonButton>
@@ -239,7 +240,7 @@ const Account: React.FC<AccountProps> = ({
           </IonButton>
         </IonItem>
         <IonItem>
-          <IonButton onClick={register}>
+          <IonButton>
             Get Help
           </IonButton>
         </IonItem>
