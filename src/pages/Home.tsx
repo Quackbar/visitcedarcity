@@ -14,7 +14,7 @@ import { Timestamp } from "@firebase/firestore";
 import { RefresherEventDetail } from '@ionic/core';
 
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {USFSchedule} from '../assets/data/USF'
 import {UMRFSchedule} from '../assets/data/UMRF'
 import {CCMASchedule} from '../assets/data/CCMA'
@@ -23,6 +23,10 @@ import {OSUSchedule} from '../assets/data/OSU'
 
 import { format, parseISO } from 'date-fns';
 import { Browser } from "@capacitor/browser";
+
+import { PushNotificationSchema, PushNotifications, Token, ActionPerformed } from '@capacitor/push-notifications';
+// import './Home.css';
+import { Toast } from "@capacitor/toast";
 
 // import { Moon } from "lunarphase-js";
 
@@ -128,6 +132,74 @@ function doRefresh(event: CustomEvent<RefresherEventDetail>) {
   }
 
 const Home: React.FC = () => {
+
+
+//     const nullEntry: any[] = []
+//     const [notifications, setnotifications] = useState(nullEntry);
+
+//     useEffect(()=>{
+//         PushNotifications.checkPermissions().then((res) => {
+//             if (res.receive !== 'granted') {
+//               PushNotifications.requestPermissions().then((res) => {
+//                 if (res.receive === 'denied') {
+//                   showToast('Push Notification permission denied');
+//                 }
+//                 else {
+//                   showToast('Push Notification permission granted');
+//                   register();
+//                 }
+//               });
+//             }
+//             else {
+//               register();
+//             }
+//           });
+//     },[])
+    
+//     const register = () => {
+//         console.log('Initializing HomePage');
+
+//         // Register with Apple / Google to receive push via APNS/FCM
+//         PushNotifications.register();
+
+//         // On success, we should be able to receive notifications
+//         PushNotifications.addListener('registration',
+//             (token: Token) => {
+//                 showToast('Push registration success');
+//             }
+//         );
+
+//         // Some issue with our setup and push will not work
+//         PushNotifications.addListener('registrationError',
+//             (error: any) => {
+//                 alert('Error on registration: ' + JSON.stringify(error));
+//             }
+//         );
+
+//         // Show us the notification payload if the app is open on our device
+//         PushNotifications.addListener('pushNotificationReceived',
+//             (notification: PushNotificationSchema) => {
+//                 setnotifications(notifications => [...notifications, { id: notification.id, title: notification.title, body: notification.body, type: 'foreground' }])
+//             }
+//         );
+
+//         // Method called when tapping on a notification
+//         PushNotifications.addListener('pushNotificationActionPerformed',
+//             (notification: ActionPerformed) => {
+//                 setnotifications(notifications => [...notifications, { id: notification.notification.data.id, title: notification.notification.data.title, body: notification.notification.data.body, type: 'action' }])
+//             }
+//         );
+//     }
+
+//     const showToast = async (msg: string) => {
+//         await Toast.show({
+//             text: msg
+//         })
+//     }
+// // 
+
+
+
     const formatDate = (value: string) => {
         return format(parseISO(value), 'MMM dd yyyy');
     };

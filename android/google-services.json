@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "449734764848",
+    "firebase_url": "https://visitcedarcity-backend-default-rtdb.firebaseio.com",
+    "project_id": "visitcedarcity-backend",
+    "storage_bucket": "visitcedarcity-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449734764848:android:0660663d5e64db799740f5",
+        "android_client_info": {
+          "package_name": "us.goldblockchain.visitcedarcity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449734764848-be5th03o2gr9m1ejqkm4us6bk30ll9t1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChpUVogK84dfMFEm4n-vAEfW3QsOftNn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449734764848-be5th03o2gr9m1ejqkm4us6bk30ll9t1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "449734764848-bg6s996345nfu3pqjenbus70b8bmnb6r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "us.goldblockchain.visitcedarcity"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
