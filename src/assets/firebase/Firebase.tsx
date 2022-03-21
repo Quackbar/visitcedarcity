@@ -1,16 +1,7 @@
 import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  collection,
-  query,
-  doc,
-  getDoc, 
-  getDocs, 
-  Timestamp,
-  orderBy,
-
-} from "firebase/firestore";
-import { StringifyOptions } from "querystring";
+import { getFirestore, collection, query, doc, getDoc, getDocs, Timestamp, orderBy } from "firebase/firestore";
+import { getMessaging, getToken, onMessage } from "firebase/messaging";
+import { onBackgroundMessage } from "firebase/messaging/sw";
 
 const config = {
   apiKey: "AIzaSyBZA9u1NyUyA2aWEltYwguVMoVEry9gzlE",
@@ -25,6 +16,39 @@ const config = {
 // firebase products
 const firebaseApp = initializeApp(config);
 const f_db = getFirestore(firebaseApp);
+const messaging = getMessaging(firebaseApp);
+
+// set up messaging
+getToken(messaging, {
+  vapidKey: "BIB3TyaBu73WRkrZhEiEL-W5nHMNQPfswiFlJWOK6T3rtdALoqEoxRf5Lwnex58YLV7BoCXQDddDz4jWgl-KRTc",
+})
+  .then((currentToken) => {
+    if (currentToken) {
+      console.log(`Current Token: ${currentToken}`);
+    } else {
+      console.log("No registration token available. Request permission to generate one.");
+    }
+  })
+  .catch((err) => {
+    console.log("An error occurred while retrieving token. ", err);
+  });
+
+onMessage(messaging, (payload) => {
+  console.log("Message received. ", payload);
+  // ...
+});
+
+onBackgroundMessage(messaging, (payload) => {
+  console.log("[firebase-messaging-sw.js] Received background message ", payload);
+  // Customize notification here
+  const notificationTitle = "Background Message Title";
+  const notificationOptions = {
+    body: "Background Message body.",
+    icon: "/firebase-logo.png",
+  };
+
+  // Show notification
+});
 
 // firestore queries
 const brianDoc = doc(f_db, "BrianHeadWeatherDayData", "current");
@@ -35,7 +59,7 @@ const RoadConDoc = doc(f_db, "RoadConditions", "current");
 
 const mountainRef = collection(f_db, "mountainData");
 
-const q = query(collection(f_db, "mountainData"))
+const q = query(collection(f_db, "mountainData"));
 
 interface MountainDataType {
   Date?: Timestamp;
@@ -52,7 +76,7 @@ type MyReturnTypeItem = {
   Date?: Timestamp;
   conditions?: string;
   temp?: string;
-}
+};
 
 interface SnowOutput {
   Date?: string[];
@@ -61,56 +85,57 @@ interface SnowOutput {
   baseDepth?: string[];
 }
 
-
-
 // const querySnapshot = await getDocs(q)
 
-
-export async function getSnowData() : Promise<SnowOutput> {
+export async function getSnowData(): Promise<SnowOutput> {
   return new Promise(async (resolve, reject) => {
     let oneDaySnowfall: string[] = [];
     let baseDepth: string[] = [];
     let temps: string[] = [];
     let dates: any[] = [];
-    let orderer: { date: any; oneDaySnowfall: any; baseDepth: any; temps: any; }[] = [];
+    let orderer: { date: any; oneDaySnowfall: any; baseDepth: any; temps: any }[] = [];
     (await getDocs(q)).forEach((doc) => {
       // console.log(doc.data())
 
-      orderer.push({date: new Date(doc.data().Date.toDate()), oneDaySnowfall: doc.data().onedaySnowfall.slice(0,-1), baseDepth: doc.data().baseDepth.slice(0,-1), temps: doc.data().temp.slice(0,-2)})
+      orderer.push({
+        date: new Date(doc.data().Date.toDate()),
+        oneDaySnowfall: doc.data().onedaySnowfall.slice(0, -1),
+        baseDepth: doc.data().baseDepth.slice(0, -1),
+        temps: doc.data().temp.slice(0, -2),
+      });
 
       // oneDaySnowfall.push(doc.data().onedaySnowfall.slice(0,-1))
       // baseDepth.push(doc.data().baseDepth.slice(0,-1))
       // dates.push(doc.data().Date.toDate().toLocaleDateString('en-US').slice(0,-5))
-    })
+    });
 
-    const sortedActivities = orderer.sort((a, b) => b.date - a.date).reverse()
+    const sortedActivities = orderer.sort((a, b) => b.date - a.date).reverse();
     // console.log(sortedActivities)
 
-
     sortedActivities.forEach((piece) => {
-      oneDaySnowfall.push(piece.oneDaySnowfall)
-      baseDepth.push(piece.baseDepth)
-      temps.push(piece.temps)
-      dates.push(piece.date.toLocaleDateString('en-US').slice(0, -5))
-    })
-    localStorage.setItem('oneDaySnowfall', JSON.stringify(oneDaySnowfall))
-    localStorage.setItem('baseDepth', JSON.stringify(baseDepth))
-    localStorage.setItem('dates', JSON.stringify(dates))
-    localStorage.setItem('temps', JSON.stringify(temps))
-    
+      oneDaySnowfall.push(piece.oneDaySnowfall);
+      baseDepth.push(piece.baseDepth);
+      temps.push(piece.temps);
+      dates.push(piece.date.toLocaleDateString("en-US").slice(0, -5));
+    });
+    localStorage.setItem("oneDaySnowfall", JSON.stringify(oneDaySnowfall));
+    localStorage.setItem("baseDepth", JSON.stringify(baseDepth));
+    localStorage.setItem("dates", JSON.stringify(dates));
+    localStorage.setItem("temps", JSON.stringify(temps));
+
     // console.log(localStorage.getItem('baseDepth'))
     let rObject: SnowOutput = {
       Date: dates,
       oneDaySnowfall: oneDaySnowfall,
       temp: temps,
       baseDepth: baseDepth,
-    }
-    resolve(rObject)
+    };
+    resolve(rObject);
   });
 }
-getSnowData()
+getSnowData();
 // firestore functions
-export async function getMountainData() : Promise<MountainDataType> {
+export async function getMountainData(): Promise<MountainDataType> {
   return new Promise(async (resolve, reject) => {
     await getDoc(mountainDoc)
       .then((docSnap) => {
@@ -131,12 +156,12 @@ export async function getRoadConditions() {
         // resolve(docSnap.data() as MountainDataType);
 
         if (docSnap.exists()) {
-          localStorage.setItem('BrianText', docSnap.data().BrianText)
-          localStorage.setItem('CedarText', docSnap.data().CedarText)
-          localStorage.setItem('LongValText', docSnap.data().LongValText)
-          localStorage.setItem('NevadaText', docSnap.data().NevadaText)
-          localStorage.setItem('ParowanText', docSnap.data().ParowanText)
-          console.log(docSnap.data().BrianText.split("<td>")[1].slice(0,-5))
+          localStorage.setItem("BrianText", docSnap.data().BrianText);
+          localStorage.setItem("CedarText", docSnap.data().CedarText);
+          localStorage.setItem("LongValText", docSnap.data().LongValText);
+          localStorage.setItem("NevadaText", docSnap.data().NevadaText);
+          localStorage.setItem("ParowanText", docSnap.data().ParowanText);
+          console.log(docSnap.data().BrianText.split("<td>")[1].slice(0, -5));
           resolve(true);
         }
       })
@@ -144,9 +169,10 @@ export async function getRoadConditions() {
         reject(error);
       });
   });
-}getRoadConditions()
+}
+getRoadConditions();
 
-export async function getBrianHeadWeather() : Promise<MyReturnTypeItem> {
+export async function getBrianHeadWeather(): Promise<MyReturnTypeItem> {
   return new Promise(async (resolve, reject) => {
     await getDoc(brianDoc)
       .then((docSnap) => {
@@ -159,7 +185,7 @@ export async function getBrianHeadWeather() : Promise<MyReturnTypeItem> {
   });
 }
 
-export async function getParoWeather() : Promise<MyReturnTypeItem>  {
+export async function getParoWeather(): Promise<MyReturnTypeItem> {
   return new Promise(async (resolve, reject) => {
     await getDoc(paroDoc)
       .then((docSnap) => {
@@ -172,7 +198,7 @@ export async function getParoWeather() : Promise<MyReturnTypeItem>  {
   });
 }
 
-export async function getCedarWeather() : Promise<MyReturnTypeItem>  {
+export async function getCedarWeather(): Promise<MyReturnTypeItem> {
   return new Promise(async (resolve, reject) => {
     await getDoc(cedarDoc)
       .then((doc) => {
