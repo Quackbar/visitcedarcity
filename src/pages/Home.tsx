@@ -192,8 +192,8 @@ const Home: React.FC = () => {
 
   return (
     <IonPage id="home-page">
-      <SafeAreaWrapper>
-        <IonContent fullscreen={true}>
+      <IonContent>
+        <SafeAreaWrapper>
           <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
             <IonRefresherContent></IonRefresherContent>
           </IonRefresher>
@@ -304,8 +304,8 @@ const Home: React.FC = () => {
           <IonGrid class="basiccentered">
             <IonButton onClick={() => setShowFilterModal(true)}>Customize</IonButton>
           </IonGrid>
-        </IonContent>
-      </SafeAreaWrapper>
+        </SafeAreaWrapper>
+      </IonContent>
 
       <IonActionSheet
         isOpen={showFilterModal}

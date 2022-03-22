@@ -125,12 +125,12 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
     });
   };
 
-    const showToast = async (msg: string) => {
-        // await Toast.show({
-        //     text: msg
-        // })
-    }
-// 
+  const showToast = async (msg: string) => {
+    // await Toast.show({
+    //     text: msg
+    // })
+  };
+  //
 
   const [chartData, setChartData] = useState<chartDataType>();
 
@@ -161,8 +161,8 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
 
   return (
     <IonPage id="account-page" onLoad={register}>
-      <SafeAreaWrapper>
-        <IonContent fullscreen={true}>
+      <IonContent>
+        <SafeAreaWrapper>
           <h1 className="centered">
             <br />
             Event Spread
@@ -213,8 +213,8 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
           <IonItem>
             <IonButton>Get Help</IonButton>
           </IonItem>
-        </IonContent>
-      </SafeAreaWrapper>
+        </SafeAreaWrapper>
+      </IonContent>
     </IonPage>
   );
 };
