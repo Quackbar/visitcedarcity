@@ -1,10 +1,14 @@
+.safe-area-wrapper {
+  margin-top: constant(safe-area-inset-top);
+  margin-top: env(safe-area-inset-top);
+}
+
 .centered {
   margin: auto;
   text-align: center;
 }
 .basiccentered {
   text-align: center;
-
 }
 .left {
   text-align: left;
@@ -25,8 +29,7 @@
   background-size: cover;
 }
 .half-image {
-  padding: .5px;
-
+  padding: 0.5px;
 }
 .gray {
   background-color: #ffffffd8;
@@ -44,12 +47,12 @@
   float: left;
 }
 
-.weatherhead{
+.weatherhead {
   font-size: larger;
   color: #000000;
 }
 
-.weatherheadbig{
+.weatherheadbig {
   font-size: xx-large;
   color: #000000;
 }
@@ -70,7 +73,7 @@
   }
 }
 
-.hundpx{
+.hundpx {
   height: 50px;
   width: 100%;
   margin-top: 50px;
@@ -80,15 +83,14 @@ ion-chip {
   min-width: fit-content;
 }
 #categorySlideSegment {
-    padding-left: 16px;
-    justify-content: flex-start;
+  padding-left: 16px;
+  justify-content: flex-start;
 }
 #categorySlideSegment {
-    --background: #00000000;
-    --background-checked: #00000000;
+  --background: #00000000;
+  --background-checked: #00000000;
 }
 
 #categorySlideSegment ion-segment-button {
-    max-width: fit-content;
+  max-width: fit-content;
 }
-
