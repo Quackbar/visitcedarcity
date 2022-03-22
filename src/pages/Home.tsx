@@ -26,7 +26,7 @@ import { Browser } from "@capacitor/browser";
 
 import { PushNotificationSchema, PushNotifications, Token, ActionPerformed } from '@capacitor/push-notifications';
 // import './Home.css';
-import { Toast } from "@capacitor/toast";
+// import { Toast } from "@capacitor/toast";
 import { trash, share, caretForwardCircle, heart } from "ionicons/icons";
 
 // import { Moon } from "lunarphase-js";

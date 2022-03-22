@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { IonContent, IonPage, IonHeader, IonToolbar, IonButtons, IonButton, IonIcon, IonLabel, IonSegment, IonSegmentButton, IonGrid, IonRow, IonCard, IonTitle, IonCol, IonText } from '@ionic/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper';
@@ -21,9 +21,16 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
   const [showSkip, setShowSkip] = useState(true);
   let [swiper, setSwiper] = useState<SwiperCore>();
 
-
-
-  const img1 = 'assets/img/ica-slidebox-img-1.png';
+  // get slide ref
+  // const mySlides = useRef(null);
+  // const onBtnClicked = async (direction: string) => {
+  //   const swiper = await mySlides.current.getSwiper();
+  //   if (direction === "next") {
+  //     swiper.slideNext();
+  //   } else if (direction === "prev") {
+  //     swiper.slidePrev();
+  //   }
+  // };
   
   const startApp = async () => { 
     await setHasSeenTutorial(true);
@@ -34,6 +41,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
     if(!swiper) return;
     setShowSkip(!swiper.isEnd);
   };
+
 
   return (
     <IonPage id="tutorial-page">
@@ -58,7 +66,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
 
             <IonRow>
               {/* <IonTitle color="primary"> */}
-              <h1 className="centered"><br/><br/><br/>
+              <h1 className="centered trublack"><br/><br/><br/>
                 Let Wonder Be
                 <br/>
                 Your Guide
@@ -68,18 +76,25 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
             <IonRow>
               {/* <IonTitle color="primary"> */}
               <IonLabel className="centered">
-              <h3 className="centered"><br/>
+              <h3 className="centered trublack"><br/>
               <br/><br/>
                 Swipe to help us<br/> get to know you...
                 <br/><br/>
               </h3>
+              {/* <IonIcon icon={chevronForward} slot="icon-only" />
               <IonIcon icon={chevronForward} slot="icon-only" />
               <IonIcon icon={chevronForward} slot="icon-only" />
-              <IonIcon icon={chevronForward} slot="icon-only" />
-              <IonIcon icon={chevronForward} slot="icon-only" />
+              <IonIcon icon={chevronForward} slot="icon-only" /> */}
               </IonLabel>
               {/* </IonTitle> */}
             </IonRow>
+
+              <IonRow>
+              <IonButton fill="clear" class="centered">
+                  Next
+                  <IonIcon slot="end" icon={arrowForward} />
+              </IonButton>
+              </IonRow>
             </IonGrid>
             </IonCard>
           </SwiperSlide>
@@ -92,7 +107,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
             <IonGrid class="centered">
             <IonRow>
               {/* <IonTitle color="primary"> */}
-              <h1 className="centered"><br/>
+              <h1 className="centered">
                 Help Us Get to Know You
                 <br/>
               </h1>
@@ -244,9 +259,17 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
                 </IonLabel>
                 </IonSegmentButton>
               </IonSegment>
+
+              </IonRow>
+              <p></p>
+              <IonRow>
+              <IonButton fill="clear" class="centered">
+                  Next
+                  <IonIcon slot="end" icon={arrowForward} />
+              </IonButton>
               </IonRow>
             </IonGrid>
-            <h1><br/></h1>
+            
 
             </IonCard>
           </SwiperSlide>
@@ -262,6 +285,11 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
                 </h1>
               {/* </IonTitle> */}
 
+              </IonRow>
+              <IonRow>
+                <h1>
+                  <br/>
+                </h1>
               </IonRow>
               <IonRow class="centered">
                 <IonCol>
@@ -286,6 +314,33 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
                 </p>
               </IonText>
               </IonCol>
+              </IonRow>
+
+              <IonRow>
+              <IonButton fill="clear" class="centered">
+                  Next
+                  <IonIcon slot="end" icon={arrowForward} />
+              </IonButton>
+              </IonRow>
+              </IonGrid>
+              </IonCard>
+          </SwiperSlide>
+
+          <SwiperSlide>
+          <IonCard>
+            <IonGrid>
+            <IonRow  class="centered">
+              {/* <IonTitle> */}
+                <h1 className="centered">
+                  What Our App Can<br/> Do For You
+                </h1>
+              {/* </IonTitle> */}
+
+              </IonRow>
+              <IonRow>
+                <h1>
+                  <br/>
+                </h1>
               </IonRow>
               <IonRow>
               <IonCol>
@@ -333,3 +388,7 @@ export default connect<OwnProps, {}, DispatchProps>({
   }),
   component: Tutorial
 });
+
+function slideNext(): void {
+  throw new Error('Function not implemented.');
+}

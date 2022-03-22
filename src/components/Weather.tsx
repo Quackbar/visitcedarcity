@@ -3,6 +3,8 @@ import { IonCardHeader,IonCardContent,IonGrid, IonRow, IonCol, IonCard } from '@
 
 
 import '../assets/scss/app.scss'
+import { getSunrise, getSunset } from 'sunrise-sunset-js';
+
 
 interface WeatherProps {
     CedarImg: string;
@@ -15,8 +17,11 @@ interface WeatherProps {
 
 var day = true
 
-const sunrise = [7, 23]
-const sunset = [19, 29];
+const truesunset = getSunset(37.689120, -113.047006);
+const truesunrise = getSunrise(37.689120, -113.047006);
+
+const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()]
+const sunset = [truesunset.getHours(), truesunset.getMinutes()];
 
 var sunrise_m = sunrise[0] * 60 + sunrise[1]
 var sunset_m = sunset[0] * 60 + sunset[1]
@@ -24,7 +29,7 @@ var sunset_m = sunset[0] * 60 + sunset[1]
 var now = new Date()
 var now_m = now.getHours() * 60 + now.getMinutes()
 
-if (now_m > sunrise_m + 60 && now_m <= sunset_m - 60) {
+if (now_m > sunrise_m + 60 && now_m <= sunset_m) {
     day = true
 } else {
     day = false

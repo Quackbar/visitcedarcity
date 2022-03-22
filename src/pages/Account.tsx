@@ -20,7 +20,6 @@ import { Browser } from "@capacitor/browser";
 
 import { PushNotificationSchema, PushNotifications, Token, ActionPerformed } from '@capacitor/push-notifications';
 // import './Home.css';
-import { Toast } from "@capacitor/toast";
 
 const chartOptions = {
   plugins: {
@@ -141,9 +140,9 @@ const Account: React.FC<AccountProps> = ({
     }
 
     const showToast = async (msg: string) => {
-        await Toast.show({
-            text: msg
-        })
+        // await Toast.show({
+        //     text: msg
+        // })
     }
 // 
 
