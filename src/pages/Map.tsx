@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import { IonContent, IonFab, IonFabButton, IonFabList, IonIcon, IonLabel, IonPage } from "@ionic/react";
+import { IonChip, IonContent, IonFab, IonFabButton, IonFabList, IonIcon, IonLabel, IonPage } from "@ionic/react";
 import {
   layersOutline,
   navigateOutline,
@@ -12,6 +12,7 @@ import {
   telescopeOutline,
   logoAppleAr,
   cameraOutline,
+  thunderstormOutline,
 } from "ionicons/icons";
 
 // @ts-ignore
@@ -27,6 +28,12 @@ mapboxgl.accessToken =
 const Map: React.FC = () => {
   const [map, setMap] = useState<MapDataType>();
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const twcApiKey = '2ec2232d72f1484282232d72f198421d';
+
+  const timeSlices = fetch(
+    'https://api.weather.com/v3/TileServer/series/productSet/PPAcore?apiKey=' +
+      twcApiKey
+  );
 
   useEffect(() => {
     setMap(
@@ -44,6 +51,7 @@ const Map: React.FC = () => {
     if (map === undefined) return;
 
     map.on("load", () => {
+      
       map.resize();
       // map.setStyle("mapbox://styles/mapbox/streets-v11")
       map.addSource("mapbox-dem", {
@@ -59,15 +67,15 @@ const Map: React.FC = () => {
       //   'color': 'white',
       //   'horizon-blend': 0.1
       // });
-      map.addLayer({
-        id: "sky",
-        type: "sky",
-        paint: {
-          "sky-type": "atmosphere",
-          "sky-atmosphere-sun": [0.0, 90.0],
-          "sky-atmosphere-sun-intensity": 15,
-        },
-      });
+      // map.addLayer({
+      //   id: "sky",
+      //   type: "sky",
+      //   paint: {
+      //     "sky-type": "atmosphere",
+      //     "sky-atmosphere-sun": [0.0, 90.0],
+      //     "sky-atmosphere-sun-intensity": 15,
+      //   },
+      // });
     });
   }, [map]);
 
@@ -144,40 +152,93 @@ const Map: React.FC = () => {
     });
   }
   const setSatelliteStyle = () => {
+
+    map.addSource("mapbox-dem", {
+      type: "raster-dem",
+      url: "mapbox://mapbox.mapbox-terrain-dem-v1",
+      tileSize: 512,
+      maxZoom: 16,
+    });
     map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
 
     map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+    map.resize();
     // map.setFog({
     //   'range': [-1, 1.5],
     //   'color': 'white',
     //   'horizon-blend': 0.1
     // });
   };
+  const addRadarLayer = () => {
+    timeSlices
+      .then((res) => res.json())
+      .then((res) => {
+        const radarTimeSlices = res.seriesInfo.radar.series;
+        const latestTimeSlice = radarTimeSlices[0].ts;
+
+        // insert the latest time for radar into the source data URL
+        map.addSource('twcRadar', {
+          type: 'raster',
+          tiles: [
+            'https://api.weather.com/v3/TileServer/tile/radar?ts=' +
+              latestTimeSlice +
+              '&xyz={x}:{y}:{z}&apiKey=' +
+              twcApiKey,
+          ],
+          tileSize: 256,
+        });
+
+        // place the layer before the "aeroway-line" layer
+        map.addLayer(
+          {
+            id: 'radar',
+            type: 'raster',
+            source: 'twcRadar',
+            paint: {
+              'raster-opacity': 0.5,
+            },
+          }
+        );
+      });
+  };
   const setStreetStyle = () => {
+    
     map.setStyle("mapbox://styles/mapbox/streets-v11");
   };
 
   return (
     <IonPage id="map-page">
-      <IonFab slot="fixed" vertical="top" horizontal="end">
+      <IonFab slot="fixed" vertical="top" horizontal="start">
         <SafeAreaWrapper>
           <IonFabButton size="small">
             <IonIcon icon={layersOutline}></IonIcon>
           </IonFabButton>
           <IonFabList side="bottom">
-            <IonFabButton onClick={() => centerMap()}>
-              <IonIcon icon={navigateOutline}></IonIcon>
-            </IonFabButton>
-            <IonFabButton onClick={() => setSatelliteStyle()}>
+            {/* <IonFabButton onClick={() => addRadarLayer()}>
+              <IonIcon icon={thunderstormOutline}></IonIcon>
+            </IonFabButton> */}
+            <IonChip class="white" onClick={() => addRadarLayer()}>
+            <IonIcon icon={thunderstormOutline}></IonIcon>
+            <IonLabel>Radar Overlay</IonLabel>
+            </IonChip>
+            <IonChip class="white" onClick={() => setSatelliteStyle()}>
+            <IonIcon icon={prismOutline}></IonIcon>
+            <IonLabel>3D Terrain</IonLabel>
+            </IonChip>
+            <IonChip class="white" onClick={() => setStreetStyle()}>
+            <IonIcon icon={carSportOutline}></IonIcon>
+            <IonLabel>Road Map</IonLabel>
+            </IonChip>
+            {/* <IonFabButton onClick={() => setSatelliteStyle()}>
               <IonIcon icon={prismOutline}></IonIcon>
             </IonFabButton>
             <IonFabButton onClick={() => setStreetStyle()}>
               <IonIcon icon={carSportOutline}></IonIcon>
-            </IonFabButton>
+            </IonFabButton> */}
           </IonFabList>
         </SafeAreaWrapper>
       </IonFab>
-      <IonFab slot="fixed" vertical="top" horizontal="start">
+      <IonFab slot="fixed" vertical="top" horizontal="end">
         <SafeAreaWrapper>
           <IonFabButton size="small">
             <IonIcon icon={pinOutline}></IonIcon>
