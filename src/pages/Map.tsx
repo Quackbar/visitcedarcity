@@ -13,6 +13,7 @@ import {
   logoAppleAr,
   cameraOutline,
   thunderstormOutline,
+  mapOutline,
 } from "ionicons/icons";
 
 // @ts-ignore
@@ -30,6 +31,13 @@ const Map: React.FC = () => {
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
   const twcApiKey = '2ec2232d72f1484282232d72f198421d';
 
+
+  const [radar, setRadar] = useState(false);
+  const [threeD, setThreeD] = useState(false);
+  const [roads, setRoads] = useState(false);
+
+
+
   const timeSlices = fetch(
     'https://api.weather.com/v3/TileServer/series/productSet/PPAcore?apiKey=' +
       twcApiKey
@@ -39,7 +47,7 @@ const Map: React.FC = () => {
     setMap(
       new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/satellite-streets-v11",
+        style: "mapbox://styles/mapbox/streets-v11",
         center: [-113.061305, 37.683057],
         zoom: 9,
         pitch: 0,
@@ -67,15 +75,15 @@ const Map: React.FC = () => {
       //   'color': 'white',
       //   'horizon-blend': 0.1
       // });
-      // map.addLayer({
-      //   id: "sky",
-      //   type: "sky",
-      //   paint: {
-      //     "sky-type": "atmosphere",
-      //     "sky-atmosphere-sun": [0.0, 90.0],
-      //     "sky-atmosphere-sun-intensity": 15,
-      //   },
-      // });
+      map.addLayer({
+        id: "sky",
+        type: "sky",
+        paint: {
+          "sky-type": "atmosphere",
+          "sky-atmosphere-sun": [0.0, 90.0],
+          "sky-atmosphere-sun-intensity": 15,
+        },
+      });
     });
   }, [map]);
 
@@ -152,17 +160,23 @@ const Map: React.FC = () => {
     });
   }
   const setSatelliteStyle = () => {
+    map.addLayer({
+      id: 'satellite',
+      source: {"type": "raster",  "url": "mapbox://mapbox.satellite", "tileSize": 256},
+      type: "raster"
+  })
+  if(radar)
+    map.moveLayer('satellite', 'radar');
+    // map.addSource("mapbox-dem", {
+    //   type: "raster-dem",
+    //   url: "mapbox://mapbox.mapbox-terrain-dem-v1",
+    //   tileSize: 512,
+    //   maxZoom: 16,
+    // });
+    // map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
 
-    map.addSource("mapbox-dem", {
-      type: "raster-dem",
-      url: "mapbox://mapbox.mapbox-terrain-dem-v1",
-      tileSize: 512,
-      maxZoom: 16,
-    });
-    map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
-
-    map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
-    map.resize();
+    // map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+    // map.resize();
     // map.setFog({
     //   'range': [-1, 1.5],
     //   'color': 'white',
@@ -170,6 +184,12 @@ const Map: React.FC = () => {
     // });
   };
   const addRadarLayer = () => {
+    if(radar){
+      map.removeLayer('radar');
+      map.removeSource('twcRadar');
+      setRadar(false)
+    }
+    else{
     timeSlices
       .then((res) => res.json())
       .then((res) => {
@@ -199,11 +219,13 @@ const Map: React.FC = () => {
             },
           }
         );
+        setRadar(true)
       });
+    }
   };
   const setStreetStyle = () => {
-    
-    map.setStyle("mapbox://styles/mapbox/streets-v11");
+    map.removeLayer('satellite');
+    map.removeSource('satellite');
   };
 
   return (
@@ -222,8 +244,8 @@ const Map: React.FC = () => {
             <IonLabel>Radar Overlay</IonLabel>
             </IonChip>
             <IonChip class="white" onClick={() => setSatelliteStyle()}>
-            <IonIcon icon={prismOutline}></IonIcon>
-            <IonLabel>3D Terrain</IonLabel>
+            <IonIcon icon={mapOutline}></IonIcon>
+            <IonLabel>Satellite</IonLabel>
             </IonChip>
             <IonChip class="white" onClick={() => setStreetStyle()}>
             <IonIcon icon={carSportOutline}></IonIcon>
