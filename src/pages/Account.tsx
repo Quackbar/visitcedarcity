@@ -87,7 +87,9 @@ const Account: React.FC<AccountProps> = ({
     const [notifications, setnotifications] = useState(nullEntry);
 
     useEffect(()=>{
+      console.log('chcecloing psuh notif')
         PushNotifications.checkPermissions().then((res) => {
+          console.log(res)
             if (res.receive !== 'granted') {
               PushNotifications.requestPermissions().then((res) => {
                 if (res.receive === 'denied') {
