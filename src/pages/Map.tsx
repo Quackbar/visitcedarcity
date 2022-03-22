@@ -1,14 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import {
-  IonContent,
-  IonFab,
-  IonFabButton,
-  IonFabList,
-  IonIcon,
-  IonLabel,
-  IonPage,
-} from "@ionic/react";
+import { IonContent, IonFab, IonFabButton, IonFabList, IonIcon, IonLabel, IonPage } from "@ionic/react";
 import {
   layersOutline,
   navigateOutline,
@@ -27,6 +19,7 @@ import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-lin
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../assets/scss/Map.scss";
+import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmVybmFyZGtpbnR6aW5nIiwiYSI6ImNrenpxc2UwejBjczAzYnMwOXhjeW1zMDEifQ.R_WjPk9TCgHbs-yKfPC1iQ";
@@ -59,7 +52,7 @@ const Map: React.FC = () => {
         tileSize: 512,
         maxZoom: 16,
       });
-  
+
       map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
       // map.setFog({
       //   'range': [-1, 1.5],
@@ -75,8 +68,7 @@ const Map: React.FC = () => {
           "sky-atmosphere-sun-intensity": 15,
         },
       });
-
-      });
+    });
   }, [map]);
 
   const centerMap = () => {};
@@ -89,7 +81,7 @@ const Map: React.FC = () => {
       [-113.06211643508729, 37.67753531295037],
       [-113.06156358789482, 37.67861592936657],
     ],
-  }
+  };
   const icecream: mapMarker = {
     color: "#ffdddd",
     coords: [
@@ -97,7 +89,7 @@ const Map: React.FC = () => {
       [-113.085447, 37.652941],
       [-113.061297, 37.680767],
     ],
-  }
+  };
   const lookouts: mapMarker = {
     color: "#4444ff",
     coords: [
@@ -105,7 +97,7 @@ const Map: React.FC = () => {
       [-113.0857, 37.2941],
       [-113.0297, 37.680767],
     ],
-  }
+  };
   const ar: mapMarker = {
     color: "#dddddd",
     coords: [
@@ -113,7 +105,7 @@ const Map: React.FC = () => {
       [-113.085447, 37.62941],
       [-113.0612, 37.68767],
     ],
-  }
+  };
   const picture: mapMarker = {
     color: "#55ff55",
     coords: [
@@ -121,39 +113,36 @@ const Map: React.FC = () => {
       [-113.08547, 37.65241],
       [-113.06297, 37.60767],
     ],
-  }
+  };
 
   type mapMarker = {
     color: string;
-    coords: [number,number][];
-  }
+    coords: [number, number][];
+  };
 
   var currentMarkers: mapboxgl.Marker[] = [];
 
-  
   function makeMarkers(val: mapMarker) {
-    if (currentMarkers!==null) {
+    if (currentMarkers !== null) {
       for (var i = currentMarkers.length - 1; i >= 0; i--) {
         currentMarkers[i].remove();
       }
     }
-    let color = val.color
+    let color = val.color;
 
-    val.coords.forEach(coord => {
-      const popup = new mapboxgl.Popup({ offset: 25 }).setText(
-        'Example'
-        );
+    val.coords.forEach((coord) => {
+      const popup = new mapboxgl.Popup({ offset: 25 }).setText("Example");
       var oneMarker = new mapboxgl.Marker({
         color: color,
-        draggable: false
-        }).setLngLat(coord)
+        draggable: false,
+      })
+        .setLngLat(coord)
         .setPopup(popup)
         .addTo(map);
 
-        currentMarkers.push(oneMarker);
-    })
-    
-  };
+      currentMarkers.push(oneMarker);
+    });
+  }
   const setSatelliteStyle = () => {
     map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
 
@@ -163,7 +152,6 @@ const Map: React.FC = () => {
     //   'color': 'white',
     //   'horizon-blend': 0.1
     // });
-
   };
   const setStreetStyle = () => {
     map.setStyle("mapbox://styles/mapbox/streets-v11");
@@ -172,53 +160,51 @@ const Map: React.FC = () => {
   return (
     <IonPage id="map-page">
       <IonFab slot="fixed" vertical="top" horizontal="end">
-        <IonFabButton size="small">
-          <IonIcon icon={layersOutline}></IonIcon>
-        </IonFabButton>
-        <IonFabList side="bottom">
-          <IonFabButton onClick={() => centerMap()}>
-            <IonIcon icon={navigateOutline}></IonIcon>
+        <SafeAreaWrapper>
+          <IonFabButton size="small">
+            <IonIcon icon={layersOutline}></IonIcon>
           </IonFabButton>
-          <IonFabButton onClick={() => setSatelliteStyle()}>
-            <IonIcon icon={prismOutline}></IonIcon>
-          </IonFabButton>
-          <IonFabButton onClick={() => setStreetStyle()}>
-            <IonIcon icon={carSportOutline}></IonIcon>
-          </IonFabButton>
-        </IonFabList>
+          <IonFabList side="bottom">
+            <IonFabButton onClick={() => centerMap()}>
+              <IonIcon icon={navigateOutline}></IonIcon>
+            </IonFabButton>
+            <IonFabButton onClick={() => setSatelliteStyle()}>
+              <IonIcon icon={prismOutline}></IonIcon>
+            </IonFabButton>
+            <IonFabButton onClick={() => setStreetStyle()}>
+              <IonIcon icon={carSportOutline}></IonIcon>
+            </IonFabButton>
+          </IonFabList>
+        </SafeAreaWrapper>
       </IonFab>
       <IonFab slot="fixed" vertical="top" horizontal="start">
-        <IonFabButton size="small">
-          <IonIcon icon={pinOutline}></IonIcon>
-        </IonFabButton>
-        <IonFabList side="bottom">
-          <IonFabButton onClick={() => makeMarkers(icecream)}>
-            <IonIcon icon={iceCreamOutline}></IonIcon>
+        <SafeAreaWrapper>
+          <IonFabButton size="small">
+            <IonIcon icon={pinOutline}></IonIcon>
           </IonFabButton>
-          <IonFabButton onClick={() => makeMarkers(food)}>
-            <IonIcon icon={fastFoodOutline}></IonIcon>
-          </IonFabButton>
-          <IonFabButton onClick={() => makeMarkers(lookouts)}>
-            <IonIcon icon={telescopeOutline}></IonIcon>
-          </IonFabButton>
-          <IonFabButton onClick={() => makeMarkers(ar)}>
-            <IonIcon icon={logoAppleAr}></IonIcon>
-          </IonFabButton>
-          <IonFabButton onClick={() => makeMarkers(picture)}>
-            <IonIcon icon={cameraOutline}></IonIcon>
-          </IonFabButton>
-        </IonFabList>
+          <IonFabList side="bottom">
+            <IonFabButton onClick={() => makeMarkers(icecream)}>
+              <IonIcon icon={iceCreamOutline}></IonIcon>
+            </IonFabButton>
+            <IonFabButton onClick={() => makeMarkers(food)}>
+              <IonIcon icon={fastFoodOutline}></IonIcon>
+            </IonFabButton>
+            <IonFabButton onClick={() => makeMarkers(lookouts)}>
+              <IonIcon icon={telescopeOutline}></IonIcon>
+            </IonFabButton>
+            <IonFabButton onClick={() => makeMarkers(ar)}>
+              <IonIcon icon={logoAppleAr}></IonIcon>
+            </IonFabButton>
+            <IonFabButton onClick={() => makeMarkers(picture)}>
+              <IonIcon icon={cameraOutline}></IonIcon>
+            </IonFabButton>
+          </IonFabList>
+        </SafeAreaWrapper>
       </IonFab>
       <IonContent scrollY={false}>
-        <div
-          id="map"
-          ref={mapContainer}
-          style={{ width: "100vw", height: "100vh" }}
-        />
+        <div id="map" ref={mapContainer} style={{ width: "100vw", height: "100vh" }} />
       </IonContent>
     </IonPage>
   );
 };
 export default Map;
-
-
