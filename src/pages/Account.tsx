@@ -9,8 +9,10 @@ import {
   IonButton,
   IonHeader,
   IonToolbar,
+  IonPopover,
+  IonActionSheet,
 } from "@ionic/react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { BarChart, chartDataType, datasetType } from "../components/Chart";
 import { updateSubscriptions } from "../data/actions";
@@ -157,7 +159,9 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
     // flip the subscription state
     allSubscriptions[index].subscribed = !allSubscriptions[index].subscribed;
     updateSubscriptions([...allSubscriptions]);
-  };
+  }; 
+  const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
+  const [showFilterModal, setShowFilterModal] = useState(false);
 
   return (
     <IonPage id="account-page" onLoad={register}>
@@ -192,7 +196,11 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
                   <IonText>&nbsp;{subscription.title}</IonText>
                 </IonItem>
 
-                <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
+                <IonIcon icon={informationCircle} onClick={
+                  (e: any) => {
+                    e.persist();
+                    setShowPopover({ showPopover: true, event: e })
+                  }} class="ion-text-right ten" color="primary" />
                 <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
               </>
             );
@@ -211,8 +219,42 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
             <IonButton href="/tutorial">See Tutorial</IonButton>
           </IonItem>
           <IonItem>
-            <IonButton>Get Help</IonButton>
+            <IonButton  onClick={() => setShowFilterModal(true)}>Get Help</IonButton>
           </IonItem>
+          <IonPopover
+            event={popoverState.event}
+            isOpen={popoverState.showPopover}
+            onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
+          >
+            <p>This is popover content</p>
+          </IonPopover>
+          <IonActionSheet
+        isOpen={showFilterModal}
+        onDidDismiss={() => setShowFilterModal(false)}
+        cssClass="my-custom-class"
+        buttons={[
+          {
+            text: "Technical Question / Suggestion",
+            handler: () => {
+              Browser.open({ url: "mailto:samluther998@gmail.com" });
+            },
+          },
+          {
+            text: "Visit Cedar City / Brian Head Question",
+            handler: () => {
+              Browser.open({ url: "mailto:tourism.group@ironcounty.net" });
+            },
+          },
+          {
+            text: "Cancel",
+            role: "cancel",
+            handler: () => {
+              //console.log("Cancel clicked");
+            },
+          },
+        ]}
+      >
+      </IonActionSheet>
         </SafeAreaWrapper>
       </IonContent>
     </IonPage>

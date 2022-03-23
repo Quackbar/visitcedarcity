@@ -42,11 +42,16 @@
   background-color: #ffffff;
   color: black;
   padding: 10px;
+
+}
+.trany{
+  transform: translateX(-12vw);
 }
 .green {
   background-color: #c6d488;
   color: black;
   padding: 10px;
+
 }
 .yellow {
   background-color: #ffe073;
@@ -54,6 +59,9 @@
 }
 .right {
   float: right;
+}
+.left {
+  float: left;
 }
 .ninety {
   width: 79vw;
@@ -106,4 +114,21 @@ ion-chip {
 
 #categorySlideSegment ion-segment-button {
   max-width: fit-content;
+}
+
+
+.ios.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show{
+  margin: -1.5px 0;
+}
+.md.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show{
+  margin: 1.5px 0;
+
+}
+
+.md.fab-list-side-bottom.fab-list-active{
+  margin: 54px 0;
+}
+
+.ios.fab-list-side-bottom.fab-list-active{
+  margin: 54px 0;
 }
