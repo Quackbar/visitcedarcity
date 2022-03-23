@@ -1,4 +1,4 @@
-package us.goldblockchain.visitcedarcity;
+package us.goldblockchain.cedarcity;
 
 import com.getcapacitor.BridgeActivity;
 

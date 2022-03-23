@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:449734764848:android:0660663d5e64db799740f5",
         "android_client_info": {
-          "package_name": "us.goldblockchain.visitcedarcity"
+          "package_name": "us.goldblockchain.cedarcity"
         }
       },
       "oauth_client": [
@@ -35,7 +35,7 @@
               "client_id": "449734764848-bg6s996345nfu3pqjenbus70b8bmnb6r.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "us.goldblockchain.visitcedarcity"
+                "bundle_id": "us.goldblockchain.cedarcity"
               }
             }
           ]

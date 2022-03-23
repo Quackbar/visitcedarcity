@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'us.goldblockchain.visitcedarcity',
-  appName: 'visit-cedar-city',
+  appId: 'us.goldblockchain.cedarcity',
+  appName: 'Visit Cedar City/Brian Head',
   webDir: 'build',
   bundledWebRuntime: false,
 };
