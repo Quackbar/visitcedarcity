@@ -40,7 +40,7 @@ const Map: React.FC = () => {
 
   const [radar, setRadar] = useState(false);
   const [outdoor, setOutdoor] = useState(false);
-  const [roads, setRoads] = useState(false);
+  const [satellite, setSatellite] = useState(false);
   const [position, setPosition] = useState<Geoposition>();
 
   const getLocation = async () => {
@@ -65,9 +65,11 @@ const Map: React.FC = () => {
       new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
-        center: [-113.061305, 37.683057],
+        center: [-113.081305, 37.680057],
+        // pitch: 60,
         zoom: 9,
-        pitch: 0,
+        pitch: 30,
+        bearing: 0,
       })
     );
   }, []);
@@ -94,6 +96,7 @@ const Map: React.FC = () => {
       //   'color': 'white',
       //   'horizon-blend': 0.1
       // });
+      map.addControl(new mapboxgl.NavigationControl());
       map.addControl(
         new mapboxgl.GeolocateControl({
         positionOptions: {
@@ -124,13 +127,7 @@ const Map: React.FC = () => {
       essential: true // this animation is considered essential with respect to prefers-reduced-motion
       });
   };
-  const centerOnUser = () => {
-    map.flyTo({
-      center: position,
 
-      essential: true // this animation is considered essential with respect to prefers-reduced-motion
-      });
-  };
 
   const food: mapMarker = {
     color: "#ff3333",
@@ -237,6 +234,7 @@ const Map: React.FC = () => {
     map.moveLayer('satellite', 'pitch-outline');
     if(radar)
       map.moveLayer('satellite', 'radar');
+    setSatellite(true);
 
   };
   const addRadarLayer = () => {
@@ -284,6 +282,7 @@ const Map: React.FC = () => {
   const setStreetStyle = () => {
     map.removeLayer('satellite');
     map.removeSource('satellite');
+    setSatellite(false);
   };
 
 
@@ -327,17 +326,17 @@ const Map: React.FC = () => {
             {/* <IonFabButton onClick={() => addRadarLayer()}>
               <IonIcon icon={thunderstormOutline}></IonIcon>
             </IonFabButton> */}
-            <IonChip class="white" onClick={() => addRadarLayer()}>
+            <IonChip class={radar? "green" :"white"} onClick={() => addRadarLayer()}>
             <IonIcon icon={thunderstormOutline}></IonIcon>
-            <IonLabel>Radar Overlay</IonLabel>
+            <IonLabel>Weather Radar </IonLabel>
             </IonChip>
-            <IonChip class="white" onClick={() => setSatelliteStyle()}>
+            <IonChip class={satellite? "green" :"white"} onClick={() => setSatelliteStyle()}>
             <IonIcon icon={mapOutline}></IonIcon>
-            <IonLabel>Satellite Overlay</IonLabel>
+            <IonLabel>Satellite </IonLabel>
             </IonChip>
-            <IonChip class="white" onClick={() => setStreetStyle()}>
+            <IonChip class={satellite? "white" :"green"} onClick={() => setStreetStyle()}>
             <IonIcon icon={carSportOutline}></IonIcon>
-            <IonLabel>Street Mode</IonLabel>
+            <IonLabel>Streets Only</IonLabel>
             </IonChip>
             <IonChip class="white" onClick={() => setOutdoorMode()}>
             <IonIcon icon={trailSignOutline}></IonIcon>
