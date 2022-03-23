@@ -87,7 +87,7 @@ const DiscoverListFilter: React.FC<DiscoverListFilterProps> = ({
               {Object.values(category.subcategories).map((subcategory, subcategoryIndex) => (
                 <IonItem key={`subcategory-${subcategoryIndex}`}>
                   <IonLabel>{subcategory}</IonLabel>
-                  {console.log(subcategory)}
+                  {/* {console.log(subcategory)} */}
                   <IonCheckbox
                     onClick={() => toggleAttractionFilter(subcategory)}
                     checked={selectedFilters.indexOf(subcategory) !== -1}

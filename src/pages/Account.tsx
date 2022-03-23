@@ -71,7 +71,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
 
   useEffect(() => {
     PushNotifications.checkPermissions().then((res) => {
-      console.log(res);
+      //console.log(res);
       if (res.receive !== "granted") {
         PushNotifications.requestPermissions().then((res) => {
           if (res.receive === "denied") {
@@ -88,7 +88,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
   }, []);
 
   const register = () => {
-    console.log("Initializing HomePage");
+    //console.log("Initializing HomePage");
 
     // Register with Apple / Google to receive push via APNS/FCM
     // PushNotifications.register();
@@ -201,12 +201,12 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
             <br />
             &nbsp;&emsp;&emsp;&emsp;Account Settings
           </h1>
-          <IonItem>
+          {/* <IonItem>
             <IonButton>Sign In</IonButton>
           </IonItem>
           <IonItem>
             <IonButton>Create Account</IonButton>
-          </IonItem>
+          </IonItem> */}
           <IonItem>
             <IonButton href="/tutorial">See Tutorial</IonButton>
           </IonItem>

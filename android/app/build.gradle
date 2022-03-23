@@ -39,6 +39,7 @@ dependencies {
     implementation project(':capacitor-cordova-android-plugins')
     implementation platform('com.google.firebase:firebase-bom:29.2.1')
     implementation platform('com.google.firebase:firebase-messaging:21.0.1')
+    implementation "com.google.android.gms:play-services-location:18.0.0"
 }
 
 apply from: 'capacitor.build.gradle'

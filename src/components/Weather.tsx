@@ -29,7 +29,7 @@ var sunset_m = sunset[0] * 60 + sunset[1]
 var now = new Date()
 var now_m = now.getHours() * 60 + now.getMinutes()
 
-if (now_m > sunrise_m + 60 && now_m <= sunset_m) {
+if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
     day = true
 } else {
     day = false

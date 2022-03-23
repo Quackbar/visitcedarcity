@@ -21,6 +21,9 @@ import Home from "./pages/Home";
 import Discover from "./pages/Discover";
 import AttractionItemDetail from "./pages/AttractionItemDetail";
 import Map from "./pages/Map";
+
+
+
 import Account from "./pages/Account";
 import Tutorial from "./pages/Tutorial";
 
@@ -50,6 +53,7 @@ import { getBrianHeadWeather, getCedarWeather, getParoWeather } from "./assets/f
 import { Timestamp } from "@firebase/firestore";
 
 setupIonicReact();
+
 
 let CedarImg = "";
 let CedarTemp = "";
@@ -105,7 +109,7 @@ var sunset_m = sunset[0] * 60 + sunset[1]
 var now = new Date()
 var now_m = now.getHours() * 60 + now.getMinutes()
 
-if (now_m > sunrise_m + 60 && now_m <= sunset_m) {
+if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
   darkMode = true
 } else {
   darkMode = false
@@ -121,6 +125,7 @@ const VisitCedarCity: React.FC = () => (
           <Route exact path="/discover" render={() => <Discover />} />
           <Route path="/discover/:id" component={AttractionItemDetail} />
           <Route exact path="/map" render={() => <Map />} />
+          <Route path="/map/:id" render={() => <Map />} />
           <Route exact path="/account" render={() => <Account />} />
           <Route path="/tutorial" component={Tutorial} />
 
@@ -152,7 +157,7 @@ const App: React.FC = () => {
 
 
   return (
-    <AppContextProvider>
+    <AppContextProvider >
       <VisitCedarCity />
     </AppContextProvider>
   );

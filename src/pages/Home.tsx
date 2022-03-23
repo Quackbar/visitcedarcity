@@ -313,49 +313,49 @@ const Home: React.FC = () => {
         cssClass="my-custom-class"
         buttons={[
           {
-            text: showWeather ? "Delete Weather Component" : "Add Weather Component",
+            text: showWeather ? "Weather Component" : "Weather Component",
             icon: showWeather ? trash : share,
             handler: () => {
               setShowWeather(!showWeather);
             },
           },
           {
-            text: showSchedule ? "Delete Schedule Component" : "Add Schedule Component",
+            text: showSchedule ? "Schedule Component" : "Schedule Component",
             icon: showSchedule ? trash : share,
             handler: () => {
               setShowSchedule(!showSchedule);
             },
           },
           {
-            text: showFestivalFood ? "Delete FestivalFood Component" : "Add FestivalFood Component",
+            text: showFestivalFood ? "FestivalFood Component" : "FestivalFood Component",
             icon: showFestivalFood ? trash : share,
             handler: () => {
               setShowFestivalFood(!showFestivalFood);
             },
           },
           {
-            text: showSkyData ? "Delete SkyData Component" : "Add SkyData Component",
+            text: showSkyData ? "SkyData Component" : "SkyData Component",
             icon: showSkyData ? trash : share,
             handler: () => {
               setShowSkyData(!showSkyData);
             },
           },
           {
-            text: showRoadConditions ? "Delete RoadConditions Component" : "Add RoadConditions Component",
+            text: showRoadConditions ? "RoadConditions Component" : "RoadConditions Component",
             icon: showRoadConditions ? trash : share,
             handler: () => {
               setShowRoadConditions(!showRoadConditions);
             },
           },
           {
-            text: showWinterMountainData ? "Delete WinterMountainData Component" : "Add WinterMountainData Component",
+            text: showWinterMountainData ? "WinterMountainData Component" : "WinterMountainData Component",
             icon: showWinterMountainData ? trash : share,
             handler: () => {
               setShowWinterMountainData(!showWinterMountainData);
             },
           },
           {
-            text: showSnowpack ? "Delete Snowpack Component" : "Add Snowpack Component",
+            text: showSnowpack ? "Snowpack Component" : "Snowpack Component",
             icon: showSnowpack ? trash : share,
             handler: () => {
               setShowSnowpack(!showSnowpack);
@@ -365,7 +365,7 @@ const Home: React.FC = () => {
             text: "Cancel",
             role: "cancel",
             handler: () => {
-              console.log("Cancel clicked");
+              //console.log("Cancel clicked");
             },
           },
         ]}

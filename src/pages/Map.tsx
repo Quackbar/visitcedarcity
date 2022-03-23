@@ -14,8 +14,10 @@ import {
   cameraOutline,
   thunderstormOutline,
   mapOutline,
+  homeOutline,
+  trailSignOutline,
 } from "ionicons/icons";
-
+import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 // @ts-ignore
 import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 
@@ -26,6 +28,10 @@ import SafeAreaWrapper from "../components/SafeAreaWrapper";
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmVybmFyZGtpbnR6aW5nIiwiYSI6ImNrenpxc2UwejBjczAzYnMwOXhjeW1zMDEifQ.R_WjPk9TCgHbs-yKfPC1iQ";
 
+
+
+
+
 const Map: React.FC = () => {
   const [map, setMap] = useState<MapDataType>();
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
@@ -33,9 +39,20 @@ const Map: React.FC = () => {
 
 
   const [radar, setRadar] = useState(false);
-  const [threeD, setThreeD] = useState(false);
+  const [outdoor, setOutdoor] = useState(false);
   const [roads, setRoads] = useState(false);
+  const [position, setPosition] = useState<Geoposition>();
 
+  const getLocation = async () => {
+
+    try {
+        const position = await Geolocation.getCurrentPosition();
+        setPosition(position);
+
+    } catch (e) {
+
+    }
+}
 
 
   const timeSlices = fetch(
@@ -59,6 +76,8 @@ const Map: React.FC = () => {
     if (map === undefined) return;
 
     map.on("load", () => {
+
+      
       
       map.resize();
       // map.setStyle("mapbox://styles/mapbox/streets-v11")
@@ -75,6 +94,17 @@ const Map: React.FC = () => {
       //   'color': 'white',
       //   'horizon-blend': 0.1
       // });
+      map.addControl(
+        new mapboxgl.GeolocateControl({
+        positionOptions: {
+        enableHighAccuracy: true
+        },
+        // When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+        // Draw an arrow next to the location dot to indicate which direction the device is heading.
+        showUserHeading: true
+        })
+        );
       map.addLayer({
         id: "sky",
         type: "sky",
@@ -87,7 +117,20 @@ const Map: React.FC = () => {
     });
   }, [map]);
 
-  const centerMap = () => {};
+  const centerMap = () => {
+    map.flyTo({
+      center: [-113.061306, 37.678057],
+
+      essential: true // this animation is considered essential with respect to prefers-reduced-motion
+      });
+  };
+  const centerOnUser = () => {
+    map.flyTo({
+      center: position,
+
+      essential: true // this animation is considered essential with respect to prefers-reduced-motion
+      });
+  };
 
   const food: mapMarker = {
     color: "#ff3333",
@@ -159,37 +202,52 @@ const Map: React.FC = () => {
       currentMarkers.push(oneMarker);
     });
   }
+  const setOutdoorMode = () => {
+    if(outdoor)
+      window.location.reload();
+    map.setStyle("mapbox://styles/mapbox/outdoors-v11");
+    setOutdoor(!outdoor)
+    if(radar){
+      map.removeLayer('radar');
+      map.removeSource('twcRadar');
+    }
+    map.removeLayer('sky');
+    map.setTerrain();
+    map.removeSource('mapbox-dem');
+
+    try {
+      map.removeLayer('satellite');
+      map.removeSource('satellite');
+    } catch (error) {
+      console.log("no satelllite")
+    }
+
+
+
+    
+    
+
+  }
   const setSatelliteStyle = () => {
     map.addLayer({
       id: 'satellite',
       source: {"type": "raster",  "url": "mapbox://mapbox.satellite", "tileSize": 256},
       type: "raster"
-  })
-  if(radar)
-    map.moveLayer('satellite', 'radar');
-    // map.addSource("mapbox-dem", {
-    //   type: "raster-dem",
-    //   url: "mapbox://mapbox.mapbox-terrain-dem-v1",
-    //   tileSize: 512,
-    //   maxZoom: 16,
-    // });
-    // map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
+    })
+    map.moveLayer('satellite', 'pitch-outline');
+    if(radar)
+      map.moveLayer('satellite', 'radar');
 
-    // map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
-    // map.resize();
-    // map.setFog({
-    //   'range': [-1, 1.5],
-    //   'color': 'white',
-    //   'horizon-blend': 0.1
-    // });
   };
   const addRadarLayer = () => {
+
     if(radar){
       map.removeLayer('radar');
       map.removeSource('twcRadar');
       setRadar(false)
     }
     else{
+      
     timeSlices
       .then((res) => res.json())
       .then((res) => {
@@ -228,8 +286,38 @@ const Map: React.FC = () => {
     map.removeSource('satellite');
   };
 
+
+
+
   return (
-    <IonPage id="map-page">
+    <IonPage id="map-page" onLoad={getLocation}>
+      <IonFab slot="fixed" vertical="bottom" horizontal="start">
+        <SafeAreaWrapper>
+          <IonFabButton size="small" onClick={() => centerMap()}>
+              <IonIcon icon={homeOutline}></IonIcon>
+          </IonFabButton>
+
+        </SafeAreaWrapper>
+
+      </IonFab>
+
+
+      {outdoor ? <IonFab slot="fixed" vertical="top" horizontal="start">
+        <SafeAreaWrapper>
+          <IonFabButton size="small">
+            <IonIcon icon={layersOutline}></IonIcon>
+          </IonFabButton>
+          <IonFabList side="bottom">
+            {/* <IonFabButton onClick={() => addRadarLayer()}>
+              <IonIcon icon={thunderstormOutline}></IonIcon>
+            </IonFabButton> */}
+            <IonChip class="white" onClick={() => setOutdoorMode()}>
+            <IonIcon icon={mapOutline}></IonIcon>
+            <IonLabel>Regular Mode</IonLabel>
+            </IonChip>
+          </IonFabList>
+        </SafeAreaWrapper>
+      </IonFab> :
       <IonFab slot="fixed" vertical="top" horizontal="start">
         <SafeAreaWrapper>
           <IonFabButton size="small">
@@ -245,27 +333,26 @@ const Map: React.FC = () => {
             </IonChip>
             <IonChip class="white" onClick={() => setSatelliteStyle()}>
             <IonIcon icon={mapOutline}></IonIcon>
-            <IonLabel>Satellite</IonLabel>
+            <IonLabel>Satellite Overlay</IonLabel>
             </IonChip>
             <IonChip class="white" onClick={() => setStreetStyle()}>
             <IonIcon icon={carSportOutline}></IonIcon>
-            <IonLabel>Road Map</IonLabel>
+            <IonLabel>Street Mode</IonLabel>
             </IonChip>
-            {/* <IonFabButton onClick={() => setSatelliteStyle()}>
-              <IonIcon icon={prismOutline}></IonIcon>
-            </IonFabButton>
-            <IonFabButton onClick={() => setStreetStyle()}>
-              <IonIcon icon={carSportOutline}></IonIcon>
-            </IonFabButton> */}
+            <IonChip class="white" onClick={() => setOutdoorMode()}>
+            <IonIcon icon={trailSignOutline}></IonIcon>
+            <IonLabel>Outdoor Mode</IonLabel>
+            </IonChip>
           </IonFabList>
         </SafeAreaWrapper>
-      </IonFab>
-      <IonFab slot="fixed" vertical="top" horizontal="end">
+      </IonFab>}
+
+      <IonFab slot="fixed" vertical="bottom" horizontal="end">
         <SafeAreaWrapper>
           <IonFabButton size="small">
             <IonIcon icon={pinOutline}></IonIcon>
           </IonFabButton>
-          <IonFabList side="bottom">
+          <IonFabList side="top">
             <IonFabButton onClick={() => makeMarkers(icecream)}>
               <IonIcon icon={iceCreamOutline}></IonIcon>
             </IonFabButton>

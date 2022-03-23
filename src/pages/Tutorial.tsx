@@ -369,7 +369,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
                     <IonCol>
                       <IonText>
                         <p>
-                          See when the events you love are in season and plan your trip knowing you'll have a good time.
+                          See when the events you love are in season and plan your trip knowing you'll have a good time in Festival City!
                         </p>
                       </IonText>
                     </IonCol>
