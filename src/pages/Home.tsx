@@ -167,16 +167,12 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
   });
 
   function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
-    console.log("Dragged from index", event.detail.from, "to", event.detail.to);
-
-    // Finish the reorder and position the item in the DOM based on
-    // where the gesture ended. This method can also be called directly
-    // by the reorder group
+    // reorder array
+    selectedHomeModules.splice(event.detail.to, 0, selectedHomeModules.splice(event.detail.from, 1)[0]);
     event.detail.complete();
   }
 
   const toggleModule = (index: number) => {
-    console.log("toggleing ", index);
     // flip the subscription state
     if (selectedHomeModules.includes(index)) {
       selectedHomeModules.splice(selectedHomeModules.indexOf(index), 1);
@@ -322,27 +318,24 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
           <IonList lines={ios ? "inset" : "full"}>
             <IonItemGroup>
               <IonReorderGroup disabled={false} onIonItemReorder={doReorder}>
-                {Object.values(HomeModules).map(
-                  (module, index) =>
-                    selectedHomeModules.includes(index) && (
-                      <IonItemSliding key={`subbed_mod-${index}`}>
-                        <IonItem>
-                          <IonLabel>{module.label}</IonLabel>
-                          <IonReorder />
-                        </IonItem>
-                        <IonItemOptions side="end">
-                          <IonItemOption
-                            color="danger"
-                            onClick={() => {
-                              toggleModule(index);
-                            }}
-                          >
-                            Remove
-                          </IonItemOption>
-                        </IonItemOptions>
-                      </IonItemSliding>
-                    )
-                )}
+                {selectedHomeModules.map((moduleId: AllModules, index) => (
+                  <IonItemSliding key={`subbed_mod-${index}`}>
+                    <IonItem>
+                      <IonLabel>{HomeModules[moduleId].label}</IonLabel>
+                      <IonReorder />
+                    </IonItem>
+                    <IonItemOptions side="end">
+                      <IonItemOption
+                        color="danger"
+                        onClick={() => {
+                          toggleModule(moduleId);
+                        }}
+                      >
+                        Remove
+                      </IonItemOption>
+                    </IonItemOptions>
+                  </IonItemSliding>
+                ))}
               </IonReorderGroup>
             </IonItemGroup>
             <IonItemGroup>
