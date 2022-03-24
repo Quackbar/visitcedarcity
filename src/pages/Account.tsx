@@ -236,7 +236,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
           {
             text: "Technical Question / Suggestion",
             handler: () => {
-              Browser.open({ url: "mailto:samluther998@gmail.com" });
+              Browser.open({ url: "mailto:info@goldblockchain.us" });
             },
           },
           {
