@@ -170,10 +170,11 @@ export interface SubscriptionItem {
   color: string;
   url: string;
   furl: string;
-  subscribed: boolean;
 }
 
 export interface User {
   hasSeenTutorial: boolean;
   isLoading: boolean
+  selectedAttractionFilters: AllCategories[];
+  selectedSubscriptions: number[];
 }

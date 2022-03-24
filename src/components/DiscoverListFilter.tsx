@@ -120,7 +120,7 @@ const DiscoverListFilter: React.FC<DiscoverListFilterProps> = ({
 export default connect<OwnProps, StateProps, DispatchProps>({
   mapStateToProps: (state) => ({
     allFilters: state.allAttractionFilters,
-    selectedFilters: state.selectedAttractionFilters,
+    selectedFilters: state.user.selectedAttractionFilters,
   }),
   mapDispatchToProps: {
     updateSelectedAttractionFilters,

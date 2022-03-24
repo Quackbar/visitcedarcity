@@ -1,6 +1,6 @@
 import { AllCategories, SubscriptionItem, User } from "../models/defaultModels";
 import { ActionType } from "../util/types";
-import { getUserData, setHasSeenTutorialData } from "./dataApi";
+import { getUserData, setHasSeenTutorialData, setSelectedSubscriptionsData } from "./dataApi";
 
 export const loadUserData = () => async (dispatch: React.Dispatch<any>) => {
   dispatch(setLoading(true));
@@ -27,12 +27,13 @@ export const updateSelectedAttractionFilters = (selectedAttractionFilters: AllCa
     selectedAttractionFilters,
   } as const);
 
-export const updateSubscriptions = (subscriptionItems: SubscriptionItem[]) =>
-  ({
-    type: "update-subscription",
-    subscriptionItems,
-  } as const);
-
+export const updateSelectedSubscriptions = (selectedSubscriptions: number[]) => async (dispatch: React.Dispatch<any>) => {
+  await setSelectedSubscriptionsData(selectedSubscriptions);
+  return {
+    type: "update-selected-subscription",
+    selectedSubscriptions,
+  } as const;
+};
 export const setIsLoading = (isLoading: boolean) => {
   return {
     type: "set-is-loading",
@@ -50,6 +51,6 @@ export const setHasSeenTutorial = (hasSeenTutorial: boolean) => async (dispatch:
 export type StateActions =
   | ActionType<typeof setData>
   | ActionType<typeof updateSelectedAttractionFilters>
-  | ActionType<typeof updateSubscriptions>
+  | ActionType<typeof updateSelectedSubscriptions>
   | ActionType<typeof setIsLoading>
   | ActionType<typeof setHasSeenTutorial>;

@@ -5,7 +5,6 @@ import { Subscriptions } from "./subscriptions";
 export type AppState = {
   attractionItems: AttractionItem[];
   allAttractionFilters: AllCategories[];
-  selectedAttractionFilters: AllCategories[];
   subscriptionItems: SubscriptionItem[];
   user: User;
 };
@@ -24,10 +23,11 @@ function shuffle(array: Array<any>) {
 export const initialState: AppState = {
   attractionItems: shuffle(OutdoorItems.concat(shuffle(CityItems))),
   allAttractionFilters: Object.values(AllCategories),
-  selectedAttractionFilters: Object.values(AllCategories),
   subscriptionItems: Subscriptions,
   user: {
+    selectedAttractionFilters: Object.values(AllCategories),
+    selectedSubscriptions: [],
     hasSeenTutorial: false,
-    isLoading: false
+    isLoading: false,
   },
 };

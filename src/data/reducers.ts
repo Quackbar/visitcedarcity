@@ -15,13 +15,19 @@ export const reducers = (state: AppState, action: StateActions): AppState => {
     case "update-filtered-attractions": {
       return {
         ...state,
-        selectedAttractionFilters: action.selectedAttractionFilters,
+        user: {
+          ...state.user,
+          selectedAttractionFilters: action.selectedAttractionFilters,
+        },
       };
     }
-    case "update-subscription": {
+    case "update-selected-subscription": {
       return {
         ...state,
-        subscriptionItems: action.subscriptionItems,
+        user: {
+          ...state.user,
+          selectedSubscriptions: action.selectedSubscriptions,
+        },
       };
     }
     case "set-is-loading": {
