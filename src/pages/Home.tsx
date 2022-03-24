@@ -370,7 +370,6 @@ const Home: React.FC = () => {
           },
         ]}
       >
-        <IonCheckbox>thisthing</IonCheckbox>
       </IonActionSheet>
     </IonPage>
   );
