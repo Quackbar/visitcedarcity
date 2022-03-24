@@ -1,3 +1,15 @@
+import { Timestamp } from "firebase/firestore";
+
+export enum AllModules {
+  Weather = 0,
+  Schedule = 1,
+  FestivalFood = 2,
+  SkyData = 3,
+  RoadConditions = 4,
+  WinterMountainData = 5,
+  SnowPack = 6,
+}
+
 export enum AllCategories {
   AsianIndian = "asian-indian",
   LocalEatery = "local-eatery",
@@ -170,5 +182,39 @@ export interface SubscriptionItem {
   color: string;
   url: string;
   furl: string;
-  subscribed: boolean;
+}
+
+export interface User {
+  hasSeenTutorial: boolean;
+  isLoading: boolean;
+  selectedAttractionFilters: AllCategories[];
+  selectedSubscriptions: number[];
+  selectedHomeModules: AllModules[]
+}
+
+export interface ConditionsReturnType {
+  Date?: Timestamp;
+  conditions?: string;
+  temp?: string;
+}
+
+export interface MountainDataType {
+  Date?: Timestamp;
+  baseDepth?: string;
+  conditions?: string;
+  onedaySnowfall?: string;
+  liftsOpen?: string;
+  trailsOpen?: string;
+  temp?: string;
+  wind?: string;
+}
+
+export interface TodaysType {
+  name: string;
+  url: string;
+  timeStart: string;
+  timeEnd: string;
+  location: string;
+  tracks: string[];
+  id: string;
 }

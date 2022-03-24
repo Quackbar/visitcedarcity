@@ -1,4 +1,4 @@
-import { AttractionItem } from "../models/defaultModels";
+import { AttractionItem } from "../../models/defaultModels";
 import { AppState } from "./state";
 
 const getAttractionItems = (state: AppState) => state.attractionItems;

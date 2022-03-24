@@ -12,11 +12,11 @@ import {
   IonPopover,
   IonActionSheet,
 } from "@ionic/react";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import { BarChart, chartDataType, datasetType } from "../components/Chart";
-import { updateSubscriptions } from "../data/actions";
-import { connect } from "../data/connect";
+import { updateSelectedSubscriptions } from "../data/context/actions";
+import { connect } from "../data/context/connect";
 import { SubscriptionItem } from "../models/defaultModels";
 
 import { informationCircle, logoFacebook } from "ionicons/icons";
@@ -60,14 +60,15 @@ const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 
 interface StateProps {
   allSubscriptions: SubscriptionItem[];
+  selectedSubscriptions: number[];
 }
 interface DispatchProps {
-  updateSubscriptions: typeof updateSubscriptions;
+  updateSelectedSubscriptions: typeof updateSelectedSubscriptions;
 }
 
 type AccountProps = StateProps & DispatchProps;
 
-const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions }) => {
+const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptions, updateSelectedSubscriptions }) => {
   const nullEntry: any[] = [];
   const [notifications, setnotifications] = useState(nullEntry);
 
@@ -140,7 +141,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
     let newChartDataSet: datasetType[] = [];
 
     allSubscriptions.forEach((subscription) => {
-      if (subscription.subscribed) {
+      if (selectedSubscriptions.includes(subscription.id)) {
         newChartDataSet.push({
           label: subscription.title,
           data: subscription.timing,
@@ -153,13 +154,17 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
       labels: labels,
       datasets: newChartDataSet,
     });
-  }, [allSubscriptions]);
+  }, [allSubscriptions, selectedSubscriptions]);
 
   const didToggleCheckbox = (index: number) => {
     // flip the subscription state
-    allSubscriptions[index].subscribed = !allSubscriptions[index].subscribed;
-    updateSubscriptions([...allSubscriptions]);
-  }; 
+    if (selectedSubscriptions.includes(index)) {
+      selectedSubscriptions.splice(selectedSubscriptions.indexOf(index), 1);
+    } else {
+      selectedSubscriptions.push(index);
+    }
+    updateSelectedSubscriptions([...selectedSubscriptions]);
+  };
   const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
   const [showFilterModal, setShowFilterModal] = useState(false);
 
@@ -184,25 +189,29 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
               await Browser.open({ url: subscription.furl });
             };
             return (
-              <>
-                <IonItem key={index} class="ninety">
+              <Fragment key={index}>
+                <IonItem class="ninety">
                   <IonCheckbox
                     class={"c" + subscription.color.slice(1)}
                     onClick={() => didToggleCheckbox(index)}
-                    checked={subscription.subscribed}
+                    checked={selectedSubscriptions.includes(subscription.id)}
                   >
                     {subscription.title}
                   </IonCheckbox>
                   <IonText>&nbsp;{subscription.title}</IonText>
                 </IonItem>
 
-                <IonIcon icon={informationCircle} onClick={
-                  (e: any) => {
+                <IonIcon
+                  icon={informationCircle}
+                  onClick={(e: any) => {
                     e.persist();
-                    setShowPopover({ showPopover: true, event: e })
-                  }} class="ion-text-right ten" color="primary" />
+                    setShowPopover({ showPopover: true, event: e });
+                  }}
+                  class="ion-text-right ten"
+                  color="primary"
+                />
                 <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
-              </>
+              </Fragment>
             );
           })}
           <h1>
@@ -219,7 +228,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
             <IonButton href="/tutorial">See Tutorial</IonButton>
           </IonItem>
           <IonItem>
-            <IonButton  onClick={() => setShowFilterModal(true)}>Get Help</IonButton>
+            <IonButton onClick={() => setShowFilterModal(true)}>Get Help</IonButton>
           </IonItem>
           <IonPopover
             event={popoverState.event}
@@ -264,9 +273,10 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, updateSubscriptions
 export default connect<{}, StateProps, DispatchProps>({
   mapStateToProps: (state) => ({
     allSubscriptions: state.subscriptionItems,
+    selectedSubscriptions: state.user.selectedSubscriptions,
   }),
   mapDispatchToProps: {
-    updateSubscriptions,
+    updateSelectedSubscriptions,
   },
   component: Account,
 });

@@ -20,9 +20,9 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper";
 import { arrowForward, chevronForward, heart, thumbsDown, thumbsUp } from "ionicons/icons";
-import { setHasSeenTutorial } from "../data/user/user.actions";
+import { setHasSeenTutorial } from "../data/context/actions";
 import "@ionic/react/css/ionic-swiper.css";
-import { connect } from "../data/connect";
+import { connect } from "../data/context/connect";
 import { RouteComponentProps } from "react-router";
 import "swiper/css";
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
@@ -51,6 +51,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
   // };
 
   const startApp = async () => {
+    console.log('starting app')
     await setHasSeenTutorial(true);
     history.push("/home", { direction: "none" });
   };
@@ -369,7 +370,8 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
                     <IonCol>
                       <IonText>
                         <p>
-                          See when the events you love are in season and plan your trip knowing you'll have a good time in Festival City!
+                          See when the events you love are in season and plan your trip knowing you'll have a good time
+                          in Festival City!
                         </p>
                       </IonText>
                     </IonCol>

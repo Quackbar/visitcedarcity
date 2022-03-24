@@ -11,12 +11,10 @@ import {
   IonSearchbar,
   IonTitle,
   IonToolbar,
-  IonInfiniteScroll,
-  IonInfiniteScrollContent,
 } from "@ionic/react";
 import DiscoverList from "../components/DiscoverList";
 import { filterCircleOutline } from "ionicons/icons";
-import { AppContext } from "../data/AppContext";
+import { AppContext } from "../data/context/AppContext";
 import DiscoverListFilter from "../components/DiscoverListFilter";
 import CategorySlide from "../components/CategorySlide";
 import { AttractionItem } from "../models/defaultModels";
@@ -47,7 +45,7 @@ const Discover: React.FC = () => {
   useEffect(() => {
     // selected filters changed
     let filteredResults: AttractionItem[] = [];
-    for (let selectedFilter of context.state.selectedAttractionFilters) {
+    for (let selectedFilter of context.state.user.selectedAttractionFilters) {
       const resultsForFilter = context.state.attractionItems.filter((item) =>
         item.categories?.some((e) => e === selectedFilter)
       );
@@ -60,7 +58,7 @@ const Discover: React.FC = () => {
     }
 
     setFilteredAttractions(filteredResults);
-  }, [context.state.attractionItems, context.state.selectedAttractionFilters]);
+  }, [context.state.attractionItems, context.state.user.selectedAttractionFilters]);
 
   return (
     <IonPage ref={pageRef} id="discover-page">

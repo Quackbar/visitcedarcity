@@ -1,3 +1,5 @@
+import React, { Fragment, ReactElement, useState } from "react";
+import { Browser } from "@capacitor/browser";
 import {
   IonModal,
   IonDatetime,
@@ -14,41 +16,41 @@ import {
   IonButton,
   IonGrid,
   IonActionSheet,
-  IonCheckbox,
   IonHeader,
   IonToolbar,
+  IonIcon,
+  IonButtons,
+  IonList,
+  IonCheckbox,
 } from "@ionic/react";
+import { getMode, RefresherEventDetail } from "@ionic/core";
+import { trash, share, settingsOutline } from "ionicons/icons";
 
-import Weather from "../components/Weather";
-import MountainData from "../components/Mountaindata";
-import ScheduleComp from "../components/Schedule";
-import SnowPack from "../components/SnowPack";
-import SkyData from "../components/SkyData";
-import RoadConditions from "../components/RoadConditions";
-import FestivalFood from "../components/FestivalFood";
+import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
+// modules
+import Weather from "../modules/Weather";
+import MountainData from "../modules/Mountaindata";
+import ScheduleComp from "../modules/Schedule";
+import SnowPack from "../modules/SnowPack";
+import SkyData from "../modules/SkyData";
+import RoadConditions from "../modules/RoadConditions";
+import FestivalFood from "../modules/FestivalFood";
+
+//firebase
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
-import { Timestamp } from "@firebase/firestore";
 
-import { RefresherEventDetail } from "@ionic/core";
+import { format, parseISO } from "date-fns";
+import { AllModules, ConditionsReturnType, MountainDataType, TodaysType } from "../models/defaultModels";
+import { updateSelectedHomeModules } from "../data/context/actions";
 
-import React, { useRef, useState, useEffect } from "react";
+// schedules
 import { USFSchedule } from "../assets/data/USF";
 import { UMRFSchedule } from "../assets/data/UMRF";
 import { CCMASchedule } from "../assets/data/CCMA";
 import { NSFSchedule } from "../assets/data/NSF";
 import { OSUSchedule } from "../assets/data/OSU";
-
-import { format, parseISO } from "date-fns";
-import { Browser } from "@capacitor/browser";
-
-import { PushNotificationSchema, PushNotifications, Token, ActionPerformed } from "@capacitor/push-notifications";
-// import './Home.css';
-// import { Toast } from "@capacitor/toast";
-import { trash, share, caretForwardCircle, heart } from "ionicons/icons";
-import SafeAreaWrapper from "../components/SafeAreaWrapper";
-
-// import { Moon } from "lunarphase-js";
+import { connect } from "../data/context/connect";
 
 let CedarImg = "";
 let CedarTemp = "";
@@ -61,34 +63,7 @@ let MDOneDay = "";
 let MDLiftsOpen = "";
 let MDTrailsOpen = "";
 
-type MyReturnTypeItem = {
-  Date?: Timestamp;
-  conditions?: string;
-  temp?: string;
-};
-type MountainDataType = {
-  Date?: Timestamp;
-  baseDepth?: string;
-  conditions?: string;
-  onedaySnowfall?: string;
-  liftsOpen?: string;
-  trailsOpen?: string;
-  temp?: string;
-  wind?: string;
-};
-
-type todaystype = {
-  name: string;
-  url: string;
-  timeStart: string;
-  timeEnd: string;
-  location: string;
-  tracks: string[];
-  id: string;
-};
-
 getMountainData().then((data) => {
-  // console.log('mountainData', data);
   var x: MountainDataType = data;
   MDBaseDepth = x.baseDepth ?? "unknown";
   MDOneDay = x.onedaySnowfall ?? "unknown";
@@ -101,25 +76,23 @@ getMountainData().then((data) => {
 });
 
 getBrianHeadWeather().then((data) => {
-  // console.log('brian head', data);
-  var x: MyReturnTypeItem = data;
+  var x: ConditionsReturnType = data;
   BrianImg = x.conditions ?? "unknown";
   BrianTemp = x.temp ?? "unknown";
   localStorage.setItem("BrianImg", x.conditions ?? "unknown");
   localStorage.setItem("BrianTemp", x.temp ?? "unknown");
-  // console.log('brian head', x.Date?.toDate().toLocaleDateString("en-US") );
 });
+
 getCedarWeather().then((data) => {
-  // console.log('cedar',data);
-  var x: MyReturnTypeItem = data;
+  var x: ConditionsReturnType = data;
   CedarImg = x.conditions ?? "unknown";
   CedarTemp = x.temp ?? "unknown";
   localStorage.setItem("CedarImg", x.conditions ?? "unknown");
   localStorage.setItem("CedarTemp", x.temp ?? "unknown");
 });
+
 getParoWeather().then((data) => {
-  // console.log('paro',data);
-  var x: MyReturnTypeItem = data;
+  var x: ConditionsReturnType = data;
   ParoImg = x.conditions ?? "unknown";
   ParoTemp = x.temp ?? "unknown";
   localStorage.setItem("ParoImg", x.conditions ?? "unknown");
@@ -130,7 +103,7 @@ const openSite = async () => {
   await Browser.open({ url: "https://visitcedarcity.com/events/" });
 };
 
-function checkSched(things: todaystype[]) {
+function checkSched(things: TodaysType[]) {
   if (things.length === 0) {
     return (
       <ScheduleComp
@@ -145,30 +118,38 @@ function checkSched(things: todaystype[]) {
 }
 
 function doRefresh(event: CustomEvent<RefresherEventDetail>) {
-  // console.log('Begin async operation');
   window.location.reload();
 }
 
-const Home: React.FC = () => {
+interface StateProps {
+  selectedHomeModules: AllModules[];
+}
+interface DispatchProps {
+  updateSelectedHomeModules: typeof updateSelectedHomeModules;
+}
+
+type HomeProps = StateProps & DispatchProps;
+
+const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModules }) => {
   const formatDate = (value: string) => {
     return format(parseISO(value), "MMM dd yyyy");
   };
 
-  const pageRef = useRef<HTMLElement>(null);
+  const ios = getMode() === "ios";
 
   const [showFilterModal, setShowFilterModal] = useState(false);
 
-  const [showWeather, setShowWeather] = useState(true);
-  const [showSchedule, setShowSchedule] = useState(true);
-  const [showFestivalFood, setShowFestivalFood] = useState(true);
-  const [showSkyData, setShowSkyData] = useState(true);
-  const [showRoadConditions, setShowRoadConditions] = useState(true);
-  const [showWinterMountainData, setShowWinterMountainData] = useState(true);
-  const [showSnowpack, setShowSnowpack] = useState(true);
+  // const [showWeather, setShowWeather] = useState(true);
+  // const [showSchedule, setShowSchedule] = useState(true);
+  // const [showFestivalFood, setShowFestivalFood] = useState(true);
+  // const [showSkyData, setShowSkyData] = useState(true);
+  // const [showRoadConditions, setShowRoadConditions] = useState(true);
+  // const [showWinterMountainData, setShowWinterMountainData] = useState(true);
+  // const [showSnowpack, setShowSnowpack] = useState(true);
 
   const today = new Date();
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
-  let things: todaystype[] = [];
+  let things: TodaysType[] = [];
   things = [];
   const [formattedDate, setFormattedDate] = useState(new Date().toISOString().slice(0, 10));
 
@@ -179,199 +160,182 @@ const Home: React.FC = () => {
   );
 
   yourSchedule.map((item) => {
-    // var formattedDate =  "2022-08-08"
     if (item.date === formattedDate) {
-      item.groups.map((group) => {
-        // console.log("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
-        // console.log(group.sessions[0])
-        // console.log(group.sessions[0].name)
-        things.push(group.sessions[0] as todaystype);
+      things = item.groups.map((group) => {
+        return group.sessions[0] as TodaysType;
       });
     }
   });
 
+  const toggleModule = (index: number) => {
+    // flip the subscription state
+    if (selectedHomeModules.includes(index)) {
+      selectedHomeModules.splice(selectedHomeModules.indexOf(index), 1);
+    } else {
+      selectedHomeModules.push(index);
+    }
+    updateSelectedHomeModules([...selectedHomeModules]);
+  };
+
+  const HomeModules: { [key in AllModules]: { label: string; src: ReactElement } } = {
+    [AllModules.Weather]: {
+      label: "Weather",
+      src: (
+        <Weather
+          CedarImg={CedarImg || String(localStorage.getItem("CedarImg"))}
+          CedarTemp={CedarTemp || String(localStorage.getItem("CedarTemp"))}
+          ParoImg={ParoImg || String(localStorage.getItem("ParoImg"))}
+          ParoTemp={ParoTemp || String(localStorage.getItem("ParoTemp"))}
+          BrianImg={BrianImg || String(localStorage.getItem("BrianImg"))}
+          BrianTemp={BrianTemp || String(localStorage.getItem("BrianTemp"))}
+        />
+      ),
+    },
+    [AllModules.Schedule]: {
+      label: "Schedule",
+      src: (
+        <IonCard class="basiccentered">
+          <IonTitle class="centered">
+            <br />
+            Your Daily Schedule
+            <br />
+            <br />
+          </IonTitle>
+          {/* Datetime in overlay */}
+          {/* <IonButton  class="centered" id="open-modal">Choose Custom Date</IonButton> */}
+          <IonModal trigger="open-modal">
+            <IonContent>
+              <IonDatetime></IonDatetime>
+            </IonContent>
+          </IonModal>
+
+          {/* Datetime in popover with cover element */}
+          <IonItem button={true} id="open-date-input">
+            <IonLabel>Date</IonLabel>
+            <IonText slot="end">{popoverDate}</IonText>
+            <IonPopover trigger="open-date-input" showBackdrop={false}>
+              <IonDatetime
+                presentation="date"
+                onIonChange={(ev) => {
+                  setPopoverDate(formatDate(ev.detail.value!));
+                  // console.log(ev.detail.value!)
+                  setFormattedDate(ev.detail.value!.slice(0, -15));
+                }}
+              />
+            </IonPopover>
+          </IonItem>
+
+          {things.map((event) => {
+            return (
+              <ScheduleComp
+                name={event.name}
+                timeStart={event.timeStart}
+                timeEnd={event.timeEnd}
+                thelocation={event.location}
+                url={event.url}
+              />
+            );
+          })}
+          {checkSched(things)}
+          <IonButton onClick={openSite}>See Extended Events Calendar</IonButton>
+          <p></p>
+        </IonCard>
+      ),
+    },
+    [AllModules.FestivalFood]: { label: "Festival Food", src: <FestivalFood /> },
+    [AllModules.SkyData]: {
+      label: "Sky Data",
+      src: (
+        <IonCard>
+          <SkyData />
+        </IonCard>
+      ),
+    },
+    [AllModules.RoadConditions]: { label: "Road Conditions", src: <RoadConditions /> },
+    [AllModules.WinterMountainData]: {
+      label: "Winter Mountain Data",
+      src: (
+        <MountainData
+          BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
+          OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
+          LiftsOpen={MDLiftsOpen || String(localStorage.getItem("MDLiftsOpen"))}
+          TrailsOpen={MDTrailsOpen || String(localStorage.getItem("MDTrailsOpen"))}
+        />
+      ),
+    },
+    [AllModules.SnowPack]: {
+      label: "Snow Pack",
+      src: (
+        <IonCard>
+          <h1 className="centered">
+            <br />
+            Brian Head Snowpack
+            <br />
+          </h1>
+          <SnowPack
+            theDates={JSON.parse(String(localStorage.getItem("dates")))}
+            baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))}
+            oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))}
+            temps={JSON.parse(String(localStorage.getItem("temps")))}
+          />
+        </IonCard>
+      ),
+    },
+  };
+
   return (
     <IonPage id="home-page">
       <IonContent>
-        <SafeAreaWrapper>
-          <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
-            <IonRefresherContent></IonRefresherContent>
-          </IonRefresher>
-
-          {showWeather ? (
-            <Weather
-              CedarImg={CedarImg || String(localStorage.getItem("CedarImg"))}
-              CedarTemp={CedarTemp || String(localStorage.getItem("CedarTemp"))}
-              ParoImg={ParoImg || String(localStorage.getItem("ParoImg"))}
-              ParoTemp={ParoTemp || String(localStorage.getItem("ParoTemp"))}
-              BrianImg={BrianImg || String(localStorage.getItem("BrianImg"))}
-              BrianTemp={BrianTemp || String(localStorage.getItem("BrianTemp"))}
-            />
-          ) : (
-            ""
-          )}
-
-          {showSchedule ? (
-            <IonCard class="basiccentered">
-              <IonTitle class="centered">
-                <br />
-                Your Daily Schedule
-                <br />
-                <br />
-              </IonTitle>
-              {/* Datetime in overlay */}
-              {/* <IonButton  class="centered" id="open-modal">Choose Custom Date</IonButton> */}
-              <IonModal trigger="open-modal">
-                <IonContent>
-                  <IonDatetime></IonDatetime>
-                </IonContent>
-              </IonModal>
-
-              {/* Datetime in popover with cover element */}
-              <IonItem button={true} id="open-date-input">
-                <IonLabel>Date</IonLabel>
-                <IonText slot="end">{popoverDate}</IonText>
-                <IonPopover trigger="open-date-input" showBackdrop={false}>
-                  <IonDatetime
-                    presentation="date"
-                    onIonChange={(ev) => {
-                      setPopoverDate(formatDate(ev.detail.value!));
-                      // console.log(ev.detail.value!)
-                      setFormattedDate(ev.detail.value!.slice(0, -15));
-                    }}
-                  />
-                </IonPopover>
-              </IonItem>
-
-              {things.map((event) => {
-                return (
-                  <ScheduleComp
-                    name={event.name}
-                    timeStart={event.timeStart}
-                    timeEnd={event.timeEnd}
-                    thelocation={event.location}
-                    url={event.url}
-                  />
-                );
-              })}
-              {checkSched(things)}
-              <IonButton onClick={openSite}>See Extended Events Calendar</IonButton>
-              <p></p>
-            </IonCard>
-          ) : (
-            ""
-          )}
-
-          {showFestivalFood ? <FestivalFood /> : ""}
-
-          {showSkyData ? (
-            <IonCard>
-              <SkyData />
-            </IonCard>
-          ) : (
-            ""
-          )}
-
-          {showRoadConditions ? <RoadConditions /> : ""}
-          {showWinterMountainData ? (
-            <MountainData
-              BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
-              OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
-              LiftsOpen={MDLiftsOpen || String(localStorage.getItem("MDLiftsOpen"))}
-              TrailsOpen={MDTrailsOpen || String(localStorage.getItem("MDTrailsOpen"))}
-            />
-          ) : (
-            ""
-          )}
-
-          {showSnowpack ? (
-            <IonCard>
-              <h1 className="centered">
-                <br />
-                Brian Head Snowpack
-                <br />
-              </h1>
-              <SnowPack
-                theDates={JSON.parse(String(localStorage.getItem("dates")))}
-                baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))}
-                oneDaySnowfall={JSON.parse(String(localStorage.getItem("oneDaySnowfall")))}
-                temps={JSON.parse(String(localStorage.getItem("temps")))}
-              />
-            </IonCard>
-          ) : (
-            ""
-          )}
-          <IonGrid class="basiccentered">
-            <IonButton onClick={() => setShowFilterModal(true)}>Customize</IonButton>
-          </IonGrid>
-        </SafeAreaWrapper>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Home</IonTitle>
+            <IonButton onClick={() => setShowFilterModal(true)} slot="end" fill="clear">
+              <IonIcon icon={settingsOutline} slot="icon-only" />
+            </IonButton>
+          </IonToolbar>
+        </IonHeader>
+        <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
+          <IonRefresherContent></IonRefresherContent>
+        </IonRefresher>
+        {selectedHomeModules.map((moduleId: AllModules) => {
+          return <Fragment key={moduleId}>{HomeModules[moduleId].src}</Fragment>;
+        })}
       </IonContent>
 
-      <IonActionSheet
-        isOpen={showFilterModal}
-        onDidDismiss={() => setShowFilterModal(false)}
-        cssClass="my-custom-class"
-        buttons={[
-          {
-            text: showWeather ? "Weather Component" : "Weather Component",
-            icon: showWeather ? trash : share,
-            handler: () => {
-              setShowWeather(!showWeather);
-            },
-          },
-          {
-            text: showSchedule ? "Schedule Component" : "Schedule Component",
-            icon: showSchedule ? trash : share,
-            handler: () => {
-              setShowSchedule(!showSchedule);
-            },
-          },
-          {
-            text: showFestivalFood ? "FestivalFood Component" : "FestivalFood Component",
-            icon: showFestivalFood ? trash : share,
-            handler: () => {
-              setShowFestivalFood(!showFestivalFood);
-            },
-          },
-          {
-            text: showSkyData ? "SkyData Component" : "SkyData Component",
-            icon: showSkyData ? trash : share,
-            handler: () => {
-              setShowSkyData(!showSkyData);
-            },
-          },
-          {
-            text: showRoadConditions ? "RoadConditions Component" : "RoadConditions Component",
-            icon: showRoadConditions ? trash : share,
-            handler: () => {
-              setShowRoadConditions(!showRoadConditions);
-            },
-          },
-          {
-            text: showWinterMountainData ? "WinterMountainData Component" : "WinterMountainData Component",
-            icon: showWinterMountainData ? trash : share,
-            handler: () => {
-              setShowWinterMountainData(!showWinterMountainData);
-            },
-          },
-          {
-            text: showSnowpack ? "Snowpack Component" : "Snowpack Component",
-            icon: showSnowpack ? trash : share,
-            handler: () => {
-              setShowSnowpack(!showSnowpack);
-            },
-          },
-          {
-            text: "Cancel",
-            role: "cancel",
-            handler: () => {
-              //console.log("Cancel clicked");
-            },
-          },
-        ]}
-      >
-      </IonActionSheet>
+      <IonModal isOpen={showFilterModal} swipeToClose={true} onDidDismiss={() => setShowFilterModal(false)}>
+        <IonHeader translucent={true} className="module-filter">
+          <IonToolbar>
+            <IonTitle>Custom Modules</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonContent className="module-filter">
+          <IonList lines={ios ? "inset" : "full"}>
+            {Object.values(HomeModules).map((module, index) => (
+              <IonItem key={`module-${index}`}>
+                <IonLabel>{module.label}</IonLabel>
+                <IonCheckbox
+                  onClick={() => toggleModule(index)}
+                  checked={selectedHomeModules.includes(index)}
+                  color="primary"
+                  value={index}
+                ></IonCheckbox>
+              </IonItem>
+            ))}
+          </IonList>
+        </IonContent>
+      </IonModal>
     </IonPage>
   );
 };
-export default Home;
+// export default Home;
+
+export default connect<{}, StateProps, DispatchProps>({
+  mapStateToProps: (state) => ({
+    selectedHomeModules: state.user.selectedHomeModules,
+  }),
+  mapDispatchToProps: {
+    updateSelectedHomeModules,
+  },
+  component: Home,
+});
