@@ -39,17 +39,6 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
   const [showSkip, setShowSkip] = useState(true);
   let [swiper, setSwiper] = useState<SwiperCore>();
 
-  // get slide ref
-  // const mySlides = useRef(null);
-  // const onBtnClicked = async (direction: string) => {
-  //   const swiper = await mySlides.current.getSwiper();
-  //   if (direction === "next") {
-  //     swiper.slideNext();
-  //   } else if (direction === "prev") {
-  //     swiper.slidePrev();
-  //   }
-  // };
-
   const startApp = async () => {
     console.log('starting app')
     await setHasSeenTutorial(true);
