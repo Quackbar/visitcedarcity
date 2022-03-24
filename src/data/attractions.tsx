@@ -12,7 +12,7 @@ export const OutdoorItems = [
     id: 1,
     title: "Vermillion Castle",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "2 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/1fb8638d-3e2b-48b1-93d1-5b48ded737ac",
     categories: [
@@ -25,7 +25,7 @@ export const OutdoorItems = [
     id: 2,
     title: "Noah's Ark",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "3 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/b812a61d-2904-4c68-93f2-e872693e473f",
     categories: [
@@ -38,7 +38,7 @@ export const OutdoorItems = [
     id: 3,
     title: "Vermillion Castle",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "2 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/4f4227f8-e379-4866-8c65-978b10fdc573",
     categories: [
@@ -51,7 +51,7 @@ export const OutdoorItems = [
     id: 4,
     title: "Hidden Haven",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "1 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
     categories: [
@@ -64,7 +64,7 @@ export const OutdoorItems = [
     id: 4,
     title: "Hidden Haven",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "1 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
     categories: [
@@ -77,7 +77,7 @@ export const OutdoorItems = [
     id: 5,
     title: "Henderson Lake",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description:
       "3 mile, Out-and-Back (or continue on Dark Hollow Trai for point-to-point or loop) type trail accessible Early Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/f39f1ee6-2d25-415d-b574-4871798b4364",
@@ -91,7 +91,7 @@ export const OutdoorItems = [
     id: 6,
     title: "Manzanita",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "2.5 mile, Loop type trail accessible Early Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/898cef05-df6b-40e0-89d4-d237fb92b65d",
     categories: [
@@ -104,7 +104,7 @@ export const OutdoorItems = [
     id: 7,
     title: "Town Trail",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "2 mile, Point-to-Point type trail accessible Early Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/c6d6bcf5-ea72-40f1-89f7-815786eb9510",
     categories: [
@@ -117,7 +117,7 @@ export const OutdoorItems = [
     id: 8,
     title: "Alpine Creek Loop",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "2 - 4 - 9 mile, Loop type trail accessible Early Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/27ca3269-6d60-4179-9970-1e2ebeb4364b",
     categories: [
@@ -130,7 +130,7 @@ export const OutdoorItems = [
     id: 9,
     title: "Dark Hollow",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "14.5 mile, Point-to-Point type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/45f000c3-548f-44be-9bdc-360dfec454e8",
     categories: [
@@ -143,7 +143,7 @@ export const OutdoorItems = [
     id: 10,
     title: "Sidney Peaks",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "4 mile, Point-to-Point type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/afbfecff-722a-436d-991b-fdac1bdb9649",
     categories: [
@@ -156,7 +156,7 @@ export const OutdoorItems = [
     id: 11,
     title: "Bunker Creek",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "11 mile, Point-to-Point type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/8f1d2314-e81f-4ae0-b1f0-f2e836562c5a",
     categories: [
@@ -169,7 +169,7 @@ export const OutdoorItems = [
     id: 12,
     title: "Twisted Forest",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "1 mile, Out-and-Back type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/66e5092c-d0ef-4b53-995c-228a2b325bd1",
     categories: [
@@ -182,7 +182,7 @@ export const OutdoorItems = [
     id: 13,
     title: "Navajo Loop",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "3.5 mile, Loop type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/7ea638b3-96f9-425f-a112-38916b6d6640",
     categories: [
@@ -195,7 +195,7 @@ export const OutdoorItems = [
     id: 14,
     title: "Marathon / Mace's Run",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "5 mile, Loop type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
     categories: [
@@ -208,7 +208,7 @@ export const OutdoorItems = [
     id: 15,
     title: "Lowder Ponds Loop",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "11.5 mile, Loop type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/db1a48da-f22d-466b-a613-91aa4ecc0085",
     categories: [
@@ -221,7 +221,7 @@ export const OutdoorItems = [
     id: 16,
     title: "High Mountain",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "6 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/393200b3-5022-4323-88d8-ec11f099ad64",
     categories: [
@@ -234,7 +234,7 @@ export const OutdoorItems = [
     id: 17,
     title: "Rattlesnake",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "10 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/f0585b38-f7e6-4646-8158-5a1e3c9c24a2",
     categories: [
@@ -247,7 +247,7 @@ export const OutdoorItems = [
     id: 18,
     title: "Alpine Pond",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "1 mile, Loop type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/95328441-a68e-4fd1-a319-0187f3ebc0d7",
     categories: [
@@ -260,7 +260,7 @@ export const OutdoorItems = [
     id: 19,
     title: "Ramparts",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "2 mile, Out-and-Back type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/7e6f955b-1e42-4a0a-a2b6-932d694b89f6",
     categories: [
@@ -273,7 +273,7 @@ export const OutdoorItems = [
     id: 20,
     title: "Hancock Peak",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.visitbrianhead.org/Trails",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "5.5 mile, Point-to-Point type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/00085e57-a61a-4975-a0b7-54b73ce6f12d",
     categories: [
@@ -455,6 +455,102 @@ export const OutdoorItems = [
     categories: [
       AttractionCategories.Lodging.subcategories.Campground,
       AttractionCategories.Lodging.subcategories.Tenting,
+    ],
+  },
+  {
+    id: 32,
+    title: "Kolob Canyon",
+    subtitle: "National Parks and Monuments",
+    url: "https://www.nps.gov/zion/planyourvisit/kolob-canyons.htm",
+    description:
+      "Kolob Canyon is a lesser known area of Zion National Park that is typically less traveled, but no less spectacular. Be prepared to be amazed. The canyon is shaped in rugged red sandstone cast against wildflowers that bloom in abundance. The canyon received its name from religious settlers in the 1850s who named it after “the star nearest to the residence of God.”",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/Slide-2-National-Parks.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.NationalParks,
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.Drives,
+      AttractionCategories.Experiences.subcategories.Trails,
+      AttractionCategories.Experiences.subcategories.DarkSkies,
+    ],
+  },
+  {
+    id: 33,
+    title: "Zion National Park",
+    subtitle: "National Parks and Monuments",
+    url: "https://www.nps.gov/zion/index.htm",
+    description:
+      "Originally established in 1909 as Mukuntuweap National Monument, the name Zion is a Hebrew word referring to a place of safety, named so by Mormon pioneers finding refuge in Southern Utah. A geologic showpiece with sandstone cliffs among the highest in the world, this Southern Utah park measures 147,551 acres, with an elevation that ranges from 3,666 to 8,726 feet. Zion is home to a large, diverse animal and plant community, with almost 800 native species. The diversity in elevation, sunlight, water and temperature create “micro-environments,” like hanging gardens, forested side canyons and isolated mesas.",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/Slide-4-National-Parks.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.NationalParks,
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.Drives,
+      AttractionCategories.Experiences.subcategories.Trails,
+      AttractionCategories.Experiences.subcategories.DarkSkies,
+    ],
+  },
+  {
+    id: 34,
+    title: "Bryce Canyon",
+    subtitle: "National Parks and Monuments",
+    url: "www.nps.gov/brca",
+    description:
+      "Mother Nature’s powerful force and time-honored patience sculpted this beautiful mural that we call Bryce Canyon National Park. Wind and erosion over eons of time crafted spires, fins and mazes out of colorful limestone to create a whimsical array of formations. The landscape of eccentric shadows and vibrant red hues constantly changes with every second of the day, while the cool and crisp air of night at 9,000 feet brings the stars right to your fingertips. With every twist and turn of Bryce’s stunning labyrinth, you’re one step closer to adventure.",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/Bryce-Canyon-scaled.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.NationalParks,
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.Drives,
+      AttractionCategories.Experiences.subcategories.Trails,
+      AttractionCategories.Experiences.subcategories.DarkSkies,
+    ],
+  },
+  {
+    id: 35,
+    title: "Lake Powell",
+    subtitle: "National Parks and Monuments",
+    url: "www.nps.gov/glca",
+    description:
+      "If you enjoy floating in clean, crisp waters, then we’re sure you already know all about Lake Powell, the water playground of the West. This lake of deep blue water stretches across hundreds of miles of sandy beaches cast against jaw-dropping red rock cliffs and pocketed water holes in its gooseneck canyons. Lake Powell and the Glen Canyon National Recreation Area offers unparalleled opportunities for water-based and backcountry recreation. The area stretches for hundreds of miles from Lee’s Ferry in Arizona to the Orange Cliffs of Southern Utah, encompassing scenic vistas, geological wonders and a panorama of human history. Here, you can do it all — boating, water skiing, fishing, swimming, backcountry hiking or four-wheeling.",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/National-Recreation-Areas-Lake-Powell-Jerry-Sintz.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.NationalParks,
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.Drives,
+      AttractionCategories.Experiences.subcategories.Trails,
+      AttractionCategories.Experiences.subcategories.DarkSkies,
+    ],
+  },
+  {
+    id: 36,
+    title: "Grand Staircase",
+    subtitle: "National Parks and Monuments",
+    url: "www.ut.blm.gov/monument",
+    description:
+      "Grand Staircase-Escalante National Monument is a dramatic, multi-hued landscape, rich in natural and human history. Extending across almost two million acres of Utah public lands managed by the Bureau of Land Management, the Monument represents a unique combination of archaeological, historical, paleontological, geological, and biological resources. These strikingly beautiful and scientifically important lands are divided into three distinct regions: the Grand Staircase, the Kaiparowits Plateau, and the Canyons of the Escalante, meaning “Big Mountain’s Little Brother.” Many sites from prehistoric cultures have been recorded on the Plateau. Many more are preserved for future study.",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/National-Monuments-Grand-Staircase-Escalante-Tom-Till.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.NationalParks,
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.Drives,
+      AttractionCategories.Experiences.subcategories.Trails,
+      AttractionCategories.Experiences.subcategories.DarkSkies,
+    ],
+  },
+  {
+    id: 37,
+    title: "Grand Canyon",
+    subtitle: "National Parks and Monuments",
+    url: "www.nps.gov/grca",
+    description:
+      "The first time you see the Grand Canyon you’ll gasp for breath. It happens to everyone. The enormity of 2,000 million years of erosion overwhelms the senses. The canyon is so deep and the walls so sheer that the first glimpse leaves some hesitant to step near the edge. Today, it is one of the natural wonders of the world. If you’re feeling adventurous, take a mule ride into the canyon, or hike along the well-marked trails. You’ll be awe-struck as you gaze on the various shades of blues and purples as they extend from horizon to horizon.",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/Grand-Canyon.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.NationalParks,
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.Drives,
+      AttractionCategories.Experiences.subcategories.Trails,
+      AttractionCategories.Experiences.subcategories.DarkSkies,
     ],
   },
 ];

@@ -238,31 +238,32 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
             <p>This is popover content</p>
           </IonPopover>
           <IonActionSheet
-            isOpen={showFilterModal}
-            onDidDismiss={() => setShowFilterModal(false)}
-            cssClass="my-custom-class"
-            buttons={[
-              {
-                text: "Technical Question / Suggestion",
-                handler: () => {
-                  Browser.open({ url: "mailto:samluther998@gmail.com" });
-                },
-              },
-              {
-                text: "Visit Cedar City / Brian Head Question",
-                handler: () => {
-                  Browser.open({ url: "mailto:tourism.group@ironcounty.net" });
-                },
-              },
-              {
-                text: "Cancel",
-                role: "cancel",
-                handler: () => {
-                  //console.log("Cancel clicked");
-                },
-              },
-            ]}
-          ></IonActionSheet>
+        isOpen={showFilterModal}
+        onDidDismiss={() => setShowFilterModal(false)}
+        cssClass="my-custom-class"
+        buttons={[
+          {
+            text: "Technical Question / Suggestion",
+            handler: () => {
+              Browser.open({ url: "mailto:info@goldblockchain.us" });
+            },
+          },
+          {
+            text: "Visit Cedar City / Brian Head Question",
+            handler: () => {
+              Browser.open({ url: "mailto:tourism.group@ironcounty.net" });
+            },
+          },
+          {
+            text: "Cancel",
+            role: "cancel",
+            handler: () => {
+              //console.log("Cancel clicked");
+            },
+          },
+        ]}
+      >
+      </IonActionSheet>
         </SafeAreaWrapper>
       </IonContent>
     </IonPage>
