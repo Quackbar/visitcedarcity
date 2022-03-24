@@ -7,7 +7,6 @@ interface StateProps {
 }
 
 const HomeOrTutorial: React.FC<StateProps> = ({ hasSeenTutorial }) => {
-  console.log(hasSeenTutorial)
   return hasSeenTutorial ? <Redirect to="/home" /> : <Redirect to="/tutorial" />
 };
 

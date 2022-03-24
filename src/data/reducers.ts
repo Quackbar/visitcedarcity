@@ -4,7 +4,13 @@ import { AppState } from "./state";
 export const reducers = (state: AppState, action: StateActions): AppState => {
   switch (action.type) {
     case "set-user-data": {
-      return { ...state, ...action.data };
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          ...action.data,
+        },
+      };
     }
     case "update-filtered-attractions": {
       return {
@@ -18,7 +24,16 @@ export const reducers = (state: AppState, action: StateActions): AppState => {
         subscriptionItems: action.subscriptionItems,
       };
     }
-    case "set-has-seen-tutorial":
+    case "set-is-loading": {
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          isLoading: action.isLoading,
+        },
+      };
+    }
+    case "set-has-seen-tutorial": {
       return {
         ...state,
         user: {
@@ -26,5 +41,6 @@ export const reducers = (state: AppState, action: StateActions): AppState => {
           hasSeenTutorial: action.hasSeenTutorial,
         },
       };
+    }
   }
 };

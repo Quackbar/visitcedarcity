@@ -51,6 +51,7 @@ const Tutorial: React.FC<TutorialProps> = ({ history, setHasSeenTutorial }) => {
   // };
 
   const startApp = async () => {
+    console.log('starting app')
     await setHasSeenTutorial(true);
     history.push("/home", { direction: "none" });
   };

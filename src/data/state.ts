@@ -28,5 +28,6 @@ export const initialState: AppState = {
   subscriptionItems: Subscriptions,
   user: {
     hasSeenTutorial: false,
+    isLoading: false
   },
 };

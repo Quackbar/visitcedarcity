@@ -175,4 +175,5 @@ export interface SubscriptionItem {
 
 export interface User {
   hasSeenTutorial: boolean;
+  isLoading: boolean
 }

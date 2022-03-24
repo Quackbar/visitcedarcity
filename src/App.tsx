@@ -108,19 +108,24 @@ if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
 } else {
   darkMode = false;
 }
+interface StateProps {
+  isLoading: boolean;
+}
 interface DispatchProps {
   loadUserData: typeof loadUserData;
 }
 
-interface IonicAppProps extends DispatchProps {}
+interface IonicAppProps extends StateProps, DispatchProps {}
 
-const VisitCedarCity: React.FC<IonicAppProps> = ({ loadUserData }) => {
+const VisitCedarCity: React.FC<IonicAppProps> = ({ isLoading, loadUserData }) => {
   useEffect(() => {
     loadUserData();
     // eslint-disable-next-line
   }, []);
 
-  return (
+  return isLoading ? (
+    <div></div>
+  ) : (
     <IonApp className={`${darkMode ? "" : "dark-theme"}`}>
       <IonReactRouter>
         <IonTabs>
@@ -158,7 +163,10 @@ const VisitCedarCity: React.FC<IonicAppProps> = ({ loadUserData }) => {
   );
 };
 
-const VisitCedarCityConnected = connect<{}, {}, DispatchProps>({
+const VisitCedarCityConnected = connect<{}, StateProps, DispatchProps>({
+  mapStateToProps: (state) => ({
+    isLoading: state.user.isLoading,
+  }),
   mapDispatchToProps: { loadUserData },
   component: VisitCedarCity,
 });
