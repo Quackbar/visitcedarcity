@@ -172,3 +172,7 @@ export interface SubscriptionItem {
   furl: string;
   subscribed: boolean;
 }
+
+export interface User {
+  hasSeenTutorial: boolean;
+}
