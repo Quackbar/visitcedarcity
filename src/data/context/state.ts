@@ -1,6 +1,6 @@
-import { AllCategories, AttractionItem, SubscriptionItem, User } from "../models/defaultModels";
-import { OutdoorItems, CityItems } from "./attractions";
-import { Subscriptions } from "./subscriptions";
+import { AllCategories, AttractionItem, SubscriptionItem, User } from "../../models/defaultModels";
+import { OutdoorItems, CityItems } from "../attractions";
+import { Subscriptions } from "../subscriptions";
 
 export type AppState = {
   attractionItems: AttractionItem[];
@@ -12,7 +12,7 @@ export type AppState = {
 function shuffle(array: Array<any>) {
   let currentIndex = array.length,
     randomIndex;
-  while (currentIndex != 0) {
+  while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
     [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
@@ -27,6 +27,7 @@ export const initialState: AppState = {
   user: {
     selectedAttractionFilters: Object.values(AllCategories),
     selectedSubscriptions: [],
+    selectedHomeModules: [],
     hasSeenTutorial: false,
     isLoading: false,
   },

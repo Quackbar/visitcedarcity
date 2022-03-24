@@ -12,8 +12,8 @@ import { IonReactRouter } from "@ionic/react-router";
 import { Route, Redirect } from "react-router-dom";
 import { homeOutline, searchOutline, mapOutline, personOutline } from "ionicons/icons";
 
-import { AppContextProvider } from "./data/AppContext";
-import { loadUserData } from "./data/actions";
+import { AppContextProvider } from "./data/context/AppContext";
+import { loadUserData } from "./data/context/actions";
 
 import HomeOrTutorial from "./components/HomeOrTutorial";
 import Home from "./pages/Home";
@@ -47,7 +47,7 @@ import "./assets/scss/app.scss";
 import { getBrianHeadWeather, getCedarWeather, getParoWeather } from "./assets/firebase/Firebase";
 import { Timestamp } from "@firebase/firestore";
 import { useEffect } from "react";
-import { connect } from "./data/connect";
+import { connect } from "./data/context/connect";
 
 setupIonicReact();
 

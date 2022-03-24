@@ -30,6 +30,15 @@ export const reducers = (state: AppState, action: StateActions): AppState => {
         },
       };
     }
+    case "update-selected-home-modules": {
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          selectedHomeModules: action.selectedHomeModules,
+        },
+      };
+    }
     case "set-is-loading": {
       return {
         ...state,

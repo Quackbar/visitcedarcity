@@ -14,7 +14,7 @@ import {
 } from "@ionic/react";
 import DiscoverList from "../components/DiscoverList";
 import { filterCircleOutline } from "ionicons/icons";
-import { AppContext } from "../data/AppContext";
+import { AppContext } from "../data/context/AppContext";
 import DiscoverListFilter from "../components/DiscoverListFilter";
 import CategorySlide from "../components/CategorySlide";
 import { AttractionItem } from "../models/defaultModels";

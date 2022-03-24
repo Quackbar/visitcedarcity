@@ -16,8 +16,8 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import { AllCategories, AttractionCategories } from "../models/defaultModels";
-import { connect } from "../data/connect";
-import { updateSelectedAttractionFilters } from "../data/actions";
+import { connect } from "../data/context/connect";
+import { updateSelectedAttractionFilters } from "../data/context/actions";
 
 interface OwnProps {
   onDismissModal: () => void;
@@ -86,8 +86,7 @@ const DiscoverListFilter: React.FC<DiscoverListFilterProps> = ({
               </IonItemDivider>
               {Object.values(category.subcategories).map((subcategory, subcategoryIndex) => (
                 <IonItem key={`subcategory-${subcategoryIndex}`}>
-                  <IonLabel>{subcategory}</IonLabel>
-                  {/* {console.log(subcategory)} */}
+                  <IonLabel>{subcategory}</IonLabel>\
                   <IonCheckbox
                     onClick={() => toggleAttractionFilter(subcategory)}
                     checked={selectedFilters.indexOf(subcategory) !== -1}

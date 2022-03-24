@@ -11,9 +11,9 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { connect } from "../data/connect";
+import { connect } from "../data/context/connect";
 import { RouteComponentProps, withRouter } from "react-router";
-import { getAttractionItem } from "../data/selectors";
+import { getAttractionItem } from "../data/context/selectors";
 import { AttractionItem } from "../models/defaultModels";
 
 interface OwnProps extends RouteComponentProps {}

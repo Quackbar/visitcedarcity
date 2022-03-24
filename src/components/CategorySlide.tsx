@@ -16,8 +16,8 @@ import {
   close,
   sunny,
 } from "ionicons/icons";
-import { updateSelectedAttractionFilters } from "../data/actions";
-import { connect } from "../data/connect";
+import { updateSelectedAttractionFilters } from "../data/context/actions";
+import { connect } from "../data/context/connect";
 import { AllCategories, AttractionCategories } from "../models/defaultModels";
 
 enum slideCategories {

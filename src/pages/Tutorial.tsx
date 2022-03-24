@@ -20,9 +20,9 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper";
 import { arrowForward, chevronForward, heart, thumbsDown, thumbsUp } from "ionicons/icons";
-import { setHasSeenTutorial } from "../data/actions";
+import { setHasSeenTutorial } from "../data/context/actions";
 import "@ionic/react/css/ionic-swiper.css";
-import { connect } from "../data/connect";
+import { connect } from "../data/context/connect";
 import { RouteComponentProps } from "react-router";
 import "swiper/css";
 import SafeAreaWrapper from "../components/SafeAreaWrapper";

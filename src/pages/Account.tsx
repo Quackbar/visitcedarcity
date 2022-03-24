@@ -15,8 +15,8 @@ import {
 import React, { Fragment, useEffect, useState } from "react";
 
 import { BarChart, chartDataType, datasetType } from "../components/Chart";
-import { updateSelectedSubscriptions } from "../data/actions";
-import { connect } from "../data/connect";
+import { updateSelectedSubscriptions } from "../data/context/actions";
+import { connect } from "../data/context/connect";
 import { SubscriptionItem } from "../models/defaultModels";
 
 import { informationCircle, logoFacebook } from "ionicons/icons";
