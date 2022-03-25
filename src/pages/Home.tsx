@@ -22,8 +22,15 @@ import {
   IonButtons,
   IonList,
   IonCheckbox,
+  IonReorder,
+  IonReorderGroup,
+  IonItemGroup,
+  IonItemDivider,
+  IonItemSliding,
+  IonItemOptions,
+  IonItemOption,
 } from "@ionic/react";
-import { getMode, RefresherEventDetail } from "@ionic/core";
+import { getMode, ItemReorderEventDetail, RefresherEventDetail } from "@ionic/core";
 import { trash, share, settingsOutline } from "ionicons/icons";
 
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
@@ -144,14 +151,6 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
 
   const [showFilterModal, setShowFilterModal] = useState(false);
 
-  // const [showWeather, setShowWeather] = useState(true);
-  // const [showSchedule, setShowSchedule] = useState(true);
-  // const [showFestivalFood, setShowFestivalFood] = useState(true);
-  // const [showSkyData, setShowSkyData] = useState(true);
-  // const [showRoadConditions, setShowRoadConditions] = useState(true);
-  // const [showWinterMountainData, setShowWinterMountainData] = useState(true);
-  // const [showSnowpack, setShowSnowpack] = useState(true);
-
   const today = new Date();
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
   let things: TodaysType[] = [];
@@ -192,6 +191,12 @@ getTodays(formattedDate)
 //       })
 //     }
 //   });
+
+  function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
+    // reorder array
+    selectedHomeModules.splice(event.detail.to, 0, selectedHomeModules.splice(event.detail.from, 1)[0]);
+    event.detail.complete();
+  }
 
   const toggleModule = (index: number) => {
     // flip the subscription state
@@ -338,17 +343,41 @@ getTodays(formattedDate)
 
         <IonContent className="module-filter">
           <IonList lines={ios ? "inset" : "full"}>
-            {Object.values(HomeModules).map((module, index) => (
-              <IonItem key={`module-${index}`}>
-                <IonLabel>{module.label}</IonLabel>
-                <IonCheckbox
-                  onClick={() => toggleModule(index)}
-                  checked={selectedHomeModules.includes(index)}
-                  color="primary"
-                  value={index}
-                ></IonCheckbox>
-              </IonItem>
-            ))}
+            <IonItemGroup>
+              <IonReorderGroup disabled={false} onIonItemReorder={doReorder}>
+                {selectedHomeModules.map((moduleId: AllModules, index) => (
+                  <IonItemSliding key={`subbed_mod-${index}`}>
+                    <IonItem>
+                      <IonLabel>{HomeModules[moduleId].label}</IonLabel>
+                      <IonReorder />
+                    </IonItem>
+                    <IonItemOptions side="end">
+                      <IonItemOption
+                        color="danger"
+                        onClick={() => {
+                          toggleModule(moduleId);
+                        }}
+                      >
+                        Remove
+                      </IonItemOption>
+                    </IonItemOptions>
+                  </IonItemSliding>
+                ))}
+              </IonReorderGroup>
+            </IonItemGroup>
+            <IonItemGroup>
+              <IonItemDivider sticky>
+                <IonLabel>Add new modules</IonLabel>
+              </IonItemDivider>
+              {Object.values(HomeModules).map(
+                (module, index) =>
+                  !selectedHomeModules.includes(index) && (
+                    <IonItem key={`unsubbed_mod-${index}`} onClick={() => toggleModule(index)}>
+                      <IonLabel>{module.label}</IonLabel>
+                    </IonItem>
+                  )
+              )}
+            </IonItemGroup>
           </IonList>
         </IonContent>
       </IonModal>
