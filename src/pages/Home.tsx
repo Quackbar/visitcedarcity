@@ -45,12 +45,17 @@ import { AllModules, ConditionsReturnType, MountainDataType, TodaysType } from "
 import { updateSelectedHomeModules } from "../data/context/actions";
 
 // schedules
+import { CCSchedule } from "../assets/data/CC"
+
+import { BHSchedule } from "../assets/data/BH"
 import { USFSchedule } from "../assets/data/USF";
 import { UMRFSchedule } from "../assets/data/UMRF";
 import { CCMASchedule } from "../assets/data/CCMA";
 import { NSFSchedule } from "../assets/data/NSF";
 import { OSUSchedule } from "../assets/data/OSU";
 import { connect } from "../data/context/connect";
+
+
 
 let CedarImg = "";
 let CedarTemp = "";
@@ -155,17 +160,38 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
 
   const yourSchedule = USFSchedule.schedule.concat(
     UMRFSchedule.schedule.concat(
-      CCMASchedule.schedule.concat(NSFSchedule.schedule.concat(OSUSchedule.schedule.concat()))
+      CCMASchedule.schedule.concat(NSFSchedule.schedule.concat(OSUSchedule.schedule.concat(BHSchedule.schedule.concat(CCSchedule.schedule))))
     )
   );
-
-  yourSchedule.map((item) => {
-    if (item.date === formattedDate) {
-      things = item.groups.map((group) => {
-        return group.sessions[0] as TodaysType;
-      });
-    }
-  });
+  function getTodays(rn: string){
+    let temp: any[] = []
+    yourSchedule.map((item) => {
+        // console.log("doing stuff")
+      if (item.date === rn) {
+        temp.push(item.groups.map((group) => {
+          return group.sessions[0] as TodaysType;
+        }))
+      }
+    });
+    // console.log(temp)
+    let returnable: TodaysType[] = [];
+    temp.map(el => {
+        el.map((element: TodaysType) => {
+            returnable.push(element)
+        });
+    })
+    // console.log(returnable)
+    things = returnable
+  }
+getTodays(formattedDate)
+//   yourSchedule.map((item) => {
+//       console.log("doing stuff")
+//     if (item.date === formattedDate) {
+//       things = item.groups.map((group) => {
+//         return group.sessions[0] as TodaysType;
+//       })
+//     }
+//   });
 
   const toggleModule = (index: number) => {
     // flip the subscription state
@@ -178,6 +204,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
   };
 
   const HomeModules: { [key in AllModules]: { label: string; src: ReactElement } } = {
+    // const [things, setThings] = useState([]);
     [AllModules.Weather]: {
       label: "Weather",
       src: (
