@@ -1,4 +1,4 @@
-{
+var data = {
     "kind": "calendar#events",
     "etag": "\"p33odhuf5snefc0g\"",
     "summary": "SUU CPVA Arts Calendar",
@@ -625,3 +625,33 @@
     ]
    }
    
+
+console.log("{\"schedule\": [")
+var id = 0;
+
+data.items.forEach(el => {
+    id++;
+    console.log("{")
+    console.log("\"date\": \""+new Date(el.start.dateTime).toISOString().slice(0, 10)+"\",")
+
+    console.log("\"groups\": [{ \"time\": \"" + new Date(el.start.dateTime).toLocaleTimeString("en-US")+"\",")
+
+    console.log("\"sessions\": [ {\"name\": \""+el.summary+"\",")
+
+    console.log("\"url\": \"https://www.suu.edu/pva/\",\"timeStart\": \""+new Date(el.start.dateTime).toLocaleTimeString("en-US")+"\",")
+
+    console.log("\"timeEnd\": \""+new Date(el.end.dateTime).toLocaleTimeString("en-US")+"\",")
+    console.log("\"location\": \""+el.location+"\",")
+
+    console.log("\"tracks\": [\"SUU Performing Arts\"],\"id\": \""+id+"\"}]},]},")
+
+    // console.log(el.content.summary.text)
+    // console.log(new Date(el.when.start.millis).toLocaleDateString("en-US"))
+    // console.log(new Date(el.when.start.millis).toLocaleTimeString("en-US"))
+    // console.log("-")
+    // console.log(new Date(el.when.end.millis).toLocaleTimeString("en-US"))
+    // console.log(JSON.stringify(el.content.location))
+    // console.log("/////////")
+
+})
+console.log("]}")
