@@ -2,7 +2,7 @@ export const Subscriptions = [
   {
     id: 0,
     title: "Utah Shakespeare Festival",
-    schedule: "/assets/data/USF.json",
+    schedule: "/assets/data/USF.tsx",
     timing: ["0", "0", "0", "0", "0", "2", "4", "4", "4", "3", "0", "0"],
     color: "#c3121e",
     url: "https://www.bard.org/",
@@ -12,7 +12,7 @@ export const Subscriptions = [
   {
     id: 1,
     title: "Neil Simon Festival",
-    schedule: "/assets/data/NSF.json",
+    schedule: "/assets/data/NSF.tsx",
     //12 months => 12 element array
     timing: ["0", "0", "0", "0", "0", "0", "4", "0", "0", "0", "0", "0"],
     color: "#0000ff",
@@ -23,7 +23,7 @@ export const Subscriptions = [
   {
     id: 2,
     title: "Brian Head Winter",
-    schedule: "/assets/data/BHW.json",
+    schedule: "/assets/data/BH.tsx",
     timing: ["2", "2", "2", "1", "0", "0", "0", "0", "0", "0", "1", "2"],
     color: "#2f4f4f",
     url: "https://www.brianhead.com/",
@@ -33,7 +33,7 @@ export const Subscriptions = [
   {
     id: 3,
     title: "Brian Head Summer",
-    schedule: "/assets/data/BHS.json",
+    schedule: "/assets/data/BH.tsx",
     timing: ["0", "0", "0", "0", "0", "1", "2", "2", "2", "1", "0", "0"],
     color: "#228b22",
     url: "https://www.brianhead.com/",
@@ -63,7 +63,7 @@ export const Subscriptions = [
   {
     id: 6,
     title: "SUU Performing Arts",
-    schedule: "/assets/data/SUUPA.json",
+    schedule: "/assets/data/SUUPA.tsx",
     timing: ["1", "2", "2", "2", "0", "0", "0", "0", "0", "1", "2", "2"],
     color: "#ff0000",
     url: "https://www.suu.edu/pva/",
@@ -73,7 +73,7 @@ export const Subscriptions = [
   {
     id: 7,
     title: "Orchestra Of Southern Utah",
-    schedule: "/assets/data/OSA.json",
+    schedule: "/assets/data/OSU.tsx",
     timing: ["0", "1", "0", "1", "0", "0", "0", "0", "0", "2", "1", "1"],
     color: "#8b4513",
     url: "https://www.myosu.org/",
@@ -102,7 +102,7 @@ export const Subscriptions = [
   },
   {
     id: 10,
-    title: "Frontier Homestead State Park Museum",
+    title: "Frontier Homestead Park",
     schedule: "/assets/data/FHSPM.json",
     timing: ["1", "0", "1", "1", "1", "1", "2", "2", "2", "2", "1", "0"],
     color: "#000000",
@@ -112,7 +112,7 @@ export const Subscriptions = [
   },
   {
     id: 11,
-    title: "Cedar Breaks National Monument",
+    title: "Cedar Breaks Nat. Monument",
     schedule: "/assets/data/CBNM.json",
     timing: ["1", "1", "1", "0", "1", "2", "2", "2", "2", "1", "0", "0"],
     color: "#ff69b4",
@@ -132,8 +132,8 @@ export const Subscriptions = [
   },
   {
     id: 13,
-    title: "Utah Midsummer Renaissance Faire",
-    schedule: "/assets/data/UMRF.json",
+    title: "Midsummer Renaissance Faire",
+    schedule: "/assets/data/UMRF.tsx",
     timing: ["0", "0", "0", "0", "0", "0", "2", "0", "0", "0", "0", "0"],
     color: "#8c34eb",
     url: "http://www.umrf.net/",
@@ -148,6 +148,26 @@ export const Subscriptions = [
     color: "#7f1545",
     url: "https://utahwinefest.com/",
     furl: "https://www.facebook.com/utahwinefest/",
+    subscribed: true,
+  },
+  {
+    id: 15,
+    title: "SUU Sports",
+    schedule: "/assets/data/SUUS.tsx",
+    timing: ["1", "1", "1", "1", "1", "0", "0", "0", "1", "1", "1", "1"],
+    color: "#c4142599",
+    url: "https://suutbirds.com/",
+    furl: "https://www.facebook.com/SUUTBirds",
+    subscribed: true,
+  },
+  {
+    id: 16,
+    title: "Local Events",
+    schedule: "/assets/data/CC.tsx",
+    timing: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
+    color: "#bbbbbb",
+    url: "https://visitcedarcity.com/events/",
+    furl: "https://www.facebook.com/VisitCedarCity",
     subscribed: true,
   },
 ];

@@ -70,7 +70,7 @@ type AccountProps = StateProps & DispatchProps;
 
 const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptions, updateSelectedSubscriptions }) => {
   const nullEntry: any[] = [];
-  const [notifications, setnotifications] = useState(nullEntry);
+  // const [notifications, setnotifications] = useState(nullEntry);
 
   useEffect(() => {
     PushNotifications.checkPermissions().then((res) => {
@@ -104,27 +104,6 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
     // Some issue with our setup and push will not work
     PushNotifications.addListener("registrationError", (error: any) => {
       alert("Error on registration: " + JSON.stringify(error));
-    });
-
-    // Show us the notification payload if the app is open on our device
-    PushNotifications.addListener("pushNotificationReceived", (notification: PushNotificationSchema) => {
-      setnotifications((notifications) => [
-        ...notifications,
-        { id: notification.id, title: notification.title, body: notification.body, type: "foreground" },
-      ]);
-    });
-
-    // Method called when tapping on a notification
-    PushNotifications.addListener("pushNotificationActionPerformed", (notification: ActionPerformed) => {
-      setnotifications((notifications) => [
-        ...notifications,
-        {
-          id: notification.notification.data.id,
-          title: notification.notification.data.title,
-          body: notification.notification.data.body,
-          type: "action",
-        },
-      ]);
     });
   };
 
@@ -163,6 +142,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
     } else {
       selectedSubscriptions.push(index);
     }
+
     updateSelectedSubscriptions([...selectedSubscriptions]);
   };
   const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
@@ -179,7 +159,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
           <BarChart propOptions={chartOptions} propData={chartData} propHeight={300} />
           <h1>
             <br />
-            &emsp;Subscriptions
+            &nbsp;&nbsp;Subscriptions
           </h1>
           {Object.values(allSubscriptions).map((subscription, index) => {
             const openSite = async () => {
@@ -203,10 +183,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
 
                 <IonIcon
                   icon={informationCircle}
-                  onClick={(e: any) => {
-                    e.persist();
-                    setShowPopover({ showPopover: true, event: e });
-                  }}
+                  onClick={openSite}
                   class="ion-text-right ten"
                   color="primary"
                 />
@@ -216,7 +193,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
           })}
           <h1>
             <br />
-            &nbsp;&emsp;&emsp;&emsp;Account Settings
+            &nbsp;&emsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;Account Settings
           </h1>
           {/* <IonItem>
             <IonButton>Sign In</IonButton>

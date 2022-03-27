@@ -24,10 +24,11 @@ const MountainData: React.FC<MountainProps> = ({ BaseDepth, OneDaySnowfall, Lift
     return (
       <>
         <IonCard>
-          <h1 className="centered">
+          <h3 className="centered">
+            <br/>
             Brian Head Winter
             <br /> Mountain Data
-          </h1>
+          </h3>
 
           <h2>&emsp;Base Snow Depth: {BaseDepth}</h2>
           <h2>&emsp;One Day Snowfall: {OneDaySnowfall}</h2>

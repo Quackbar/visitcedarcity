@@ -38,32 +38,32 @@ function getMoon() {
 const SkyData: React.FC = () => {
   return (
     <>
-      <h1 className="centered">
+      <h3 className="centered">
         <br />
         Sky Data
-      </h1>
+      </h3>
       <IonGrid>
         <IonRow>
           <img src="assets/img/sunrisesunset.png" />
         </IonRow>
         <IonRow>
           <IonCol>
-            <h1 className="left">
+            <h3 className="left">
               Sunrise
               <br />
               {sunrise.toLocaleTimeString("en-US")}
-            </h1>
+            </h3>
           </IonCol>
           <IonCol>
-            <h1 className="right">
+            <h3 className="right">
               Sunset
               <br />
               {sunset.toLocaleTimeString("en-US")}
-            </h1>
+            </h3>
           </IonCol>
         </IonRow>
         <IonRow>
-          <h1 className="centered">
+          <h3 className="centered">
             <br />
             Lunar Phase
             <br />
@@ -71,7 +71,7 @@ const SkyData: React.FC = () => {
             {getMoon()}
             <br />
             <br />
-          </h1>
+          </h3>
         </IonRow>
       </IonGrid>
     </>

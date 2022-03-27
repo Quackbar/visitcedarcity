@@ -1,4 +1,4 @@
-import React, { Fragment, ReactElement, useState } from "react";
+import React, { Fragment, ReactElement, useContext, useState } from "react";
 import { Browser } from "@capacitor/browser";
 import {
   IonModal,
@@ -53,7 +53,8 @@ import { updateSelectedHomeModules } from "../data/context/actions";
 
 // schedules
 import { CCSchedule } from "../assets/data/CC"
-
+import { SUUSSchedule } from "../assets/data/SUUS"
+import { SUUPSchedule } from "../assets/data/SUUP"
 import { BHSchedule } from "../assets/data/BH"
 import { USFSchedule } from "../assets/data/USF";
 import { UMRFSchedule } from "../assets/data/UMRF";
@@ -61,6 +62,8 @@ import { CCMASchedule } from "../assets/data/CCMA";
 import { NSFSchedule } from "../assets/data/NSF";
 import { OSUSchedule } from "../assets/data/OSU";
 import { connect } from "../data/context/connect";
+import { AppContext } from "../data/context/AppContext";
+import { types } from "util";
 
 
 
@@ -149,6 +152,10 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
 
   const ios = getMode() === "ios";
 
+  const context = useContext(AppContext);
+
+  console.log(context.state.user.selectedSubscriptions)
+
   const [showFilterModal, setShowFilterModal] = useState(false);
 
   const today = new Date();
@@ -157,12 +164,88 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
   things = [];
   const [formattedDate, setFormattedDate] = useState(new Date().toISOString().slice(0, 10));
 
-  const yourSchedule = USFSchedule.schedule.concat(
-    UMRFSchedule.schedule.concat(
-      CCMASchedule.schedule.concat(NSFSchedule.schedule.concat(OSUSchedule.schedule.concat(BHSchedule.schedule.concat(CCSchedule.schedule))))
-    )
-  );
-  function getTodays(rn: string){
+type subtype = {
+    date: string;
+    groups: {
+        time: string;
+        sessions: {
+            name: string;
+            url: string;
+            timeStart: string;
+            timeEnd: string;
+            location: string;
+            tracks: string[];
+            id: string;
+        }[];
+    }[]
+}
+
+let yourSchedule: subtype[] = []
+//   let subs = localStorage.getItem("subs")
+//   console.log(subs);
+yourSchedule = USFSchedule.schedule
+yourSchedule = yourSchedule.filter(function(item) { 
+    return USFSchedule.schedule.indexOf(item) < 0; 
+});
+
+function getTodays(fd?: string){
+    let rn = fd ?? new Date().toISOString().slice(0, 10)
+    context.state.user.selectedSubscriptions.includes(0) ? 
+    yourSchedule = yourSchedule.concat(USFSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return USFSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(1) ? 
+    yourSchedule = yourSchedule.concat(NSFSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return NSFSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(2)||context.state.user.selectedSubscriptions.includes(3) ? 
+    yourSchedule = yourSchedule.concat(BHSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return BHSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(6) ? 
+    yourSchedule = yourSchedule.concat(SUUPSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return SUUPSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(7) ? 
+    yourSchedule = yourSchedule.concat(OSUSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return OSUSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(8) ? 
+    yourSchedule = yourSchedule.concat(CCMASchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return CCMASchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(15) ? 
+    yourSchedule = yourSchedule.concat(SUUSSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return SUUSSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(16) ? 
+    yourSchedule = yourSchedule.concat(CCSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return CCSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(13) ? 
+    yourSchedule = yourSchedule.concat(UMRFSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return UMRFSchedule.schedule.indexOf(item) < 0; 
+    });
+
+
     let temp: any[] = []
     yourSchedule.map((item) => {
         // console.log("doing stuff")
@@ -182,7 +265,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
     // console.log(returnable)
     things = returnable
   }
-getTodays(formattedDate)
+// setFormattedDate(new Date().toISOString().slice(0, 10))
 //   yourSchedule.map((item) => {
 //       console.log("doing stuff")
 //     if (item.date === formattedDate) {
@@ -207,6 +290,7 @@ getTodays(formattedDate)
     }
     updateSelectedHomeModules([...selectedHomeModules]);
   };
+  getTodays(formattedDate)
 
   const HomeModules: { [key in AllModules]: { label: string; src: ReactElement } } = {
     // const [things, setThings] = useState([]);
@@ -228,10 +312,12 @@ getTodays(formattedDate)
       src: (
         <IonCard class="basiccentered">
           <IonTitle class="centered">
+            {/* <br />
+            <h3>
+            Going On Today In Cedar City
+            </h3>
             <br />
-            Your Daily Schedule
-            <br />
-            <br />
+            <br /> */}
           </IonTitle>
           {/* Datetime in overlay */}
           {/* <IonButton  class="centered" id="open-modal">Choose Custom Date</IonButton> */}
@@ -299,11 +385,6 @@ getTodays(formattedDate)
       label: "Snow Pack",
       src: (
         <IonCard>
-          <h1 className="centered">
-            <br />
-            Brian Head Snowpack
-            <br />
-          </h1>
           <SnowPack
             theDates={JSON.parse(String(localStorage.getItem("dates")))}
             baseDepth={JSON.parse(String(localStorage.getItem("baseDepth")))}

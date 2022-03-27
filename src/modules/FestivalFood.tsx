@@ -52,7 +52,7 @@ function firstChoice() {
   if (breakfast) {
     return (
       <IonCard class="centered" onClick={openGrind}>
-        <img src="https://lh3.googleusercontent.com/-Xt2ZvykFyH0/X-PNAoaIIMI/AAAAAAAAA84/Zk-E5NecNAUkPjLm91h_sGoF1MLhrfuKQCJUFGAYYCw/w768-h768-n-o-k-v1/" />
+        <img src="assets/img/grind.jpg" />
         <h1>Grind Coffee House</h1>
         <p>$</p>
       </IonCard>
