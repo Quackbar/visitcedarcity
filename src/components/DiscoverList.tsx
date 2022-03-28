@@ -44,7 +44,7 @@ const DiscoverList: React.FC<DiscoverListProps> = ({ attractions }) => {
   }, [attractions]);
 
   useEffect(() => {
-    if (listData.length === 0) {
+    if (listData.length === 0 && attractions.length > 0) {
       pushData();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -76,10 +76,3 @@ const DiscoverList: React.FC<DiscoverListProps> = ({ attractions }) => {
 };
 
 export default DiscoverList;
-
-// export default connect<OwnProps, StateProps, {}>({
-//   mapStateToProps: (state) => ({
-//     searchText: state.user.searchText,
-//   }),
-//   component: React.memo(DiscoverList),
-// });
