@@ -124,7 +124,7 @@ export const AllCategoryLabels: { [key in AllCategories]?: string } = {
   [AllCategories.USA]: "USA",
   [AllCategories.Shows]: "Shows",
   [AllCategories.Shop]: "Shop",
-}
+};
 
 const FoodAndDrink = {
   AsianIndian: AllCategories.AsianIndian,
@@ -247,7 +247,8 @@ export interface User {
   isLoading: boolean;
   selectedAttractionFilters: AllCategories[];
   selectedSubscriptions: number[];
-  selectedHomeModules: AllModules[]
+  selectedHomeModules: AllModules[];
+  searchText?: string;
 }
 
 export interface ConditionsReturnType {

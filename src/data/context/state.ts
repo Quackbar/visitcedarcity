@@ -30,5 +30,6 @@ export const initialState: AppState = {
     selectedHomeModules: [],
     hasSeenTutorial: false,
     isLoading: false,
+    searchText: undefined,
   },
 };

@@ -39,6 +39,15 @@ export const reducers = (state: AppState, action: StateActions): AppState => {
         },
       };
     }
+    case "update-search-text": {
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          searchText: action.searchText,
+        },
+      };
+    }
     case "set-is-loading": {
       return {
         ...state,

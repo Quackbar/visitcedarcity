@@ -1,6 +1,11 @@
 import { AllCategories, AllModules, User } from "../../models/defaultModels";
 import { ActionType } from "../../util/types";
-import { getUserData, setHasSeenTutorialData, setSelectedSubscriptionsData, setSelectedHomeModulesData } from "./dataApi";
+import {
+  getUserData,
+  setHasSeenTutorialData,
+  setSelectedSubscriptionsData,
+  setSelectedHomeModulesData,
+} from "./dataApi";
 
 export const loadUserData = () => async (dispatch: React.Dispatch<any>) => {
   dispatch(setLoading(true));
@@ -35,13 +40,20 @@ export const updateSelectedSubscriptions =
       selectedSubscriptions,
     } as const;
   };
-export const updateSelectedHomeModules = (selectedHomeModules: AllModules[]) => async (dispatch: React.Dispatch<any>) => {
-  await setSelectedHomeModulesData(selectedHomeModules);
-  return {
-    type: "update-selected-home-modules",
-    selectedHomeModules,
-  } as const;
-};
+
+export const updateSearchText = (searchText?: string) =>
+  ({
+    type: "update-search-text",
+    searchText,
+  } as const);
+export const updateSelectedHomeModules =
+  (selectedHomeModules: AllModules[]) => async (dispatch: React.Dispatch<any>) => {
+    await setSelectedHomeModulesData(selectedHomeModules);
+    return {
+      type: "update-selected-home-modules",
+      selectedHomeModules,
+    } as const;
+  };
 export const setIsLoading = (isLoading: boolean) => {
   return {
     type: "set-is-loading",
@@ -61,5 +73,6 @@ export type StateActions =
   | ActionType<typeof updateSelectedAttractionFilters>
   | ActionType<typeof updateSelectedSubscriptions>
   | ActionType<typeof updateSelectedHomeModules>
+  | ActionType<typeof updateSearchText>
   | ActionType<typeof setIsLoading>
   | ActionType<typeof setHasSeenTutorial>;
