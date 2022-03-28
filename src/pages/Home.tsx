@@ -14,15 +14,11 @@ import {
   IonPopover,
   IonText,
   IonButton,
-  IonGrid,
-  IonActionSheet,
   IonHeader,
   IonToolbar,
   IonIcon,
-  IonButtons,
-  IonList,
-  IonCheckbox,
   IonReorder,
+  IonList,
   IonReorderGroup,
   IonItemGroup,
   IonItemDivider,
@@ -31,9 +27,8 @@ import {
   IonItemOption,
 } from "@ionic/react";
 import { getMode, ItemReorderEventDetail, RefresherEventDetail } from "@ionic/core";
-import { trash, share, settingsOutline } from "ionicons/icons";
+import { settingsOutline } from "ionicons/icons";
 
-import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
 // modules
 import Weather from "../modules/Weather";
@@ -52,6 +47,8 @@ import { AllModules, ConditionsReturnType, MountainDataType, TodaysType } from "
 import { updateSelectedHomeModules } from "../data/context/actions";
 
 // schedules
+import { UTWFSchedule } from "../assets/data/UTWF"
+import { SUMASchedule } from "../assets/data/SUMA"
 import { CCSchedule } from "../assets/data/CC"
 import { SUUSSchedule } from "../assets/data/SUUS"
 import { SUUPSchedule } from "../assets/data/SUUP"
@@ -63,7 +60,6 @@ import { NSFSchedule } from "../assets/data/NSF";
 import { OSUSchedule } from "../assets/data/OSU";
 import { connect } from "../data/context/connect";
 import { AppContext } from "../data/context/AppContext";
-import { types } from "util";
 
 
 
@@ -154,7 +150,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModu
 
   const context = useContext(AppContext);
 
-  console.log(context.state.user.selectedSubscriptions)
+  //console.log(context.state.user.selectedSubscriptions)
 
   const [showFilterModal, setShowFilterModal] = useState(false);
 
@@ -208,6 +204,12 @@ function getTodays(fd?: string){
     yourSchedule = yourSchedule.filter(function(item) { 
         return BHSchedule.schedule.indexOf(item) < 0; 
     });
+    context.state.user.selectedSubscriptions.includes(5) ? 
+    yourSchedule = yourSchedule.concat(SUMASchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return SUMASchedule.schedule.indexOf(item) < 0; 
+    });
     context.state.user.selectedSubscriptions.includes(6) ? 
     yourSchedule = yourSchedule.concat(SUUPSchedule.schedule)
         :
@@ -243,6 +245,12 @@ function getTodays(fd?: string){
         :
     yourSchedule = yourSchedule.filter(function(item) { 
         return UMRFSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(14) ? 
+    yourSchedule = yourSchedule.concat(UTWFSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return UTWFSchedule.schedule.indexOf(item) < 0; 
     });
 
 
@@ -319,19 +327,12 @@ function getTodays(fd?: string){
             <br />
             <br /> */}
           </IonTitle>
-          {/* Datetime in overlay */}
-          {/* <IonButton  class="centered" id="open-modal">Choose Custom Date</IonButton> */}
-          <IonModal trigger="open-modal">
-            <IonContent>
-              <IonDatetime></IonDatetime>
-            </IonContent>
-          </IonModal>
 
           {/* Datetime in popover with cover element */}
           <IonItem button={true} id="open-date-input">
             <IonLabel>Date</IonLabel>
             <IonText slot="end">{popoverDate}</IonText>
-            <IonPopover trigger="open-date-input" showBackdrop={false}>
+            <IonPopover alignment="end" side="top" trigger="open-date-input" showBackdrop={true}>
               <IonDatetime
                 presentation="date"
                 onIonChange={(ev) => {
