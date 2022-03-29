@@ -59,7 +59,9 @@ const Discover: React.FC = () => {
 
     setFilteredAttractions(filteredResults);
   }, [context.state.attractionItems, context.state.user.selectedAttractionFilters]);
-
+  document.querySelectorAll('img').forEach(function(img){
+    img.onerror = function(){this.style.display='none';};
+  })
   return (
     <IonPage ref={pageRef} id="discover-page">
       <IonContent fullscreen={true}>

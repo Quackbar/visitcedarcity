@@ -184,8 +184,7 @@ yourSchedule = yourSchedule.filter(function(item) {
     return USFSchedule.schedule.indexOf(item) < 0; 
 });
 
-function getTodays(fd?: string){
-    let rn = fd ?? new Date().toISOString().slice(0, 10)
+
     context.state.user.selectedSubscriptions.includes(0) ? 
     yourSchedule = yourSchedule.concat(USFSchedule.schedule)
         :
@@ -253,7 +252,7 @@ function getTodays(fd?: string){
         return UTWFSchedule.schedule.indexOf(item) < 0; 
     });
 
-
+  function getTodays(rn: string){
     let temp: any[] = []
     yourSchedule.map((item) => {
         // console.log("doing stuff")
@@ -272,6 +271,7 @@ function getTodays(fd?: string){
     })
     // console.log(returnable)
     things = returnable
+    return returnable;
   }
 // setFormattedDate(new Date().toISOString().slice(0, 10))
 //   yourSchedule.map((item) => {
@@ -339,6 +339,7 @@ function getTodays(fd?: string){
                   setPopoverDate(formatDate(ev.detail.value!));
                   // console.log(ev.detail.value!)
                   setFormattedDate(ev.detail.value!.slice(0, -15));
+                  getTodays(formattedDate)
                 }}
               />
             </IonPopover>

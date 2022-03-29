@@ -61,7 +61,7 @@ export const OutdoorItems = [
     ],
   },
   {
-    id: 4,
+    id: 60,
     title: "Hidden Haven",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -557,7 +557,7 @@ export const OutdoorItems = [
 
 export const CityItems = [
   {
-    id: 1,
+    id: 38,
     title: "Pastry Pub",
     subtitle: "Cedar City Dining",
     url: "https://pastrypubcedarcity.com/",
@@ -573,7 +573,7 @@ export const CityItems = [
   },
 
   {
-    id: 2,
+    id: 39,
     title: "I/G Winery",
     subtitle: "Cedar City Winery",
     url: "https://igwinery.com/",
@@ -584,7 +584,7 @@ export const CityItems = [
   },
 
   {
-    id: 3,
+    id: 40,
     title: "Centro Woodfired Pizzaria",
     subtitle: "Cedar City Dining",
     url: "https://www.centropizzeria.com/",
@@ -599,7 +599,7 @@ export const CityItems = [
   },
 
   {
-    id: 4,
+    id: 41,
     title: "Policy Kings Brewery",
     subtitle: "Cedar City Brewery",
     url: "https://policykingsbrewery.com/",
@@ -610,7 +610,7 @@ export const CityItems = [
   },
 
   {
-    id: 5,
+    id: 42,
     title: "Calvario's Family Restaurant",
     subtitle: "Parowan Dining",
     url: "https://calvarios-family-restaurant.business.site/",
@@ -624,7 +624,7 @@ export const CityItems = [
   },
 
   {
-    id: 6,
+    id: 43,
     title: "Bristlecone Coffee | Yoga | Connect",
     subtitle: "Cedar City Coffee House",
     url: "https://calvarios-family-restaurant.business.site/",
@@ -639,7 +639,7 @@ export const CityItems = [
   },
 
   {
-    id: 7,
+    id: 44,
     title: "Sook Jai Thai Cuisine",
     subtitle: "Brian Head Dining",
     url: "https://www.sookjaibrianhead.com/",
@@ -651,7 +651,7 @@ export const CityItems = [
   },
 
   {
-    id: 8,
+    id: 45,
     title: "Best Western Premier Brian Head",
     subtitle: "Brian Head Lodging",
     url: "https://bwpbrianheadhotel.com/",
@@ -667,7 +667,7 @@ export const CityItems = [
   },
 
   {
-    id: 9,
+    id: 46,
     title: "Big Yellow Inn (B&B)",
     subtitle: "Cedar City Lodging",
     url: "http://bigyellowinn.com/",
@@ -679,7 +679,7 @@ export const CityItems = [
   },
 
   {
-    id: 10,
+    id: 47,
     title: "Abbey Inn and Suites",
     subtitle: "Cedar City Lodging",
     url: "https://abbeyinncedar.com/",
@@ -691,7 +691,7 @@ export const CityItems = [
   },
 
   {
-    id: 11,
+    id: 48,
     title: "Southern Utah Museum of Art",
     subtitle: "Cedar City Art",
     url: "https://www.suu.edu/suma/",
@@ -704,7 +704,7 @@ export const CityItems = [
     ],
   },
   {
-    id: 12,
+    id: 49,
     title: "Dry Lakes Ranch Beef",
     subtitle: "Parowan Beef and Butcher Shop",
     url: "https://www.drylakesranchbeef.com/",
@@ -725,7 +725,7 @@ export const CityItems = [
     categories: [AttractionCategories.Experiences.subcategories.Shows],
   },
   {
-    id: 14,
+    id: 50,
     title: "Grind Coffee House",
     subtitle: "Cedar City Coffee House",
     url: "https://grindcoffeehouse.business.site/",
@@ -739,7 +739,7 @@ export const CityItems = [
     ],
   },
   {
-    id: 15,
+    id: 51,
     title: "Utah Shakespeare Festival",
     subtitle: "Cedar City Theatre Festival",
     url: "https://www.bard.org/",
@@ -752,7 +752,7 @@ export const CityItems = [
     ],
   },
   {
-    id: 16,
+    id:52,
     title: "Main Street Books Cedar City",
     subtitle: "Cedar City Book Shop",
     url: "https://www.facebook.com/mainstreetbookscedarcity/",
@@ -762,7 +762,7 @@ export const CityItems = [
     categories: [AttractionCategories.Experiences.subcategories.Shop],
   },
   {
-    id: 17,
+    id: 53,
     title: "The Navajo Crafting Co.",
     subtitle: "Cedar City Shop",
     url: "https://www.navajocraftingco.com/",
@@ -772,7 +772,7 @@ export const CityItems = [
     categories: [AttractionCategories.Experiences.subcategories.Shop],
   },
   {
-    id: 18,
+    id: 54,
     title: "Artisans Gallery",
     subtitle: "Cedar City Shop",
     url: "https://www.facebook.com/pages/category/Artist/Artisans-Gallery-134547949914392/",
