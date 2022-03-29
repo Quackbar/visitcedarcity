@@ -20,7 +20,15 @@
  * https://www.ionicframework.com/docs/theming/color-generator
  */
 
+ @font-face {
+  font-family: 'GlossandBloom';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/Gloss_And_Bloom.ttf');
+}
+
  :root {
+  --ion-font-family-special: 'GlossandBloom';
   /** primary **/
   --ion-color-primary: #D95318;
   --ion-color-primary-rgb: 56, 128, 255;

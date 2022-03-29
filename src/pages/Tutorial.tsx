@@ -120,7 +120,7 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
 
                   <IonRow>
                     {/* <IonTitle color="primary"> */}
-                    <h1 className="centered trublack">
+                    <h1 className="centered trublack glossbloom">
                       <br />
                       <br />
                       <br />
@@ -151,9 +151,9 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   </IonRow>
 
                   <IonRow>
-                  <IonTitle>
-                      <h1>&gt; Swipe &gt;</h1>
-                    </IonTitle>
+                  <IonText class="centered">
+                      <h1 className="glossbloom">&gt; Swipe &gt;</h1>
+                    </IonText>
                   </IonRow>
                 </IonGrid>
               </IonCard>
@@ -199,9 +199,9 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   </IonRow>
 
                   <IonRow>
-                  <IonTitle>
-                      <h1>&gt; Swipe &gt;</h1>
-                    </IonTitle>
+                  <IonText class="centered">
+                      <h1 className="glossbloom">&gt; Swipe &gt;</h1>
+                    </IonText>
                   </IonRow>
                 </IonGrid>
               </IonCard>
@@ -247,9 +247,9 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   </IonRow>
 
                   <IonRow>
-                    <IonTitle>
-                      <h1>&gt; Swipe &gt;</h1>
-                    </IonTitle>
+                    <IonText class="centered">
+                      <h1 className="glossbloom">&gt; Swipe &gt;</h1>
+                    </IonText>
 
 
                   </IonRow>
