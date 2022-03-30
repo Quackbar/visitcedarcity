@@ -182,7 +182,9 @@ const FestivalFood: React.FC = ({}) => {
           Shakespeare Festival
           <br />
           for {titleMeal()}
+          <br/>
         </h1>
+        <p></p>
 
         {firstChoice()}
         <IonText class="centered">

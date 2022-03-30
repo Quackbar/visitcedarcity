@@ -47,6 +47,7 @@ import { AllModules, ConditionsReturnType, MountainDataType, TodaysType } from "
 import { updateSelectedHomeModules } from "../data/context/actions";
 
 // schedules
+import { FMFSchedule } from "../assets/data/FMF"
 import { UTWFSchedule } from "../assets/data/UTWF"
 import { SUMASchedule } from "../assets/data/SUMA"
 import { CCSchedule } from "../assets/data/CC"
@@ -250,6 +251,12 @@ yourSchedule = yourSchedule.filter(function(item) {
         :
     yourSchedule = yourSchedule.filter(function(item) { 
         return UTWFSchedule.schedule.indexOf(item) < 0; 
+    });
+    context.state.user.selectedSubscriptions.includes(12) ? 
+    yourSchedule = yourSchedule.concat(FMFSchedule.schedule)
+        :
+    yourSchedule = yourSchedule.filter(function(item) { 
+        return FMFSchedule.schedule.indexOf(item) < 0; 
     });
 
   function getTodays(rn: string){
