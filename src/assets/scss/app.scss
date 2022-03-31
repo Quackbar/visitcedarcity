@@ -20,7 +20,7 @@
   background-image: url("../img/nighbackground.png");
   background-size: cover;
 }
-.higher{
+.higher {
   padding-bottom: 30px;
   background-color: #c9dce466;
 }
@@ -35,7 +35,7 @@
 .half-image {
   padding: 0.5px;
 }
-.trublack{
+.trublack {
   color: #000;
 }
 .gray {
@@ -46,21 +46,8 @@
   background-color: #ffffff;
   color: black;
   padding: 10px;
+}
 
-}
-.trany{
-  transform: translateX(-12vw);
-}
-.green {
-  background-color: #c6d488;
-  color: black;
-  padding: 10px;
-
-}
-.yellow {
-  background-color: #ffe073;
-  padding: 10px;
-}
 .right {
   float: right;
 }
@@ -120,22 +107,64 @@ ion-chip {
   max-width: fit-content;
 }
 
-.glossbloom{
-  font-family: 'GlossandBloom';
+.glossbloom {
+  font-family: "GlossandBloom";
 }
-.ios.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show{
+.ios.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
   margin: -1.5px 0;
 }
-.md.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show{
+.md.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
   margin: 1.5px 0;
-
 }
 
-
-.md.fab-list-side-bottom.fab-list-active{
+.md.fab-list-side-bottom.fab-list-active {
   margin: 54px 0;
 }
 
-.ios.fab-list-side-bottom.fab-list-active{
+.ios.fab-list-side-bottom.fab-list-active {
   margin: 54px 0;
+}
+
+#map-page {
+  &.isLoading * {
+    visibility: hidden;
+  }
+
+  #map {
+    height: 100vh;
+    width: 100vw;
+
+    .map-container {
+      height: 100%;
+      .mapboxgl-canvas-container {
+        height: 100vh;
+        width: auto;
+
+        .mapboxgl-canvas {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  ion-chip {
+    background-color: #ffffff;
+  }
+
+  .trany {
+    transform: translateX(-15vw);
+    width: 100%;
+    &.green {
+      background-color: #c6d488;
+      color: black;
+      padding: 10px;
+    }
+    &.yellow {
+      background-color: #ffe073;
+      padding: 10px;
+    }
+  }
+  
 }
