@@ -31,11 +31,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { AllCategories, AttractionItem } from "../models/defaultModels";
 import { connect } from "../data/context/connect";
 
-type MapMarker = {
-  color: string;
-  coords: [number, number][];
-};
-
 interface StateProps {
   attractionItems: AttractionItem[];
   groupedAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
@@ -50,11 +45,12 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
   const [mapIsLoaded, setMapIsLoaded] = useState<boolean>(false);
   const [markers, setMarkers] = useState<{ [id: string]: mapboxgl.Marker[] }>({});
 
+  const { id } = useParams<{ id: string | undefined }>();
+
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   const twcApiKey = "2ec2232d72f1484282232d72f198421d";
   const timeSlices = fetch("https://api.weather.com/v3/TileServer/series/productSet/PPAcore?apiKey=" + twcApiKey);
-  const { id } = useParams<{ id: string | undefined }>();
 
   const getLocation = async () => {
     try {
@@ -118,7 +114,40 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
 
       setMapIsLoaded(true);
     });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map]);
+
+  useEffect(() => {
+    if (mapIsLoaded) {
+      // display marker if one is requested
+      if (id) {
+        const numberID = Number(id);
+        const color = "#565656";
+        const requestedMarker = attractionItems.find((item) => item.id === numberID);
+
+        if (requestedMarker !== undefined && requestedMarker.coordinates !== undefined) {
+          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+            '<img src="https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w"/><h1>Centros Woodfired Pizzaria</h1><a href="https://www.google.com/maps/place/Centro+Woodfired+Pizzeria/@37.678244,-113.0633694,18.21z/data=!4m5!3m4!1s0x80b561ba4714611d:0x7aec392aed6bea71!8m2!3d37.6775706!4d-113.0626666">more info</a>'
+          );
+
+          const marker = new mapboxgl.Marker({
+            color: color,
+            draggable: false,
+          })
+            .setLngLat([requestedMarker.coordinates.lng, requestedMarker.coordinates.lat])
+            .setPopup(popup)
+            .addTo(map);
+
+          popup.setLngLat([requestedMarker.coordinates.lng, requestedMarker.coordinates.lat]).addTo(map);
+
+          setMarkers({ ...markers, requested: [marker] });
+        }
+      }
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mapIsLoaded]);
 
   const centerMap = () => {
     map.flyTo({
@@ -128,6 +157,13 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
   };
 
   const toggleMarkers = (key: string) => {
+    // remove requested marker
+    if (markers["requested"]) {
+      markers["requested"].forEach((marker) => {
+        marker.remove();
+      });
+    }
+
     if (markers[key]) {
       markers[key].forEach((marker) => {
         marker.remove();
@@ -167,74 +203,6 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
       setMarkers({ ...markers, [key]: newMarkers });
     }
   };
-
-  const food: MapMarker = {
-    color: "#ff3333",
-    coords: [
-      [-113.06277995786483, 37.67752333293612],
-      [-113.06307790517457, 37.6775077919207],
-      [-113.06211643508729, 37.67753531295037],
-      [-113.06156358789482, 37.67861592936657],
-    ],
-  };
-  const icecream: MapMarker = {
-    color: "#ffdddd",
-    coords: [
-      [-113.061979, 37.681917],
-      [-113.085447, 37.652941],
-      [-113.061297, 37.680767],
-    ],
-  };
-  const lookouts: MapMarker = {
-    color: "#4444ff",
-    coords: [
-      [-113.0679, 37.6819],
-      [-113.0857, 37.2941],
-      [-113.0297, 37.680767],
-    ],
-  };
-  const ar: MapMarker = {
-    color: "#dddddd",
-    coords: [
-      [-113.06179, 37.68197],
-      [-113.085447, 37.62941],
-      [-113.0612, 37.68767],
-    ],
-  };
-  const picture: MapMarker = {
-    color: "#55ff55",
-    coords: [
-      [-113.06199, 37.81917],
-      [-113.08547, 37.65241],
-      [-113.06297, 37.60767],
-    ],
-  };
-
-  var currentMarkers: mapboxgl.Marker[] = [];
-
-  function makeMarkers(val: MapMarker) {
-    if (currentMarkers !== null) {
-      for (var i = currentMarkers.length - 1; i >= 0; i--) {
-        currentMarkers[i].remove();
-      }
-    }
-    let color = val.color;
-
-    val.coords.forEach((coord) => {
-      const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        '<img src="https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w"/><h1>Centros Woodfired Pizzaria</h1><a href="https://www.google.com/maps/place/Centro+Woodfired+Pizzeria/@37.678244,-113.0633694,18.21z/data=!4m5!3m4!1s0x80b561ba4714611d:0x7aec392aed6bea71!8m2!3d37.6775706!4d-113.0626666">more info</a>'
-      );
-      var oneMarker = new mapboxgl.Marker({
-        color: color,
-        draggable: false,
-      })
-        .setLngLat(coord)
-        .setPopup(popup)
-        .addTo(map);
-
-      currentMarkers.push(oneMarker);
-    });
-  }
 
   const setOutdoorMode = () => {
     if (outdoor) window.location.reload();
