@@ -1,123 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { IonChip, IonIcon, IonLabel, IonSegment, IonSegmentButton } from "@ionic/react";
-import {
-  fastFood,
-  wine,
-  trailSign,
-  storefront,
-  colorPalette,
-  bed,
-  shield,
-  bonfire,
-  telescope,
-  ticket,
-  carSport,
-  fish,
-  close,
-  sunny,
-} from "ionicons/icons";
+import { close } from "ionicons/icons";
 import { updateSelectedAttractionFilters } from "../data/context/actions";
 import { connect } from "../data/context/connect";
-import { AllCategories, AttractionCategories } from "../models/defaultModels";
-
-enum slideCategories {
-  food = "food",
-  parks = "parks",
-  lodging = "lodging",
-  familyfun = "familyfun",
-  shops = "shops",
-  arts = "arts",
-  drinks = "drinks",
-  camping = "camping",
-  drives = "drives",
-  fishing = "fishing",
-  shows = "shows",
-  lookouts = "lookouts",
-  trails = "trails",
-}
-
-const slideCategoriesData: { [id: string]: AllCategories[] } = {};
-slideCategoriesData[slideCategories.food] = [
-  AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-  AttractionCategories.FoodAndDrink.subcategories.Specialty,
-  AttractionCategories.FoodAndDrink.subcategories.Mexican,
-];
-
-slideCategoriesData[slideCategories.parks] = [AttractionCategories.Experiences.subcategories.NationalParks];
-slideCategoriesData[slideCategories.lodging] = [
-  AttractionCategories.Lodging.subcategories.Lodge,
-  AttractionCategories.Lodging.subcategories.HotelMotel,
-  AttractionCategories.Lodging.subcategories.BedAndBreakfast,
-  AttractionCategories.Lodging.subcategories.Resort,
-];
-slideCategoriesData[slideCategories.familyfun] = [
-  AttractionCategories.Experiences.subcategories.FamilyFun,
-  AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
-];
-slideCategoriesData[slideCategories.shops] = [AttractionCategories.Experiences.subcategories.Shop];
-slideCategoriesData[slideCategories.arts] = [AttractionCategories.Experiences.subcategories.CedarCityArts];
-slideCategoriesData[slideCategories.drinks] = [
-  AttractionCategories.FoodAndDrink.subcategories.Alcohol,
-  AttractionCategories.FoodAndDrink.subcategories.Coffee,
-];
-slideCategoriesData[slideCategories.camping] = [
-  AttractionCategories.Lodging.subcategories.Campground,
-  AttractionCategories.Lodging.subcategories.Tenting,
-  AttractionCategories.Lodging.subcategories.RVSite,
-  AttractionCategories.Lodging.subcategories.Cabin,
-  AttractionCategories.Lodging.subcategories.Cabinettes,
-];
-slideCategoriesData[slideCategories.drives] = [AttractionCategories.Experiences.subcategories.Drives];
-slideCategoriesData[slideCategories.shows] = [AttractionCategories.Experiences.subcategories.Shows];
-slideCategoriesData[slideCategories.fishing] = [AttractionCategories.Experiences.subcategories.Fishing];
-slideCategoriesData[slideCategories.lookouts] = [AttractionCategories.Experiences.subcategories.DarkSkies];
-slideCategoriesData[slideCategories.trails] = [
-  AttractionCategories.Experiences.subcategories.CedarCityWalks,
-  AttractionCategories.Experiences.subcategories.Trails,
-];
-
-const slideCategoriesLabel: { [id: string]: { name: string; icon: string } } = {};
-slideCategoriesLabel[slideCategories.food] = { name: "Food", icon: fastFood };
-slideCategoriesLabel[slideCategories.parks] = {
-  name: "National\xa0Parks",
-  icon: shield,
-};
-slideCategoriesLabel[slideCategories.lodging] = { name: "Lodging", icon: bed };
-slideCategoriesLabel[slideCategories.familyfun] = { name: "Family\xa0Fun", icon: sunny };
-
-slideCategoriesLabel[slideCategories.shops] = {
-  name: "Shops",
-  icon: storefront,
-};
-slideCategoriesLabel[slideCategories.arts] = {
-  name: "Art",
-  icon: colorPalette,
-};
-slideCategoriesLabel[slideCategories.drinks] = { name: "Drinks", icon: wine };
-slideCategoriesLabel[slideCategories.camping] = {
-  name: "Camping\xa0Grounds",
-  icon: bonfire,
-};
-slideCategoriesLabel[slideCategories.drives] = {
-  name: "Drives",
-  icon: carSport,
-};
-slideCategoriesLabel[slideCategories.shows] = { name: "Shows", icon: ticket };
-slideCategoriesLabel[slideCategories.fishing] = { name: "Fishing", icon: fish };
-slideCategoriesLabel[slideCategories.lookouts] = {
-  name: "Lookouts",
-  icon: telescope,
-};
-slideCategoriesLabel[slideCategories.trails] = {
-  name: "Trails",
-  icon: trailSign,
-};
+import { AllCategories } from "../models/defaultModels";
 
 interface StateProps {
+  groupedAttractions: { [id: string]: { name: string; icon: string; categories: AllCategories[] } };
   selectedFilters: AllCategories[];
   allFilters: AllCategories[];
 }
-
 interface DispatchProps {
   updateSelectedAttractionFilters: typeof updateSelectedAttractionFilters;
 }
@@ -127,22 +19,23 @@ type CategorySlidesProps = {} & StateProps & DispatchProps;
 const CategorySlides: React.FC<CategorySlidesProps> = ({
   selectedFilters,
   allFilters,
+  groupedAttractions,
   updateSelectedAttractionFilters,
 }) => {
   const [selectedSlideCategory, setSelectedSlideCategory] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     setSelectedSlideCategory(undefined);
-    Object.keys(slideCategoriesData).forEach((key, _: number) => {
-      if (slideCategoriesData[key] === selectedFilters) {
+    Object.keys(groupedAttractions).forEach((key: string, _) => {
+      if (groupedAttractions[key].categories === selectedFilters) {
         setSelectedSlideCategory(key);
       }
     });
-  }, [selectedFilters]);
+  }, [groupedAttractions, selectedFilters]);
 
   const selectFilterGroup = (category: string) => {
     setSelectedSlideCategory(category);
-    updateSelectedAttractionFilters(slideCategoriesData[category]);
+    updateSelectedAttractionFilters(groupedAttractions[category].categories);
   };
 
   const deselectFilterGroup = () => {
@@ -157,8 +50,8 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
         <>
           <IonSegment id="categorySlideSegment">
             <IonChip color="primary">
-              <IonIcon icon={slideCategoriesLabel[selectedSlideCategory].icon} color="primary" />
-              <IonLabel>{slideCategoriesLabel[selectedSlideCategory].name}</IonLabel>
+              <IonIcon icon={groupedAttractions[selectedSlideCategory].icon} color="primary" />
+              <IonLabel>{groupedAttractions[selectedSlideCategory].name}</IonLabel>
             </IonChip>
             <IonSegmentButton onClick={() => deselectFilterGroup()} layout="icon-start">
               <IonIcon icon={close} />
@@ -168,10 +61,10 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
       ) : (
         <>
           <IonSegment id="categorySlideSegment" className={"hide-scrollbar"} scrollable={true} draggable={true}>
-            {Object.values(slideCategories).map((category, index) => (
-              <IonChip key={index} onClick={() => selectFilterGroup(category)}>
-                <IonIcon icon={slideCategoriesLabel[category].icon} color="primary" />
-                <IonLabel>{slideCategoriesLabel[category].name}</IonLabel>
+            {Object.keys(groupedAttractions).map((key, index) => (
+              <IonChip key={index} onClick={() => selectFilterGroup(key)}>
+                <IonIcon icon={groupedAttractions[key].icon} color="primary" />
+                <IonLabel>{groupedAttractions[key].name}</IonLabel>
               </IonChip>
             ))}
             <div style={{ minWidth: "16px" }}></div>
@@ -182,10 +75,11 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
   );
 };
 
-export default connect<{}, {}, DispatchProps>({
+export default connect<{}, StateProps, DispatchProps>({
   mapStateToProps: (state) => ({
     allFilters: state.allAttractionFilters,
     selectedFilters: state.user.selectedAttractionFilters,
+    groupedAttractions: state.groupedAttractions,
   }),
   mapDispatchToProps: {
     updateSelectedAttractionFilters,

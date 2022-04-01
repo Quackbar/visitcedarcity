@@ -64,6 +64,10 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.681917,
+      lng: -113.061979,
+    },
   },
   {
     id: 2,
@@ -556,7 +560,8 @@ export const OutdoorItems = [
     url: "www.nps.gov/glca",
     description:
       "If you enjoy floating in clean, crisp waters, then we’re sure you already know all about Lake Powell, the water playground of the West. This lake of deep blue water stretches across hundreds of miles of sandy beaches cast against jaw-dropping red rock cliffs and pocketed water holes in its gooseneck canyons. Lake Powell and the Glen Canyon National Recreation Area offers unparalleled opportunities for water-based and backcountry recreation. The area stretches for hundreds of miles from Lee’s Ferry in Arizona to the Orange Cliffs of Southern Utah, encompassing scenic vistas, geological wonders and a panorama of human history. Here, you can do it all — boating, water skiing, fishing, swimming, backcountry hiking or four-wheeling.",
-    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/National-Recreation-Areas-Lake-Powell-Jerry-Sintz.jpg",
+    image:
+      "https://visitcedarcity.com/wp-content/uploads/2019/05/National-Recreation-Areas-Lake-Powell-Jerry-Sintz.jpg",
     categories: [
       AttractionCategories.Experiences.subcategories.NationalParks,
       AttractionCategories.Experiences.subcategories.Outdoor,
@@ -572,7 +577,8 @@ export const OutdoorItems = [
     url: "www.ut.blm.gov/monument",
     description:
       "Grand Staircase-Escalante National Monument is a dramatic, multi-hued landscape, rich in natural and human history. Extending across almost two million acres of Utah public lands managed by the Bureau of Land Management, the Monument represents a unique combination of archaeological, historical, paleontological, geological, and biological resources. These strikingly beautiful and scientifically important lands are divided into three distinct regions: the Grand Staircase, the Kaiparowits Plateau, and the Canyons of the Escalante, meaning “Big Mountain’s Little Brother.” Many sites from prehistoric cultures have been recorded on the Plateau. Many more are preserved for future study.",
-    image: "https://visitcedarcity.com/wp-content/uploads/2019/05/National-Monuments-Grand-Staircase-Escalante-Tom-Till.jpg",
+    image:
+      "https://visitcedarcity.com/wp-content/uploads/2019/05/National-Monuments-Grand-Staircase-Escalante-Tom-Till.jpg",
     categories: [
       AttractionCategories.Experiences.subcategories.NationalParks,
       AttractionCategories.Experiences.subcategories.Outdoor,
@@ -599,7 +605,7 @@ export const OutdoorItems = [
   },
 ];
 
-export const CityItems = [
+export const CityItems: AttractionItem[] = [
   {
     id: 38,
     title: "Pastry Pub",
@@ -796,7 +802,7 @@ export const CityItems = [
     ],
   },
   {
-    id:52,
+    id: 52,
     title: "Main Street Books Cedar City",
     subtitle: "Cedar City Book Shop",
     url: "https://www.facebook.com/mainstreetbookscedarcity/",
@@ -820,12 +826,14 @@ export const CityItems = [
     title: "Artisans Gallery",
     subtitle: "Cedar City Shop",
     url: "https://www.facebook.com/pages/category/Artist/Artisans-Gallery-134547949914392/",
-    description: "Established in 2009, offering local art and handcrafted items. Artisans offers an online gallery for local artists and artisans to showcase and sell their artwork as well as a physical art gallery located in the quaint downtown district of Cedar City and just one block east of Southern Utah University and the Utah Shakespearean Festival.",
+    description:
+      "Established in 2009, offering local art and handcrafted items. Artisans offers an online gallery for local artists and artisans to showcase and sell their artwork as well as a physical art gallery located in the quaint downtown district of Cedar City and just one block east of Southern Utah University and the Utah Shakespearean Festival.",
     image:
       "https://scontent-lax3-1.xx.fbcdn.net/v/t31.18172-8/10700637_754836944552153_6950922609931521472_o.jpg?stp=dst-jpg_s2048x2048&_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xtk_why8ZmUAX_Uwd2Y&_nc_ht=scontent-lax3-1.xx&oh=00_AT-0pwHzOtU6zkbbAIJGWNw8tewVbNv_nXu2sgPfg5bWEw&oe=625AF82E",
-    categories: [AttractionCategories.Experiences.subcategories.Shop,
-                 AttractionCategories.Experiences.subcategories.CedarCityArts
-                ],
+    categories: [
+      AttractionCategories.Experiences.subcategories.Shop,
+      AttractionCategories.Experiences.subcategories.CedarCityArts,
+    ],
   },
 ]
 

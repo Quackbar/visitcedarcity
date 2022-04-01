@@ -212,6 +212,22 @@ export const AttractionCategories = {
   },
 };
 
+export enum GroupedAttractionCategories {
+  Food = "food",
+  Parks = "parks",
+  Lodging = "lodging",
+  FamilyFun = "familyfun",
+  Shops = "shops",
+  Arts = "arts",
+  Drinks = "drinks",
+  Camping = "camping",
+  Drives = "drives",
+  Fishing = "fishing",
+  Shows = "shows",
+  Lookouts = "lookouts",
+  Trails = "trails",
+}
+
 export enum AttractionLocations {
   BrianHead = "brian-head",
   CedarCity = "cedar-city",
@@ -230,6 +246,10 @@ export interface AttractionItem {
   url: string;
   categories?: AllCategories[];
   location?: AttractionLocations;
+  coordinates?: {
+    lat: number;
+    lng: number
+  }
 }
 
 export interface SubscriptionItem {
