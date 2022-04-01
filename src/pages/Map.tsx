@@ -26,9 +26,6 @@ import {
   homeOutline,
   trailSignOutline,
 } from "ionicons/icons";
-// @ts-ignore
-
-import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import { Toast } from "@capacitor/toast";
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
@@ -42,8 +39,8 @@ interface StateProps {
 }
 const showToast = async (msg: string) => {
   await Toast.show({
-      text: msg
-  })
+    text: msg,
+  });
 };
 
 const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {

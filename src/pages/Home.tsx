@@ -29,7 +29,7 @@ import SnowPack from "../modules/SnowPack";
 import SkyData from "../modules/SkyData";
 import RoadConditions from "../modules/RoadConditions";
 import FestivalFood from "../modules/FestivalFood";
-import ShareSocialFab from "../components/ShareSocialFab"
+import ShareSocialFab from "../components/ShareSocialFab";
 
 //firebase
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
@@ -371,6 +371,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
       >
         <HomeModulesFilter homeModules={HomeModules} onDismissModal={() => setShowFilterModal(false)} />
       </IonModal>
+
       {/* <ShareSocialFab/> */}
     </IonPage>
   );

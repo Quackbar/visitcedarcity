@@ -7,49 +7,27 @@ export type AppState = {
   subscriptionItems: SubscriptionItem[];
 };
 
+const Experiences = localStorage.getItem("Experiences") ?? "[]";
+const Fooder = localStorage.getItem("Foods") ?? "[]";
+const Lodges = localStorage.getItem("Lodging") ?? "[]";
 
-type attractionObj = {
-  id: number ;
-  title: string;
-  subtitle: string;
-  description: string;
-  url: string;
-  image: string;
-  categories: AllCategories[];
-}[]
+export const ExpObj = JSON.parse(Experiences?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 
-const Experiences = localStorage.getItem("Experiences") ?? "[]"
-console.log(Experiences.toString())
+ExpObj.forEach((el) => {
+  el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity);
+});
 
+export const Foods = JSON.parse(Fooder?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 
+Foods.forEach((el) => {
+  el.categories.push(AttractionCategories.FoodAndDrink.subcategories.LocalEatery);
+});
 
-const Fooder = localStorage.getItem("Foods") ?? "[]"
-console.log(Fooder.toString())
+export const Lodging = JSON.parse(Lodges?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 
-
-const Lodges = localStorage.getItem("Lodging") ?? "[]"
-console.log(Lodges.toString())
-
-export const ExpObj = JSON.parse(Experiences?.slice(0,-1)+"]" || "[]") as attractionObj
-
-ExpObj.forEach(el=>{
-  el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity)
-})
-
-
-export const Foods = JSON.parse(Fooder?.slice(0,-1)+"]" || "[]") as attractionObj
-
-Foods.forEach(el=>{
-  el.categories.push(AttractionCategories.FoodAndDrink.subcategories.LocalEatery)
-})
-
-export const Lodging = JSON.parse(Lodges?.slice(0,-1)+"]" || "[]") as attractionObj
-
-Lodging.forEach(el=>{
-  el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel,)
-})
-
-
+Lodging.forEach((el) => {
+  el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel);
+});
 
 export const OutdoorItems = [
   {
@@ -1026,5 +1004,4 @@ export const CityItems: AttractionItem[] = [
       lng: -113.0653943,
     },
   },
-]
-
+];
