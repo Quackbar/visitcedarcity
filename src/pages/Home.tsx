@@ -1,4 +1,4 @@
-import React, { Fragment, ReactElement, useContext, useState } from "react";
+import React, { Fragment, ReactElement, useContext, useRef, useState } from "react";
 import { Browser } from "@capacitor/browser";
 import {
   IonModal,
@@ -17,18 +17,9 @@ import {
   IonHeader,
   IonToolbar,
   IonIcon,
-  IonReorder,
-  IonList,
-  IonReorderGroup,
-  IonItemGroup,
-  IonItemDivider,
-  IonItemSliding,
-  IonItemOptions,
-  IonItemOption,
 } from "@ionic/react";
-import { getMode, ItemReorderEventDetail, RefresherEventDetail } from "@ionic/core";
+import { RefresherEventDetail } from "@ionic/core";
 import { settingsOutline } from "ionicons/icons";
-
 
 // modules
 import Weather from "../modules/Weather";
@@ -47,13 +38,13 @@ import { AllModules, ConditionsReturnType, MountainDataType, TodaysType } from "
 import { updateSelectedHomeModules } from "../data/context/actions";
 
 // schedules
-import { FMFSchedule } from "../assets/data/FMF"
-import { UTWFSchedule } from "../assets/data/UTWF"
-import { SUMASchedule } from "../assets/data/SUMA"
-import { CCSchedule } from "../assets/data/CC"
-import { SUUSSchedule } from "../assets/data/SUUS"
-import { SUUPSchedule } from "../assets/data/SUUP"
-import { BHSchedule } from "../assets/data/BH"
+import { FMFSchedule } from "../assets/data/FMF";
+import { UTWFSchedule } from "../assets/data/UTWF";
+import { SUMASchedule } from "../assets/data/SUMA";
+import { CCSchedule } from "../assets/data/CC";
+import { SUUSSchedule } from "../assets/data/SUUS";
+import { SUUPSchedule } from "../assets/data/SUUP";
+import { BHSchedule } from "../assets/data/BH";
 import { USFSchedule } from "../assets/data/USF";
 import { UMRFSchedule } from "../assets/data/UMRF";
 import { CCMASchedule } from "../assets/data/CCMA";
@@ -61,8 +52,23 @@ import { NSFSchedule } from "../assets/data/NSF";
 import { OSUSchedule } from "../assets/data/OSU";
 import { connect } from "../data/context/connect";
 import { AppContext } from "../data/context/AppContext";
+import HomeModulesFilter from "../components/HomeModulesFilter";
 
-
+type subtype = {
+  date: string;
+  groups: {
+    time: string;
+    sessions: {
+      name: string;
+      url: string;
+      timeStart: string;
+      timeEnd: string;
+      location: string;
+      tracks: string[];
+      id: string;
+    }[];
+  }[];
+};
 
 let CedarImg = "";
 let CedarTemp = "";
@@ -136,176 +142,116 @@ function doRefresh(event: CustomEvent<RefresherEventDetail>) {
 interface StateProps {
   selectedHomeModules: AllModules[];
 }
-interface DispatchProps {
-  updateSelectedHomeModules: typeof updateSelectedHomeModules;
-}
 
-type HomeProps = StateProps & DispatchProps;
+type HomeProps = {} & StateProps & {};
 
-const Home: React.FC<HomeProps> = ({ selectedHomeModules, updateSelectedHomeModules }) => {
+const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   const formatDate = (value: string) => {
     return format(parseISO(value), "MMM dd yyyy");
   };
 
-  const ios = getMode() === "ios";
+  let things: TodaysType[] = [];
+  things = [];
+  const today = new Date();
 
   const context = useContext(AppContext);
 
-  //console.log(context.state.user.selectedSubscriptions)
-
   const [showFilterModal, setShowFilterModal] = useState(false);
-
-  const today = new Date();
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
-  let things: TodaysType[] = [];
-  things = [];
   const [formattedDate, setFormattedDate] = useState(new Date().toISOString().slice(0, 10));
 
-type subtype = {
-    date: string;
-    groups: {
-        time: string;
-        sessions: {
-            name: string;
-            url: string;
-            timeStart: string;
-            timeEnd: string;
-            location: string;
-            tracks: string[];
-            id: string;
-        }[];
-    }[]
-}
+  const pageRef = useRef<HTMLElement>(null);
 
-let yourSchedule: subtype[] = []
-//   let subs = localStorage.getItem("subs")
-//   console.log(subs);
-yourSchedule = USFSchedule.schedule
-yourSchedule = yourSchedule.filter(function(item) { 
-    return USFSchedule.schedule.indexOf(item) < 0; 
-});
+  let yourSchedule: subtype[] = [];
+  yourSchedule = USFSchedule.schedule;
+  yourSchedule = yourSchedule.filter(function (item) {
+    return USFSchedule.schedule.indexOf(item) < 0;
+  });
 
+  context.state.user.selectedSubscriptions.includes(0)
+    ? (yourSchedule = yourSchedule.concat(USFSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return USFSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(1)
+    ? (yourSchedule = yourSchedule.concat(NSFSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return NSFSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(2) || context.state.user.selectedSubscriptions.includes(3)
+    ? (yourSchedule = yourSchedule.concat(BHSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return BHSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(5)
+    ? (yourSchedule = yourSchedule.concat(SUMASchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return SUMASchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(6)
+    ? (yourSchedule = yourSchedule.concat(SUUPSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return SUUPSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(7)
+    ? (yourSchedule = yourSchedule.concat(OSUSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return OSUSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(8)
+    ? (yourSchedule = yourSchedule.concat(CCMASchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return CCMASchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(15)
+    ? (yourSchedule = yourSchedule.concat(SUUSSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return SUUSSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(16)
+    ? (yourSchedule = yourSchedule.concat(CCSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return CCSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(13)
+    ? (yourSchedule = yourSchedule.concat(UMRFSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return UMRFSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(14)
+    ? (yourSchedule = yourSchedule.concat(UTWFSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return UTWFSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(12)
+    ? (yourSchedule = yourSchedule.concat(FMFSchedule.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return FMFSchedule.schedule.indexOf(item) < 0;
+      }));
 
-    context.state.user.selectedSubscriptions.includes(0) ? 
-    yourSchedule = yourSchedule.concat(USFSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return USFSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(1) ? 
-    yourSchedule = yourSchedule.concat(NSFSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return NSFSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(2)||context.state.user.selectedSubscriptions.includes(3) ? 
-    yourSchedule = yourSchedule.concat(BHSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return BHSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(5) ? 
-    yourSchedule = yourSchedule.concat(SUMASchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return SUMASchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(6) ? 
-    yourSchedule = yourSchedule.concat(SUUPSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return SUUPSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(7) ? 
-    yourSchedule = yourSchedule.concat(OSUSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return OSUSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(8) ? 
-    yourSchedule = yourSchedule.concat(CCMASchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return CCMASchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(15) ? 
-    yourSchedule = yourSchedule.concat(SUUSSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return SUUSSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(16) ? 
-    yourSchedule = yourSchedule.concat(CCSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return CCSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(13) ? 
-    yourSchedule = yourSchedule.concat(UMRFSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return UMRFSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(14) ? 
-    yourSchedule = yourSchedule.concat(UTWFSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return UTWFSchedule.schedule.indexOf(item) < 0; 
-    });
-    context.state.user.selectedSubscriptions.includes(12) ? 
-    yourSchedule = yourSchedule.concat(FMFSchedule.schedule)
-        :
-    yourSchedule = yourSchedule.filter(function(item) { 
-        return FMFSchedule.schedule.indexOf(item) < 0; 
-    });
-
-  function getTodays(rn: string){
-    let temp: any[] = []
+  function getTodays(rn: string) {
+    let temp: any[] = [];
     yourSchedule.map((item) => {
-        // console.log("doing stuff")
+      // console.log("doing stuff")
       if (item.date === rn) {
-        temp.push(item.groups.map((group) => {
-          return group.sessions[0] as TodaysType;
-        }))
+        temp.push(
+          item.groups.map((group) => {
+            return group.sessions[0] as TodaysType;
+          })
+        );
       }
     });
-    // console.log(temp)
     let returnable: TodaysType[] = [];
-    temp.map(el => {
-        el.map((element: TodaysType) => {
-            returnable.push(element)
-        });
-    })
-    // console.log(returnable)
-    things = returnable
+    temp.map((el) => {
+      el.map((element: TodaysType) => {
+        returnable.push(element);
+      });
+    });
+    things = returnable;
     return returnable;
   }
-// setFormattedDate(new Date().toISOString().slice(0, 10))
-//   yourSchedule.map((item) => {
-//       console.log("doing stuff")
-//     if (item.date === formattedDate) {
-//       things = item.groups.map((group) => {
-//         return group.sessions[0] as TodaysType;
-//       })
-//     }
-//   });
 
-  function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
-    // reorder array
-    selectedHomeModules.splice(event.detail.to, 0, selectedHomeModules.splice(event.detail.from, 1)[0]);
-    event.detail.complete();
-  }
-
-  const toggleModule = (index: number) => {
-    // flip the subscription state
-    if (selectedHomeModules.includes(index)) {
-      selectedHomeModules.splice(selectedHomeModules.indexOf(index), 1);
-    } else {
-      selectedHomeModules.push(index);
-    }
-    updateSelectedHomeModules([...selectedHomeModules]);
-  };
-  getTodays(formattedDate)
+  getTodays(formattedDate);
 
   const HomeModules: { [key in AllModules]: { label: string; src: ReactElement } } = {
     // const [things, setThings] = useState([]);
@@ -326,15 +272,6 @@ yourSchedule = yourSchedule.filter(function(item) {
       label: "Schedule",
       src: (
         <IonCard class="basiccentered">
-          <IonTitle class="centered">
-            {/* <br />
-            <h3>
-            Going On Today In Cedar City
-            </h3>
-            <br />
-            <br /> */}
-          </IonTitle>
-
           {/* Datetime in popover with cover element */}
           <IonItem button={true} id="open-date-input">
             <IonLabel>Date</IonLabel>
@@ -346,15 +283,16 @@ yourSchedule = yourSchedule.filter(function(item) {
                   setPopoverDate(formatDate(ev.detail.value!));
                   // console.log(ev.detail.value!)
                   setFormattedDate(ev.detail.value!.slice(0, -15));
-                  getTodays(formattedDate)
+                  getTodays(formattedDate);
                 }}
               />
             </IonPopover>
           </IonItem>
 
-          {things.map((event) => {
+          {things.map((event, index) => {
             return (
               <ScheduleComp
+                key={index}
                 name={event.name}
                 timeStart={event.timeStart}
                 timeEnd={event.timeEnd}
@@ -373,7 +311,7 @@ yourSchedule = yourSchedule.filter(function(item) {
     [AllModules.SkyData]: {
       label: "Sky Data",
       src: (
-        <IonCard>
+        <IonCard key={AllModules.RoadConditions}>
           <SkyData />
         </IonCard>
       ),
@@ -406,7 +344,7 @@ yourSchedule = yourSchedule.filter(function(item) {
   };
 
   return (
-    <IonPage id="home-page">
+    <IonPage ref={pageRef} id="home-page">
       <IonContent>
         <IonHeader>
           <IonToolbar>
@@ -419,64 +357,24 @@ yourSchedule = yourSchedule.filter(function(item) {
         <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
-        {selectedHomeModules.map((moduleId: AllModules) => {
-          return <Fragment key={moduleId}>{HomeModules[moduleId].src}</Fragment>;
+        {selectedHomeModules.map((moduleId: AllModules, index) => {
+          return <Fragment key={index}>{HomeModules[moduleId].src}</Fragment>;
         })}
       </IonContent>
 
-      <IonModal isOpen={showFilterModal} swipeToClose={true} onDidDismiss={() => setShowFilterModal(false)}>
-        <IonHeader translucent={true} className="module-filter">
-          <IonToolbar>
-            <IonTitle>Custom Modules</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-
-        <IonContent className="module-filter">
-          <IonList lines={ios ? "inset" : "full"}>
-            <IonItemGroup>
-              <IonReorderGroup disabled={false} onIonItemReorder={doReorder}>
-                {selectedHomeModules.map((moduleId: AllModules, index) => (
-                  <IonItemSliding key={`subbed_mod-${index}`}>
-                    <IonItem>
-                      <IonLabel>{HomeModules[moduleId].label}</IonLabel>
-                      <IonReorder />
-                    </IonItem>
-                    <IonItemOptions side="end">
-                      <IonItemOption
-                        color="danger"
-                        onClick={() => {
-                          toggleModule(moduleId);
-                        }}
-                      >
-                        Remove
-                      </IonItemOption>
-                    </IonItemOptions>
-                  </IonItemSliding>
-                ))}
-              </IonReorderGroup>
-            </IonItemGroup>
-            <IonItemGroup>
-              <IonItemDivider sticky>
-                <IonLabel>Add new modules</IonLabel>
-              </IonItemDivider>
-              {Object.values(HomeModules).map(
-                (module, index) =>
-                  !selectedHomeModules.includes(index) && (
-                    <IonItem key={`unsubbed_mod-${index}`} onClick={() => toggleModule(index)}>
-                      <IonLabel>{module.label}</IonLabel>
-                    </IonItem>
-                  )
-              )}
-            </IonItemGroup>
-          </IonList>
-        </IonContent>
+      <IonModal
+        isOpen={showFilterModal}
+        onDidDismiss={() => setShowFilterModal(false)}
+        swipeToClose={true}
+        presentingElement={pageRef.current!}
+      >
+        <HomeModulesFilter homeModules={HomeModules} onDismissModal={() => setShowFilterModal(false)} />
       </IonModal>
     </IonPage>
   );
 };
-// export default Home;
 
-export default connect<{}, StateProps, DispatchProps>({
+export default connect<{}, StateProps, {}>({
   mapStateToProps: (state) => ({
     selectedHomeModules: state.user.selectedHomeModules,
   }),

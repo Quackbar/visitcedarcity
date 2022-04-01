@@ -156,10 +156,14 @@ ion-chip {
 
   ion-chip {
     background-color: #ffffff;
+
+    ion-label {
+      color: rgba(0, 0, 0, 0.87);
+    }
   }
 
   .trany {
-    transform: translateX(-15vw);
+    transform: translateX(calc(-100% + 40px));
     width: 100%;
     &.green {
       background-color: #c6d488;

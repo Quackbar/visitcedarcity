@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import {
   IonChip,
+  IonCol,
   IonContent,
   IonFab,
   IonFabButton,
@@ -127,9 +128,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
         const requestedMarker = attractionItems.find((item) => item.id === numberID);
 
         if (requestedMarker !== undefined && requestedMarker.coordinates !== undefined) {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-            '<img src="https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w"/><h1>Centros Woodfired Pizzaria</h1><a href="https://www.google.com/maps/place/Centro+Woodfired+Pizzeria/@37.678244,-113.0633694,18.21z/data=!4m5!3m4!1s0x80b561ba4714611d:0x7aec392aed6bea71!8m2!3d37.6775706!4d-113.0626666">more info</a>'
-          );
+          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(requestedMarker));
 
           const marker = new mapboxgl.Marker({
             color: color,
@@ -154,6 +153,10 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
       center: [-113.061306, 37.678057],
       essential: true, // this animation is considered essential with respect to prefers-reduced-motion
     });
+  };
+
+  const makeMarkerPopupHTML: (item: AttractionItem) => string = (item) => {
+    return `<img src="${item.image}"/><h1>${item.title}</h1><a href="${item.url}">more info</a>`;
   };
 
   const toggleMarkers = (key: string) => {
@@ -185,9 +188,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
       const markerColor = groupedAttractions[key].color;
       filteredResults.forEach((result) => {
         if (result.coordinates) {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-            '<img src="https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w"/><h1>Centros Woodfired Pizzaria</h1><a href="https://www.google.com/maps/place/Centro+Woodfired+Pizzeria/@37.678244,-113.0633694,18.21z/data=!4m5!3m4!1s0x80b561ba4714611d:0x7aec392aed6bea71!8m2!3d37.6775706!4d-113.0626666">more info</a>'
-          );
+          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(result));
 
           newMarkers.push(
             new mapboxgl.Marker({
@@ -289,47 +290,43 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
       </IonFab>
       {outdoor ? (
         <IonFab slot="fixed" vertical="bottom" horizontal="end">
-          <SafeAreaWrapper>
-            <IonFabButton size="small">
-              <IonIcon icon={layersOutline}></IonIcon>
-            </IonFabButton>
-            <IonFabList side="start">
-              <IonChip class="white" onClick={() => setOutdoorMode()}>
-                <IonIcon icon={mapOutline}></IonIcon>
-                <IonLabel>Regular Mode</IonLabel>
-              </IonChip>
-            </IonFabList>
-          </SafeAreaWrapper>
+          <IonFabButton size="small">
+            <IonIcon icon={layersOutline}></IonIcon>
+          </IonFabButton>
+          <IonFabList side="start">
+            <IonChip class="white" onClick={() => setOutdoorMode()}>
+              <IonIcon icon={mapOutline}></IonIcon>
+              <IonLabel>Regular</IonLabel>
+            </IonChip>
+          </IonFabList>
         </IonFab>
       ) : (
         <IonFab slot="fixed" vertical="bottom" horizontal="end">
-          <SafeAreaWrapper>
-            <IonFabButton size="small">
-              <IonIcon icon={layersOutline}></IonIcon>
-            </IonFabButton>
-            <IonFabList side="top" class="left">
-              <IonGrid>
-                <IonRow>
-                  <IonChip class={radar ? "green trany" : "white trany"} onClick={() => addRadarLayer()}>
-                    <IonIcon icon={thunderstormOutline}></IonIcon>
-                    <IonLabel>Weather</IonLabel>
-                  </IonChip>
-                  <IonChip class={satellite ? "green trany" : "white trany"} onClick={() => setSatelliteStyle()}>
-                    <IonIcon icon={mapOutline}></IonIcon>
-                    <IonLabel>Satellite</IonLabel>
-                  </IonChip>
-                  <IonChip class={satellite ? "white trany" : "green trany"} onClick={() => setStreetStyle()}>
-                    <IonIcon icon={carSportOutline}></IonIcon>
-                    <IonLabel>Streets</IonLabel>
-                  </IonChip>
-                  <IonChip class="white trany" onClick={() => setOutdoorMode()}>
-                    <IonIcon icon={trailSignOutline}></IonIcon>
-                    <IonLabel>Outdoor</IonLabel>
-                  </IonChip>
-                </IonRow>
-              </IonGrid>
-            </IonFabList>
-          </SafeAreaWrapper>
+          <IonFabButton size="small">
+            <IonIcon icon={layersOutline}></IonIcon>
+          </IonFabButton>
+          <IonFabList side="top" class="left">
+            <IonGrid>
+              <IonRow>
+                <IonChip class={radar ? "green trany" : "white trany"} onClick={() => addRadarLayer()}>
+                  <IonIcon icon={thunderstormOutline}></IonIcon>
+                  <IonLabel>Weather</IonLabel>
+                </IonChip>
+                <IonChip class={satellite ? "green trany" : "white trany"} onClick={() => setSatelliteStyle()}>
+                  <IonIcon icon={mapOutline}></IonIcon>
+                  <IonLabel>Satellite</IonLabel>
+                </IonChip>
+                <IonChip class={satellite ? "white trany" : "green trany"} onClick={() => setStreetStyle()}>
+                  <IonIcon icon={carSportOutline}></IonIcon>
+                  <IonLabel>Streets</IonLabel>
+                </IonChip>
+                <IonChip class="white trany" onClick={() => setOutdoorMode()}>
+                  <IonIcon icon={trailSignOutline}></IonIcon>
+                  <IonLabel>Outdoor</IonLabel>
+                </IonChip>
+              </IonRow>
+            </IonGrid>
+          </IonFabList>
         </IonFab>
       )}
       <IonFab slot="fixed" vertical="top" horizontal="start">
@@ -339,18 +336,16 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
           </IonFabButton>
           <IonFabList side="bottom">
             <IonGrid>
-              <IonRow>
-                {Object.keys(groupedAttractions).map((key, index) => {
-                  return (
-                    <Fragment key={index}>
-                      <IonChip onClick={() => toggleMarkers(key)}>
-                        <IonIcon icon={groupedAttractions[key].icon}></IonIcon>
-                        <IonLabel>{groupedAttractions[key].name}</IonLabel>
-                      </IonChip>
-                    </Fragment>
-                  );
-                })}
-              </IonRow>
+              {Object.keys(groupedAttractions).map((key, index) => {
+                return (
+                  <IonCol key={index}>
+                    <IonChip onClick={() => toggleMarkers(key)}>
+                      <IonIcon icon={groupedAttractions[key].icon}></IonIcon>
+                      <IonLabel>{groupedAttractions[key].name}</IonLabel>
+                    </IonChip>
+                  </IonCol>
+                );
+              })}
             </IonGrid>
           </IonFabList>
         </SafeAreaWrapper>
