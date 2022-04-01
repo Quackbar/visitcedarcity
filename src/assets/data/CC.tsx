@@ -1,4 +1,4 @@
-export const CCSchedule = {"schedule": [
+export let CCSchedule = {"schedule": [
     {
     "date": "2022-04-07",
     "groups": [{ "time": "12:00:00 AM",
@@ -4832,3 +4832,15 @@ export const CCSchedule = {"schedule": [
     "location": "Iron County Fair Building",
     "tracks": ["General Events"],"id": "604"}]},]},
     ]}
+
+
+let schedule = localStorage.getItem("CCScheduleUpdate")?.slice(0,-1) + "]}" || "{\"schedule\": []}"
+    // console.log(schedule)
+
+
+try{
+    CCSchedule = JSON.parse(schedule)
+}catch(err){
+    console.log(err)
+}
+

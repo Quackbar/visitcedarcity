@@ -8,29 +8,77 @@ import { Simple } from "@lab-code/moonphase";
 const today = new Date();
 // console.log(today.toLocaleDateString());
 const sepDate = today.toLocaleDateString().split("/");
+// console.log(sepDate)
 
 const sunset = getSunset(37.68912, -113.047006);
 const sunrise = getSunrise(37.68912, -113.047006);
 // const phaseEmoji = Moon.lunarPhaseEmoji();
 
+
+function getMoonPhase(year: number, month: number, day: number)
+{
+    var c = 0;
+    var e = 0;
+    var jd = 0;
+    var b = 0;
+
+    if (month < 3) {
+        year--;
+        month += 12;
+    }
+
+    ++month;
+
+    c = 365.25 * year;
+
+    e = 30.6 * month;
+
+    jd = c + e + day - 694039.09; //jd is total days elapsed
+
+    jd /= 29.5305882; //divide by the moon cycle
+
+    b = parseInt(jd.toString()); //int(jd) -> b, take integer part of jd
+
+    jd -= b; //subtract integer part to leave fractional part of original jd
+
+    b = Math.round(jd * 8); //scale fraction from 0-8 and round
+
+    if (b >= 8 ) {
+        b = 0; //0 and 8 are the same so turn 8 into 0
+    }
+
+    // 0 => New Moon
+    // 1 => Waxing Crescent Moon
+    // 2 => Quarter Moon
+    // 3 => Waxing Gibbous Moon
+    // 4 => Full Moon
+    // 5 => Waning Gibbous Moon
+    // 6 => Last Quarter Moon
+    // 7 => Waning Crescent Moon
+    
+    return b;
+}
+
+
 function getMoon() {
-  const phase: Number = Simple(Number(sepDate[1]), Number(sepDate[0]), Number(sepDate[2]));
-  switch (true) {
-    case phase < 2 && phase > 28:
+  const phase: Number = getMoonPhase(Number(sepDate[2]), Number(sepDate[0]), Number(sepDate[1]));
+  // console.log(phase)
+  switch (phase) {
+    case 0:
       return "🌑";
-    case phase < 6 && phase > 1:
+    case 1:
       return "🌒";
-    case phase < 10 && phase > 5:
+    case 2:
       return "🌓";
-    case phase < 14 && phase > 9:
+    case 3:
       return "🌔";
-    case phase < 17 && phase > 13:
+    case 4:
       return "🌕";
-    case phase < 20 && phase > 16:
+    case 5:
       return "🌖";
-    case phase < 26 && phase > 19:
+    case 6:
       return "🌗";
-    case phase < 29 && phase > 24:
+    case 7:
       return "🌘";
   }
 }

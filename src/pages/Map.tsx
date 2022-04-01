@@ -40,7 +40,9 @@ import {
 } from "ionicons/icons";
 import { Geolocation, Geoposition } from "@ionic-native/geolocation";
 // @ts-ignore
+
 import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import { Toast } from "@capacitor/toast";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import "../assets/scss/Map.scss";
@@ -49,11 +51,18 @@ import SafeAreaWrapper from "../components/SafeAreaWrapper";
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmVybmFyZGtpbnR6aW5nIiwiYSI6ImNrenpxc2UwejBjczAzYnMwOXhjeW1zMDEifQ.R_WjPk9TCgHbs-yKfPC1iQ";
 
+
+const showToast = async (msg: string) => {
+  await Toast.show({
+      text: msg
+  })
+};
+
 const Map: React.FC = () => {
   const [map, setMap] = useState<MapDataType>();
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
   const twcApiKey = "2ec2232d72f1484282232d72f198421d";
-
+  // showToast("Swipe up with two fingers to see the map in 3D");
   const [radar, setRadar] = useState(false);
   const [outdoor, setOutdoor] = useState(false);
   const [satellite, setSatellite] = useState(false);
@@ -117,10 +126,11 @@ const Map: React.FC = () => {
         type: "sky",
         paint: {
           "sky-type": "atmosphere",
-          "sky-atmosphere-sun": [0.0, 90.0],
+          "sky-atmosphere-sun": [0.0, 80.0],
           "sky-atmosphere-sun-intensity": 15,
         },
       });
+      // showToast("Swipe up with two fingers to see the map in 3D");
     });
   }, [map]);
 
@@ -232,6 +242,7 @@ const Map: React.FC = () => {
     });
     map.moveLayer("satellite", "pitch-outline");
     if (radar) map.moveLayer("satellite", "radar");
+    showToast("Swipe up with two fingers to see in 3D");
     setSatellite(true);
   };
   

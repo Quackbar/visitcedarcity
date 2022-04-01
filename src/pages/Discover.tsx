@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import {
   IonButton,
   IonContent,
+  IonGrid,
   IonHeader,
   IonIcon,
   IonModal,
   IonPage,
   IonRefresher,
   IonRefresherContent,
+  IonRow,
   IonSearchbar,
   IonTitle,
   IonToolbar,
@@ -20,10 +22,15 @@ import CategorySlide from "../components/CategorySlide";
 import { AttractionItem } from "../models/defaultModels";
 import { updateSearchText } from "../data/context/actions";
 import { connect } from "../data/context/connect";
+import { Browser } from "@capacitor/browser";
+
 
 interface DispatchProps {
   updateSearchText: typeof updateSearchText;
 }
+
+
+
 
 const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
   const context = useContext(AppContext);
@@ -63,7 +70,11 @@ const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
 
     setFilteredAttractions(filteredResults);
   }, [context.state.attractionItems, context.state.user.selectedAttractionFilters, context.state.user.searchText]);
-
+  const openSite = async () => {
+    await Browser.open({
+      url: "https://visitcedarcity.com/",
+    });
+  };
   return (
     <IonPage ref={pageRef} id="discover-page">
       <IonContent fullscreen={true}>
@@ -83,6 +94,15 @@ const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
         </IonRefresher>
         <CategorySlide />
         <DiscoverList attractions={filteredAttractions} />
+
+        <IonGrid>
+          <IonRow>
+          <IonButton class="centered" onClick={openSite}>
+          See Extended List of Offerings
+        </IonButton>
+          </IonRow>
+        </IonGrid>
+
       </IonContent>
 
       <IonModal

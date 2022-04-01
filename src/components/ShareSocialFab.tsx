@@ -1,5 +1,6 @@
+import { Browser } from "@capacitor/browser";
 import { IonLoading, IonFab, IonFabButton, IonIcon, IonFabList } from "@ionic/react"
-import { shareSocial, logoVimeo, logoInstagram, logoTwitter, logoFacebook } from "ionicons/icons"
+import { shareSocial, logoVimeo, logoInstagram, logoTwitter, logoFacebook, addOutline, addCircleOutline } from "ionicons/icons"
 import React, { useState } from "react"
 
 const ShareSocialFab: React.FC = () => {
@@ -7,8 +8,15 @@ const ShareSocialFab: React.FC = () => {
   const [showLoading, setShowLoading] = useState(false);
 
   const openSocial = (network: string) => {
-    setLoadingMessage(`Posting to ${network}`);
+    setLoadingMessage(`Going to ${network}`);
     setShowLoading(true);
+    
+  };
+  const openFacebook = async () => {
+    await Browser.open({ url: "https://www.facebook.com/VisitCedarCity" });
+  };
+  const openInstagram = async () => {
+    await Browser.open({ url: "https://www.instagram.com/visitcedarcity/" });
   };
 
   return(
@@ -21,20 +29,14 @@ const ShareSocialFab: React.FC = () => {
         onDidDismiss={() => setShowLoading(false)}
       />
       <IonFab slot="fixed" vertical="bottom" horizontal="end">
-        <IonFabButton>
-          <IonIcon icon={shareSocial} />
+        <IonFabButton size="small">
+          <IonIcon icon={addCircleOutline} />
         </IonFabButton>
-        <IonFabList side="top">
-          <IonFabButton color="vimeo" onClick={() => openSocial('Vimeo')}>
-            <IonIcon icon={logoVimeo} />
-          </IonFabButton>
-          <IonFabButton color="instagram" onClick={() => openSocial('Instagram')}>
+        <IonFabList side="top" >
+          <IonFabButton color="instagram" onClick={() => openInstagram}>
             <IonIcon icon={logoInstagram} />
           </IonFabButton>
-          <IonFabButton color="twitter" onClick={() => openSocial('Twitter')}>
-            <IonIcon icon={logoTwitter} />
-          </IonFabButton>
-          <IonFabButton color="facebook" onClick={() => openSocial('Facebook')}>
+          <IonFabButton color="facebook" onClick={() => openFacebook}>
             <IonIcon icon={logoFacebook} />
           </IonFabButton>
         </IonFabList>

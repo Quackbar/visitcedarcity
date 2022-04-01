@@ -7,6 +7,50 @@ export type AppState = {
   subscriptionItems: SubscriptionItem[];
 };
 
+
+type attractionObj = {
+  id: number ;
+  title: string;
+  subtitle: string;
+  description: string;
+  url: string;
+  image: string;
+  categories: AllCategories[];
+}[]
+
+const Experiences = localStorage.getItem("Experiences") ?? "[]"
+console.log(Experiences.toString())
+
+
+
+const Fooder = localStorage.getItem("Foods") ?? "[]"
+console.log(Fooder.toString())
+
+
+const Lodges = localStorage.getItem("Lodging") ?? "[]"
+console.log(Lodges.toString())
+
+export const ExpObj = JSON.parse(Experiences?.slice(0,-1)+"]" || "[]") as attractionObj
+
+ExpObj.forEach(el=>{
+  el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity)
+})
+
+
+export const Foods = JSON.parse(Fooder?.slice(0,-1)+"]" || "[]") as attractionObj
+
+Foods.forEach(el=>{
+  el.categories.push(AttractionCategories.FoodAndDrink.subcategories.LocalEatery)
+})
+
+export const Lodging = JSON.parse(Lodges?.slice(0,-1)+"]" || "[]") as attractionObj
+
+Lodging.forEach(el=>{
+  el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel,)
+})
+
+
+
 export const OutdoorItems = [
   {
     id: 1,
@@ -783,4 +827,5 @@ export const CityItems = [
                  AttractionCategories.Experiences.subcategories.CedarCityArts
                 ],
   },
-];
+]
+

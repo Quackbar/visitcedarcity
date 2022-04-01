@@ -28,6 +28,9 @@ const f_db = getFirestore(firebaseApp);
 
 // firestore queries
 const brianDoc = doc(f_db, "BrianHeadWeatherDayData", "current");
+const lodgeDoc = doc(f_db, "Lodgings", "current");
+const expDoc = doc(f_db, "Experiences", "current");
+const foodDoc = doc(f_db, "Foodsanddrinks", "current");
 const paroDoc = doc(f_db, "ParowanWeatherDayData", "current");
 const cedarDoc = doc(f_db, "CedarCityWeatherDayData", "current");
 const mountainDoc = doc(f_db, "mountainData", "current");
@@ -158,6 +161,56 @@ export async function getBrianHeadWeather() : Promise<MyReturnTypeItem> {
       });
   });
 }
+
+export async function getExperiences() : Promise<string> {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(expDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        // console.log(docSnap.data()!.current )
+        let returnable = docSnap.data()!.current || "[]"
+        localStorage.setItem('Experiences', returnable)
+        resolve(docSnap.data()!.current+"]" as string);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}getExperiences()
+
+
+
+export async function getFoods() : Promise<string> {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(foodDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        // console.log(docSnap.data()!.current )
+        let returnable = docSnap.data()!.current || "[]"
+        localStorage.setItem('Foods', returnable)
+        resolve(docSnap.data()!.current+"]" as string);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}getFoods()
+
+export async function getLodgings() : Promise<string> {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(lodgeDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        // console.log(docSnap.data()!.current )
+        let returnable = docSnap.data()!.current || "[]"
+        localStorage.setItem('Lodging', returnable)
+        resolve(docSnap.data()!.current+"]" as string);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}getLodgings()
 
 export async function getParoWeather() : Promise<MyReturnTypeItem>  {
   return new Promise(async (resolve, reject) => {

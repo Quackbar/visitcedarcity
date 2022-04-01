@@ -38,6 +38,7 @@ import SnowPack from "../modules/SnowPack";
 import SkyData from "../modules/SkyData";
 import RoadConditions from "../modules/RoadConditions";
 import FestivalFood from "../modules/FestivalFood";
+import ShareSocialFab from "../components/ShareSocialFab"
 
 //firebase
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
@@ -469,8 +470,10 @@ yourSchedule = yourSchedule.filter(function(item) {
               )}
             </IonItemGroup>
           </IonList>
+          
         </IonContent>
       </IonModal>
+      {/* <ShareSocialFab/> */}
     </IonPage>
   );
 };

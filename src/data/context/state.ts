@@ -1,5 +1,5 @@
 import { AllCategories, AttractionItem, SubscriptionItem, User } from "../../models/defaultModels";
-import { OutdoorItems, CityItems } from "../attractions";
+import { OutdoorItems, CityItems, ExpObj, Foods, Lodging } from "../attractions";
 import { Subscriptions } from "../subscriptions";
 
 export type AppState = {
@@ -21,7 +21,7 @@ function shuffle(array: Array<any>) {
 }
 
 export const initialState: AppState = {
-  attractionItems: shuffle(OutdoorItems.concat(shuffle(CityItems))),
+  attractionItems: shuffle(shuffle(OutdoorItems.concat(shuffle(CityItems.concat(shuffle(ExpObj.concat(shuffle(Foods.concat(shuffle(Lodging)))))))))),
   allAttractionFilters: Object.values(AllCategories),
   subscriptionItems: Subscriptions,
   user: {

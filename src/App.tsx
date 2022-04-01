@@ -45,6 +45,7 @@ import "./theme/variables.css";
 import "./assets/scss/app.scss";
 
 import { getBrianHeadWeather, getCedarWeather, getParoWeather } from "./assets/firebase/Firebase";
+import { getCCSched } from "./assets/data/ScheduleUpdater";
 import { Timestamp } from "@firebase/firestore";
 import { useEffect } from "react";
 import { connect } from "./data/context/connect";
@@ -88,6 +89,8 @@ getParoWeather().then((data) => {
   localStorage.setItem("ParoImg", x.conditions ?? "unknown");
   localStorage.setItem("ParoTemp", x.temp ?? "unknown");
 });
+
+getCCSched();
 
 var darkMode = true;
 

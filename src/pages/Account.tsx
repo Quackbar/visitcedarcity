@@ -21,8 +21,8 @@ import { SubscriptionItem } from "../models/defaultModels";
 
 import { informationCircle, logoFacebook } from "ionicons/icons";
 import { Browser } from "@capacitor/browser";
-
-import { PushNotificationSchema, PushNotifications, Token, ActionPerformed } from "@capacitor/push-notifications";
+import { Toast } from "@capacitor/toast";
+import {  PushNotifications, Token } from "@capacitor/push-notifications";
 // import './Home.css';
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
@@ -108,9 +108,9 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
   };
 
   const showToast = async (msg: string) => {
-    // await Toast.show({
-    //     text: msg
-    // })
+    await Toast.show({
+        text: msg
+    })
   };
   //
 
