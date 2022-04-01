@@ -16,7 +16,7 @@ import {
 } from "@ionic/react";
 import { Geolocation, Geoposition } from "@ionic-native/geolocation";
 // @ts-ignore
-import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+// import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; 
 import {
   layersOutline,
   carSportOutline,
@@ -165,7 +165,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
   };
 
   const makeMarkerPopupHTML: (item: AttractionItem) => string = (item) => {
-    return `<img src="${item.image}"/><h1>${item.title}</h1><a href="${item.url}">more info</a>`;
+    return `<img src="${item.image}"/><h1>${item.title}</h1><p>${item.description.substring(0, 100)+"..."}</p><a href="${item.url}">more info</a>`;
   };
 
   const toggleMarkers = (key: string) => {

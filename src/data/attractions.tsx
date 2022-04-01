@@ -65,8 +65,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.681917,
-      lng: -113.061979,
+      lat: 37.7969826,
+      lng: -112.8424624,
     },
   },
   {
@@ -81,19 +81,10 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
-  },
-  {
-    id: 3,
-    title: "Vermillion Castle",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "2 mile, Out-and-Back type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/4f4227f8-e379-4866-8c65-978b10fdc573",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    coordinates: {
+      lat: 37.7946839,
+      lng: -112.802001,
+    },
   },
   {
     id: 4,
@@ -107,23 +98,15 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.7722235,
+      lng: -112.8490779,
+    },
   },
-  {
-    id: 60,
-    title: "Hidden Haven",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "1 mile, Out-and-Back type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-  },
+
   {
     id: 5,
-    title: "Henderson Lake",
+    title: "Hendrickson Lake",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description:
@@ -134,20 +117,28 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.7392284,
+      lng: -112.8035701,
+    },
   },
-  {
-    id: 6,
-    title: "Manzanita",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "2.5 mile, Loop type trail accessible Early Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/898cef05-df6b-40e0-89d4-d237fb92b65d",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-  },
+  // {
+  //   id: 6,
+  //   title: "Manzanita",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+  //   description: "2.5 mile, Loop type trail accessible Early Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/898cef05-df6b-40e0-89d4-d237fb92b65d",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.7969826,
+  //     lng: -112.8424624,
+  //   },
+  // },
   {
     id: 7,
     title: "Town Trail",
@@ -160,20 +151,28 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.6976581,
+      lng: -112.9080203,
+    },
   },
-  {
-    id: 8,
-    title: "Alpine Creek Loop",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "2 - 4 - 9 mile, Loop type trail accessible Early Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/27ca3269-6d60-4179-9970-1e2ebeb4364b",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-  },
+  // {
+  //   id: 8,
+  //   title: "Alpine Creek Loop",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+  //   description: "2 - 4 - 9 mile, Loop type trail accessible Early Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/27ca3269-6d60-4179-9970-1e2ebeb4364b",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.7969826,
+  //     lng: -112.8424624,
+  //   },
+  // },
   {
     id: 9,
     title: "Dark Hollow",
@@ -186,6 +185,10 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.6972019,
+      lng: -112.8135233,
+    },
   },
   {
     id: 10,
@@ -199,6 +202,10 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.7019538,
+      lng: -112.815742,
+    },
   },
   {
     id: 11,
@@ -212,6 +219,10 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.6999304,
+      lng: -112.7382277,
+    },
   },
   {
     id: 12,
@@ -225,20 +236,28 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
     ],
+    coordinates: {
+      lat: 37.684775,
+      lng: -112.8886631,
+    },
   },
-  {
-    id: 13,
-    title: "Navajo Loop",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "3.5 mile, Loop type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/7ea638b3-96f9-425f-a112-38916b6d6640",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-  },
+  // {
+  //   id: 13,
+  //   title: "Navajo Loop",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+  //   description: "3.5 mile, Loop type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/7ea638b3-96f9-425f-a112-38916b6d6640",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.7969826,
+  //     lng: -112.8424624,
+  //   },
+  // },
   {
     id: 14,
     title: "Marathon / Mace's Run",
@@ -250,7 +269,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6820627,
+      lng: -112.8260211,
+    },
   },
   {
     id: 15,
@@ -263,7 +286,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.668962, 
+      lng: -112.786841,
+    },
   },
   {
     id: 16,
@@ -276,7 +303,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6626723,
+      lng: -112.9227396,
+    },
   },
   {
     id: 17,
@@ -289,7 +320,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6285049,
+      lng: -112.8759518,
+    },
   },
   {
     id: 18,
@@ -302,7 +337,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6329769,
+      lng: -112.8339699,
+    },
   },
   {
     id: 19,
@@ -315,7 +354,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.633044,
+      lng: -112.8667202,
+    },
   },
   {
     id: 20,
@@ -328,7 +371,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6341769,
+      lng: -112.7796293,
+    },
   },
   {
     id: 21,
@@ -342,7 +389,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6811207,
+      lng: -112.8487983,
+    },
   },
   {
     id: 22,
@@ -356,7 +407,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.7932341,
+      lng: -112.8580291,
+    },
   },
   {
     id: 23,
@@ -370,7 +425,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6371188,
+      lng: -112.936814,
+    },
   },
   {
     id: 24,
@@ -384,7 +443,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.688625,
+      lng: -112.882622,
+    },
   },
   {
     id: 25,
@@ -398,7 +461,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.655127, 
+      lng: -112.824110,
+    },
   },
   {
     id: 26,
@@ -413,7 +480,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.FamilyFun,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.607235,
+      lng:-113.1095151,
+    },
   },
   {
     id: 27,
@@ -430,7 +501,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6362741,
+      lng: -112.8474178,
+    },
   },
   {
     id: 27,
@@ -445,7 +520,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.FamilyFun,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.Biking,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.7021177,
+      lng: -112.8521613,
+    },
   },
   {
     id: 28,
@@ -459,7 +538,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.FamilyFun,
       AttractionCategories.Experiences.subcategories.Fishing,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6894458,
+      lng: -112.8534075,
+    },
   },
   {
     id: 29,
@@ -475,7 +558,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.7084369,
+      lng: -112.5957131,
+    },
   },
   {
     id: 30,
@@ -489,7 +576,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.FamilyFun,
       AttractionCategories.Experiences.subcategories.Fishing,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.7171449,
+      lng: -112.676492,
+    },
   },
   {
     id: 31,
@@ -503,7 +594,11 @@ export const OutdoorItems = [
     categories: [
       AttractionCategories.Lodging.subcategories.Campground,
       AttractionCategories.Lodging.subcategories.Tenting,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6102854,
+      lng: -112.8331011,
+    },
   },
   {
     id: 32,
@@ -519,7 +614,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.4382542,
+      lng: -113.2346693,
+    },
   },
   {
     id: 33,
@@ -535,7 +634,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.3223096,
+      lng: -113.3227303,
+    },
   },
   {
     id: 34,
@@ -551,7 +654,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.5735695,
+      lng: -112.3180536,
+    },
   },
   {
     id: 35,
@@ -568,7 +675,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.3880448,
+      lng: -112.0874674,
+    },
   },
   {
     id: 36,
@@ -585,7 +696,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.4047403,
+      lng: -111.6863111,
+    },
   },
   {
     id: 37,
@@ -601,7 +716,11 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
-    ],
+    ],    
+    coordinates: {
+      lat: 36.0760496,
+      lng: -115.0808283,
+    },
   },
 ];
 
@@ -619,7 +738,11 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
       AttractionCategories.FoodAndDrink.subcategories.Alcohol,
       AttractionCategories.FoodAndDrink.subcategories.Coffee,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6775197,
+      lng: -113.0652508,
+    },
   },
 
   {
@@ -630,7 +753,11 @@ export const CityItems: AttractionItem[] = [
     description:
       "Nestled in the heart of Downtown Cedar City. Our wines are all made, blended and vinted locally, using grapes sourced from Washington, Oregon, California, and Utah.",
     image: "https://igwinery.com/wp-content/uploads/Building.jpg",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],
+    categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
+    coordinates: {
+      lat: 37.6772177,
+      lng: -113.064937,
+    },
   },
 
   {
@@ -645,7 +772,11 @@ export const CityItems: AttractionItem[] = [
     categories: [
       AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
       AttractionCategories.FoodAndDrink.subcategories.Alcohol,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.677574,
+      lng: -113.0649409,
+    },
   },
 
   {
@@ -656,7 +787,11 @@ export const CityItems: AttractionItem[] = [
     description:
       "One pint at a time, we are waking up the pallets of our Community through creative & innovative sessionable style beers. From our signature tea beers, to our classic Westcoast IPAs, our main goal is to always deliver a crushable beer.",
     image: "https://policykingsbrewery.com/wp-content/uploads/2021/01/24556.jpeg",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],
+    categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
+    coordinates: {
+      lat: 37.6815036,
+      lng: -113.0662931,
+    },
   },
 
   {
@@ -670,7 +805,11 @@ export const CityItems: AttractionItem[] = [
     categories: [
       AttractionCategories.FoodAndDrink.subcategories.Mexican,
       AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.842791,
+      lng: -112.8295399,
+    },
   },
 
   {
@@ -685,7 +824,11 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.FoodAndDrink.subcategories.Coffee,
       AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
       AttractionCategories.Events.subcategories.CommunityWorkshop,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6770164,
+      lng: -113.0651313,
+    },
   },
 
   {
@@ -697,7 +840,11 @@ export const CityItems: AttractionItem[] = [
       "We serve classic, authentic Thai cuisine like curries, stir-fries, rice dishes, and noodles. Add tofu, chicken, pork, beef, or shrimp to any of your favorite entrées. ",
     image:
       "https://images.squarespace-cdn.com/content/v1/5a26b7a1d7bdcec8c32fa731/1512496647000-APVQY53U4X1GMPFA1FMF/SJ-Our-Favorites-Wide_0003_Kaeng-Ka-Ree.png?format=1500w",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.LocalEatery],
+    categories: [AttractionCategories.FoodAndDrink.subcategories.LocalEatery],    
+    coordinates: {
+      lat: 37.6940403,
+      lng: -112.8488475,
+    },
   },
 
   {
@@ -713,7 +860,11 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Lodging.subcategories.Lodge,
       AttractionCategories.Lodging.subcategories.HotelMotel,
       AttractionCategories.Lodging.subcategories.Resort,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.7055122,
+      lng: -112.8545843,
+    },
   },
 
   {
@@ -725,7 +876,11 @@ export const CityItems: AttractionItem[] = [
       "Our Elegant Georgian Revival Bed & Breakfast is just one block from the Utah Shakespeare Festival. Leave your car in our parking lot and walk to dining and the downtown historic district. We offer twelve air-conditioned rooms all with private full baths. Your lodging experience includes a grand staircase, eight fireplaces, three sitting rooms, a great room, crown moldings, balconies and porches. A guest library has books and a large video collection. A full breakfast is served each morning. You can choose to eat inside in the dining area, the library or out on on of the porches. We are a luxurious Inn with the amenities of an exclusive hotel.",
     image:
       "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Big-Yellow-Inn-front_7F48E6D4-5056-A36F-234B3B3EAC689FE7-7f48e5675056a36_7f48e72c-5056-a36f-23bc0b86e81eba7d.jpg",
-    categories: [AttractionCategories.Lodging.subcategories.BedAndBreakfast],
+    categories: [AttractionCategories.Lodging.subcategories.BedAndBreakfast],    
+    coordinates: {
+      lat: 37.6635726,
+      lng: -113.0782252,
+    },
   },
 
   {
@@ -737,7 +892,11 @@ export const CityItems: AttractionItem[] = [
       "Abbey Inn of Cedar City, Utah is the ideal headquarters for your visit to Utah’s Color Country. Six national parks and some of the world’s most beautiful scenery are accessible by the major highways that intersect Cedar City. With a short drive you can visit Zion, Bryce Canyon, Grand Canyon North Rim, Capitol Reef, Great Basin National Parks, Cedar Breaks National Monument and Lake Powell.",
     image:
       "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Abbey-Inn--King-Suite_D4A6B91C-5056-A36F-2322F5D269286ACC-d4a6b69f5056a36_d4a6b987-5056-a36f-23f0b979464418ad.jpg",
-    categories: [AttractionCategories.Lodging.subcategories.HotelMotel],
+    categories: [AttractionCategories.Lodging.subcategories.HotelMotel],    
+    coordinates: {
+      lat: 37.6818201,
+      lng: -113.0776457,
+    },
   },
 
   {
@@ -751,7 +910,11 @@ export const CityItems: AttractionItem[] = [
     categories: [
       AttractionCategories.Experiences.subcategories.CedarCityArts,
       AttractionCategories.Experiences.subcategories.FamilyFun,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.677072,
+      lng: -113.0684848,
+    },
   },
   {
     id: 49,
@@ -762,7 +925,11 @@ export const CityItems: AttractionItem[] = [
       "Stop by our retail beef shop on Parowan's Historic Main Street where we offer fresh beef starting Thursday each week and continuing through Monday, or when we sell out. We are closed on Tuesdays and Wednesdays for travel when we take our steers to harvest, and also pick up our fresh beef each week.",
     image:
       "https://dry-lakes-ranch-beef.square.site/uploads/b/d8d90b79e1c8c1665c1345d5ed7f485dc04b16c3de1c82e192668144afdc8392/2021-10-30_14-45-45_1635626754.jpg?width=800",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.Specialty],
+    categories: [AttractionCategories.FoodAndDrink.subcategories.Specialty],    
+    coordinates: {
+      lat: 37.8436592,
+      lng: -112.83002,
+    },
   },
   {
     id: 13,
@@ -772,7 +939,11 @@ export const CityItems: AttractionItem[] = [
     description:
       "Visit Megaplex's Cedar City theatre in Cedar City, UT 84720. Check out new films, movie trailers, showtimes, and buy movie tickets for your ultimate cinema experience.",
     image: "https://media.megaplextheatres.com/theatres/cedarcity/header-mobile.jpg",
-    categories: [AttractionCategories.Experiences.subcategories.Shows],
+    categories: [AttractionCategories.Experiences.subcategories.Shows],    
+    coordinates: {
+      lat: 37.6592425,
+      lng: -113.0840113,
+    },
   },
   {
     id: 50,
@@ -786,7 +957,11 @@ export const CityItems: AttractionItem[] = [
     categories: [
       AttractionCategories.FoodAndDrink.subcategories.Coffee,
       AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6778182,
+      lng: -113.0642583,
+    },
   },
   {
     id: 51,
@@ -799,7 +974,11 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Experiences.subcategories.Shows,
       AttractionCategories.Experiences.subcategories.FamilyFun,
       AttractionCategories.Experiences.subcategories.FestivalCity,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.676307,
+      lng: -113.0666184,
+    },
   },
   {
     id: 52,
@@ -809,7 +988,11 @@ export const CityItems: AttractionItem[] = [
     description:
       "Cedar City's only independent bookstore. We carry new, used, and collectible. Exchange books for store credit and take home a new adventure!",
     image: "https://lh5.googleusercontent.com/p/AF1QipMLfnQf2LJQ_O0wWEpeq1koxBRMgk8Yl1Cdb9qd=s686-k-no",
-    categories: [AttractionCategories.Experiences.subcategories.Shop],
+    categories: [AttractionCategories.Experiences.subcategories.Shop],    
+    coordinates: {
+      lat: 37.6779331,
+      lng: -113.0642103,
+    },
   },
   {
     id: 53,
@@ -819,7 +1002,11 @@ export const CityItems: AttractionItem[] = [
     description: "Carrying on tradition with authentic + hand-crafted Navajo jewelry",
     image:
       "https://www.navajocraftingco.com/uploads/b/89153bea32d5164d8f26027c80d1047874b99cb71021deb18d1b56438dc2aee6/2020-11-18_20-51-02_1605757880.jpg?width=400",
-    categories: [AttractionCategories.Experiences.subcategories.Shop],
+    categories: [AttractionCategories.Experiences.subcategories.Shop],    
+    coordinates: {
+      lat: 37.677504, 
+      lng: -113.061799,
+    },
   },
   {
     id: 54,
@@ -833,7 +1020,11 @@ export const CityItems: AttractionItem[] = [
     categories: [
       AttractionCategories.Experiences.subcategories.Shop,
       AttractionCategories.Experiences.subcategories.CedarCityArts,
-    ],
+    ],    
+    coordinates: {
+      lat: 37.6776036,
+      lng: -113.0653943,
+    },
   },
 ]
 

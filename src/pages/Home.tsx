@@ -363,55 +363,6 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         })}
       </IonContent>
 
-<<<<<<< HEAD
-      <IonModal isOpen={showFilterModal} swipeToClose={true} onDidDismiss={() => setShowFilterModal(false)}>
-        <IonHeader translucent={true} className="module-filter">
-          <IonToolbar>
-            <IonTitle>Custom Modules</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-
-        <IonContent className="module-filter">
-          <IonList lines={ios ? "inset" : "full"}>
-            <IonItemGroup>
-              <IonReorderGroup disabled={false} onIonItemReorder={doReorder}>
-                {selectedHomeModules.map((moduleId: AllModules, index) => (
-                  <IonItemSliding key={`subbed_mod-${index}`}>
-                    <IonItem>
-                      <IonLabel>{HomeModules[moduleId].label}</IonLabel>
-                      <IonReorder />
-                    </IonItem>
-                    <IonItemOptions side="end">
-                      <IonItemOption
-                        color="danger"
-                        onClick={() => {
-                          toggleModule(moduleId);
-                        }}
-                      >
-                        Remove
-                      </IonItemOption>
-                    </IonItemOptions>
-                  </IonItemSliding>
-                ))}
-              </IonReorderGroup>
-            </IonItemGroup>
-            <IonItemGroup>
-              <IonItemDivider sticky>
-                <IonLabel>Add new modules</IonLabel>
-              </IonItemDivider>
-              {Object.values(HomeModules).map(
-                (module, index) =>
-                  !selectedHomeModules.includes(index) && (
-                    <IonItem key={`unsubbed_mod-${index}`} onClick={() => toggleModule(index)}>
-                      <IonLabel>{module.label}</IonLabel>
-                    </IonItem>
-                  )
-              )}
-            </IonItemGroup>
-          </IonList>
-          
-        </IonContent>
-=======
       <IonModal
         isOpen={showFilterModal}
         onDidDismiss={() => setShowFilterModal(false)}
@@ -419,7 +370,6 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         presentingElement={pageRef.current!}
       >
         <HomeModulesFilter homeModules={HomeModules} onDismissModal={() => setShowFilterModal(false)} />
->>>>>>> 2bcdbf5a1c8dbab94cb836b85bc1569df9820d61
       </IonModal>
       {/* <ShareSocialFab/> */}
     </IonPage>
