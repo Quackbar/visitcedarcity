@@ -134,6 +134,11 @@ ion-chip {
     height: 100vh;
     width: 100vw;
 
+    .mapboxgl-ctrl-top-right {
+      top: constant(safe-area-inset-top);
+      top: env(safe-area-inset-top);
+    }
+
     .map-container {
       height: 100%;
       .mapboxgl-canvas-container {
@@ -166,5 +171,4 @@ ion-chip {
       padding: 10px;
     }
   }
-  
 }
