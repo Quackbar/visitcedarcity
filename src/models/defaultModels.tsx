@@ -244,7 +244,7 @@ export interface AttractionItem {
   description: string;
   image: string;
   url: string;
-  categories?: AllCategories[];
+  categories: AllCategories[];
   location?: AttractionLocations;
   coordinates?: {
     lat: number;
