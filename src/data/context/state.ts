@@ -1,5 +1,5 @@
 // import { AllCategories, AttractionItem, SubscriptionItem, User } from "../../models/defaultModels";
-import {  ExpObj, Foods, Lodging } from "../attractions";
+import { ExpObj, Foods, Lodging } from "../attractions";
 import {
   AllCategories,
   AttractionCategories,
@@ -34,19 +34,25 @@ export type AppState = {
   user: User;
 };
 
-function shuffle(array: Array<any>) {
-  let currentIndex = array.length,
-    randomIndex;
+const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
+  let concatArray: Array<any>[] = [];
+  arrays.forEach((array) => {
+    concatArray = concatArray.concat(array)
+  });
+
+  let currentIndex = concatArray.length;
+  let randomIndex: number;
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    [concatArray[currentIndex], concatArray[randomIndex]] = [concatArray[randomIndex], concatArray[currentIndex]];
   }
-  return array;
-}
+  return concatArray;
+};
+
 
 export const initialState: AppState = {
-  attractionItems: shuffle(shuffle(OutdoorItems.concat(shuffle(CityItems.concat(shuffle(ExpObj.concat(shuffle(Foods.concat(shuffle(Lodging)))))))))),
+  attractionItems: shuffleArrays([OutdoorItems, CityItems, ExpObj, Foods, Lodging]),
   allAttractionFilters: Object.values(AllCategories),
   subscriptionItems: Subscriptions,
   groupedAttractions: {
