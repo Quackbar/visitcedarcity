@@ -26,6 +26,9 @@ import {
   homeOutline,
   trailSignOutline,
 } from "ionicons/icons";
+// @ts-ignore
+
+import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import { Toast } from "@capacitor/toast";
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
@@ -35,15 +38,15 @@ import { connect } from "../data/context/connect";
 
 interface StateProps {
   attractionItems: AttractionItem[];
-  groupedAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
+  mapAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
 }
 const showToast = async (msg: string) => {
   await Toast.show({
-    text: msg,
-  });
+      text: msg
+  })
 };
 
-const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
+const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
   const [map, setMap] = useState<MapDataType>();
   const [radar, setRadar] = useState(false);
   const [outdoor, setOutdoor] = useState(false);
@@ -130,7 +133,8 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
       // display marker if one is requested
       if (id) {
         const numberID = Number(id);
-        const color = "#565656";
+        const color = Math.floor(Math.random()*16777215).toString(16);
+        console.log(color);
         const requestedMarker = attractionItems.find((item) => item.id === numberID);
 
         if (requestedMarker !== undefined && requestedMarker.coordinates !== undefined) {
@@ -162,7 +166,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
   };
 
   const makeMarkerPopupHTML: (item: AttractionItem) => string = (item) => {
-    return `<img src="${item.image}"/><h1>${item.title}</h1><p>${item.description.substring(0, 100)+"..."}</p><a href="${item.url}">more info</a>`;
+    return `<img src="${item.image}"/><h1>${item.title}</h1><p>${item.description.substring(0, 150)+"..."}</p><a href="${item.url}">more info</a>`;
   };
 
   const toggleMarkers = (key: string) => {
@@ -180,7 +184,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
     } else {
       // create markers
       let filteredResults: AttractionItem[] = [];
-      for (let selectedFilter of groupedAttractions[key].categories) {
+      for (let selectedFilter of mapAttractions[key].categories) {
         const resultsForFilter = attractionItems.filter((item) => item.categories?.some((e) => e === selectedFilter));
 
         for (let filterResult of resultsForFilter) {
@@ -191,7 +195,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
       }
 
       const newMarkers: mapboxgl.Marker[] = [];
-      const markerColor = groupedAttractions[key].color;
+      const markerColor = mapAttractions[key].color;
       filteredResults.forEach((result) => {
         if (result.coordinates) {
           const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(result));
@@ -343,12 +347,12 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
           </IonFabButton>
           <IonFabList side="bottom">
             <IonGrid>
-              {Object.keys(groupedAttractions).map((key, index) => {
+              {Object.keys(mapAttractions).map((key, index) => {
                 return (
                   <IonCol key={index}>
                     <IonChip onClick={() => toggleMarkers(key)}>
-                      <IonIcon icon={groupedAttractions[key].icon}></IonIcon>
-                      <IonLabel>{groupedAttractions[key].name}</IonLabel>
+                      <IonIcon icon={mapAttractions[key].icon}></IonIcon>
+                      <IonLabel>{mapAttractions[key].name}</IonLabel>
                     </IonChip>
                   </IonCol>
                 );
@@ -369,7 +373,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, groupedAttractions }) => {
 export default connect<{}, StateProps, {}>({
   mapStateToProps: (state) => ({
     attractionItems: state.attractionItems,
-    groupedAttractions: state.groupedAttractions,
+    mapAttractions: state.mapAttractions,
   }),
   component: Map,
 });

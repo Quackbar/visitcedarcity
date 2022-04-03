@@ -5,6 +5,7 @@ import {
   AttractionCategories,
   AttractionItem,
   GroupedAttractionCategories,
+  MapAttractionCategories,
   SubscriptionItem,
   User,
 } from "../../models/defaultModels";
@@ -22,6 +23,8 @@ import {
   carSport,
   fish,
   sunny,
+  train,
+  walk,
 } from "ionicons/icons";
 import { OutdoorItems, CityItems } from "../attractions";
 import { Subscriptions } from "../subscriptions";
@@ -31,6 +34,7 @@ export type AppState = {
   allAttractionFilters: AllCategories[];
   subscriptionItems: SubscriptionItem[];
   groupedAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
+  mapAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
   user: User;
 };
 
@@ -56,20 +60,11 @@ export const initialState: AppState = {
   allAttractionFilters: Object.values(AllCategories),
   subscriptionItems: Subscriptions,
   groupedAttractions: {
-    [GroupedAttractionCategories.Food]: {
-      name: "Food",
-      icon: fastFood,
-      color: "#000000",
-      categories: [
-        AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-        AttractionCategories.FoodAndDrink.subcategories.Specialty,
-        AttractionCategories.FoodAndDrink.subcategories.Mexican,
-      ],
-    },
+
     [GroupedAttractionCategories.Parks]: {
       name: "National\xa0Parks",
       icon: shield,
-      color: "#000000",
+      color: "#4b5e26",
       categories: [AttractionCategories.Experiences.subcategories.NationalParks],
     },
     [GroupedAttractionCategories.Lodging]: {
@@ -86,7 +81,7 @@ export const initialState: AppState = {
     [GroupedAttractionCategories.FamilyFun]: {
       name: "Family\xa0Fun",
       icon: sunny,
-      color: "#000000",
+      color: "#f6ff00",
       categories: [
         AttractionCategories.Experiences.subcategories.FamilyFun,
         AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
@@ -95,28 +90,38 @@ export const initialState: AppState = {
     [GroupedAttractionCategories.Shops]: {
       name: "Shops",
       icon: storefront,
-      color: "#000000",
+      color: "#8800ff",
       categories: [AttractionCategories.Experiences.subcategories.Shop],
     },
     [GroupedAttractionCategories.Arts]: {
       name: "Art",
       icon: colorPalette,
-      color: "#000000",
+      color: "#ffffff",
       categories: [AttractionCategories.Experiences.subcategories.CedarCityArts],
     },
     [GroupedAttractionCategories.Drinks]: {
       name: "Drinks",
       icon: wine,
-      color: "#000000",
+      color: "#b33024",
       categories: [
         AttractionCategories.FoodAndDrink.subcategories.Alcohol,
         AttractionCategories.FoodAndDrink.subcategories.Coffee,
       ],
     },
+    [GroupedAttractionCategories.Food]: {
+      name: "Food",
+      icon: fastFood,
+      color: "#ff2222",
+      categories: [
+        AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+        AttractionCategories.FoodAndDrink.subcategories.Specialty,
+        AttractionCategories.FoodAndDrink.subcategories.Mexican,
+      ],
+    },
     [GroupedAttractionCategories.Camping]: {
       name: "Camping\xa0Grounds",
       icon: bonfire,
-      color: "#000000",
+      color: "#0cfa00",
       categories: [
         AttractionCategories.Lodging.subcategories.Campground,
         AttractionCategories.Lodging.subcategories.Tenting,
@@ -128,34 +133,141 @@ export const initialState: AppState = {
     [GroupedAttractionCategories.Drives]: {
       name: "Drives",
       icon: carSport,
-      color: "#000000",
+      color: "#0cfa00",
       categories: [AttractionCategories.Experiences.subcategories.Drives],
     },
     [GroupedAttractionCategories.Shows]: {
       name: "Shows",
       icon: ticket,
-      color: "#000000",
+      color: "#faa300",
       categories: [AttractionCategories.Experiences.subcategories.Shows],
     },
     [GroupedAttractionCategories.Fishing]: {
       name: "Fishing",
       icon: fish,
-      color: "#000000",
+      color: "#2116b8",
       categories: [AttractionCategories.Experiences.subcategories.Fishing],
     },
     [GroupedAttractionCategories.Lookouts]: {
       name: "Lookouts",
       icon: telescope,
-      color: "#000000",
+      color: "#a6a6a6",
       categories: [AttractionCategories.Experiences.subcategories.DarkSkies],
     },
     [GroupedAttractionCategories.Trails]: {
       name: "Trails",
       icon: trailSign,
-      color: "#000000",
+      color: "#6e2929",
       categories: [
         AttractionCategories.Experiences.subcategories.CedarCityWalks,
         AttractionCategories.Experiences.subcategories.Trails,
+      ],
+    },
+  },
+  mapAttractions: {
+    [MapAttractionCategories.Food]: {
+      name: "Food",
+      icon: fastFood,
+      color: "#ff2222",
+      categories: [
+        AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+        AttractionCategories.FoodAndDrink.subcategories.Specialty,
+        AttractionCategories.FoodAndDrink.subcategories.Mexican,
+      ],
+    },
+    [MapAttractionCategories.Parks]: {
+      name: "National\xa0Parks",
+      icon: shield,
+      color: "#4b5e26",
+      categories: [AttractionCategories.Experiences.subcategories.NationalParks],
+    },
+    [MapAttractionCategories.Lodging]: {
+      name: "Lodging",
+      icon: bed,
+      color: "#000000",
+      categories: [
+        AttractionCategories.Lodging.subcategories.Lodge,
+        AttractionCategories.Lodging.subcategories.HotelMotel,
+        AttractionCategories.Lodging.subcategories.BedAndBreakfast,
+        AttractionCategories.Lodging.subcategories.Resort,
+      ],
+    },
+
+    [MapAttractionCategories.Shops]: {
+      name: "Shops",
+      icon: storefront,
+      color: "#8800ff",
+      categories: [AttractionCategories.Experiences.subcategories.Shop],
+    },
+    [MapAttractionCategories.Arts]: {
+      name: "Art",
+      icon: colorPalette,
+      color: "#ffffff",
+      categories: [AttractionCategories.Experiences.subcategories.CedarCityArts],
+    },
+    [MapAttractionCategories.Drinks]: {
+      name: "Drinks",
+      icon: wine,
+      color: "#b33024",
+      categories: [
+        AttractionCategories.FoodAndDrink.subcategories.Alcohol,
+        AttractionCategories.FoodAndDrink.subcategories.Coffee,
+      ],
+    },
+    [MapAttractionCategories.Camping]: {
+      name: "Camping\xa0Grounds",
+      icon: bonfire,
+      color: "#0cfa00",
+      categories: [
+        AttractionCategories.Lodging.subcategories.Campground,
+        AttractionCategories.Lodging.subcategories.Tenting,
+        AttractionCategories.Lodging.subcategories.RVSite,
+        AttractionCategories.Lodging.subcategories.Cabin,
+        AttractionCategories.Lodging.subcategories.Cabinettes,
+      ],
+    },
+    [MapAttractionCategories.Shows]: {
+      name: "Shows",
+      icon: ticket,
+      color: "#faa300",
+      categories: [AttractionCategories.Experiences.subcategories.Shows],
+    },
+    [MapAttractionCategories.Fishing]: {
+      name: "Fishing",
+      icon: fish,
+      color: "#2116b8",
+      categories: [AttractionCategories.Experiences.subcategories.Fishing],
+    },
+    [MapAttractionCategories.Lookouts]: {
+      name: "Lookouts",
+      icon: telescope,
+      color: "#a6a6a6",
+      categories: [AttractionCategories.Experiences.subcategories.DarkSkies],
+    },
+    [MapAttractionCategories.Trails]: {
+      name: "Trails",
+      icon: trailSign,
+      color: "#6e2929",
+      categories: [
+        AttractionCategories.Experiences.subcategories.CedarCityWalks,
+        AttractionCategories.Experiences.subcategories.Trails,
+      ],
+    },
+    [MapAttractionCategories.Downtown]: {
+      name: "Historic Downtown Walking Tour",
+      icon: walk,
+      color: "#0000ff",
+      categories: [
+       
+        AttractionCategories.Experiences.subcategories.DowntownTour,
+      ],
+    },
+    [MapAttractionCategories.Railroad]: {
+      name: "Railroad History Walking Tour",
+      icon: train,
+      color: "#555555",
+      categories: [
+        AttractionCategories.Experiences.subcategories.RailroadTour,
       ],
     },
   },

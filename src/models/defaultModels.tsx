@@ -66,6 +66,8 @@ export enum AllCategories {
   USA = "usa",
   Shows = "shows",
   Shop = "shop",
+  DowntownTour = "DowntownTour",
+  RailroadTour = "RailroadTour",
 }
 
 export const AllCategoryLabels: { [key in AllCategories]?: string } = {
@@ -191,6 +193,8 @@ const Experiences = {
   Fishing: AllCategories.Fishing,
   Shows: AllCategories.Shows,
   Shop: AllCategories.Shop,
+  DowntownTour: AllCategories.DowntownTour,
+  RailroadTour: AllCategories.RailroadTour,
 };
 
 export const AttractionCategories = {
@@ -226,6 +230,21 @@ export enum GroupedAttractionCategories {
   Shows = "shows",
   Lookouts = "lookouts",
   Trails = "trails",
+}
+export enum MapAttractionCategories {
+  Food = "food",
+  Parks = "parks",
+  Lodging = "lodging",
+  Shops = "shops",
+  Arts = "arts",
+  Drinks = "drinks",
+  Camping = "camping",
+  Fishing = "fishing",
+  Shows = "shows",
+  Lookouts = "lookouts",
+  Trails = "trails",
+  Downtown = "downtown",
+  Railroad = "railroad",
 }
 
 export enum AttractionLocations {
