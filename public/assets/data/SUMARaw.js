@@ -158,14 +158,14 @@ var data = {
   }
  ]
 }
-
+// https://www.googleapis.com/calendar/v3/calendars/suu.edu_hohm4a339kc7qpj79jnhfom0pc@group.calendar.google.com/events?key=AIzaSyBLJiGeQHA3cHNh0UGWNqJiotLKQOId6J0&timeMin=2022-04-03T07:00:00-06:00&maxResults=30&orderBy=startTime&singleEvents=true&q=
 console.log("{\"schedule\": [")
 var id = 0;
 
 data.items.forEach(el => {
     id++;
     console.log("{")
-    console.log("\"date\": \""+new Date(el.start.dateTime).toISOString().slice(0, 10)+"\",")
+    console.log("\"date\": \""+new Date(el.start.dateTime.slice(0, -6)).toISOString().slice(0, 10)+"\",")
 
     console.log("\"groups\": [{ \"time\": \"" + new Date(el.start.dateTime).toLocaleTimeString("en-US")+"\",")
 
@@ -177,14 +177,6 @@ data.items.forEach(el => {
     console.log("\"location\": \""+"SUMA"+"\",")
 
     console.log("\"tracks\": [\"SUMA\"],\"id\": \""+id+"\"}]},]},")
-
-    // console.log(el.content.summary.text)
-    // console.log(new Date(el.when.start.millis).toLocaleDateString("en-US"))
-    // console.log(new Date(el.when.start.millis).toLocaleTimeString("en-US"))
-    // console.log("-")
-    // console.log(new Date(el.when.end.millis).toLocaleTimeString("en-US"))
-    // console.log(JSON.stringify(el.content.location))
-    // console.log("/////////")
 
 })
 console.log("]}")
