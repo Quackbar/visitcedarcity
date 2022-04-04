@@ -10,8 +10,6 @@ import {
   IonFooter,
   IonHeader,
   IonIcon,
-  IonRow,
-  IonCol,
   IonItem,
   IonItemGroup,
   IonLabel,
@@ -146,7 +144,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
       });
 
       map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
-      map.addControl(new mapboxgl.NavigationControl(), "top-right");
+      map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
       map.addControl(
         new mapboxgl.GeolocateControl({
           positionOptions: {
@@ -155,7 +153,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
           trackUserLocation: true,
           showUserHeading: true,
         }),
-        "top-right"
+        "bottom-right"
       );
       map.addLayer({
         id: "sky",
@@ -425,8 +423,8 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
             </IonGrid>
           </IonFabList>
         </SafeAreaWrapper>
-      </IonFab>
-      {/* <IonFab slot="fixed" vertical="bottom" horizontal="start">
+      </IonFab> */}
+      <IonFab slot="fixed" vertical="bottom" horizontal="start">
         <IonFabButton size="small">
           <IonIcon icon={settingsOutline}></IonIcon>
         </IonFabButton>
@@ -441,7 +439,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
             <IonIcon icon={homeOutline} />
           </IonFabButton>
         </IonFabList>
-      </IonFab> */}
+      </IonFab>
       <IonContent scrollY={false}>
         <div id="map-search-bar-wrapper">
           <SafeAreaWrapper>
