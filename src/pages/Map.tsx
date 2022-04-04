@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import {
   IonButton,
   IonButtons,
+  IonCheckbox,
   IonContent,
   IonFab,
   IonFabButton,
@@ -11,6 +12,7 @@ import {
   IonHeader,
   IonIcon,
   IonItem,
+  IonItemDivider,
   IonItemGroup,
   IonLabel,
   IonList,
@@ -66,11 +68,12 @@ const showToast = async (msg: string) => {
 const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, updateSearchText }) => {
   const { id } = useParams<{ id: string | undefined }>();
 
+  // map
   const [map, setMap] = useState<MapDataType>();
-  const [radar, setRadar] = useState(false);
-  const [outdoor, setOutdoor] = useState(false);
-  const [satellite, setSatellite] = useState(false);
-  const [position, setPosition] = useState<Geoposition>();
+  // map layers
+  const [satelliteLayerVisible, setSatelliteLayerVisible] = useState(false);
+  const [outdoorLayerVisible, setOutdoorLayerVisible] = useState(false);
+  const [radarLayerVisible, setRadarLayerVisible] = useState(false);
   const [mapIsLoaded, setMapIsLoaded] = useState<boolean>(false);
   const [markers, setMarkers] = useState<{ [id: string]: mapboxgl.Marker[] }>({});
   const [requestedMarkerID, setRequestedMarkerID] = useState<string | undefined>(id);
@@ -82,40 +85,14 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
   const pageRef = useRef<HTMLElement>(null);
 
   const ios = getMode() === "ios";
-
-  const [thisone, seThisone] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-  const HandleToggle = (index: number) => {
-    seThisone((thisone) => thisone.map((item, idx) => (idx === index ? !item : item)));
-  };
-
   const twcApiKey = "2ec2232d72f1484282232d72f198421d";
   const timeSlices = fetch("https://api.weather.com/v3/TileServer/series/productSet/PPAcore?apiKey=" + twcApiKey);
 
-  const getLocation = async () => {
-    try {
-      const position = await Geolocation.getCurrentPosition();
-      setPosition(position);
-    } catch (e) {}
-  };
-
+  // create map
   useEffect(() => {
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYmVybmFyZGtpbnR6aW5nIiwiYSI6ImNrenpxc2UwejBjczAzYnMwOXhjeW1zMDEifQ.R_WjPk9TCgHbs-yKfPC1iQ";
 
-    // create map
     setMap(
       new mapboxgl.Map({
         container: "map",
@@ -173,23 +150,22 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
 
   // manage requested marker
   useEffect(() => {
-    if (mapIsLoaded) {
-      // remove previous marker
-      removeMarkers("requested");
+    if (!mapIsLoaded) return;
+    // remove previous marker
+    removeMarkers("requested");
 
-      if (requestedMarkerID) {
-        const numberID = Number(requestedMarkerID);
-        const requestedMarker = attractionItems.find((item) => item.id === numberID);
-        if (requestedMarker) {
-          addMarkers("requested", [requestedMarker]);
-        }
+    if (requestedMarkerID) {
+      const numberID = Number(requestedMarkerID);
+      const requestedMarker = attractionItems.find((item) => item.id === numberID);
+      if (requestedMarker) {
+        addMarkers("requested", [requestedMarker]);
       }
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mapIsLoaded, requestedMarkerID]);
 
-  // selected filters changed
+  // search text changes
   useEffect(() => {
     if (searchText !== undefined) {
       let filteredResults: AttractionItem[] = [];
@@ -198,6 +174,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
     }
   }, [attractionItems, searchText]);
 
+  // center map on Cedar City
   const centerMap = () => {
     map.flyTo({
       center: [-113.061306, 37.678057],
@@ -207,7 +184,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
 
   const makeMarkerPopupHTML: (item: AttractionItem) => string = (item) => {
     return `<img src="${item.image}"/><h1 class="trublack">${item.title}</h1><p class="trublack">${
-      item.description.substring(0, 150) + "..."
+      item.description.substring(0, 100) + "..."
     }</p><a href="${item.url}">more info</a>`;
   };
 
@@ -242,6 +219,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
       markers[key].forEach((marker) => {
         marker.remove();
       });
+      setMarkers({ ...markers, [key]: [] });
     }
   };
 
@@ -249,19 +227,18 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
     // remove requested marker
     removeMarkers("requested");
 
-    console.log(key, markers[key])
-
     if (markers[key]) {
       removeMarkers(key);
     } else {
       // create markers
       let filteredResults: AttractionItem[] = [];
       for (let selectedFilter of mapAttractions[key].categories) {
-        const resultsForFilter = attractionItems.filter((item) => { return item.categories.includes(selectedFilter)})
+        const resultsForFilter = attractionItems.filter((item) => {
+          return item.categories.includes(selectedFilter);
+        });
         for (let filterResult of resultsForFilter) {
           if (!filteredResults.includes(filterResult)) {
             filteredResults.push(filterResult);
-            console.log(filterResult)
           }
         }
       }
@@ -270,10 +247,10 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
   };
 
   const setOutdoorMode = () => {
-    if (outdoor) window.location.reload();
+    if (outdoorLayerVisible) window.location.reload();
     map.setStyle("mapbox://styles/mapbox/outdoors-v11");
-    setOutdoor(!outdoor);
-    if (radar) {
+    setOutdoorLayerVisible(!outdoorLayerVisible);
+    if (radarLayerVisible) {
       map.removeLayer("radar");
       map.removeSource("twcRadar");
     }
@@ -296,24 +273,24 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
       type: "raster",
     });
     map.moveLayer("satellite", "pitch-outline");
-    if (radar) map.moveLayer("satellite", "radar");
+    if (radarLayerVisible) map.moveLayer("satellite", "radar");
     showToast("Swipe up with two fingers to see in 3D");
-    setSatellite(true);
+    setSatelliteLayerVisible(true);
   };
 
   const setStreetStyle = () => {
     try {
       map.removeLayer("satellite");
       map.removeSource("satellite");
-      setSatellite(false);
+      setSatelliteLayerVisible(false);
     } catch (error) {}
   };
 
   const addRadarLayer = () => {
-    if (radar) {
+    if (radarLayerVisible) {
       map.removeLayer("radar");
       map.removeSource("twcRadar");
-      setRadar(false);
+      setRadarLayerVisible(false);
     } else {
       timeSlices
         .then((res) => res.json())
@@ -342,104 +319,30 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
               "raster-opacity": 0.5,
             },
           });
-          setRadar(true);
+          setRadarLayerVisible(true);
         });
     }
   };
 
   return (
-    <IonPage id="map-page" className={`${!mapIsLoaded && "isLoading"}`} onLoad={getLocation} ref={pageRef}>
-      {/* <IonFab slot="fixed" vertical="bottom" horizontal="start">
-        <SafeAreaWrapper>
-          <IonFabButton size="small" onClick={() => centerMap()}>
-            <IonIcon icon={homeOutline}></IonIcon>
-          </IonFabButton>
-        </SafeAreaWrapper>
-      </IonFab>
-      {outdoor ? (
-        <IonFab slot="fixed" vertical="bottom" horizontal="end">
-          <IonFabButton size="small">
-            <IonIcon icon={layersOutline}></IonIcon>
-          </IonFabButton>
-          <IonFabList side="start">
-            <IonChip class="white" onClick={() => setOutdoorMode()}>
-              <IonIcon icon={mapOutline}></IonIcon>
-              <IonLabel>Regular</IonLabel>
-            </IonChip>
-          </IonFabList>
-        </IonFab>
-      ) : (
-        <IonFab slot="fixed" vertical="bottom" horizontal="end">
-          <IonFabButton size="small">
-            <IonIcon icon={layersOutline}></IonIcon>
-          </IonFabButton>
-          <IonFabList side="top" class="left">
-            <IonGrid>
-              <IonRow>
-                <IonChip class={radar ? "green trany" : "white trany"} onClick={() => addRadarLayer()}>
-                  <IonIcon icon={thunderstormOutline}></IonIcon>
-                  <IonLabel>Weather</IonLabel>
-                </IonChip>
-                <IonChip class={satellite ? "green trany" : "white trany"} onClick={() => setSatelliteStyle()}>
-                  <IonIcon icon={mapOutline}></IonIcon>
-                  <IonLabel>Satellite</IonLabel>
-                </IonChip>
-                <IonChip class={satellite ? "white trany" : "green trany"} onClick={() => setStreetStyle()}>
-                  <IonIcon icon={carSportOutline}></IonIcon>
-                  <IonLabel>Streets</IonLabel>
-                </IonChip>
-                <IonChip class="white trany" onClick={() => setOutdoorMode()}>
-                  <IonIcon icon={trailSignOutline}></IonIcon>
-                  <IonLabel>Outdoor</IonLabel>
-                </IonChip>
-              </IonRow>
-            </IonGrid>
-          </IonFabList>
-        </IonFab>
-      )}
-      <IonFab slot="fixed" vertical="top" horizontal="start">
-        <SafeAreaWrapper>
-          <IonFabButton size="small">
-            <IonIcon icon={pinOutline}></IonIcon>
-          </IonFabButton>
-          <IonFabList side="bottom">
-            <IonGrid>
-              {Object.keys(mapAttractions).map((key, index) => {
-                return (
-                  <IonCol key={index}>
-                    <IonChip
-                      class={thisone[index] ? "green notrany" : "white notrany"}
-                      onClick={() => {
-                        toggleMarkers(key);
-                        HandleToggle(index);
-                      }}
-                    >
-                      <IonIcon icon={mapAttractions[key].icon}></IonIcon>
-                      <IonLabel>{mapAttractions[key].name}</IonLabel>
-                    </IonChip>
-                  </IonCol>
-                );
-              })}
-            </IonGrid>
-          </IonFabList>
-        </SafeAreaWrapper>
-      </IonFab> */}
+    <IonPage id="map-page" className={`${!mapIsLoaded && "isLoading"}`} ref={pageRef}>
       <IonFab slot="fixed" vertical="bottom" horizontal="start">
         <IonFabButton size="small">
           <IonIcon icon={settingsOutline}></IonIcon>
         </IonFabButton>
         <IonFabList side="top">
           <IonFabButton>
-            <IonIcon icon={pinOutline} onClick={() => setShowPinsModal(true)}/>
+            <IonIcon icon={pinOutline} onClick={() => setShowPinsModal(true)} />
           </IonFabButton>
           <IonFabButton>
-            <IonIcon icon={layersOutline} onClick={() => setShowLayersModal(true)}/>
+            <IonIcon icon={layersOutline} onClick={() => setShowLayersModal(true)} />
           </IonFabButton>
           <IonFabButton>
-            <IonIcon icon={homeOutline} />
+            <IonIcon icon={homeOutline} onClick={() => centerMap()} />
           </IonFabButton>
         </IonFabList>
       </IonFab>
+
       <IonContent scrollY={false}>
         <div id="map-search-bar-wrapper">
           <SafeAreaWrapper>
@@ -449,7 +352,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
               onIonChange={(e: CustomEvent) => updateSearchText(e.detail.value)}
             />
             <div id="results-wrapper">
-              <IonList lines={filteredAttractions.length < 2 ? "none" : "full"}>
+              <IonList lines={filteredAttractions.length < 2 ? "none" : ios ? "inset" : "full"}>
                 {searchText !== "" && searchText !== undefined ? (
                   filteredAttractions.length > 0 ? (
                     filteredAttractions.map((attraction, index) => {
@@ -492,24 +395,22 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
             <IonTitle>Map Pins</IonTitle>
           </IonToolbar>
         </IonHeader>
-
-        <IonList lines={ios ? "inset" : "full"}>
-          <IonItemGroup>
-            {Object.keys(mapAttractions).map((key, index) => (
-              <IonItem
-                key={index}
-                onClick={() => {
-                  toggleMarkers(key);
-                  HandleToggle(index);
-                }}
-              >
-                <IonLabel class={thisone[index] ? "green notrany" : "white notrany"}>
-                  {mapAttractions[key].name}
-                </IonLabel>
-              </IonItem>
-            ))}
-          </IonItemGroup>
-        </IonList>
+        <IonContent>
+          <IonList lines={ios ? "inset" : "full"}>
+            <IonItemGroup>
+              {Object.keys(mapAttractions).map((key, index) => (
+                <IonItem key={index} onClick={() => toggleMarkers(key)}>
+                  <IonLabel>{mapAttractions[key].name}</IonLabel>
+                  <IonCheckbox
+                    onClick={() => toggleMarkers(key)}
+                    checked={markers[key] ? markers[key].length > 0 : false}
+                    color="primary"
+                  />
+                </IonItem>
+              ))}
+            </IonItemGroup>
+          </IonList>
+        </IonContent>
       </IonModal>
 
       <IonModal
@@ -517,7 +418,44 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
         onDidDismiss={() => setShowLayersModal(false)}
         swipeToClose={true}
         presentingElement={pageRef.current!}
-      ></IonModal>
+      >
+        <IonHeader translucent={true}>
+          <IonToolbar>
+            <IonTitle>Map</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonContent>
+          <IonList lines={ios ? "inset" : "full"}>
+            <IonItemGroup>
+              <IonItemDivider sticky>
+                <IonLabel>Layers</IonLabel>
+              </IonItemDivider>
+              <IonItem>
+                <IonLabel>Weather</IonLabel>
+                <IonCheckbox onClick={() => addRadarLayer()} checked={radarLayerVisible} color="primary" />
+              </IonItem>
+            </IonItemGroup>
+            <IonItemGroup>
+              <IonItemDivider sticky>
+                <IonLabel>Styles</IonLabel>
+              </IonItemDivider>
+              <IonItem>
+                <IonLabel>Satellite</IonLabel>
+                <IonCheckbox onClick={() => setSatelliteStyle()} checked={satelliteLayerVisible} color="primary" />
+              </IonItem>
+              <IonItem>
+                <IonLabel>Streets</IonLabel>
+                <IonCheckbox onClick={() => setStreetStyle()} checked={!satelliteLayerVisible} color="primary" />
+              </IonItem>
+              <IonItem>
+                <IonLabel>Outdoor</IonLabel>
+                <IonCheckbox onClick={() => setOutdoorMode()} checked={outdoorLayerVisible} color="primary" />
+              </IonItem>
+            </IonItemGroup>
+          </IonList>
+        </IonContent>
+      </IonModal>
 
       <IonLoading cssClass="my-custom-class" isOpen={!mapIsLoaded} message={"Loading Map..."} />
     </IonPage>
