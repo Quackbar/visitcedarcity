@@ -35,6 +35,7 @@ import SafeAreaWrapper from "../components/SafeAreaWrapper";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { AllCategories, AttractionItem } from "../models/defaultModels";
 import { connect } from "../data/context/connect";
+import closestIndexTo from "date-fns/closestIndexTo/index.js";
 
 interface StateProps {
   attractionItems: AttractionItem[];
@@ -54,6 +55,13 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
   const [position, setPosition] = useState<Geoposition>();
   const [mapIsLoaded, setMapIsLoaded] = useState<boolean>(false);
   const [markers, setMarkers] = useState<{ [id: string]: mapboxgl.Marker[] }>({});
+
+  const [thisone, seThisone] = useState([false,false,false,false,false,false,false,false,false,false,false,false]);
+  const HandleToggle = (index: number) => {
+    seThisone(thisone => thisone.map((item, idx) => idx === index ? !item : item))
+  };
+
+  // console.log(thisone)
 
   const { id } = useParams<{ id: string | undefined }>();
 
@@ -166,7 +174,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
   };
 
   const makeMarkerPopupHTML: (item: AttractionItem) => string = (item) => {
-    return `<img src="${item.image}"/><h1>${item.title}</h1><p>${item.description.substring(0, 150)+"..."}</p><a href="${item.url}">more info</a>`;
+    return `<img src="${item.image}"/><h1 class="trublack">${item.title}</h1><p class="trublack">${item.description.substring(0, 150)+"..."}</p><a href="${item.url}">more info</a>`;
   };
 
   const toggleMarkers = (key: string) => {
@@ -248,9 +256,14 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
   };
 
   const setStreetStyle = () => {
-    map.removeLayer("satellite");
-    map.removeSource("satellite");
-    setSatellite(false);
+    try {
+      map.removeLayer("satellite");
+      map.removeSource("satellite");
+      setSatellite(false);
+    } catch (error) {
+      
+    }
+
   };
 
   const addRadarLayer = () => {
@@ -348,9 +361,10 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
           <IonFabList side="bottom">
             <IonGrid>
               {Object.keys(mapAttractions).map((key, index) => {
+
                 return (
                   <IonCol key={index}>
-                    <IonChip onClick={() => toggleMarkers(key)}>
+                    <IonChip class={thisone[index] ? "green notrany" : "white notrany"} onClick={() => {toggleMarkers(key);HandleToggle(index)}}>
                       <IonIcon icon={mapAttractions[key].icon}></IonIcon>
                       <IonLabel>{mapAttractions[key].name}</IonLabel>
                     </IonChip>

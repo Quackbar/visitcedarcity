@@ -59,11 +59,11 @@ const DiscoverList: React.FC<DiscoverListProps> = ({ attractions }) => {
   } else {
     return (
       <>
-        <IonList>
+        {/* <IonList> */}
           {listData.map((item, index: number) => (
             <DiscoverListItem data={item} key={`attraction-item-${index}`} />
           ))}
-        </IonList>
+        {/* </IonList> */}
         <IonInfiniteScroll onIonInfinite={loadData} threshold="100px" disabled={isInfiniteDisabled}>
           <IonInfiniteScrollContent
             loadingSpinner="bubbles"

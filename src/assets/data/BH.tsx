@@ -1,4 +1,4 @@
-export const BHSchedule = {"schedule": [
+export let BHSchedule = {"schedule": [
     {
     "date": "2020-07-18",
     "groups": [{ "time": "8:30:00 AM",
@@ -1000,3 +1000,13 @@ export const BHSchedule = {"schedule": [
     "location": "Brian Head Resort",
     "tracks": ["Brian Head"],"id": "125"}]},]},
     ]}
+
+let schedule = localStorage.getItem("BHScheduleUpdate")?.slice(0,-1) + "]}" || "{\"schedule\": []}"
+    // console.log(schedule)
+
+
+try{
+    BHSchedule = JSON.parse(schedule)
+}catch(err){
+    console.log(err)
+}

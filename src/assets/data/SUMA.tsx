@@ -1,4 +1,4 @@
-export const SUMASchedule = {"schedule": [
+export let SUMASchedule = {"schedule": [
     {
     "date": "2022-03-31",
     "groups": [{ "time": "6:00:00 PM",
@@ -40,3 +40,13 @@ export const SUMASchedule = {"schedule": [
     "location": "SUMA",
     "tracks": ["SUMA"],"id": "5"}]},]},
     ]}
+
+let schedule = localStorage.getItem("SUMAScheduleUpdate")?.slice(0,-1) + "]}" || "{\"schedule\": []}"
+    // console.log(schedule)
+
+
+try{
+    SUMASchedule = JSON.parse(schedule)
+}catch(err){
+    console.log(err)
+}

@@ -1010,7 +1010,7 @@ export const CityItems: AttractionItem[] = [
   },
   {
     id: 952,
-    title: "Shopping",
+    title: "Shopping Guide",
     subtitle: "Cedar City Shopping",
     url: "https://visitcedarcity.com/things-to-do/city-activities/shopping/",
     description:
@@ -1578,6 +1578,7 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Experiences.subcategories.CedarCityArts,
       AttractionCategories.Experiences.subcategories.LoveLocalCedarCity,
       AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
+      AttractionCategories.Experiences.subcategories.Shows,
 
     ],    
 

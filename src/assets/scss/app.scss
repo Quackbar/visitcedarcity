@@ -47,7 +47,11 @@
   color: black;
   padding: 10px;
 }
-
+.green {
+  background-color: #c6d488;
+  color: black;
+  padding: 10px;
+}
 .right {
   float: right;
 }
@@ -63,7 +67,9 @@
   font-size: larger;
   color: #000000;
 }
-
+.rounded{
+  border-radius: 5px;
+}
 .weatherheadbig {
   font-size: xx-large;
   color: #000000;
@@ -165,6 +171,18 @@ ion-chip {
   .trany {
     transform: translateX(calc(-100% + 40px));
     width: 100%;
+    &.green {
+      background-color: #c6d488;
+      color: black;
+      padding: 10px;
+    }
+    &.yellow {
+      background-color: #ffe073;
+      padding: 10px;
+    }
+  }
+  .notrany {
+    // width: 100%;
     &.green {
       background-color: #c6d488;
       color: black;

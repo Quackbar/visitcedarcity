@@ -169,6 +169,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
               await Browser.open({ url: subscription.furl });
             };
             return (
+              <IonItem>
               <Fragment key={index}>
                 <IonItem class="ninety">
                   <IonCheckbox
@@ -189,11 +190,12 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
                 />
                 <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
               </Fragment>
+              </IonItem>
             );
           })}
           <h1>
-            <br />
-            &nbsp;&emsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;Account Settings
+
+            &nbsp;&nbsp;Account Settings
           </h1>
           {/* <IonItem>
             <IonButton>Sign In</IonButton>
@@ -202,11 +204,12 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
             <IonButton>Create Account</IonButton>
           </IonItem> */}
           <IonItem>
-            <IonButton href="/tutorial">See Tutorial</IonButton>
-          </IonItem>
           <IonItem>
+            <IonButton href="/tutorial">See Tutorial</IonButton>
+            </IonItem></IonItem>
+          <IonItem><IonItem>
             <IonButton onClick={() => setShowFilterModal(true)}>Get Help</IonButton>
-          </IonItem>
+            </IonItem></IonItem>
           <IonPopover
             event={popoverState.event}
             isOpen={popoverState.showPopover}

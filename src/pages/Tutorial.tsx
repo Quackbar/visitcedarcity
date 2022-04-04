@@ -114,13 +114,13 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                       <br />
                     </h1>
 
-                    <img className="centered" src="assets/img/cover.png" alt="" />
+                    <img className="centered rounded" src="assets/img/cover.png" alt="" />
                     {/* </IonTitle> */}
                   </IonRow>
 
                   <IonRow>
                     {/* <IonTitle color="primary"> */}
-                    <h1 className="centered trublack glossbloom">
+                    <h1 className="centered glossbloom">
                       <br />
                       <br />
                       <br />
@@ -133,7 +133,7 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   <IonRow>
                     {/* <IonTitle color="primary"> */}
                     <IonLabel className="centered">
-                      <h3 className="centered trublack">
+                      <h3 className="centered">
                         <br />
                         <br />
                         <br />
@@ -165,6 +165,7 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   <IonRow class="centered">
                     {/* <IonTitle> */}
                     <h1 className="centered">
+                    <br />
                       What Our App Can
                       <br /> Do For You
                     </h1>
@@ -172,15 +173,14 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   </IonRow>
                   <IonRow>
                     <h1>
-                      <br />
                     </h1>
                   </IonRow>
                   <IonRow class="centered">
                     <IonCol>
-                      <img src="assets/img/home.png" alt="" className="half-image" />
+                      <img src="assets/img/home.png" alt="" className="half-image rounded" />
                     </IonCol>
                     <IonCol>
-                      <img src="assets/img/discover.png" alt="" className="half-image" />
+                      <img src="assets/img/discover.png" alt="" className="half-image rounded" />
                     </IonCol>
                   </IonRow>
                   <IonRow>
@@ -213,6 +213,7 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   <IonRow class="centered">
                     {/* <IonTitle> */}
                     <h1 className="centered">
+                    <br />
                       What Our App Can
                       <br /> Do For You
                     </h1>
@@ -220,15 +221,15 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   </IonRow>
                   <IonRow>
                     <h1>
-                      <br />
+                      
                     </h1>
                   </IonRow>
                   <IonRow>
                     <IonCol>
-                      <img src="assets/img/map.png" alt="" className="half-image" />
+                      <img src="assets/img/map.png" alt="" className="half-image rounded" />
                     </IonCol>
                     <IonCol>
-                      <img src="assets/img/account.png" alt="" className="half-image" />
+                      <img src="assets/img/account.png" alt="" className="half-image rounded" />
                     </IonCol>
                   </IonRow>
                   <IonRow>
