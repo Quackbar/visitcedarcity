@@ -25,6 +25,7 @@ import {
   sunny,
   train,
   walk,
+  heart,
 } from "ionicons/icons";
 import { OutdoorItems, CityItems } from "../attractions";
 import { Subscriptions } from "../subscriptions";
@@ -60,7 +61,12 @@ export const initialState: AppState = {
   allAttractionFilters: Object.values(AllCategories),
   subscriptionItems: Subscriptions,
   groupedAttractions: {
-
+    [GroupedAttractionCategories.Love]: {
+      name: "What We Love",
+      icon: heart,
+      color: "#ff2222",
+      categories: [AttractionCategories.Experiences.subcategories.LoveLocalCedarCity],
+    },
     [GroupedAttractionCategories.Parks]: {
       name: "National\xa0Parks",
       icon: shield,

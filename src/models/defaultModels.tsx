@@ -217,6 +217,7 @@ export const AttractionCategories = {
 };
 
 export enum GroupedAttractionCategories {
+  Love = "LoveLocalCedarCity",
   Food = "food",
   Parks = "parks",
   Lodging = "lodging",
