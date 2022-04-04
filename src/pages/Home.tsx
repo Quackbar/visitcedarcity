@@ -161,6 +161,18 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
   const [formattedDate, setFormattedDate] = useState(new Date().toISOString().slice(0, 10));
 
+let CBAlerts: {schedule: subtype[]} = {schedule: []}
+
+  let schedule = localStorage.getItem("CBAlertUpdate")?.slice(0,-1) + "]}" || "{\"schedule\": []}"
+  // console.log(schedule)
+
+
+  try{
+    CBAlerts = JSON.parse(schedule)
+  }catch(err){
+    console.log(err)
+  }
+
   const pageRef = useRef<HTMLElement>(null);
 
   let yourSchedule: subtype[] = [];
@@ -228,6 +240,11 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
     ? (yourSchedule = yourSchedule.concat(FMFSchedule.schedule))
     : (yourSchedule = yourSchedule.filter(function (item) {
         return FMFSchedule.schedule.indexOf(item) < 0;
+      }));
+  context.state.user.selectedSubscriptions.includes(11)
+    ? (yourSchedule = yourSchedule.concat(CBAlerts.schedule))
+    : (yourSchedule = yourSchedule.filter(function (item) {
+        return CBAlerts.schedule.indexOf(item) < 0;
       }));
 
   function getTodays(rn: string) {

@@ -141,3 +141,44 @@ export async function getSUMASched() : Promise<string> {
         
     });
 })}
+
+
+export async function getCBAlerts() : Promise<string> {
+    return new Promise(async (resolve, reject) => {
+        let returnable = "{\"schedule\": ["
+        var id = 3000;
+        let thefetch = await fetch('https://www.nps.gov/cebr/nps-alerts-cebr.json?dt='+new Date().getTime())  
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data.toString().includes("Art Festival"))
+            // console.log(data)
+            data.CEDATA.forEach((el: any) => {
+                // console.log(el)
+                // let newdate = el.start.dateTime.slice(0, -6)+".000Z"
+                // console.log(newdate)
+                
+                id++;
+
+                returnable = returnable + "{"
+
+                    returnable = returnable + "\"date\": \""+new Date().toISOString().slice(0, 10)+"\","
+            
+                    returnable = returnable + "\"groups\": [{ \"time\": \"\","
+                
+                    returnable = returnable + "\"sessions\": [ {\"name\": \""+el.FIC_title+"\","
+                
+                    returnable = returnable + "\"url\": \"https://www.nps.gov/cebr/\",\"timeStart\": \"\","
+                
+                    returnable = returnable + "\"timeEnd\": \"\","
+                returnable = returnable + "\"location\": \""+"Cedar Breaks National Monument"+"\","
+            
+                returnable = returnable + "\"tracks\": [\"Cedar Breaks National Monument\"],\"id\": \""+id+"\"}]}]},"
+                localStorage.setItem("CBAlertUpdate", returnable)
+            });
+            returnable = returnable
+            console.log(returnable)
+
+            localStorage.setItem("CBAlertUpdate", returnable)
+        
+    });
+})}
