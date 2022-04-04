@@ -43,8 +43,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.795416, 
-      lng: -112.797367,
+      lat: 37.795291046474226, 
+      lng: -112.79736578806097,
     },
   },
   {
@@ -77,8 +77,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.794585, 
-      lng: -112.793102,
+      lat: 37.79446317826018, 
+      lng: -112.79324622929663,
     },
   },
   {
@@ -94,8 +94,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.772513, 
-      lng: -112.840135,
+      lat: 37.772104474814135, 
+      lng: -112.8401943702633,
     },
   },
 
@@ -113,8 +113,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.739224, 
-      lng: -112.794928,
+      lat: 37.739147888113074, 
+      lng: -112.7954093093424,
     },
   },
   // {
@@ -181,8 +181,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.6972019,
-      lng: -112.8135233,
+      lat: 37.702092036835666, 
+      lng: -112.80814498183658,
     },
   },
   {
@@ -198,8 +198,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.7019538,
-      lng: -112.815742,
+      lat: 37.7017793160736, 
+      lng: -112.79824629077574,
     },
   },
   {
@@ -215,8 +215,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.6999304,
-      lng: -112.7382277,
+      lat: 37.716585353752244, 
+      lng: -112.75225545818769,
     },
   },
   {
@@ -232,8 +232,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],
     coordinates: {
-      lat: 37.684775,
-      lng: -112.8886631,
+      lat: 37.68443051619365, 
+      lng: -112.88635109866028,
     },
   },
   // {
@@ -266,8 +266,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.6820627,
-      lng: -112.8260211,
+      lat: 37.68272328218124, 
+      lng: -112.800831208387,
     },
   },
   {
@@ -283,8 +283,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.668962, 
-      lng: -112.786841,
+      lat: 37.67308144702817, 
+      lng: -112.78988688816634,
     },
   },
   {
@@ -300,8 +300,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.6626723,
-      lng: -112.9227396,
+      lat: 37.67835651590776, 
+      lng: -112.89964457494001,
     },
   },
   {
@@ -317,8 +317,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.6285049,
-      lng: -112.8759518,
+      lat: 37.66245436477396, 
+      lng: -112.83812874436182,
     },
   },
   {
@@ -334,8 +334,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.6329769,
-      lng: -112.8339699,
+      lat: 37.63276810877802, 
+      lng: -112.83144330417213,
     },
   },
   {
@@ -351,8 +351,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.633044,
-      lng: -112.8667202,
+      lat: 37.61173736026522, 
+      lng: -112.83736796263182,
     },
   },
   {
@@ -368,8 +368,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.6341769,
-      lng: -112.7796293,
+      lat: 37.63394070651882, 
+      lng: -112.7622343146256,
     },
   },
   {
@@ -386,8 +386,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.6811207,
-      lng: -112.8487983,
+      lat: 37.68188517658585, 
+      lng: -112.830314480243,
     },
   },
   {
@@ -404,8 +404,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.7932341,
-      lng: -112.8580291,
+      lat: 37.754098199967025, 
+      lng: -112.77230184286238,
     },
   },
   {
@@ -422,8 +422,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.6371188,
-      lng: -112.936814,
+      lat: 37.641368948080604, 
+      lng: -112.90712379339463,
     },
   },
   {
@@ -440,8 +440,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
     coordinates: {
-      lat: 37.688625,
-      lng: -112.882622,
+      lat: 37.695294421964846, 
+      lng: -112.87798505445302,
     },
   },
   {
@@ -457,10 +457,7 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
     ],    
-    coordinates: {
-      lat: 37.655127, 
-      lng: -112.824110,
-    },
+
   },
   {
     id: 26,
@@ -477,8 +474,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.FamilyFun,
     ],    
     coordinates: {
-      lat: 37.607235,
-      lng:-113.1095151,
+      lat: 37.60821598840955, 
+      lng:-113.10591544846321,
     },
   },
   {
@@ -498,8 +495,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
     coordinates: {
-      lat: 37.6362741,
-      lng: -112.8474178,
+      lat: 37.61296800244361, 
+      lng: -112.83734794415587,
     },
   },
   {
@@ -517,8 +514,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Biking,
     ],    
     coordinates: {
-      lat: 37.7021177,
-      lng: -112.8521613,
+      lat: 37.70204499782152, 
+      lng: -112.85075049507414,
     },
   },
   {
@@ -535,8 +532,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Fishing,
     ],    
     coordinates: {
-      lat: 37.6894458,
-      lng: -112.8534075,
+      lat: 37.68993645223137, 
+      lng: -112.85173356753828,
     },
   },
   {
@@ -554,10 +551,7 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
-    coordinates: {
-      lat: 37.7084369,
-      lng: -112.5957131,
-    },
+
   },
   {
     id: 30,
@@ -573,8 +567,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Fishing,
     ],    
     coordinates: {
-      lat: 37.7171449,
-      lng: -112.676492,
+      lat: 37.71272567952687, 
+      lng: -112.63915736490165,
     },
   },
   {
@@ -591,8 +585,8 @@ export const OutdoorItems = [
       AttractionCategories.Lodging.subcategories.Tenting,
     ],    
     coordinates: {
-      lat: 37.6102854,
-      lng: -112.8331011,
+      lat: 37.61004256943162, 
+      lng: -112.83083200203632,
     },
   },
   {
@@ -611,8 +605,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
     coordinates: {
-      lat: 37.4382542,
-      lng: -113.2346693,
+      lat: 37.45338535336845, 
+      lng: -113.22494625183379,
     },
   },
   {
@@ -631,8 +625,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
     coordinates: {
-      lat: 37.3223096,
-      lng: -113.3227303,
+      lat: 37.19974523887032, 
+      lng: -112.98739475082049,
     },
   },
   {
@@ -651,8 +645,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
     coordinates: {
-      lat: 37.5735695,
-      lng: -112.3180536,
+      lat: 37.640189844285274, 
+      lng: -112.1696702565254,
     },
   },
   {
@@ -672,8 +666,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
     coordinates: {
-      lat: 37.3880448,
-      lng: -112.0874674,
+      lat: 37.009782404055514, 
+      lng: -111.48016365582072,
     },
   },
   {
@@ -693,8 +687,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
     coordinates: {
-      lat: 37.4047403,
-      lng: -111.6863111,
+      lat: 37.40410258607778, 
+      lng: -111.68474139076258,
     },
   },
   {
@@ -713,8 +707,8 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.DarkSkies,
     ],    
     coordinates: {
-      lat: 36.0760496,
-      lng: -115.0808283,
+      lat: 36.058919003695614, 
+      lng: -112.10931092823793,
     },
   },
 ];
@@ -735,8 +729,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.FoodAndDrink.subcategories.Coffee,
     ],    
     coordinates: {
-      lat: 37.6775197,
-      lng: -113.0652508,
+      lat: 37.677518204616916, 
+      lng: -113.06312943618299,
     },
   },
 
@@ -750,8 +744,8 @@ export const CityItems: AttractionItem[] = [
     image: "https://igwinery.com/wp-content/uploads/Building.jpg",
     categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
     coordinates: {
-      lat: 37.6772177,
-      lng: -113.064937,
+      lat: 37.67716458227816, 
+      lng: -113.06278323744154,
     },
   },
 
@@ -769,8 +763,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.FoodAndDrink.subcategories.Alcohol,
     ],    
     coordinates: {
-      lat: 37.677574,
-      lng: -113.0649409,
+      lat: 37.67753085664828, 
+      lng: -113.06274563962826,
     },
   },
 
@@ -784,8 +778,8 @@ export const CityItems: AttractionItem[] = [
     image: "https://policykingsbrewery.com/wp-content/uploads/2021/01/24556.jpeg",
     categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
     coordinates: {
-      lat: 37.6815036,
-      lng: -113.0662931,
+      lat: 37.68153042996585, 
+      lng: -113.06422980687805,
     },
   },
 
@@ -802,8 +796,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
     ],    
     coordinates: {
-      lat: 37.842791,
-      lng: -112.8295399,
+      lat: 37.842729102073726, 
+      lng: -112.82741031500996,
     },
   },
 
@@ -821,8 +815,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Events.subcategories.CommunityWorkshop,
     ],    
     coordinates: {
-      lat: 37.6770164,
-      lng: -113.0631313,
+      lat: 37.67699857559947, 
+      lng: -113.06294845810962,
     },
   },
 
@@ -837,8 +831,8 @@ export const CityItems: AttractionItem[] = [
       "https://images.squarespace-cdn.com/content/v1/5a26b7a1d7bdcec8c32fa731/1512496647000-APVQY53U4X1GMPFA1FMF/SJ-Our-Favorites-Wide_0003_Kaeng-Ka-Ree.png?format=1500w",
     categories: [AttractionCategories.FoodAndDrink.subcategories.LocalEatery],    
     coordinates: {
-      lat: 37.6940403,
-      lng: -112.8468475,
+      lat: 37.69402238012576, 
+      lng: -112.84666533279108,
     },
   },
 
@@ -857,8 +851,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Lodging.subcategories.Resort,
     ],    
     coordinates: {
-      lat: 37.7055122,
-      lng: -112.8525843,
+      lat: 37.70551542695132, 
+      lng: -112.85239654327744,
     },
   },
 
@@ -873,8 +867,8 @@ export const CityItems: AttractionItem[] = [
       "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Big-Yellow-Inn-front_7F48E6D4-5056-A36F-234B3B3EAC689FE7-7f48e5675056a36_7f48e72c-5056-a36f-23bc0b86e81eba7d.jpg",
     categories: [AttractionCategories.Lodging.subcategories.BedAndBreakfast],    
     coordinates: {
-      lat: 37.6635726,
-      lng: -113.0762252,
+      lat: 37.67311581150884, 
+      lng: -113.06719234430257,
     },
   },
 
@@ -889,8 +883,8 @@ export const CityItems: AttractionItem[] = [
       "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Abbey-Inn--King-Suite_D4A6B91C-5056-A36F-2322F5D269286ACC-d4a6b69f5056a36_d4a6b987-5056-a36f-23f0b979464418ad.jpg",
     categories: [AttractionCategories.Lodging.subcategories.HotelMotel],    
     coordinates: {
-      lat: 37.6818201,
-      lng: -113.075645700,
+      lat: 37.681645435763485, 
+      lng: -113.07550534089559,
     },
   },
 
@@ -907,8 +901,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Experiences.subcategories.FamilyFun,
     ],    
     coordinates: {
-      lat: 37.677072,
-      lng: -113.0654848,
+      lat: 37.67704689175199, 
+      lng: -113.06658084831352
     },
   },
 
@@ -941,8 +935,8 @@ export const CityItems: AttractionItem[] = [
       "https://dry-lakes-ranch-beef.square.site/uploads/b/d8d90b79e1c8c1665c1345d5ed7f485dc04b16c3de1c82e192668144afdc8392/2021-10-30_14-45-45_1635626754.jpg?width=800",
     categories: [AttractionCategories.FoodAndDrink.subcategories.Specialty],    
     coordinates: {
-      lat: 37.8436592,
-      lng: -112.82802,
+      lat: 37.84358657861868, 
+      lng: -112.82792254465679,
     },
   },
   {
@@ -955,8 +949,8 @@ export const CityItems: AttractionItem[] = [
     image: "https://media.megaplextheatres.com/theatres/cedarcity/header-mobile.jpg",
     categories: [AttractionCategories.Experiences.subcategories.Shows],    
     coordinates: {
-      lat: 37.6592425,
-      lng: -113.0840113,
+      lat: 37.65925889308963, 
+      lng: -113.08192531214618,
     },
   },
   {
@@ -973,8 +967,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
     ],    
     coordinates: {
-      lat: 37.6778182,
-      lng: -113.0622583,
+      lat: 37.6778169395864, 
+      lng: -113.06205498119003,
     },
   },
   {
@@ -990,8 +984,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Experiences.subcategories.FestivalCity,
     ],    
     coordinates: {
-      lat: 37.676307,
-      lng: -113.0646184,
+      lat: 37.67662071664922, 
+      lng: -113.06499935801874,
     },
   },
   {
@@ -1004,8 +998,8 @@ export const CityItems: AttractionItem[] = [
     image: "https://lh5.googleusercontent.com/p/AF1QipMLfnQf2LJQ_O0wWEpeq1koxBRMgk8Yl1Cdb9qd=s686-k-no",
     categories: [AttractionCategories.Experiences.subcategories.Shop],    
     coordinates: {
-      lat: 37.6779331,
-      lng: -113.0622103,
+      lat: 37.67792297229269, 
+      lng: -113.06198055206485,
     },
   },
   {
@@ -1034,8 +1028,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Experiences.subcategories.FamilyFun,
       AttractionCategories.Experiences.subcategories.LoveLocalCedarCity],    
     coordinates: {
-      lat: 37.687430, 
-      lng: -113.062112,
+      lat: 37.68721027469668, 
+      lng: -113.06227713787322,
     },
   },
   {
@@ -1048,8 +1042,8 @@ export const CityItems: AttractionItem[] = [
       "https://www.navajocraftingco.com/uploads/b/89153bea32d5164d8f26027c80d1047874b99cb71021deb18d1b56438dc2aee6/2020-11-18_20-51-02_1605757880.jpg?width=400",
     categories: [AttractionCategories.Experiences.subcategories.Shop],    
     coordinates: {
-      lat: 37.677504, 
-      lng: -113.059799,
+      lat: 37.67752164719273, 
+      lng: -113.06197191827322,
     },
   },
   {
@@ -1066,8 +1060,8 @@ export const CityItems: AttractionItem[] = [
       AttractionCategories.Experiences.subcategories.CedarCityArts,
     ],    
     coordinates: {
-      lat: 37.6776036,
-      lng: -113.0633943,
+      lat: 37.677521431873096, 
+      lng: -113.06322053414922,
     },
   },
 
