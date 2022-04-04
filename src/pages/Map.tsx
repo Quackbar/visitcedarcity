@@ -1,17 +1,25 @@
 import React, { useRef, useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import {
+  IonButton,
+  IonButtons,
   IonContent,
   IonFab,
   IonFabButton,
   IonFabList,
+  IonFooter,
+  IonHeader,
   IonIcon,
   IonItem,
+  IonItemGroup,
   IonLabel,
   IonList,
   IonLoading,
+  IonModal,
   IonPage,
   IonSearchbar,
+  IonTitle,
+  IonToolbar,
 } from "@ionic/react";
 import { Geolocation, Geoposition } from "@ionic-native/geolocation";
 // @ts-ignore
@@ -37,6 +45,7 @@ import { AllCategories, AttractionItem } from "../models/defaultModels";
 import { connect } from "../data/context/connect";
 import closestIndexTo from "date-fns/closestIndexTo/index.js";
 import { updateSearchText } from "../data/context/actions";
+import { getMode } from "@ionic/core";
 
 interface DispatchProps {
   updateSearchText: typeof updateSearchText;
@@ -65,8 +74,14 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
   const [mapIsLoaded, setMapIsLoaded] = useState<boolean>(false);
   const [markers, setMarkers] = useState<{ [id: string]: mapboxgl.Marker[] }>({});
   const [requestedMarkerID, setRequestedMarkerID] = useState<string | undefined>(id);
-  const [isSearching, setIsSearching] = useState<boolean>(false);
+  const [showPinsModal, setShowPinsModal] = useState<boolean>(false);
+  const [showLayersModal, setShowLayersModal] = useState<boolean>(false);
   const [filteredAttractions, setFilteredAttractions] = useState<AttractionItem[]>([]);
+
+  const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
+  const pageRef = useRef<HTMLElement>(null);
+
+  const ios = getMode() === "ios";
 
   const [thisone, seThisone] = useState([
     false,
@@ -85,8 +100,6 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
   const HandleToggle = (index: number) => {
     seThisone((thisone) => thisone.map((item, idx) => (idx === index ? !item : item)));
   };
-
-  const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   const twcApiKey = "2ec2232d72f1484282232d72f198421d";
   const timeSlices = fetch("https://api.weather.com/v3/TileServer/series/productSet/PPAcore?apiKey=" + twcApiKey);
@@ -160,7 +173,6 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
 
   // manage requested marker
   useEffect(() => {
-    console.log(requestedMarkerID);
     if (mapIsLoaded) {
       // remove previous marker
       removeMarkers("requested");
@@ -237,41 +249,23 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
     // remove requested marker
     removeMarkers("requested");
 
+    console.log(key, markers[key])
+
     if (markers[key]) {
       removeMarkers(key);
     } else {
       // create markers
       let filteredResults: AttractionItem[] = [];
       for (let selectedFilter of mapAttractions[key].categories) {
-        const resultsForFilter = attractionItems.filter((item) => item.categories?.some((e) => e === selectedFilter));
-
+        const resultsForFilter = attractionItems.filter((item) => { return item.categories.includes(selectedFilter)})
         for (let filterResult of resultsForFilter) {
           if (!filteredResults.includes(filterResult)) {
             filteredResults.push(filterResult);
+            console.log(filterResult)
           }
         }
       }
-
-      addMarkers(key, filteredAttractions);
-
-      // const newMarkers: mapboxgl.Marker[] = [];
-      // const markerColor = mapAttractions[key].color;
-      // filteredResults.forEach((result) => {
-      //   if (result.coordinates) {
-      //     const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(result));
-
-      //     newMarkers.push(
-      //       new mapboxgl.Marker({
-      //         color: markerColor,
-      //         draggable: false,
-      //       })
-      //         .setLngLat([result.coordinates.lng, result.coordinates.lat])
-      //         .setPopup(popup)
-      //         .addTo(map)
-      //     );
-      //   }
-      // });
-      // setMarkers({ ...markers, [key]: newMarkers });
+      addMarkers(key, filteredResults);
     }
   };
 
@@ -354,7 +348,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
   };
 
   return (
-    <IonPage id="map-page" className={`${!mapIsLoaded && "isLoading"}`} onLoad={getLocation}>
+    <IonPage id="map-page" className={`${!mapIsLoaded && "isLoading"}`} onLoad={getLocation} ref={pageRef}>
       {/* <IonFab slot="fixed" vertical="bottom" horizontal="start">
         <SafeAreaWrapper>
           <IonFabButton size="small" onClick={() => centerMap()}>
@@ -436,10 +430,10 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
         </IonFabButton>
         <IonFabList side="top">
           <IonFabButton>
-            <IonIcon icon={pinOutline} />
+            <IonIcon icon={pinOutline} onClick={() => setShowPinsModal(true)}/>
           </IonFabButton>
           <IonFabButton>
-            <IonIcon icon={layersOutline} />
+            <IonIcon icon={layersOutline} onClick={() => setShowLayersModal(true)}/>
           </IonFabButton>
           <IonFabButton>
             <IonIcon icon={homeOutline} />
@@ -486,6 +480,44 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
 
         <div id="map" ref={mapContainer} />
       </IonContent>
+
+      <IonModal
+        isOpen={showPinsModal}
+        onDidDismiss={() => setShowPinsModal(false)}
+        swipeToClose={true}
+        presentingElement={pageRef.current!}
+      >
+        <IonHeader translucent={true}>
+          <IonToolbar>
+            <IonTitle>Map Pins</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonList lines={ios ? "inset" : "full"}>
+          <IonItemGroup>
+            {Object.keys(mapAttractions).map((key, index) => (
+              <IonItem
+                key={index}
+                onClick={() => {
+                  toggleMarkers(key);
+                  HandleToggle(index);
+                }}
+              >
+                <IonLabel class={thisone[index] ? "green notrany" : "white notrany"}>
+                  {mapAttractions[key].name}
+                </IonLabel>
+              </IonItem>
+            ))}
+          </IonItemGroup>
+        </IonList>
+      </IonModal>
+
+      <IonModal
+        isOpen={showLayersModal}
+        onDidDismiss={() => setShowLayersModal(false)}
+        swipeToClose={true}
+        presentingElement={pageRef.current!}
+      ></IonModal>
 
       <IonLoading cssClass="my-custom-class" isOpen={!mapIsLoaded} message={"Loading Map..."} />
     </IonPage>
