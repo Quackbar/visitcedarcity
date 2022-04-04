@@ -1,11 +1,15 @@
 import React, { useRef, useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import {
+  IonChip,
   IonContent,
   IonFab,
   IonFabButton,
   IonFabList,
+  IonGrid,
   IonIcon,
+  IonRow,
+  IonCol,
   IonItem,
   IonLabel,
   IonList,
@@ -131,7 +135,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
       });
 
       map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
-      map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
+      map.addControl(new mapboxgl.NavigationControl(), "top-right");
       map.addControl(
         new mapboxgl.GeolocateControl({
           positionOptions: {
@@ -140,7 +144,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
           trackUserLocation: true,
           showUserHeading: true,
         }),
-        "bottom-right"
+        "top-right"
       );
       map.addLayer({
         id: "sky",
@@ -355,7 +359,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
 
   return (
     <IonPage id="map-page" className={`${!mapIsLoaded && "isLoading"}`} onLoad={getLocation}>
-      {/* <IonFab slot="fixed" vertical="bottom" horizontal="start">
+      <IonFab slot="fixed" vertical="bottom" horizontal="start">
         <SafeAreaWrapper>
           <IonFabButton size="small" onClick={() => centerMap()}>
             <IonIcon icon={homeOutline}></IonIcon>
@@ -429,8 +433,8 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
             </IonGrid>
           </IonFabList>
         </SafeAreaWrapper>
-      </IonFab> */}
-      <IonFab slot="fixed" vertical="bottom" horizontal="start">
+      </IonFab>
+      {/* <IonFab slot="fixed" vertical="bottom" horizontal="start">
         <IonFabButton size="small">
           <IonIcon icon={settingsOutline}></IonIcon>
         </IonFabButton>
@@ -445,7 +449,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
             <IonIcon icon={homeOutline} />
           </IonFabButton>
         </IonFabList>
-      </IonFab>
+      </IonFab> */}
       <IonContent scrollY={false}>
         <div id="map-search-bar-wrapper">
           <SafeAreaWrapper>
