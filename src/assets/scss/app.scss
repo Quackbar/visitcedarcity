@@ -67,7 +67,7 @@
   font-size: larger;
   color: #000000;
 }
-.rounded{
+.rounded {
   border-radius: 5px;
 }
 .weatherheadbig {
@@ -116,33 +116,63 @@ ion-chip {
 .glossbloom {
   font-family: "GlossandBloom";
 }
-.ios.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
-  margin: -1.5px 0;
-}
-.md.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
-  margin: 1.5px 0;
-}
+// .ios.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
+//   margin: -1.5px 0;
+// }
+// .md.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
+//   margin: 1.5px 0;
+// }
 
-.md.fab-list-side-bottom.fab-list-active {
-  margin: 54px 0;
-}
+// .md.fab-list-side-bottom.fab-list-active {
+//   margin: 54px 0;
+// }
 
-.ios.fab-list-side-bottom.fab-list-active {
-  margin: 54px 0;
-}
+// .ios.fab-list-side-bottom.fab-list-active {
+//   margin: 54px 0;
+// }
 
 #map-page {
   &.isLoading * {
     visibility: hidden;
   }
 
+  #map-search-bar-wrapper {
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+
+    #results-wrapper {
+      margin: 0 12px;
+      height: fit-content;
+      border-radius: 10px;
+      background-color: #ffffff;
+
+      .ion-item-border {
+        border-radius: 20px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+
+      ion-list {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        max-height: 40vh;
+        overflow-y: scroll;
+      }
+    }
+  }
+
   #map {
+    z-index: 10;
     height: 100vh;
     width: 100vw;
 
-    .mapboxgl-ctrl-top-right {
-      top: constant(safe-area-inset-top);
-      top: env(safe-area-inset-top);
+    .mapboxgl-ctrl-bottom-right {
+      margin-bottom: 20px;
     }
 
     .map-container {

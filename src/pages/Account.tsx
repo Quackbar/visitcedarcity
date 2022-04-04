@@ -22,7 +22,7 @@ import { SubscriptionItem } from "../models/defaultModels";
 import { informationCircle, logoFacebook } from "ionicons/icons";
 import { Browser } from "@capacitor/browser";
 import { Toast } from "@capacitor/toast";
-import {  PushNotifications, Token } from "@capacitor/push-notifications";
+import { PushNotifications, Token } from "@capacitor/push-notifications";
 // import './Home.css';
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
@@ -109,8 +109,8 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
 
   const showToast = async (msg: string) => {
     await Toast.show({
-        text: msg
-    })
+      text: msg,
+    });
   };
   //
 
@@ -169,8 +169,7 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
               await Browser.open({ url: subscription.furl });
             };
             return (
-              <IonItem>
-              <Fragment key={index}>
+              <IonItem key={index}>
                 <IonItem class="ninety">
                   <IonCheckbox
                     class={"c" + subscription.color.slice(1)}
@@ -182,21 +181,12 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
                   <IonText>&nbsp;{subscription.title}</IonText>
                 </IonItem>
 
-                <IonIcon
-                  icon={informationCircle}
-                  onClick={openSite}
-                  class="ion-text-right ten"
-                  color="primary"
-                />
+                <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
                 <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
-              </Fragment>
               </IonItem>
             );
           })}
-          <h1>
-
-            &nbsp;&nbsp;Account Settings
-          </h1>
+          <h1>&nbsp;&nbsp;Account Settings</h1>
           {/* <IonItem>
             <IonButton>Sign In</IonButton>
           </IonItem>
@@ -204,12 +194,15 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
             <IonButton>Create Account</IonButton>
           </IonItem> */}
           <IonItem>
+            <IonItem>
+              <IonButton href="/tutorial">See Tutorial</IonButton>
+            </IonItem>
+          </IonItem>
           <IonItem>
-            <IonButton href="/tutorial">See Tutorial</IonButton>
-            </IonItem></IonItem>
-          <IonItem><IonItem>
-            <IonButton onClick={() => setShowFilterModal(true)}>Get Help</IonButton>
-            </IonItem></IonItem>
+            <IonItem>
+              <IonButton onClick={() => setShowFilterModal(true)}>Get Help</IonButton>
+            </IonItem>
+          </IonItem>
           <IonPopover
             event={popoverState.event}
             isOpen={popoverState.showPopover}
@@ -218,32 +211,31 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
             <p>This is popover content</p>
           </IonPopover>
           <IonActionSheet
-        isOpen={showFilterModal}
-        onDidDismiss={() => setShowFilterModal(false)}
-        cssClass="my-custom-class"
-        buttons={[
-          {
-            text: "Technical Question / Suggestion",
-            handler: () => {
-              Browser.open({ url: "mailto:info@goldblockchain.us" });
-            },
-          },
-          {
-            text: "Visit Cedar City / Brian Head Question",
-            handler: () => {
-              Browser.open({ url: "mailto:tourism.group@ironcounty.net" });
-            },
-          },
-          {
-            text: "Cancel",
-            role: "cancel",
-            handler: () => {
-              //console.log("Cancel clicked");
-            },
-          },
-        ]}
-      >
-      </IonActionSheet>
+            isOpen={showFilterModal}
+            onDidDismiss={() => setShowFilterModal(false)}
+            cssClass="my-custom-class"
+            buttons={[
+              {
+                text: "Technical Question / Suggestion",
+                handler: () => {
+                  Browser.open({ url: "mailto:info@goldblockchain.us" });
+                },
+              },
+              {
+                text: "Visit Cedar City / Brian Head Question",
+                handler: () => {
+                  Browser.open({ url: "mailto:tourism.group@ironcounty.net" });
+                },
+              },
+              {
+                text: "Cancel",
+                role: "cancel",
+                handler: () => {
+                  //console.log("Cancel clicked");
+                },
+              },
+            ]}
+          ></IonActionSheet>
         </SafeAreaWrapper>
       </IonContent>
     </IonPage>
