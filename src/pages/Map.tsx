@@ -1,22 +1,21 @@
 import React, { useRef, useEffect, useState, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import {
-  IonChip,
-  IonCol,
   IonContent,
   IonFab,
   IonFabButton,
   IonFabList,
-  IonGrid,
   IonIcon,
+  IonItem,
   IonLabel,
+  IonList,
   IonLoading,
   IonPage,
-  IonRow,
+  IonSearchbar,
 } from "@ionic/react";
 import { Geolocation, Geoposition } from "@ionic-native/geolocation";
 // @ts-ignore
-// import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; 
+// import mapboxgl, { Map as MapDataType } from "!mapbox-gl";
 import {
   layersOutline,
   carSportOutline,
@@ -25,6 +24,7 @@ import {
   mapOutline,
   homeOutline,
   trailSignOutline,
+  settingsOutline,
 } from "ionicons/icons";
 // @ts-ignore
 
@@ -36,18 +36,27 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { AllCategories, AttractionItem } from "../models/defaultModels";
 import { connect } from "../data/context/connect";
 import closestIndexTo from "date-fns/closestIndexTo/index.js";
+import { updateSearchText } from "../data/context/actions";
 
+interface DispatchProps {
+  updateSearchText: typeof updateSearchText;
+}
 interface StateProps {
   attractionItems: AttractionItem[];
   mapAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
+  searchText: string | undefined;
 }
+
+type MapProps = {} & StateProps & DispatchProps;
 const showToast = async (msg: string) => {
   await Toast.show({
-      text: msg
-  })
+    text: msg,
+  });
 };
 
-const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
+const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, updateSearchText }) => {
+  const { id } = useParams<{ id: string | undefined }>();
+
   const [map, setMap] = useState<MapDataType>();
   const [radar, setRadar] = useState(false);
   const [outdoor, setOutdoor] = useState(false);
@@ -55,15 +64,27 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
   const [position, setPosition] = useState<Geoposition>();
   const [mapIsLoaded, setMapIsLoaded] = useState<boolean>(false);
   const [markers, setMarkers] = useState<{ [id: string]: mapboxgl.Marker[] }>({});
+  const [requestedMarkerID, setRequestedMarkerID] = useState<string | undefined>(id);
+  const [isSearching, setIsSearching] = useState<boolean>(false);
+  const [filteredAttractions, setFilteredAttractions] = useState<AttractionItem[]>([]);
 
-  const [thisone, seThisone] = useState([false,false,false,false,false,false,false,false,false,false,false,false]);
+  const [thisone, seThisone] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
   const HandleToggle = (index: number) => {
-    seThisone(thisone => thisone.map((item, idx) => idx === index ? !item : item))
+    seThisone((thisone) => thisone.map((item, idx) => (idx === index ? !item : item)));
   };
-
-  // console.log(thisone)
-
-  const { id } = useParams<{ id: string | undefined }>();
 
   const mapContainer = useRef() as React.MutableRefObject<HTMLInputElement>;
 
@@ -110,7 +131,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
       });
 
       map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
-      map.addControl(new mapboxgl.NavigationControl());
+      map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
       map.addControl(
         new mapboxgl.GeolocateControl({
           positionOptions: {
@@ -118,7 +139,8 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
           },
           trackUserLocation: true,
           showUserHeading: true,
-        })
+        }),
+        "bottom-right"
       );
       map.addLayer({
         id: "sky",
@@ -136,35 +158,33 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map]);
 
+  // manage requested marker
   useEffect(() => {
+    console.log(requestedMarkerID);
     if (mapIsLoaded) {
-      // display marker if one is requested
-      if (id) {
-        const numberID = Number(id);
-        const color = Math.floor(Math.random()*16777215).toString(16);
-        console.log(color);
+      // remove previous marker
+      removeMarkers("requested");
+
+      if (requestedMarkerID) {
+        const numberID = Number(requestedMarkerID);
         const requestedMarker = attractionItems.find((item) => item.id === numberID);
-
-        if (requestedMarker !== undefined && requestedMarker.coordinates !== undefined) {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(requestedMarker));
-
-          const marker = new mapboxgl.Marker({
-            color: color,
-            draggable: false,
-          })
-            .setLngLat([requestedMarker.coordinates.lng, requestedMarker.coordinates.lat])
-            .setPopup(popup)
-            .addTo(map);
-
-          popup.setLngLat([requestedMarker.coordinates.lng, requestedMarker.coordinates.lat]).addTo(map);
-
-          setMarkers({ ...markers, requested: [marker] });
+        if (requestedMarker) {
+          addMarkers("requested", [requestedMarker]);
         }
       }
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mapIsLoaded]);
+  }, [mapIsLoaded, requestedMarkerID]);
+
+  // selected filters changed
+  useEffect(() => {
+    if (searchText !== undefined) {
+      let filteredResults: AttractionItem[] = [];
+      filteredResults = attractionItems.filter((s) => s.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1);
+      setFilteredAttractions(filteredResults);
+    }
+  }, [attractionItems, searchText]);
 
   const centerMap = () => {
     map.flyTo({
@@ -174,21 +194,51 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
   };
 
   const makeMarkerPopupHTML: (item: AttractionItem) => string = (item) => {
-    return `<img src="${item.image}"/><h1 class="trublack">${item.title}</h1><p class="trublack">${item.description.substring(0, 150)+"..."}</p><a href="${item.url}">more info</a>`;
+    return `<img src="${item.image}"/><h1 class="trublack">${item.title}</h1><p class="trublack">${
+      item.description.substring(0, 150) + "..."
+    }</p><a href="${item.url}">more info</a>`;
   };
 
-  const toggleMarkers = (key: string) => {
-    // remove requested marker
-    if (markers["requested"]) {
-      markers["requested"].forEach((marker) => {
-        marker.remove();
-      });
-    }
+  // add marker
+  const addMarkers = (key: string, attractionItems: AttractionItem[]) => {
+    const newMarkers: mapboxgl.Marker[] = [];
+    const markerColor = mapAttractions[key]
+      ? mapAttractions[key].color
+      : Math.floor(Math.random() * 16777215).toString(16);
 
+    attractionItems.forEach((result) => {
+      if (result.coordinates) {
+        const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(result));
+
+        newMarkers.push(
+          new mapboxgl.Marker({
+            color: markerColor,
+            draggable: false,
+          })
+            .setLngLat([result.coordinates.lng, result.coordinates.lat])
+            .setPopup(popup)
+            .addTo(map)
+        );
+      }
+    });
+    setMarkers({ ...markers, [key]: newMarkers });
+  };
+
+  // remove marker if exists
+  const removeMarkers = (key: string) => {
     if (markers[key]) {
       markers[key].forEach((marker) => {
         marker.remove();
       });
+    }
+  };
+
+  const toggleMarkers = (key: string) => {
+    // remove requested marker
+    removeMarkers("requested");
+
+    if (markers[key]) {
+      removeMarkers(key);
     } else {
       // create markers
       let filteredResults: AttractionItem[] = [];
@@ -202,24 +252,26 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
         }
       }
 
-      const newMarkers: mapboxgl.Marker[] = [];
-      const markerColor = mapAttractions[key].color;
-      filteredResults.forEach((result) => {
-        if (result.coordinates) {
-          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(result));
+      addMarkers(key, filteredAttractions);
 
-          newMarkers.push(
-            new mapboxgl.Marker({
-              color: markerColor,
-              draggable: false,
-            })
-              .setLngLat([result.coordinates.lng, result.coordinates.lat])
-              .setPopup(popup)
-              .addTo(map)
-          );
-        }
-      });
-      setMarkers({ ...markers, [key]: newMarkers });
+      // const newMarkers: mapboxgl.Marker[] = [];
+      // const markerColor = mapAttractions[key].color;
+      // filteredResults.forEach((result) => {
+      //   if (result.coordinates) {
+      //     const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(result));
+
+      //     newMarkers.push(
+      //       new mapboxgl.Marker({
+      //         color: markerColor,
+      //         draggable: false,
+      //       })
+      //         .setLngLat([result.coordinates.lng, result.coordinates.lat])
+      //         .setPopup(popup)
+      //         .addTo(map)
+      //     );
+      //   }
+      // });
+      // setMarkers({ ...markers, [key]: newMarkers });
     }
   };
 
@@ -260,10 +312,7 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
       map.removeLayer("satellite");
       map.removeSource("satellite");
       setSatellite(false);
-    } catch (error) {
-      
-    }
-
+    } catch (error) {}
   };
 
   const addRadarLayer = () => {
@@ -303,9 +352,10 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
         });
     }
   };
+
   return (
     <IonPage id="map-page" className={`${!mapIsLoaded && "isLoading"}`} onLoad={getLocation}>
-      <IonFab slot="fixed" vertical="bottom" horizontal="start">
+      {/* <IonFab slot="fixed" vertical="bottom" horizontal="start">
         <SafeAreaWrapper>
           <IonFabButton size="small" onClick={() => centerMap()}>
             <IonIcon icon={homeOutline}></IonIcon>
@@ -361,10 +411,15 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
           <IonFabList side="bottom">
             <IonGrid>
               {Object.keys(mapAttractions).map((key, index) => {
-
                 return (
                   <IonCol key={index}>
-                    <IonChip class={thisone[index] ? "green notrany" : "white notrany"} onClick={() => {toggleMarkers(key);HandleToggle(index)}}>
+                    <IonChip
+                      class={thisone[index] ? "green notrany" : "white notrany"}
+                      onClick={() => {
+                        toggleMarkers(key);
+                        HandleToggle(index);
+                      }}
+                    >
                       <IonIcon icon={mapAttractions[key].icon}></IonIcon>
                       <IonLabel>{mapAttractions[key].name}</IonLabel>
                     </IonChip>
@@ -374,8 +429,61 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
             </IonGrid>
           </IonFabList>
         </SafeAreaWrapper>
+      </IonFab> */}
+      <IonFab slot="fixed" vertical="bottom" horizontal="start">
+        <IonFabButton size="small">
+          <IonIcon icon={settingsOutline}></IonIcon>
+        </IonFabButton>
+        <IonFabList side="top">
+          <IonFabButton>
+            <IonIcon icon={pinOutline} />
+          </IonFabButton>
+          <IonFabButton>
+            <IonIcon icon={layersOutline} />
+          </IonFabButton>
+          <IonFabButton>
+            <IonIcon icon={homeOutline} />
+          </IonFabButton>
+        </IonFabList>
       </IonFab>
       <IonContent scrollY={false}>
+        <div id="map-search-bar-wrapper">
+          <SafeAreaWrapper>
+            <IonSearchbar
+              value={searchText}
+              placeholder="Search"
+              onIonChange={(e: CustomEvent) => updateSearchText(e.detail.value)}
+            />
+            <div id="results-wrapper">
+              <IonList lines={filteredAttractions.length < 2 ? "none" : "full"}>
+                {searchText !== "" && searchText !== undefined ? (
+                  filteredAttractions.length > 0 ? (
+                    filteredAttractions.map((attraction, index) => {
+                      return (
+                        <IonItem
+                          key={index}
+                          onClick={() => {
+                            setRequestedMarkerID("" + attraction.id);
+                            updateSearchText(undefined);
+                          }}
+                        >
+                          <IonLabel>{attraction.title}</IonLabel>
+                        </IonItem>
+                      );
+                    })
+                  ) : (
+                    <IonItem>
+                      <IonLabel>No Results</IonLabel>
+                    </IonItem>
+                  )
+                ) : (
+                  <></>
+                )}
+              </IonList>
+            </div>
+          </SafeAreaWrapper>
+        </div>
+
         <div id="map" ref={mapContainer} />
       </IonContent>
 
@@ -384,10 +492,14 @@ const Map: React.FC<StateProps> = ({ attractionItems, mapAttractions }) => {
   );
 };
 
-export default connect<{}, StateProps, {}>({
+export default connect<{}, StateProps, DispatchProps>({
   mapStateToProps: (state) => ({
     attractionItems: state.attractionItems,
     mapAttractions: state.mapAttractions,
+    searchText: state.user.searchText,
   }),
+  mapDispatchToProps: {
+    updateSearchText,
+  },
   component: Map,
 });

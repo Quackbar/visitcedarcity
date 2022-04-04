@@ -24,13 +24,9 @@ import { updateSearchText } from "../data/context/actions";
 import { connect } from "../data/context/connect";
 import { Browser } from "@capacitor/browser";
 
-
 interface DispatchProps {
   updateSearchText: typeof updateSearchText;
 }
-
-
-
 
 const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
   const context = useContext(AppContext);
@@ -97,12 +93,11 @@ const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
 
         <IonGrid>
           <IonRow>
-          <IonButton class="centered" onClick={openSite}>
-          See Extended List of Offerings
-        </IonButton>
+            <IonButton class="centered" onClick={openSite}>
+              See Extended List of Offerings
+            </IonButton>
           </IonRow>
         </IonGrid>
-
       </IonContent>
 
       <IonModal
