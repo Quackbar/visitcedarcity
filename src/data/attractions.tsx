@@ -31,7 +31,7 @@ Lodging.forEach((el) => {
 
 export const OutdoorItems = [
   {
-    id: 1,
+    id: 101,
     title: "Vermillion Castle",
     subtitle: "Brian Head Area Trails",
     url: "https://www.google.com/maps/place/Vermillion+Castle+Day+Use+Area/@37.7954398,-112.7977095,19.65z/data=!4m5!3m4!1s0x80b550b00dc8debb:0x61a3ae67616506e5!8m2!3d37.7955318!4d-112.7974427",
@@ -65,7 +65,7 @@ export const OutdoorItems = [
     },
   },
   {
-    id: 2,
+    id: 102,
     title: "Noah's Ark",
     subtitle: "Brian Head Area Trails",
     url: "https://www.google.com/maps/place/Noah's+Ark+Trailhead/@37.7944968,-112.7940625,18.85z/data=!4m5!3m4!1s0x80b551c7c75b8991:0xf2a7fdaae80fb10f!8m2!3d37.7946673!4d-112.7932462",
@@ -82,7 +82,7 @@ export const OutdoorItems = [
     },
   },
   {
-    id: 4,
+    id: 104,
     title: "Hidden Haven",
     subtitle: "Brian Head Area Trails",
     url: "https://www.google.com/maps/place/Hidden+Haven+Trailhead/@37.771865,-112.8408257,18.09z/data=!4m9!1m2!2m1!1shidden+haven!3m5!1s0x80b5598bfffc6cdb:0x1fb477681d4b6430!8m2!3d37.7722069!4d-112.8403231!15sCgxoaWRkZW4gaGF2ZW6SAQtoaWtpbmdfYXJlYQ",
@@ -100,7 +100,7 @@ export const OutdoorItems = [
   },
 
   {
-    id: 5,
+    id: 105,
     title: "Hendrickson Lake",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -135,7 +135,7 @@ export const OutdoorItems = [
   //   },
   // },
   {
-    id: 7,
+    id: 107,
     title: "Town Trail",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -169,7 +169,7 @@ export const OutdoorItems = [
   //   },
   // },
   {
-    id: 9,
+    id: 109,
     title: "Dark Hollow",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -186,7 +186,7 @@ export const OutdoorItems = [
     },
   },
   {
-    id: 10,
+    id: 1010,
     title: "Sidney Peaks",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -203,7 +203,7 @@ export const OutdoorItems = [
     },
   },
   {
-    id: 11,
+    id: 1011,
     title: "Bunker Creek",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -220,7 +220,7 @@ export const OutdoorItems = [
     },
   },
   {
-    id: 12,
+    id: 1012,
     title: "Twisted Forest",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -254,7 +254,7 @@ export const OutdoorItems = [
   //   },
   // },
   {
-    id: 14,
+    id: 1014,
     title: "Marathon / Mace's Run",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -271,7 +271,7 @@ export const OutdoorItems = [
     },
   },
   {
-    id: 15,
+    id: 1015,
     title: "Lowder Ponds Loop",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -288,7 +288,7 @@ export const OutdoorItems = [
     },
   },
   {
-    id: 16,
+    id: 1016,
     title: "High Mountain",
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
@@ -940,7 +940,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 13,
+    id: 10013,
     title: "Megaplex Theatre Cedar City",
     subtitle: "Cedar City Movie Theatre",
     url: "https://www.megaplextheatres.com/cedarcity",
