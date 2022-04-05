@@ -228,7 +228,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
     // remove requested marker
     removeMarkers("requested");
 
-    if (markers[key]) {
+    if (markers[key] && markers[key].length>0) {
       removeMarkers(key);
     } else {
       // create markers
@@ -332,14 +332,14 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
           <IonIcon icon={settingsOutline}></IonIcon>
         </IonFabButton>
         <IonFabList side="top">
-          <IonFabButton>
-            <IonIcon icon={pinOutline} onClick={() => setShowPinsModal(true)} />
+          <IonFabButton onClick={() => setShowPinsModal(true)}>
+            <IonIcon icon={pinOutline}  />
           </IonFabButton>
-          <IonFabButton>
-            <IonIcon icon={layersOutline} onClick={() => setShowLayersModal(true)} />
+          <IonFabButton onClick={() => setShowLayersModal(true)} >
+            <IonIcon icon={layersOutline} />
           </IonFabButton>
-          <IonFabButton>
-            <IonIcon icon={homeOutline} onClick={() => centerMap()} />
+          <IonFabButton onClick={() => centerMap()} >
+            <IonIcon icon={homeOutline} />
           </IonFabButton>
         </IonFabList>
       </IonFab>
