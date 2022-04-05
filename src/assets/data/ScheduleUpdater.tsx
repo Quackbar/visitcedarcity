@@ -11,9 +11,12 @@ export async function getCCSched() : Promise<string> {
         .then(data => {
             // console.log(data.toString().includes("Art Festival"))
             // console.log(data)
+            let date = new Date()
+            date.setDate(date.getDate() - 1);
+
             data.forEach((element: any) => {
                 
-                if(!(new Date(element.acf.start_date).getTime()<new Date().getTime())){
+                if(!(new Date(element.acf.start_date).getTime()<date.getTime())){
                     id++;
                     returnable = returnable + "{"
                     returnable = returnable + "\"date\": \""+new Date(element.acf.start_date).toISOString().slice(0, 10)+"\","

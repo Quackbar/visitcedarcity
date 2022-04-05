@@ -200,10 +200,15 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
           </IonItem>
           <IonItem>
             <IonItem>
-              <IonButton onClick={() => setShowFilterModal(true)}>Get Help</IonButton>
+              <IonButton href="mailto:info@goldblockchain.us">Get Technical Help</IonButton>
             </IonItem>
           </IonItem>
-          <IonPopover
+          <IonItem>
+            <IonItem>
+              <IonButton href="mailto:tourism.group@ironcounty.net">Get Cedar City Help</IonButton>
+            </IonItem>
+          </IonItem>
+          {/* <IonPopover
             event={popoverState.event}
             isOpen={popoverState.showPopover}
             onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
@@ -235,7 +240,9 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
                 },
               },
             ]}
-          ></IonActionSheet>
+          >
+            
+          </IonActionSheet> */}
         </SafeAreaWrapper>
       </IonContent>
     </IonPage>

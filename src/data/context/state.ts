@@ -260,7 +260,7 @@ export const initialState: AppState = {
     },
   },
   user: {
-    selectedAttractionFilters: [],
+    selectedAttractionFilters: Object.values(AllCategories),
     selectedSubscriptions: [],
     selectedHomeModules: [],
     hasSeenTutorial: false,
