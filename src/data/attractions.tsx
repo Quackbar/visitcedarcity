@@ -29,12 +29,15 @@ Lodging.forEach((el) => {
   el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel);
 });
 
+//add recreation areas category on map, remove shows and combine with art. fast food added as a filtered thing
+
+
 export const OutdoorItems = [
   {
     id: 101,
     title: "Vermillion Castle",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.google.com/maps/place/Vermillion+Castle+Day+Use+Area/@37.7954398,-112.7977095,19.65z/data=!4m5!3m4!1s0x80b550b00dc8debb:0x61a3ae67616506e5!8m2!3d37.7955318!4d-112.7974427",
+    url: "https://www.alltrails.com/trail/us/utah/vermillion-castle-trail",
     description: "2 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/1fb8638d-3e2b-48b1-93d1-5b48ded737ac",
     categories: [
@@ -68,7 +71,7 @@ export const OutdoorItems = [
     id: 102,
     title: "Noah's Ark",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.google.com/maps/place/Noah's+Ark+Trailhead/@37.7944968,-112.7940625,18.85z/data=!4m5!3m4!1s0x80b551c7c75b8991:0xf2a7fdaae80fb10f!8m2!3d37.7946673!4d-112.7932462",
+    url: "https://www.alltrails.com/trail/us/utah/noahs-ark-trail",
     description: "3 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/b812a61d-2904-4c68-93f2-e872693e473f",
     categories: [
@@ -85,7 +88,7 @@ export const OutdoorItems = [
     id: 104,
     title: "Hidden Haven",
     subtitle: "Brian Head Area Trails",
-    url: "https://www.google.com/maps/place/Hidden+Haven+Trailhead/@37.771865,-112.8408257,18.09z/data=!4m9!1m2!2m1!1shidden+haven!3m5!1s0x80b5598bfffc6cdb:0x1fb477681d4b6430!8m2!3d37.7722069!4d-112.8403231!15sCgxoaWRkZW4gaGF2ZW6SAQtoaWtpbmdfYXJlYQ",
+    url: "https://www.alltrails.com/trail/us/utah/hidden-haven-waterfall",
     description: "1 mile, Out-and-Back type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
     categories: [
@@ -103,7 +106,7 @@ export const OutdoorItems = [
     id: 105,
     title: "Hendrickson Lake",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/hendrickson-lake-trail",
     description:
       "3 mile, Out-and-Back (or continue on Dark Hollow Trai for point-to-point or loop) type trail accessible Early Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/f39f1ee6-2d25-415d-b574-4871798b4364",
@@ -134,23 +137,23 @@ export const OutdoorItems = [
   //     lng: -112.8424624,
   //   },
   // },
-  {
-    id: 107,
-    title: "Town Trail",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "2 mile, Point-to-Point type trail accessible Early Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/c6d6bcf5-ea72-40f1-89f7-815786eb9510",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.6976581,
-      lng: -112.9080203,
-    },
-  },
+  // {
+  //   id: 107,
+  //   title: "Town Trail",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+  //   description: "2 mile, Point-to-Point type trail accessible Early Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/c6d6bcf5-ea72-40f1-89f7-815786eb9510",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.6976581,
+  //     lng: -112.9080203,
+  //   },
+  // },
   // {
   //   id: 8,
   //   title: "Alpine Creek Loop",
@@ -172,7 +175,7 @@ export const OutdoorItems = [
     id: 109,
     title: "Dark Hollow",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/dark-hollow-second-left-hand-canyon/",
     description: "14.5 mile, Point-to-Point type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/45f000c3-548f-44be-9bdc-360dfec454e8",
     categories: [
@@ -189,7 +192,7 @@ export const OutdoorItems = [
     id: 1010,
     title: "Sidney Peaks",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/sydney-peak-trail",
     description: "4 mile, Point-to-Point type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/afbfecff-722a-436d-991b-fdac1bdb9649",
     categories: [
@@ -206,7 +209,7 @@ export const OutdoorItems = [
     id: 1011,
     title: "Bunker Creek",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/right-fork-of-bunker-creek",
     description: "11 mile, Point-to-Point type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/8f1d2314-e81f-4ae0-b1f0-f2e836562c5a",
     categories: [
@@ -223,7 +226,7 @@ export const OutdoorItems = [
     id: 1012,
     title: "Twisted Forest",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/twisted-forest",
     description: "1 mile, Out-and-Back type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/66e5092c-d0ef-4b53-995c-228a2b325bd1",
     categories: [
@@ -257,7 +260,7 @@ export const OutdoorItems = [
     id: 1014,
     title: "Marathon / Mace's Run",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/marathon-trail",
     description: "5 mile, Loop type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
     categories: [
@@ -274,7 +277,7 @@ export const OutdoorItems = [
     id: 1015,
     title: "Lowder Ponds Loop",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/lower-lowder-ponds",
     description: "11.5 mile, Loop type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/db1a48da-f22d-466b-a613-91aa4ecc0085",
     categories: [
@@ -291,7 +294,7 @@ export const OutdoorItems = [
     id: 1016,
     title: "High Mountain",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/dry-lakes-high-mountain-scenic-backway",
     description: "6 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
     image: "https://www.visitbrianhead.org/File/393200b3-5022-4323-88d8-ec11f099ad64",
     categories: [
@@ -310,7 +313,7 @@ export const OutdoorItems = [
     subtitle: "Brian Head Area Trails",
     url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
     description: "10 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/f0585b38-f7e6-4646-8158-5a1e3c9c24a2",
+    image: "https://www.alltrails.com/trail/us/utah/rattlesnake-creek-trail",
     categories: [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.CedarCityWalks,
@@ -325,7 +328,7 @@ export const OutdoorItems = [
     id: 18,
     title: "Alpine Pond",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/alpine-pond-trail--3",
     description: "1 mile, Loop type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/95328441-a68e-4fd1-a319-0187f3ebc0d7",
     categories: [
@@ -342,7 +345,7 @@ export const OutdoorItems = [
     id: 19,
     title: "Ramparts",
     subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+    url: "https://www.alltrails.com/trail/us/utah/spectra-point-and-rampart-overlook-trails",
     description: "2 mile, Out-and-Back type trail accessible Summer though Fall.",
     image: "https://www.visitbrianhead.org/File/7e6f955b-1e42-4a0a-a2b6-932d694b89f6",
     categories: [
@@ -355,28 +358,28 @@ export const OutdoorItems = [
       lng: -112.83736796263182,
     },
   },
-  {
-    id: 20,
-    title: "Hancock Peak",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "5.5 mile, Point-to-Point type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/00085e57-a61a-4975-a0b7-54b73ce6f12d",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.63394070651882, 
-      lng: -112.7622343146256,
-    },
-  },
+  // {
+  //   id: 20,
+  //   title: "Hancock Peak",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+  //   description: "5.5 mile, Point-to-Point type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/00085e57-a61a-4975-a0b7-54b73ce6f12d",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.63394070651882, 
+  //     lng: -112.7622343146256,
+  //   },
+  // },
   {
     id: 21,
     title: "Brian Head Peak",
     subtitle: "Brian Head Area Trails and Roads",
-    url: "https://www.visitbrianhead.org/Attractions",
+    url: "https://www.alltrails.com/trail/us/utah/brian-head-peak-trail",
     description:
       "Our peak has the best view around at 11,307 ft.  From the top, one can see into neighboring states such as Arizona and Nevada.  The stone hut on the very tip of the peak was built between 1935-1937 by the Civilian Conservation Corps; ever since its construction, it has become an icon on the peak.  It not only provides a taste of Brian Head's past, but also a breathtaking view.  (Literally, breath taking since it is so high in elevation). Just before reaching the peak, you'll see the Sydney Peak Trailhead, which is the jumping off point for several of the hiking and mountain biking trails in Dixie National Forest, including Dark Hollow, Bunker Creek, Sydney Peaks, Spruces, and Mace's Run. Restrooms are located at the trailhead. *Note: The road to the summit is accessible in the summer and fall seasons only. ",
     image: "https://www.visitbrianhead.org/file/image/m/300/200/d8c9c3fe-29ee-4e2e-b2d1-6817027910d3",
@@ -394,7 +397,7 @@ export const OutdoorItems = [
     id: 22,
     title: "Yankee Meadows",
     subtitle: "Brian Head Area Trails and Roads",
-    url: "https://www.visitbrianhead.org/Attractions",
+    url: "https://www.fs.usda.gov/recarea/dixie/recarea/?recid=74400",
     description:
       "Yankee Meadows is a little known gem that offers outstanding beauty and recreation. Only 15 miles from Brian Head, it is accessed off of Hwy 143 in Parowan Canyon. The drive up Yankee Meadows Road is surrounded by the towering red rocks of Vermillion Castle dotted with juniper trees and scrub oak and maple. There are several trails along the way that lead to the top of the cliffs where one can see the “Noah’s Ark” and the “Grand Castle” formations. In the fall, the scrub oak and maple blaze red and orange making it an outstanding area for leaf peepers. As you continue up to Yankee Meadows, you'll find campgrounds, picnic areas, and fantastic scenery. Yankee Meadow Reservoir is located at the base of the towering volcanic cliffs of Sydney Peaks. During summer and fall trout fishing and non-motorized boating are the most popular activities.   Note: Much of the vegetation and camping right around Yankee Meadow Reservoir was significantly damaged during the 2017 Brian Head Fire. Revegetation efforts are underway, but it will take some years to be completed. ",
     image: "https://www.visitbrianhead.org/file/image/m/300/168/6eb1b0de-9e5f-4207-89ef-0a18e6ac45df",
@@ -412,7 +415,7 @@ export const OutdoorItems = [
     id: 23,
     title: "Ashdown Gorge Wilderness Area",
     subtitle: "Brian Head Area Trails and Roads",
-    url: "https://www.visitbrianhead.org/Attractions",
+    url: "https://www.alltrails.com/parks/us/utah/ashdown-gorge-wilderness",
     description:
       "Ashdown Gorge in Dixie National Forest is one of the best kept secrets in Southern Utah. While it's not for the more casual recreationalist, those who brave the steep trails and rough terrain will be treated to a back country experience few can boast of. The area can be accessed from either the Rattlesnake Trail (named for the creek and not a particular prevalence of vipers -- although you always want to watch out for snakes) which is adjacent to the North Entrance of Cedar Breaks National Monument, or the High Mountain Trail which is right off of Dry Lakes Road west of Brian Head. Both of those trails will drop you down into mountain meadows where deer and elk are common and into the river gorge where you'll hike through narrows and slot canyons past Flannigan Arch (PS: be prepared to get wet). Exploring the several creeks in these drainages you'll be rewarded with pristine water falls, slot canyons, and untouched back country. Most people hike through Ashdown Creek which lets out on Highway 14 in Cedar Canyon, where they stash a shuttle car. Some will hike out Potato Hollow trail, and those in impressive physical condition may want to hike up and out the way they came in (not for the faint of heart). The hike is about 12 miles one-way and can be done in one day, but most take the opportunity to do it as an overnight backpacking trip.",
     image: "https://www.visitbrianhead.org/file/image/m/300/316/7f3d934d-30ca-448e-8fe8-faef203db75d",
@@ -430,7 +433,7 @@ export const OutdoorItems = [
     id: 24,
     title: "Twisted Forest/Dry Lakes Scenic Backway",
     subtitle: "Brian Head Area Trails and Roads",
-    url: "https://www.visitbrianhead.org/Attractions",
+    url: "https://www.alltrails.com/trail/us/utah/twisted-forest",
     description:
       "Often overlooked by hikers headed to nearby Cedar Breaks National Monument, a sacred grove of prehistoric trees aptly titled “Twisted Forest” lies at the end of a family friendly, mile-long, out-and-back hike a few miles west of Brian Head accessed off of Dry Lakes Road. This short stroll takes you through a rare and somewhat ghostly grove of Bristlecone Pines – a species thought to be among the oldest living organisms on the planet, often surviving for 3,000-4,000 years. The trail meanders up a gravely red rock slope abruptly terminating at the top of a cliffside with sweeping views of Cedar Breaks and Ashdown Gorge.",
     image: "https://www.visitbrianhead.org/file/image/m/300/200/1895e48f-8ba5-4046-80bb-ac208a8b3519",
@@ -522,7 +525,7 @@ export const OutdoorItems = [
     id: 28,
     title: "Bristlecone Pond ",
     subtitle: "Brian Head Area",
-    url: "https://www.visitbrianhead.org/Attractions",
+    url: "https://www.google.com/maps/place/Bristlecone+Pond/@37.6894416,-112.8534129,17z/data=!3m1!4b1!4m5!3m4!1s0x80caa7d240ea2b5b:0xa3c86e62259124ba!8m2!3d37.6894416!4d-112.8512242",
     description:
       "Bristlecone Pond is the summer focal point in Brian Head. The pond sits on the south end of the main corridor through Town, and features a large pavillion (which can be reserved by contacting Town Hall). There are also several small picnic pads, campfire rings, a playground, volleyball, basketball and pickleball courts available to the public. The pond is a hotspot for fishing, kayaking, swimming, and paddle boarding. Check out our many outfitters to gear up for activities at Bristlecone Pond.",
     image: "https://www.visitbrianhead.org/file/image/m/300/169/639ae05e-a573-4db7-a46b-9394d5fc77f3",
@@ -557,7 +560,7 @@ export const OutdoorItems = [
     id: 30,
     title: "Panguitch Lake",
     subtitle: "Southern Utah Attractions",
-    url: "https://www.visitbrianhead.org/Attractions",
+    url: "https://www.google.com/maps/place/Panguitch+Lake/@37.7171449,-112.6765779,13z/data=!3m1!4b1!4m5!3m4!1s0x80caaabf8f6ab7a1:0x768bf0de491ba2c2!8m2!3d37.7143281!4d-112.6407229",
     description:
       "Panguitch Lake is just 18 miles from Brian Head in Dixie National Forest right on Highway 143. The word “Panguitch” comes from the local Native American indians and means “Big Fish”. The lake has approximately 10 miles of shoreline and is ideal for year-round fishing. In the summer you find excellent fishing for some of the largest rainbow trout in Utah. Boats are available for rent. In winter ice fishing is a popular sport and easily accessible from local lodges.",
     image: "https://www.visitbrianhead.org/file/image/m/300/122/6bdc0af4-ae50-455a-881e-c652d7fe2491",

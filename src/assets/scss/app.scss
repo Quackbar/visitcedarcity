@@ -153,6 +153,7 @@ ion-chip {
     right: 0;
     height: fit-content;
 
+
     #results-wrapper {
       margin: 0 12px;
       height: fit-content;
@@ -165,6 +166,10 @@ ion-chip {
         padding-right: 10px;
         padding-bottom: 5px;
         padding-top: 5px;
+      }
+      .list-md{
+        padding-top: 0px; 
+        padding-bottom: 0px;
       }
 
       ion-list {

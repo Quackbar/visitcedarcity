@@ -176,7 +176,7 @@ export async function getCBAlerts() : Promise<string> {
                 localStorage.setItem("CBAlertUpdate", returnable)
             });
             returnable = returnable
-            console.log(returnable)
+            // console.log(returnable)
 
             localStorage.setItem("CBAlertUpdate", returnable)
         

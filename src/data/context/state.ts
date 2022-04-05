@@ -102,7 +102,7 @@ export const initialState: AppState = {
       name: "Art",
       icon: colorPalette,
       color: "#ffffff",
-      categories: [AttractionCategories.Experiences.subcategories.CedarCityArts],
+      categories: [AttractionCategories.Experiences.subcategories.CedarCityArts,AttractionCategories.Experiences.subcategories.Shows],
     },
     [GroupedAttractionCategories.Drinks]: {
       name: "Drinks",
@@ -124,7 +124,7 @@ export const initialState: AppState = {
       ],
     },
     [GroupedAttractionCategories.Camping]: {
-      name: "Camping\xa0Grounds",
+      name: "Camp\xa0Grounds",
       icon: bonfire,
       color: "#0cfa00",
       categories: [
@@ -140,12 +140,6 @@ export const initialState: AppState = {
       icon: carSport,
       color: "#0cfa00",
       categories: [AttractionCategories.Experiences.subcategories.Drives],
-    },
-    [GroupedAttractionCategories.Shows]: {
-      name: "Shows",
-      icon: ticket,
-      color: "#faa300",
-      categories: [AttractionCategories.Experiences.subcategories.Shows],
     },
     [GroupedAttractionCategories.Fishing]: {
       name: "Fishing",
@@ -208,7 +202,7 @@ export const initialState: AppState = {
       name: "Art",
       icon: colorPalette,
       color: "#ffffff",
-      categories: [AttractionCategories.Experiences.subcategories.CedarCityArts],
+      categories: [AttractionCategories.Experiences.subcategories.CedarCityArts,AttractionCategories.Experiences.subcategories.Shows],
     },
     [MapAttractionCategories.Drinks]: {
       name: "Drinks",
@@ -220,7 +214,7 @@ export const initialState: AppState = {
       ],
     },
     [MapAttractionCategories.Camping]: {
-      name: "Camping\xa0Grounds",
+      name: "Camp\xa0Grounds",
       icon: bonfire,
       color: "#0cfa00",
       categories: [
@@ -230,12 +224,6 @@ export const initialState: AppState = {
         AttractionCategories.Lodging.subcategories.Cabin,
         AttractionCategories.Lodging.subcategories.Cabinettes,
       ],
-    },
-    [MapAttractionCategories.Shows]: {
-      name: "Shows",
-      icon: ticket,
-      color: "#faa300",
-      categories: [AttractionCategories.Experiences.subcategories.Shows],
     },
     [MapAttractionCategories.Fishing]: {
       name: "Fishing",
