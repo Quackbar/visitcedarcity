@@ -97,6 +97,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
       new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
+        attributionControl: false,
         center: [-113.081305, 37.680057],
         // pitch: 60,
         zoom: 9,
@@ -183,7 +184,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
   };
 
   const makeMarkerPopupHTML: (item: AttractionItem) => string = (item) => {
-    return `<img src="${item.image}"/><h1 class="trublack">${item.title}</h1><p class="trublack">${
+    return `<img src="${item.image}"/><h2 class="trublack">${item.title}</h2><p class="trublack">${
       item.description.substring(0, 100) + "..."
     }</p><a href="${item.url}">more info</a>`;
   };
@@ -197,7 +198,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
 
     attractionItems.forEach((result) => {
       if (result.coordinates) {
-        const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(makeMarkerPopupHTML(result));
+        const popup = new mapboxgl.Popup({ offset: 25, closeButton: false }).setHTML(makeMarkerPopupHTML(result));
 
         newMarkers.push(
           new mapboxgl.Marker({

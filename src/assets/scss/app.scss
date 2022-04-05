@@ -177,13 +177,11 @@ ion-chip {
 
   #map {
     z-index: 10;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 
     .mapboxgl-ctrl-bottom-right {
-      bottom: constant(safe-area-inset-top);
-      bottom: env(safe-area-inset-top);
-      margin-bottom: 20px;
+      bottom: 10px;
     }
 
     .map-container {
