@@ -402,7 +402,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
                 <IonItem key={index} onClick={() => toggleMarkers(key)}>
                   <IonLabel>{mapAttractions[key].name}</IonLabel>
                   <IonCheckbox
-                    onClick={() => toggleMarkers(key)}
+                  
                     checked={markers[key] ? markers[key].length > 0 : false}
                     color="primary"
                   />
