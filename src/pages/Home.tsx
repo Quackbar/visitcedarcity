@@ -29,7 +29,6 @@ import SnowPack from "../modules/SnowPack";
 import SkyData from "../modules/SkyData";
 import RoadConditions from "../modules/RoadConditions";
 import FestivalFood from "../modules/FestivalFood";
-import ShareSocialFab from "../components/ShareSocialFab";
 
 //firebase
 import { getBrianHeadWeather, getCedarWeather, getParoWeather, getMountainData } from "../assets/firebase/Firebase";
@@ -161,16 +160,14 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
   const [formattedDate, setFormattedDate] = useState(new Date().toISOString().slice(0, 10));
 
-let CBAlerts: {schedule: subtype[]} = {schedule: []}
+  let CBAlerts: { schedule: subtype[] } = { schedule: [] };
 
-  let schedule = localStorage.getItem("CBAlertUpdate")?.slice(0,-1) + "]}" || "{\"schedule\": []}"
-  // console.log(schedule)
+  let schedule = localStorage.getItem("CBAlertUpdate")?.slice(0, -1) + "]}" || '{"schedule": []}';
 
-
-  try{
-    CBAlerts = JSON.parse(schedule)
-  }catch(err){
-    console.log(err)
+  try {
+    CBAlerts = JSON.parse(schedule);
+  } catch (err) {
+    console.log(err);
   }
 
   const pageRef = useRef<HTMLElement>(null);
@@ -249,8 +246,7 @@ let CBAlerts: {schedule: subtype[]} = {schedule: []}
 
   function getTodays(rn: string) {
     let temp: any[] = [];
-    yourSchedule.map((item) => {
-      // console.log("doing stuff")
+    yourSchedule.forEach((item) => {
       if (item.date === rn) {
         temp.push(
           item.groups.map((group) => {
@@ -272,7 +268,6 @@ let CBAlerts: {schedule: subtype[]} = {schedule: []}
   getTodays(formattedDate);
 
   const HomeModules: { [key in AllModules]: { label: string; src: ReactElement } } = {
-    // const [things, setThings] = useState([]);
     [AllModules.Weather]: {
       label: "Weather",
       src: (
@@ -290,7 +285,6 @@ let CBAlerts: {schedule: subtype[]} = {schedule: []}
       label: "Schedule",
       src: (
         <IonCard class="basiccentered">
-          {/* Datetime in popover with cover element */}
           <IonItem button={true} id="open-date-input">
             <IonLabel>Date</IonLabel>
             <IonText slot="end">{popoverDate}</IonText>
@@ -299,7 +293,6 @@ let CBAlerts: {schedule: subtype[]} = {schedule: []}
                 presentation="date"
                 onIonChange={(ev) => {
                   setPopoverDate(formatDate(ev.detail.value!));
-                  // console.log(ev.detail.value!)
                   setFormattedDate(ev.detail.value!.slice(0, -15));
                   getTodays(formattedDate);
                 }}
@@ -375,9 +368,16 @@ let CBAlerts: {schedule: subtype[]} = {schedule: []}
         <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
-        {selectedHomeModules.map((moduleId: AllModules, index) => {
-          return <Fragment key={index}>{HomeModules[moduleId].src}</Fragment>;
-        })}
+        {selectedHomeModules.length > 0 ? (
+          selectedHomeModules.map((moduleId: AllModules, index) => {
+            return <Fragment key={index}>{HomeModules[moduleId].src}</Fragment>;
+          })
+        ) : (
+          <div className="no-module-selected-wrapper">
+            <IonLabel className="no-module-selected-title">No modules selected.</IonLabel>
+            <IonLabel className="no-module-selected-description">Get started by selecting and reordering your preffered modules from the settings.</IonLabel>
+          </div>
+        )}
       </IonContent>
 
       <IonModal
@@ -388,8 +388,6 @@ let CBAlerts: {schedule: subtype[]} = {schedule: []}
       >
         <HomeModulesFilter homeModules={HomeModules} onDismissModal={() => setShowFilterModal(false)} />
       </IonModal>
-
-      {/* <ShareSocialFab/> */}
     </IonPage>
   );
 };

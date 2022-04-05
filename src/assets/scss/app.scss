@@ -116,20 +116,29 @@ ion-chip {
 .glossbloom {
   font-family: "GlossandBloom";
 }
-// .ios.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
-//   margin: -1.5px 0;
-// }
-// .md.fab-button-in-list.ion-activatable.ion-focusable.fab-button-show {
-//   margin: 1.5px 0;
-// }
 
-// .md.fab-list-side-bottom.fab-list-active {
-//   margin: 54px 0;
-// }
+#home-page {
+  .no-module-selected-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 40px 10px 0 10px;
 
-// .ios.fab-list-side-bottom.fab-list-active {
-//   margin: 54px 0;
-// }
+    * {
+      align-self: center;
+      text-align: center;
+    }
+    .no-module-selected-title {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .no-module-selected-description {
+      font-size: 15px;
+    }
+  }
+}
 
 #map-page {
   &.isLoading * {
