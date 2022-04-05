@@ -42,7 +42,7 @@ export type AppState = {
 const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
   let concatArray: Array<any>[] = [];
   arrays.forEach((array) => {
-    concatArray = concatArray.concat(array)
+    concatArray = concatArray.concat(array);
   });
 
   let currentIndex = concatArray.length;
@@ -54,7 +54,6 @@ const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
   }
   return concatArray;
 };
-
 
 export const initialState: AppState = {
   attractionItems: shuffleArrays([OutdoorItems, CityItems, ExpObj, Foods, Lodging]),
@@ -251,22 +250,17 @@ export const initialState: AppState = {
       name: "Historic Downtown Walking Tour",
       icon: walk,
       color: "#0000ff",
-      categories: [
-       
-        AttractionCategories.Experiences.subcategories.DowntownTour,
-      ],
+      categories: [AttractionCategories.Experiences.subcategories.DowntownTour],
     },
     [MapAttractionCategories.Railroad]: {
       name: "Railroad History Walking Tour",
       icon: train,
       color: "#555555",
-      categories: [
-        AttractionCategories.Experiences.subcategories.RailroadTour,
-      ],
+      categories: [AttractionCategories.Experiences.subcategories.RailroadTour],
     },
   },
   user: {
-    selectedAttractionFilters: Object.values(AllCategories),
+    selectedAttractionFilters: [],
     selectedSubscriptions: [],
     selectedHomeModules: [],
     hasSeenTutorial: false,
