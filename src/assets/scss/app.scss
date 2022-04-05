@@ -172,6 +172,8 @@ ion-chip {
     width: 100vw;
 
     .mapboxgl-ctrl-bottom-right {
+      bottom: constant(safe-area-inset-top);
+      bottom: env(safe-area-inset-top);
       margin-bottom: 20px;
     }
 
