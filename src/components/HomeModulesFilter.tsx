@@ -1,8 +1,9 @@
-import { ReactElement, useEffect } from "react";
+import { ReactElement } from "react";
 import { getMode, ItemReorderEventDetail } from "@ionic/core";
 import {
   IonButton,
   IonButtons,
+  IonCheckbox,
   IonContent,
   IonFooter,
   IonHeader,
@@ -10,9 +11,6 @@ import {
   IonItem,
   IonItemDivider,
   IonItemGroup,
-  IonItemOption,
-  IonItemOptions,
-  IonItemSliding,
   IonLabel,
   IonList,
   IonReorder,
@@ -23,7 +21,7 @@ import {
 import { updateSelectedHomeModules } from "../data/context/actions";
 import { connect } from "../data/context/connect";
 import { AllModules } from "../models/defaultModels";
-import { addCircleOutline } from "ionicons/icons";
+import { repeatOutline } from "ionicons/icons";
 
 interface OwnProps {
   homeModules: { [key in AllModules]: { label: string; src: ReactElement } };
@@ -45,10 +43,6 @@ const HomeModulesFilter: React.FC<HomeModulesFilterProps> = ({
   updateSelectedHomeModules,
 }) => {
   const ios = getMode() === "ios";
-
-  useEffect(() => {
-    console.log(selectedHomeModules);
-  }, [selectedHomeModules]);
 
   const handleSelectAll = () => {
     updateSelectedHomeModules([
@@ -78,6 +72,7 @@ const HomeModulesFilter: React.FC<HomeModulesFilterProps> = ({
     } else {
       selectedHomeModules.push(index);
     }
+    console.log(selectedHomeModules);
     updateSelectedHomeModules([...selectedHomeModules]);
   };
 
@@ -105,22 +100,13 @@ const HomeModulesFilter: React.FC<HomeModulesFilterProps> = ({
           <IonItemGroup>
             <IonReorderGroup disabled={false} onIonItemReorder={doReorder}>
               {selectedHomeModules.map((moduleId: AllModules, index) => (
-                <IonItemSliding key={`subbed_mod-${index}`}>
-                  <IonItem>
-                    <IonLabel>{homeModules[moduleId].label}</IonLabel>
-                    <IonReorder />
-                  </IonItem>
-                  <IonItemOptions side="end">
-                    <IonItemOption
-                      color="danger"
-                      onClick={() => {
-                        toggleModule(moduleId);
-                      }}
-                    >
-                      Remove
-                    </IonItemOption>
-                  </IonItemOptions>
-                </IonItemSliding>
+                <IonItem key={`subbed_mod-${index}`}>
+                  <IonLabel>{homeModules[moduleId].label}</IonLabel>
+                  <IonReorder slot="start">
+                    <IonIcon icon={repeatOutline}></IonIcon>
+                  </IonReorder>
+                  <IonCheckbox slot="end" onClick={() => toggleModule(moduleId)} checked={true} color="primary" />
+                </IonItem>
               ))}
             </IonReorderGroup>
           </IonItemGroup>
@@ -133,7 +119,7 @@ const HomeModulesFilter: React.FC<HomeModulesFilterProps> = ({
                 !selectedHomeModules.includes(index) && (
                   <IonItem key={`unsubbed_mod-${index}`} onClick={() => toggleModule(index)}>
                     <IonLabel>{module.label}</IonLabel>
-                    <IonIcon icon={addCircleOutline} />
+                    <IonCheckbox checked={false} color="primary" />
                   </IonItem>
                 )
             )}
