@@ -164,7 +164,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
 
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
-  const [formattedDate, setFormattedDate] = useState(pad(Number(preformat[2]))+"-"+pad(Number(preformat[0]))+"-"+pad(Number(preformat[1])));
+  const [formattedDate, setFormattedDate] = useState(preformat[2]+"-"+pad(Number(preformat[0]))+"-"+pad(Number(preformat[1])));
 
 
 

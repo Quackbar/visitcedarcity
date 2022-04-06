@@ -6,6 +6,7 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonToggle,
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
@@ -47,7 +48,7 @@ import "./assets/scss/app.scss";
 import { getBrianHeadWeather, getCedarWeather, getParoWeather } from "./assets/firebase/Firebase";
 import { getBHSched, getCBAlerts, getCCSched, getSUMASched } from "./assets/data/ScheduleUpdater";
 import { Timestamp } from "@firebase/firestore";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "./data/context/connect";
 
 setupIonicReact();
@@ -129,6 +130,27 @@ const VisitCedarCity: React.FC<IonicAppProps> = ({ isLoading, loadUserData }) =>
     // eslint-disable-next-line
   }, []);
 
+
+ const [darkMode, setDarkMode] = useState(true);
+
+const truesunset = getSunset(37.68912, -113.047006);
+const truesunrise = getSunrise(37.68912, -113.047006);
+
+const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()];
+const sunset = [truesunset.getHours(), truesunset.getMinutes()];
+
+var sunrise_m = sunrise[0] * 60 + sunrise[1];
+var sunset_m = sunset[0] * 60 + sunset[1];
+
+var now = new Date();
+var now_m = now.getHours() * 60 + now.getMinutes();
+
+// if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
+//   setDarkMode(true);
+// } else {
+//   setDarkMode(false);
+// }
+
   return isLoading ? (
     <div></div>
   ) : (
@@ -153,6 +175,10 @@ const VisitCedarCity: React.FC<IonicAppProps> = ({ isLoading, loadUserData }) =>
             <IonTabButton tab="discover" href="/discover">
               <IonIcon icon={searchOutline} />
               <IonLabel>Discover</IonLabel>
+            </IonTabButton>
+            <IonTabButton>
+                <IonLabel>{darkMode ? "Dark" : "Light"} Mode</IonLabel>
+                <IonToggle color="dark" onIonChange={()=> {setDarkMode(!darkMode)}} checked={darkMode}/>
             </IonTabButton>
             <IonTabButton tab="map" href="/map">
               <IonIcon icon={mapOutline} />
