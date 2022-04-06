@@ -96,25 +96,23 @@ getCBAlerts();
 getCCSched();
 
 
-var darkMode = true;
+// const truesunset = getSunset(37.68912, -113.047006);
+// const truesunrise = getSunrise(37.68912, -113.047006);
 
-const truesunset = getSunset(37.68912, -113.047006);
-const truesunrise = getSunrise(37.68912, -113.047006);
+// const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()];
+// const sunset = [truesunset.getHours(), truesunset.getMinutes()];
 
-const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()];
-const sunset = [truesunset.getHours(), truesunset.getMinutes()];
+// var sunrise_m = sunrise[0] * 60 + sunrise[1];
+// var sunset_m = sunset[0] * 60 + sunset[1];
 
-var sunrise_m = sunrise[0] * 60 + sunrise[1];
-var sunset_m = sunset[0] * 60 + sunset[1];
+// var now = new Date();
+// var now_m = now.getHours() * 60 + now.getMinutes();
 
-var now = new Date();
-var now_m = now.getHours() * 60 + now.getMinutes();
-
-if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
-  darkMode = true;
-} else {
-  darkMode = false;
-}
+// if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
+//   darkMode = true;
+// } else {
+//   darkMode = false;
+// }
 interface StateProps {
   isLoading: boolean;
 }
@@ -131,19 +129,32 @@ const VisitCedarCity: React.FC<IonicAppProps> = ({ isLoading, loadUserData }) =>
   }, []);
 
 
- const [darkMode, setDarkMode] = useState(true);
+let result = JSON.parse(localStorage.getItem('test')||"[]")
 
-const truesunset = getSunset(37.68912, -113.047006);
-const truesunrise = getSunrise(37.68912, -113.047006);
+// console.log("result",result.myBool)
 
-const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()];
-const sunset = [truesunset.getHours(), truesunset.getMinutes()];
+const [darkMode, setDarkMode] = useState(result.myBool ?? true);
 
-var sunrise_m = sunrise[0] * 60 + sunrise[1];
-var sunset_m = sunset[0] * 60 + sunset[1];
 
-var now = new Date();
-var now_m = now.getHours() * 60 + now.getMinutes();
+let storeMe = {
+  myBool: darkMode,
+}
+
+localStorage.setItem('test', JSON.stringify(storeMe))
+
+   
+
+// const truesunset = getSunset(37.68912, -113.047006);
+// const truesunrise = getSunrise(37.68912, -113.047006);
+
+// const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()];
+// const sunset = [truesunset.getHours(), truesunset.getMinutes()];
+
+// var sunrise_m = sunrise[0] * 60 + sunrise[1];
+// var sunset_m = sunset[0] * 60 + sunset[1];
+
+// var now = new Date();
+// var now_m = now.getHours() * 60 + now.getMinutes();
 
 // if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
 //   setDarkMode(true);
@@ -154,7 +165,7 @@ var now_m = now.getHours() * 60 + now.getMinutes();
   return isLoading ? (
     <div></div>
   ) : (
-    <IonApp className={`${darkMode ? "" : "dark-theme"}`}>
+    <IonApp className={`${darkMode ? "dark-theme" : ""}`}>
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
@@ -177,8 +188,9 @@ var now_m = now.getHours() * 60 + now.getMinutes();
               <IonLabel>Discover</IonLabel>
             </IonTabButton>
             <IonTabButton>
-                <IonLabel>{darkMode ? "Dark" : "Light"} Mode</IonLabel>
-                <IonToggle color="dark" onIonChange={()=> {setDarkMode(!darkMode)}} checked={darkMode}/>
+                <IonToggle color="dark" onIonChange={()=> {setDarkMode(!darkMode)}}/>
+                <IonLabel>{darkMode ? "Dark" : "Light"}</IonLabel>
+
             </IonTabButton>
             <IonTabButton tab="map" href="/map">
               <IonIcon icon={mapOutline} />

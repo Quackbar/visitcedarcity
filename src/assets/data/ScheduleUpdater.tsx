@@ -17,7 +17,7 @@ export async function getCCSched() : Promise<string> {
             data.forEach((element: any) => {
                 
                 if(!(new Date(element.acf.start_date).getTime()<date.getTime())){
-                    console.log(element)
+                    // console.log(element)
                     id++;
                     returnable = returnable + "{"
                     returnable = returnable + "\"date\": \""+new Date(element.acf.start_date).toISOString().slice(0, 10)+"\","
