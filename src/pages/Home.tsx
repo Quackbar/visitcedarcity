@@ -153,12 +153,20 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   let things: TodaysType[] = [];
   things = [];
   const today = new Date();
+  let preformat = today.toLocaleDateString('en-US', { timeZone: 'America/Denver' }).split("/")
+
+  function pad(d: number) {
+    return (d < 10) ? '0' + d.toString() : d.toString();
+  }
+
 
   const context = useContext(AppContext);
 
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
-  const [formattedDate, setFormattedDate] = useState(new Date().toISOString().slice(0, 10));
+  const [formattedDate, setFormattedDate] = useState(pad(Number(preformat[2]))+"-"+pad(Number(preformat[0]))+"-"+pad(Number(preformat[1])));
+
+
 
   let CBAlerts: { schedule: subtype[] } = { schedule: [] };
 
