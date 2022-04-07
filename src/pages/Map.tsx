@@ -1,14 +1,11 @@
-import React, { useRef, useEffect, useState, Fragment } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
-  IonButton,
-  IonButtons,
   IonCheckbox,
   IonContent,
   IonFab,
   IonFabButton,
   IonFabList,
-  IonFooter,
   IonHeader,
   IonIcon,
   IonItem,
@@ -23,29 +20,19 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import { Geolocation, Geoposition } from "@ionic-native/geolocation";
 // @ts-ignore
 // import mapboxgl, { Map as MapDataType } from "!mapbox-gl";
-import {
-  layersOutline,
-  carSportOutline,
-  pinOutline,
-  thunderstormOutline,
-  mapOutline,
-  homeOutline,
-  trailSignOutline,
-  settingsOutline,
-} from "ionicons/icons";
-// @ts-ignore
+import { layersOutline, pinOutline, homeOutline, settingsOutline } from "ionicons/icons";
 
+// @ts-ignore
 import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+
 import { Toast } from "@capacitor/toast";
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import { AllCategories, AttractionItem } from "../models/defaultModels";
 import { connect } from "../data/context/connect";
-import closestIndexTo from "date-fns/closestIndexTo/index.js";
 import { updateSearchText } from "../data/context/actions";
 import { getMode } from "@ionic/core";
 
@@ -71,8 +58,9 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
   // map
   const [map, setMap] = useState<MapDataType>();
   // map layers
-  const [satelliteLayerVisible, setSatelliteLayerVisible] = useState(false);
+  const [streetLayerVisible, setStreetLayerVisible] = useState(true);
   const [outdoorLayerVisible, setOutdoorLayerVisible] = useState(false);
+  const [satelliteLayerVisible, setSatelliteLayerVisible] = useState(false);
   const [radarLayerVisible, setRadarLayerVisible] = useState(false);
   const [mapIsLoaded, setMapIsLoaded] = useState<boolean>(false);
   const [markers, setMarkers] = useState<{ [id: string]: mapboxgl.Marker[] }>({});
@@ -228,7 +216,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
     // remove requested marker
     removeMarkers("requested");
 
-    if (markers[key] && markers[key].length>0) {
+    if (markers[key] && markers[key].length > 0) {
       removeMarkers(key);
     } else {
       // create markers
@@ -247,59 +235,169 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
     }
   };
 
-  const setOutdoorMode = () => {
-    if (outdoorLayerVisible) window.location.reload();
-    map.setStyle("mapbox://styles/mapbox/outdoors-v11");
-    setOutdoorLayerVisible(!outdoorLayerVisible);
-    if (radarLayerVisible) {
-      map.removeLayer("radar");
-      map.removeSource("twcRadar");
-    }
-    map.removeLayer("sky");
-    map.setTerrain();
-    map.removeSource("mapbox-dem");
+  const toggleLayer = (layer: string) => {
+    const layerPromises: Promise<void>[] = [];
+    switch (layer) {
+      case "street":
+        // street layer is not visible
+        if (!streetLayerVisible) {
+          // remove satellite layer
+          if (satelliteLayerVisible) {
+            removeSatelliteLayer();
+          }
 
-    try {
-      map.removeLayer("satellite");
-      map.removeSource("satellite");
-    } catch (error) {
-      console.log("no satelllite");
+          if (outdoorLayerVisible) {
+            layerPromises.push(removeOutdoorLayer());
+          }
+
+          Promise.all(layerPromises).then(() => {
+            addStreetLayer();
+          });
+        }
+        break;
+      case "satellite":
+        // satellite layer is not visible
+        if (!satelliteLayerVisible) {
+          if (streetLayerVisible) {
+            removeStreetLayer();
+          }
+
+          if (outdoorLayerVisible) {
+            layerPromises.push(removeOutdoorLayer());
+          }
+
+          Promise.all(layerPromises).then(() => {
+            addSatelliteLayer();
+          });
+        }
+        break;
+      case "outdoor":
+        if (!outdoorLayerVisible) {
+          if (streetLayerVisible) {
+            removeStreetLayer();
+          }
+
+          if (satelliteLayerVisible) {
+            removeSatelliteLayer();
+          }
+
+          if (radarLayerVisible) {
+            removeRadarLayer();
+          }
+
+          addOutdoorLayer();
+        }
+        break;
+      case "radar":
+        // radar is the only layer that truly toggles
+        if (radarLayerVisible) {
+          removeRadarLayer();
+        } else {
+          if (outdoorLayerVisible) {
+            layerPromises.push(removeOutdoorLayer());
+          }
+
+          Promise.all(layerPromises).then(() => {
+            addRadarLayer();
+          });
+        }
+        break;
+      default:
+        console.error(`Unsupported layer type toggle: ${layer}`);
+        break;
     }
   };
 
-  const setSatelliteStyle = () => {
-    map.addLayer({
-      id: "satellite",
-      source: { type: "raster", url: "mapbox://mapbox.satellite", tileSize: 256 },
-      type: "raster",
-    });
+  const addStreetLayer = () => {
+    setStreetLayerVisible(true);
+  };
+
+  const removeStreetLayer = () => {
+    setStreetLayerVisible(false);
+  };
+
+  const addSatelliteLayer = () => {
+    if (!map.getLayer("satellite")) {
+      map.addLayer({
+        id: "satellite",
+        source: { type: "raster", url: "mapbox://mapbox.satellite", tileSize: 256 },
+        type: "raster",
+      });
+    }
+
     map.moveLayer("satellite", "pitch-outline");
     if (radarLayerVisible) map.moveLayer("satellite", "radar");
-    showToast("Swipe up with two fingers to see in 3D");
+
     setSatelliteLayerVisible(true);
   };
 
-  const setStreetStyle = () => {
-    try {
+  const removeSatelliteLayer = () => {
+    if (map.getLayer("satellite")) {
       map.removeLayer("satellite");
+    }
+
+    if (map.getSource("satellite")) {
       map.removeSource("satellite");
-      setSatelliteLayerVisible(false);
-    } catch (error) {}
+    }
+
+    setSatelliteLayerVisible(false);
+  };
+
+  const addOutdoorLayer = (): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      map.setStyle("mapbox://styles/mapbox/outdoors-v11");
+
+      map.once("styledata", function () {
+        setOutdoorLayerVisible(true);
+        resolve();
+      });
+    });
+  };
+
+  const removeOutdoorLayer = (): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      map.setStyle("mapbox://styles/mapbox/streets-v11");
+
+      map.once("styledata", function () {
+        if (!map.getSource("mapbox-dem")) {
+          map.addSource("mapbox-dem", {
+            type: "raster-dem",
+            url: "mapbox://mapbox.mapbox-terrain-dem-v1",
+            tileSize: 512,
+            maxZoom: 16,
+          });
+        }
+
+        map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+
+        if (!map.getLayer("sky")) {
+          map.addLayer({
+            id: "sky",
+            type: "sky",
+            paint: {
+              "sky-type": "atmosphere",
+              "sky-atmosphere-sun": [0.0, 80.0],
+              "sky-atmosphere-sun-intensity": 15,
+            },
+          });
+        }
+
+        addStreetLayer();
+        setOutdoorLayerVisible(false);
+        resolve();
+      });
+    });
   };
 
   const addRadarLayer = () => {
-    if (radarLayerVisible) {
-      map.removeLayer("radar");
-      map.removeSource("twcRadar");
-      setRadarLayerVisible(false);
-    } else {
-      timeSlices
-        .then((res) => res.json())
-        .then((res) => {
-          const radarTimeSlices = res.seriesInfo.radar.series;
-          const latestTimeSlice = radarTimeSlices[0].ts;
+    timeSlices
+      .then((res) => res.json())
+      .then((res) => {
+        const radarTimeSlices = res.seriesInfo.radar.series;
+        const latestTimeSlice = radarTimeSlices[0].ts;
 
-          // insert the latest time for radar into the source data URL
+        // insert the latest time for radar into the source data URL
+        if (!map.getSource("twcRadar")) {
           map.addSource("twcRadar", {
             type: "raster",
             tiles: [
@@ -310,8 +408,10 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
             ],
             tileSize: 256,
           });
+        }
 
-          // place the layer before the "aeroway-line" layer
+        // place the layer before the "aeroway-line" layer
+        if (!map.getLayer("radar")) {
           map.addLayer({
             id: "radar",
             type: "raster",
@@ -320,9 +420,22 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
               "raster-opacity": 0.5,
             },
           });
-          setRadarLayerVisible(true);
-        });
+        }
+
+        setRadarLayerVisible(true);
+      });
+  };
+
+  const removeRadarLayer = () => {
+    if (map.getLayer("radar")) {
+      map.removeLayer("radar");
     }
+
+    if (map.getSource("twcRadar")) {
+      map.removeSource("twcRadar");
+    }
+
+    setRadarLayerVisible(false);
   };
 
   return (
@@ -333,12 +446,12 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
         </IonFabButton>
         <IonFabList side="top">
           <IonFabButton onClick={() => setShowPinsModal(true)}>
-            <IonIcon icon={pinOutline}  />
+            <IonIcon icon={pinOutline} />
           </IonFabButton>
-          <IonFabButton onClick={() => setShowLayersModal(true)} >
+          <IonFabButton onClick={() => setShowLayersModal(true)}>
             <IonIcon icon={layersOutline} />
           </IonFabButton>
-          <IonFabButton onClick={() => centerMap()} >
+          <IonFabButton onClick={() => centerMap()}>
             <IonIcon icon={homeOutline} />
           </IonFabButton>
         </IonFabList>
@@ -402,11 +515,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
               {Object.keys(mapAttractions).map((key, index) => (
                 <IonItem key={index} onClick={() => toggleMarkers(key)}>
                   <IonLabel>{mapAttractions[key].name}</IonLabel>
-                  <IonCheckbox
-                  
-                    checked={markers[key] ? markers[key].length > 0 : false}
-                    color="primary"
-                  />
+                  <IonCheckbox checked={markers[key] ? markers[key].length > 0 : false} color="primary" />
                 </IonItem>
               ))}
             </IonItemGroup>
@@ -434,7 +543,12 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
               </IonItemDivider>
               <IonItem>
                 <IonLabel>Weather</IonLabel>
-                <IonCheckbox onClick={() => addRadarLayer()} checked={radarLayerVisible} color="primary" />
+                <IonCheckbox
+                  onClick={() => toggleLayer("radar")}
+                  checked={radarLayerVisible}
+                  value={radarLayerVisible}
+                  color="primary"
+                />
               </IonItem>
             </IonItemGroup>
             <IonItemGroup>
@@ -443,15 +557,33 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
               </IonItemDivider>
               <IonItem>
                 <IonLabel>Satellite</IonLabel>
-                <IonCheckbox onClick={() => setSatelliteStyle()} checked={satelliteLayerVisible} color="primary" />
+                <IonCheckbox
+                  class="prevent-onclick-when-active"
+                  onClick={() => toggleLayer("satellite")}
+                  checked={satelliteLayerVisible}
+                  value={satelliteLayerVisible}
+                  color="primary"
+                />
               </IonItem>
               <IonItem>
                 <IonLabel>Streets</IonLabel>
-                <IonCheckbox onClick={() => setStreetStyle()} checked={!satelliteLayerVisible} color="primary" />
+                <IonCheckbox
+                  class="prevent-onclick-when-active"
+                  onClick={() => toggleLayer("street")}
+                  checked={streetLayerVisible}
+                  value={streetLayerVisible}
+                  color="primary"
+                />
               </IonItem>
               <IonItem>
                 <IonLabel>Outdoor</IonLabel>
-                <IonCheckbox onClick={() => setOutdoorMode()} checked={outdoorLayerVisible} color="primary" />
+                <IonCheckbox
+                  class="prevent-onclick-when-active"
+                  onClick={() => toggleLayer("outdoor")}
+                  checked={outdoorLayerVisible}
+                  value={outdoorLayerVisible}
+                  color="primary"
+                />
               </IonItem>
             </IonItemGroup>
           </IonList>
