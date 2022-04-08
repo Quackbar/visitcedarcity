@@ -140,6 +140,12 @@ ion-chip {
   }
 }
 
+ion-checkbox.prevent-onclick-when-active {
+  &.checkbox-checked {
+  pointer-events: none;
+  }
+}
+
 #map-page {
   &.isLoading * {
     visibility: hidden;
@@ -152,7 +158,6 @@ ion-chip {
     left: 0;
     right: 0;
     height: fit-content;
-
 
     #results-wrapper {
       margin: 0 12px;
@@ -167,8 +172,8 @@ ion-chip {
         padding-bottom: 5px;
         padding-top: 5px;
       }
-      .list-md{
-        padding-top: 0px; 
+      .list-md {
+        padding-top: 0px;
         padding-bottom: 0px;
       }
 
