@@ -164,6 +164,14 @@ export const initialState: AppState = {
     },
   },
   mapAttractions: {
+    [MapAttractionCategories.RecArea]: {
+      name: "Recreation Areas",
+      icon: trailSign,
+      color: "#1c5717",
+      categories: [
+        AttractionCategories.Experiences.subcategories.RecArea,
+      ],
+    },
     [MapAttractionCategories.Food]: {
       name: "Food",
       icon: fastFood,

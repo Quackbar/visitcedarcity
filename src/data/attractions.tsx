@@ -405,6 +405,7 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
+      AttractionCategories.Experiences.subcategories.RecArea,
     ],    
     coordinates: {
       lat: 37.754098199967025, 
@@ -553,6 +554,7 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Drives,
       AttractionCategories.Experiences.subcategories.Trails,
       AttractionCategories.Experiences.subcategories.DarkSkies,
+      AttractionCategories.Experiences.subcategories.RecArea
     ],    
 
   },
@@ -568,12 +570,131 @@ export const OutdoorItems = [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.FamilyFun,
       AttractionCategories.Experiences.subcategories.Fishing,
+      AttractionCategories.Experiences.subcategories.RecArea,
     ],    
     coordinates: {
       lat: 37.71272567952687, 
       lng: -112.63915736490165,
     },
   },
+
+
+  {
+    id: 3130,
+    title: "Cascade Falls / Navajo Lake",
+    subtitle: "Southern Utah Recreation Area",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
+    description:
+      "The Navajo Lake recreation area is located atop Cedar Mountain, approximately 25 miles east of Cedar City. This pristine lake was originally known to the Paiute Indians as “Pa-Cu-Ay,” meaning “Cloud Lake.” Early pioneer settlers gave it its present name after a confrontation took place near the lake between the settlers and some traveling members of the Navajo tribe.",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/06/Cascade-Falls-Drive-Away-Vacation.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.FamilyFun,
+      AttractionCategories.Experiences.subcategories.Fishing,
+      AttractionCategories.Experiences.subcategories.RecArea,
+    ],    
+    coordinates: {
+      lat: 37.522635567303425, 
+      lng: -112.77770046777863,
+    },
+  },
+  {
+    id: 3230,
+    title: "Quail Creek Lake",
+    subtitle: "Southern Utah Recreation Area",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
+    description:
+      "With over 600 surface acres and eight miles of shoreline, Quail Creek boasts some of the warmest waters in the state during the summer. The vivid blue waters in contrast to the red rock landscapes of Southern Utah make Quail Lake a popular destination for fishing, water skiing, boating, camping and picnicking. Quail Creek reservoir was completed in 1985 to provide irrigation and culinary water to the St. George area. Most of the water in the reservoir does not come from Quail Creek, but is diverted from the Virgin River and transported through a buried pipeline.",
+    image: "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.FamilyFun,
+      AttractionCategories.Experiences.subcategories.Fishing,
+      AttractionCategories.Experiences.subcategories.RecArea,
+    ],    
+    coordinates: {
+      lat: 37.188367774352805, 
+      lng: -113.3875929282528,
+    },
+  },
+  {
+    id: 3330,
+    title: "Red Canyon",
+    subtitle: "Southern Utah Recreation Area",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
+    description:
+      "Vermillion-colored rock formations and stands of ponderosa pine greet you as you enter Red Canyon. While many visitors think they are already in Bryce Canyon National Park, Red Canyon is actually a part of the Dixie National Forest, which stretches from the Nevada border to Capitol Reef National Park.",
+    image: "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.FamilyFun,
+      AttractionCategories.Experiences.subcategories.Fishing,
+      AttractionCategories.Experiences.subcategories.RecArea,
+    ],    
+    coordinates: {
+      lat: 37.74567571034148, 
+      lng: -112.33793820557662,
+    },
+  },
+  {
+    id: 3430,
+    title: "Sand Hollow",
+    subtitle: "Southern Utah Recreation Area",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
+    description:
+      "The sprawling 20,000-acre park, which rests mostly on Bureau of Land Management (BLM) land, rivals Utah’s two largest state parks — Wasatch Mountain and Antelope Island. Sand Hollow is already one of the most visited destinations in the Utah State Park system, with recreation opportunities for nearly every user from boaters to bikers, and OHV riders to equestrians.      ",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/06/Slide-4-Recreation-Areas.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.FamilyFun,
+      AttractionCategories.Experiences.subcategories.Fishing,
+      AttractionCategories.Experiences.subcategories.RecArea,
+    ],    
+    coordinates: {
+      lat: 37.120356202413134, 
+      lng: -113.38234462122956,
+    },
+  },
+  {
+    id: 3530,
+    title: "Three Peaks Recreation Area",
+    subtitle: "Southern Utah Recreation Area",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
+    description:
+      "The rolling hills and volcanic rock formations of Three Peaks Recreation Area provide a fantastic location for outdoor recreation. Kids love to run, jump and crawl over the hunchbacked granite outcroppings expanding across the landscape. There are over 27 miles of mountain bike trails and 42 miles of OHV routes zigzag through Three Peaks’ 6,500 acres.",
+    image: "https://visitcedarcity.com/wp-content/uploads/2019/06/Dan-Ransom-Photography-11-of-116-blue-sky-1.jpg",
+    categories: [
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.FamilyFun,
+      AttractionCategories.Experiences.subcategories.Fishing,
+      AttractionCategories.Experiences.subcategories.RecArea,
+    ],    
+    coordinates: {
+      lat: 37.76657065157112, 
+      lng: -113.16814287017313,
+    },
+  },
+  {
+    id: 3630,
+    title: "Snow Canyon",
+    subtitle: "Southern Utah Recreation Area",
+    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
+    description:
+      "Snow Canyon State Park is a 7,400-acre scenic park tucked amid lava flows and soaring sandstone cliffs in a strikingly colorful and fragile desert environment. Visitors marvel at majestic views and the subtle interplay of light, shadow, and color dancing across canyon walls.",
+    image: "https://lh5.googleusercontent.com/p/AF1QipP1q8Hm2M9vekbvnMcph4YPE6aYkP79X8LSS0AE=w408-h306-k-no",
+    categories: [
+      AttractionCategories.Experiences.subcategories.Outdoor,
+      AttractionCategories.Experiences.subcategories.FamilyFun,
+      AttractionCategories.Experiences.subcategories.Fishing,
+      AttractionCategories.Experiences.subcategories.RecArea,
+    ],    
+    coordinates: {
+      lat: 37.21923179959603, 
+      lng: -113.63785134959141,
+    },
+  },
+
+
   {
     id: 31,
     title: "Point Supreme Campground",
