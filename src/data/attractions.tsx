@@ -20,12 +20,18 @@ ExpObj.forEach((el) => {
 export const Foods = JSON.parse(Fooder?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 
 Foods.forEach((el) => {
+  if(el.title.includes("Coffee")){
+    el.categories.push(AttractionCategories.FoodAndDrink.subcategories.Coffee);
+  }
   el.categories.push(AttractionCategories.FoodAndDrink.subcategories.LocalEatery);
 });
 
 export const Lodging = JSON.parse(Lodges?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 
 Lodging.forEach((el) => {
+  if(el.title.includes("RV")){
+    el.categories.push(AttractionCategories.Lodging.subcategories.RVSite);
+  }
   el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel);
 });
 
