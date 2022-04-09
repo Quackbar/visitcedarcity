@@ -35,6 +35,9 @@ const paroDoc = doc(f_db, "ParowanWeatherDayData", "current");
 const cedarDoc = doc(f_db, "CedarCityWeatherDayData", "current");
 const mountainDoc = doc(f_db, "mountainData", "current");
 const RoadConDoc = doc(f_db, "RoadConditions", "current");
+const filterDoc = doc(f_db, "Filters", "current")
+const biasDoc = doc(f_db, "Biases", "current")
+
 
 const mountainRef = collection(f_db, "mountainData");
 
@@ -178,7 +181,32 @@ export async function getExperiences() : Promise<string> {
   });
 }getExperiences()
 
-
+export async function getModifiers() : Promise<string> {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(filterDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        // console.log(docSnap.data()!.current )
+        let returnable = docSnap.data()!.current || "[]"
+        localStorage.setItem('Filters', returnable)
+        resolve(docSnap.data()!.current+"]" as string);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+    await getDoc(biasDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        // console.log(docSnap.data()!.current )
+        let returnable = docSnap.data()!.current || "[]"
+        localStorage.setItem('Biases', returnable)
+        resolve(docSnap.data()!.current+"]" as string);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}getModifiers()
 
 export async function getFoods() : Promise<string> {
   return new Promise(async (resolve, reject) => {
@@ -238,3 +266,4 @@ export async function getCedarWeather() : Promise<MyReturnTypeItem>  {
       });
   });
 }
+

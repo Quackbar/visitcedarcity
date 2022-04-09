@@ -148,6 +148,11 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
       const requestedMarker = attractionItems.find((item) => item.id === numberID);
       if (requestedMarker) {
         addMarkers("requested", [requestedMarker]);
+        map.flyTo({
+          center: [[requestedMarker][0].coordinates?.lng, [requestedMarker][0].coordinates?.lat],
+          essential: true,
+          zoom: 15, // this animation is considered essential with respect to prefers-reduced-motion
+        });
       }
     }
 
@@ -484,7 +489,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
                     })
                   ) : (
                     <IonItem>
-                      <IonLabel>No Results</IonLabel>
+                      <IonLabel>No Results -<br/> But our database can be incomplete. <br/>Please try other sources.</IonLabel>
                     </IonItem>
                   )
                 ) : (

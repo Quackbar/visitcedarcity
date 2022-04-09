@@ -11,13 +11,28 @@ const Experiences = localStorage.getItem("Experiences") ?? "[]";
 const Fooder = localStorage.getItem("Foods") ?? "[]";
 const Lodges = localStorage.getItem("Lodging") ?? "[]";
 
-export const ExpObj = JSON.parse(Experiences?.slice(0, -1) + "]" || "[]") as AttractionItem[];
+
+export let ExpObj = [] as AttractionItem[];
+try {
+  ExpObj = JSON.parse(Experiences?.slice(0, -1) + "]" || "[]") as AttractionItem[];
+} catch (error) {
+  console.log(error)
+  console.log(Experiences)
+}
+
 
 ExpObj.forEach((el) => {
   el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity);
 });
 
-export const Foods = JSON.parse(Fooder?.slice(0, -1) + "]" || "[]") as AttractionItem[];
+export let Foods = [] as AttractionItem[];
+
+try {
+  Foods = JSON.parse(Fooder?.slice(0, -1) + "]" || "[]") as AttractionItem[];
+} catch (error) {
+  console.log(error)
+  console.log(Fooder)
+}
 
 Foods.forEach((el) => {
   if(el.title.includes("Coffee")){
@@ -26,7 +41,14 @@ Foods.forEach((el) => {
   el.categories.push(AttractionCategories.FoodAndDrink.subcategories.LocalEatery);
 });
 
-export const Lodging = JSON.parse(Lodges?.slice(0, -1) + "]" || "[]") as AttractionItem[];
+export let Lodging = [] as AttractionItem[];
+
+try {
+  Lodging = JSON.parse(Lodges?.slice(0, -1) + "]" || "[]") as AttractionItem[];
+} catch (error) {
+  console.log(error)
+  console.log(Lodges)
+}
 
 Lodging.forEach((el) => {
   if(el.title.includes("RV")){
@@ -845,7 +867,7 @@ export const OutdoorItems = [
 
 export const CityItems: AttractionItem[] = [
   {
-    id: 38,
+    id: 837456834538,
     title: "Pastry Pub",
     subtitle: "Cedar City Dining",
     url: "https://pastrypubcedarcity.com/",
@@ -865,7 +887,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 39,
+    id: 837456834539,
     title: "I/G Winery",
     subtitle: "Cedar City Winery",
     url: "https://igwinery.com/",
@@ -880,7 +902,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 40,
+    id: 837456834540,
     title: "Centro Woodfired Pizzaria",
     subtitle: "Cedar City Dining",
     url: "https://www.centropizzeria.com/",
@@ -899,7 +921,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 41,
+    id: 837456834541,
     title: "Policy Kings Brewery",
     subtitle: "Cedar City Brewery",
     url: "https://policykingsbrewery.com/",
@@ -914,7 +936,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 42,
+    id: 837456834542,
     title: "Calvario's Family Restaurant",
     subtitle: "Parowan Dining",
     url: "https://calvarios-family-restaurant.business.site/",
@@ -932,7 +954,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 43,
+    id: 837456834543,
     title: "Bristlecone Coffee | Yoga | Connect",
     subtitle: "Cedar City Coffee House",
     url: "https://calvarios-family-restaurant.business.site/",
@@ -951,7 +973,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 44,
+    id: 837456834544,
     title: "Sook Jai Thai Cuisine",
     subtitle: "Brian Head Dining",
     url: "https://www.sookjaibrianhead.com/",
@@ -967,7 +989,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 45,
+    id: 837456834545,
     title: "Best Western Premier Brian Head",
     subtitle: "Brian Head Lodging",
     url: "https://bwpbrianheadhotel.com/",
@@ -987,7 +1009,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 46,
+    id: 837456834546,
     title: "Big Yellow Inn (B&B)",
     subtitle: "Cedar City Lodging",
     url: "http://bigyellowinn.com/",
@@ -1003,7 +1025,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 47,
+    id: 837456834547,
     title: "Abbey Inn and Suites",
     subtitle: "Cedar City Lodging",
     url: "https://abbeyinncedar.com/",
@@ -1019,7 +1041,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 48,
+    id: 837456834548,
     title: "Southern Utah Museum of Art",
     subtitle: "Cedar City Art",
     url: "https://www.suu.edu/suma/",
@@ -1037,7 +1059,7 @@ export const CityItems: AttractionItem[] = [
   },
 
   {
-    id: 498,
+    id: 8374568345498,
     title: "Cedar City Walks",
     subtitle: "Cedar City Walks",
     url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
@@ -1055,7 +1077,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 49,
+    id: 837456834549,
     title: "Dry Lakes Ranch Beef",
     subtitle: "Parowan Beef and Butcher Shop",
     url: "https://www.drylakesranchbeef.com/",
@@ -1070,7 +1092,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 10013,
+    id: 837456834510013,
     title: "Megaplex Theatre Cedar City",
     subtitle: "Cedar City Movie Theatre",
     url: "https://www.megaplextheatres.com/cedarcity",
@@ -1084,7 +1106,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 50,
+    id: 837456834550,
     title: "Grind Coffee House",
     subtitle: "Cedar City Coffee House",
     url: "https://grindcoffeehouse.business.site/",
@@ -1102,7 +1124,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 51,
+    id: 837456834551,
     title: "Utah Shakespeare Festival",
     subtitle: "Cedar City Theatre Festival",
     url: "https://www.bard.org/",
@@ -1119,7 +1141,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 52,
+    id: 837456834552,
     title: "Main Street Books Cedar City",
     subtitle: "Cedar City Book Shop",
     url: "https://www.facebook.com/mainstreetbookscedarcity/",
@@ -1163,7 +1185,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 53,
+    id: 837456834553,
     title: "The Navajo Crafting Co.",
     subtitle: "Cedar City Shop",
     url: "https://www.navajocraftingco.com/",
@@ -1177,7 +1199,7 @@ export const CityItems: AttractionItem[] = [
     },
   },
   {
-    id: 54,
+    id: 837456834554,
     title: "Artisans Gallery",
     subtitle: "Cedar City Shop",
     url: "https://www.facebook.com/pages/category/Artist/Artisans-Gallery-134547949914392/",
@@ -1192,423 +1214,6 @@ export const CityItems: AttractionItem[] = [
     coordinates: {
       lat: 37.677521431873096, 
       lng: -113.06322053414922,
-    },
-  },
-
-  {
-    id: 777,
-    title: "Union Pacific Railroad Depot",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Rail travel proved pivotal for Cedar City, bringing Hollywood to town for southern Utah’s vast landscapes as backdrops to film and as a jumping-off point for visitors enjoying Southwest’s national parks, Learn how the railroad led Cedar City to became America’s “Gateway to the National Parks” by clicking here.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68158287207399, 
-      lng: -113.06192591984222,
-    },
-  },
-  {
-    id: 778,
-    title: "Hotel El Escalante",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "During the golden age of rail tourism in the American West, Cedar City’s El Escalante was the gateway to Utah’s natural wonder. Sadly, the grand hotel was torn down but its history is relevant to Cedar City’s prominence internationally an international tourism destination, learn more by clicking here.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.6807572551217, 
-      lng: -113.06190581562824,
-    },
-  },
-  {
-    id: 779,
-    title: "Bank of Southern Utah",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "The reality of the Great Depression really hit home in Iron County when the Bank of Southern Utah was forced to close on Christmas Eve in 1931. The tenaciousness of the residents in reopening its one and only bank is a testament that the people of Cedar City always put their community above self. See their story by clicking here.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.67845137307977, 
-      lng: -113.06182793453382,
-    },
-  },
-  {
-    id: 780,
-    title: "Richard Harrison Statue - Iron Works Superintendent",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Richard Harrison arrived in Cedar City in 1851 among the community’s very first settlers. Here he helped establish the Iron Mission and organize a company for the making of Iron. He was superintendent of the Iron Works, helped design and build the original furnace, and on September 30th, 1852, presided over the manufacture of the first iron from iron ore in Utah.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.678519833363886, 
-      lng: -113.06188544668943,
-    },
-  },
-  {
-    id: 781,
-    title: "Cedar Sheep Association Co-Op",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Established in 1881, members of the Cedar Sheep Association turned their sheep and land to the organization so that in return they could draw supplies, food, and staples from the store. 1917, a new building was built south of the original store with an archway opening between the two buildings that you still see today. The upstairs was occupied by doctors and served as Cedar City’s first hospital. In the 1960’s it was converted into a soda fountain and drug store, which is its primary use today.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.67910423534091, 
-      lng: -113.06186351409231,
-    },
-  },
-  {
-    id: 782,
-    title: "Francis Webster Statue - Pioneer Stockman",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Francis Webster was an early merchant in Cedar City. One of the stalwarts in the monumental effort to build the first building (Old Main) at what is now Southern Utah University, he was a member of the Building Committee and is credited with playing a crucial role in persuading townspeople to participate in the undertaking.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.67904056195397, 
-      lng: -113.06193839043422,
-    },
-  },
-  {
-    id: 783,
-    title: "Henry Lunt Statue - Cedar City Founder",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Fighting a blinding blizzard, Henry Lunt led 35 Mormon settlers to found Cedar City in 1851. After helping with the settlement of Parowan, Lunt was sent with the settlers 15 miles south to start the town and iron mining operations. He kept extensive journals of his experiences.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.67769019508632, 
-      lng: -113.06153641666177,
-    },
-  },
-  {
-    id: 784,
-    title: "Post Office",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "During the turbulent 1920s, the US Government promised Cedar City a needed Federal building and post office. The Chamber of Commerce campaigned for the building to be located in the downtown to bring residents and shoppers into the area. A site was selected but to much chagrin of many locals as it also meant that the Tabernacle built by the LDS church would have to be torn down. The businessmen won out and the Tabernacle was razed. The building’s clock tower was preserved and placed in the Rock Church steeple which was built at the same time next door. Today the Old Post Office serves as the City Offices and Police Station.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.67768089013065, 
-      lng: -113.06143595257926,
-    },
-  },
-  {
-    id: 785,
-    title: "Old Rock Church",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Cedar City’s Rock Church is a shining example of the resourcefulness and fortitude of residents during the Great Depression. LDS Church leaders felt it pertinent to build a new church building since their Tabernacle Building was being torn down to make way for a new post office. The new church would serve as a place of worship and community gathering place. Money for its construction was scarce so community members pledged their own funds while others donated their time, labor and talents. Community members gathered rocks and lumber from the nearby mountains and forged iron from Iron Springs for ornate chandeliers and door hinges. Using local materials made the building unique and also cut costs. The Rock Church is still used today as a place of worship but you are welcome to wander the church grounds. Tours are by appointment only, call Ed at 435-586-6345.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.677615822134726, 
-      lng: -113.06067632726078,
-    },
-  },
-  {
-    id: 786,
-    title: "Rotary Veterans Park",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "This park features large scale memorials, statues and walking paths in honor of veterans of Afghanistan, Iraqi Freedom, Korean, Vietnam and World Wars I & II.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68061179154555, 
-      lng: -113.05816986519918,
-    },
-  },
-  {
-    id: 787,
-    title: "Helen Foster Snow Statue - Heroine of China",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "No one would have predicted the far-reaching impact of this girl born in Cedar City and her Gung Ho initiative that changed an entire nation half a world away. Learn Helen Foster Snow’s story by clicking here.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68112459377538, 
-      lng: -113.06154992565024,
-    },
-  },
-  {
-    id: 788,
-    title: "Paiute Monument",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Located on the outside of Cedar City Public Library, the Paiute Monument features several boulders with petroglyphs incised onto the rock face. The petroglyphs represent the stories of the Paiute people.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68275732413817, 
-      lng: -113.06035225577726,
-    },
-  },
-  {
-    id: 789,
-    title: "Pioneer Iron Works Blast Furnace",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "This monument marks the spot where on Sept. 30, 1852, the first iron was manufactured west of the Mississippi River by the Mormon Iron Missionaries sent by Brigham Young.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68448693638563, 
-      lng: -113.06007875506914,
-    },
-  },
-  {
-    id: 790,
-    title: "Thorley Building",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "The Thorley building anchored the southern end of Cedar City’s Main Street for many years. Two primary attractions dominated the retail space- Zion Candy Kitchen and the Thorley theatre. The theatre became one of the first in Cedar to show motion pictures including Cecil B. Demille’s Union Pacific. Shot at Iron Springs and using many locals as extras, the film told the story of the creation of the transcontinental railroad. Union Pacific is only one of many Hollywood films shot in the area. Others include: My Friend Flicka, Can’t Help Singing, Proud Rebel, and Drums Along the Mohawk.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.677825538880896, 
-      lng: -113.06184993239536,
-    },
-  },
-  {
-    id: 791,
-    title: "Jolley's Building",
-    subtitle: "Cedar City Historic Downtown Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Once, the Cedar’s Hotel, this is one of the oldest buildings on Main Street and a wonderful example of historic structures serving a present-day purpose. Until the construction of the El Escalante Hotel in 1923, the Cedar’s was the finest hotel in Southern Utah. It was in the lobby of the Cedar’s that brothers Gronway and Chauncey Parry conceived of the Utah Parks Transportation Company. The Parry brothers conducted guided auto tours to Zion, Bryce Canyon, and the North Rim of the Grand Canyon. This enterprise evolved, with Union Pacific as a partner, into the Utah Parks Company, bringing thousands of tourists to the area each year.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DowntownTour,
-
-    ],    
-    coordinates: {
-      lat: 37.67840552324446, 
-      lng: -113.06164870176057,
-    },
-  },
-
-
-  {
-    id: 792,
-    title: "Southern Pacific Train Carboose",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "The caboose provided the train crew with shelter and working space while they threw switches and inspected for problems such as shifting loads, overheated axle bearings, and dragging equipment. The conductor used the caboose for filling out various forms and reports. On longer trips, the caboose provided living quarters. Caboose 4618 was manufactured by Pacific Car and Foundry in 1978 and delivered to Southern Pacific. In its heyday, Southern Pacific operated nearly 14,000 miles of track covering various routes stretching from Tennessee to California. The body of Caboose 4618 was painted in mineral red with the bay window ends and the end walls in daylight orange, both traditional Southern Pacific colors. Cabooses in the SP system were designated C-XX-X. The “C” stood for caboose, the “XX” denoted the axle load in tons, and the final “X” represented the class, type, or design. Caboose 4618 is a C-50-7. Power for the caboose was provided by a small electrical generator mounted on the lead truck. This caboose was purchased from a California rail yard in 2005 by George Lutterman. In April 2013 it was donated to Frontier Homestead State Park and moved in partnership with Iron County, Union Pacific, Construction Steel, Inc., and Gilbert Development, Inc.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68869475716539, 
-      lng: -113.06217893706986,
-    },
-  },
-  {
-    id: 793,
-    title: "Utah Parks Company Bus Garage",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "In the early days of National Park tourism, visitors rode buses to the parks from Cedar City, Utah after a thirty-five-mile railroad spur off the mainline from Lund was finished in 1923. These long buses featured convertible tops, which provided for much better viewing of the park’s spectacular scenery. During the mid-1920s, the Union Pacific and the Utah Parks Company built a bus garage in Cedar City to house and maintain forty 11-passenger buses purchased to take tourists on a tour of what became known as “The Grand Circle,” which included Bryce Canyon, Cedar Breaks, the North Rim of the Grand Canyon, Pipe Springs, and Zion National Park.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68557699977359, 
-      lng: -113.06208129147443,
-    },
-  },
-  {
-    id: 794,
-    title: "Original Rail Crossing Sign & Mining Car",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "During a recent upgrade to the Best Western Plus hotel, the owners wanted to pay homage to the history of the location as depot and passenger area for the Union Pacific rail line spur into Cedar City. The rail crossing sign is the original sign for the property preserved for generations to enjoy. The mining car was used in the iron mines west of Cedar City, which was also served by the railroad in shipping the raw ore to northern Utah.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.682022072606415, 
-      lng: -113.06205068150156,
-    },
-  },
-  {
-    id: 795,
-    title: "Union Pacific Depot",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Immediately after the completion of the Transcontinental Railroad across Utah in 1869, the Utah Central Railroad began to stretch to the south. Every extension of rail shortened wagon travel and shipping into the region, however, tracks didn’t cross into Iron County until 1905 and the spur in Cedar City wasn’t completed until 1923 (celebrated by a visit from President Warren G Harding and his wife on June 27, 1923). Railroads proved pivotal for Iron County. Freight trains were able to haul more raw materials than ever before, increasing profits for local mining companies. Hollywood came to Cedar City by train as well, thanks to brothers Gronway, Chauncey and Whitney Parry. Cedar City also marketed itself (and continues to do so today) as the “Gateway to the National Parks” and became the jumping-off point for national park tour groups brought in by the Union Pacific owned Utah Parks Company (UPC). The UPC provided meals, transportation, and entertainment for the guests, commonly referred to as “dudes.” The “Grand Circle” Tour took the “dudes” to Zion National Park, the North Rim of the Grand Canyon, Bryce Canyon, and Cedar Breaks. Today, the historic Depot houses a restaurant, bakery, and an antique store.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.681478607711554, 
-      lng: -113.06242474505744,
-    },
-  },
-  {
-    id: 796,
-    title: "Main Street Park",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "The park was established in 1886 and originally known as Liberty Park. The Liberty Flagpole in the center of the park was built by the Daughters of the Utah Pioneers and is considered to be one of the tallest historic flagpoles in the West. The first City Hall was located on the southwest corner of the park but was later torn down to make way for park improvements. After World War II, the grounds became a makeshift campground for National Park visitors traveling by automobile rather than train. Nowadays, the park serves as the hub of historic downtown and hosts many events each year including the Midsummer Renaissance Faire, July 4th and 24th Celebration, Pioneer Day, and July Jamboree.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68168097114926, 
-      lng: -113.06101354206969,
-    },
-  },
-  {
-    id: 797,
-    title: "El Escalante Hotel",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Supported by the Cedar City Chamber of Commerce and designed by Randall Jones in 1919, the El Escalante hotel, located conveniently across from the railroad depot became the answer. Construction began under the direction of city leaders with locally made brick and soon the hotel was purchased by Union Pacific to accommodate tourists to the nearby Utah parks. In 1923, the hotel began hosting thousands of visitors a year, including movie stars and President Warren G. Harding. Not only did the El Escalante serve as a hotel, but also as community event space, dorms for pilot trainees during WWII, and as the anchor of the north end of Main Street for nearly 50 years. With the decline in rail travel, the hotel was sold to the city in the late 1950s. In August of 1971, it was sold to a private enterprise and was demolished.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.68097829982143, 
-      lng: -113.06510587725035,
-    },
-  },
-  {
-    id: 798,
-    title: "Utah Parks Commissary",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "This building served as the headquarters for the UPC. All supplies, reservations, accounting, maintenance, and hiring for the UPC was coordinated through this office. Supplies for the various operations were shipped to the commissary by train and sent to the Parks by truck. Four to five hundred dollars of merchandise was sent to the UPC locations three times a week – Mondays, Wednesdays, and Fridays. The building was equipped with a large freight elevator that moved canned goods and bulk supplies down to and up from the basement. There were large refrigerators for the meat, which was sliced to order by the butcher on site. The building also housed a large humidor for tobacco products and large shelves for concession items. The commissary staff controlled nearly every UPC field operation.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.681290163282874, 
-      lng: -113.0636329144359,
-    },
-  },
-  {
-    id: 799,
-    title: "Rail Road Workers' Housing",
-    subtitle: "Cedar City Railroad History Walking Tour",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "As you walk down this portion of 100 West, you see a nice row of houses. This section of town was developed to help house the many workers of the Union Pacific Railroad and their subsidiary company Utah Parks Company.",
-    image:
-      "",
-    categories: [
-      AttractionCategories.Experiences.subcategories.RailroadTour,
-
-    ],    
-    coordinates: {
-      lat: 37.681824142548464, 
-      lng: -113.06359308875075,
     },
   },
   {
@@ -1707,4 +1312,423 @@ export const CityItems: AttractionItem[] = [
     ],    
 
   },
+]
+
+export const TourItems: AttractionItem[] =[
+  {
+    id: 92834923874923847777,
+    title: "Union Pacific Railroad Depot",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Rail travel proved pivotal for Cedar City, bringing Hollywood to town for southern Utah’s vast landscapes as backdrops to film and as a jumping-off point for visitors enjoying Southwest’s national parks, Learn how the railroad led Cedar City to became America’s “Gateway to the National Parks” by clicking here.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68158287207399, 
+      lng: -113.06192591984222,
+    },
+  },
+  {
+    id: 92834923874923847778,
+    title: "Hotel El Escalante",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "During the golden age of rail tourism in the American West, Cedar City’s El Escalante was the gateway to Utah’s natural wonder. Sadly, the grand hotel was torn down but its history is relevant to Cedar City’s prominence internationally an international tourism destination, learn more by clicking here.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.6807572551217, 
+      lng: -113.06190581562824,
+    },
+  },
+  {
+    id: 92834923874923847779,
+    title: "Bank of Southern Utah",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "The reality of the Great Depression really hit home in Iron County when the Bank of Southern Utah was forced to close on Christmas Eve in 1931. The tenaciousness of the residents in reopening its one and only bank is a testament that the people of Cedar City always put their community above self. See their story by clicking here.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.67845137307977, 
+      lng: -113.06182793453382,
+    },
+  },
+  {
+    id: 92834923874923847780,
+    title: "Richard Harrison Statue - Iron Works Superintendent",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Richard Harrison arrived in Cedar City in 1851 among the community’s very first settlers. Here he helped establish the Iron Mission and organize a company for the making of Iron. He was superintendent of the Iron Works, helped design and build the original furnace, and on September 30th, 1852, presided over the manufacture of the first iron from iron ore in Utah.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.678519833363886, 
+      lng: -113.06188544668943,
+    },
+  },
+  {
+    id: 92834923874923847781,
+    title: "Cedar Sheep Association Co-Op",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Established in 1881, members of the Cedar Sheep Association turned their sheep and land to the organization so that in return they could draw supplies, food, and staples from the store. 1917, a new building was built south of the original store with an archway opening between the two buildings that you still see today. The upstairs was occupied by doctors and served as Cedar City’s first hospital. In the 1960’s it was converted into a soda fountain and drug store, which is its primary use today.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.67910423534091, 
+      lng: -113.06186351409231,
+    },
+  },
+  {
+    id: 92834923874923847782,
+    title: "Francis Webster Statue - Pioneer Stockman",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Francis Webster was an early merchant in Cedar City. One of the stalwarts in the monumental effort to build the first building (Old Main) at what is now Southern Utah University, he was a member of the Building Committee and is credited with playing a crucial role in persuading townspeople to participate in the undertaking.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.67904056195397, 
+      lng: -113.06193839043422,
+    },
+  },
+  {
+    id: 92834923874923847783,
+    title: "Henry Lunt Statue - Cedar City Founder",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Fighting a blinding blizzard, Henry Lunt led 35 Mormon settlers to found Cedar City in 1851. After helping with the settlement of Parowan, Lunt was sent with the settlers 15 miles south to start the town and iron mining operations. He kept extensive journals of his experiences.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.67769019508632, 
+      lng: -113.06153641666177,
+    },
+  },
+  {
+    id: 92834923874923847784,
+    title: "Post Office",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "During the turbulent 1920s, the US Government promised Cedar City a needed Federal building and post office. The Chamber of Commerce campaigned for the building to be located in the downtown to bring residents and shoppers into the area. A site was selected but to much chagrin of many locals as it also meant that the Tabernacle built by the LDS church would have to be torn down. The businessmen won out and the Tabernacle was razed. The building’s clock tower was preserved and placed in the Rock Church steeple which was built at the same time next door. Today the Old Post Office serves as the City Offices and Police Station.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.67768089013065, 
+      lng: -113.06143595257926,
+    },
+  },
+  {
+    id: 92834923874923847785,
+    title: "Old Rock Church",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Cedar City’s Rock Church is a shining example of the resourcefulness and fortitude of residents during the Great Depression. LDS Church leaders felt it pertinent to build a new church building since their Tabernacle Building was being torn down to make way for a new post office. The new church would serve as a place of worship and community gathering place. Money for its construction was scarce so community members pledged their own funds while others donated their time, labor and talents. Community members gathered rocks and lumber from the nearby mountains and forged iron from Iron Springs for ornate chandeliers and door hinges. Using local materials made the building unique and also cut costs. The Rock Church is still used today as a place of worship but you are welcome to wander the church grounds. Tours are by appointment only, call Ed at 435-586-6345.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.677615822134726, 
+      lng: -113.06067632726078,
+    },
+  },
+  {
+    id: 92834923874923847786,
+    title: "Rotary Veterans Park",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "This park features large scale memorials, statues and walking paths in honor of veterans of Afghanistan, Iraqi Freedom, Korean, Vietnam and World Wars I & II.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68061179154555, 
+      lng: -113.05816986519918,
+    },
+  },
+  {
+    id: 92834923874923847787,
+    title: "Helen Foster Snow Statue - Heroine of China",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "No one would have predicted the far-reaching impact of this girl born in Cedar City and her Gung Ho initiative that changed an entire nation half a world away. Learn Helen Foster Snow’s story by clicking here.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68112459377538, 
+      lng: -113.06154992565024,
+    },
+  },
+  {
+    id: 92834923874923847788,
+    title: "Paiute Monument",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Located on the outside of Cedar City Public Library, the Paiute Monument features several boulders with petroglyphs incised onto the rock face. The petroglyphs represent the stories of the Paiute people.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68275732413817, 
+      lng: -113.06035225577726,
+    },
+  },
+  {
+    id: 92834923874923847789,
+    title: "Pioneer Iron Works Blast Furnace",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "This monument marks the spot where on Sept. 30, 1852, the first iron was manufactured west of the Mississippi River by the Mormon Iron Missionaries sent by Brigham Young.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68448693638563, 
+      lng: -113.06007875506914,
+    },
+  },
+  {
+    id: 92834923874923847790,
+    title: "Thorley Building",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "The Thorley building anchored the southern end of Cedar City’s Main Street for many years. Two primary attractions dominated the retail space- Zion Candy Kitchen and the Thorley theatre. The theatre became one of the first in Cedar to show motion pictures including Cecil B. Demille’s Union Pacific. Shot at Iron Springs and using many locals as extras, the film told the story of the creation of the transcontinental railroad. Union Pacific is only one of many Hollywood films shot in the area. Others include: My Friend Flicka, Can’t Help Singing, Proud Rebel, and Drums Along the Mohawk.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.677825538880896, 
+      lng: -113.06184993239536,
+    },
+  },
+  {
+    id: 92834923874923847791,
+    title: "Jolley's Building",
+    subtitle: "Cedar City Historic Downtown Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Once, the Cedar’s Hotel, this is one of the oldest buildings on Main Street and a wonderful example of historic structures serving a present-day purpose. Until the construction of the El Escalante Hotel in 1923, the Cedar’s was the finest hotel in Southern Utah. It was in the lobby of the Cedar’s that brothers Gronway and Chauncey Parry conceived of the Utah Parks Transportation Company. The Parry brothers conducted guided auto tours to Zion, Bryce Canyon, and the North Rim of the Grand Canyon. This enterprise evolved, with Union Pacific as a partner, into the Utah Parks Company, bringing thousands of tourists to the area each year.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.DowntownTour,
+
+    ],    
+    coordinates: {
+      lat: 37.67840552324446, 
+      lng: -113.06164870176057,
+    },
+  },
+
+
+  {
+    id: 92834923874923847792,
+    title: "Southern Pacific Train Carboose",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "The caboose provided the train crew with shelter and working space while they threw switches and inspected for problems such as shifting loads, overheated axle bearings, and dragging equipment. The conductor used the caboose for filling out various forms and reports. On longer trips, the caboose provided living quarters. Caboose 4618 was manufactured by Pacific Car and Foundry in 1978 and delivered to Southern Pacific. In its heyday, Southern Pacific operated nearly 14,000 miles of track covering various routes stretching from Tennessee to California. The body of Caboose 4618 was painted in mineral red with the bay window ends and the end walls in daylight orange, both traditional Southern Pacific colors. Cabooses in the SP system were designated C-XX-X. The “C” stood for caboose, the “XX” denoted the axle load in tons, and the final “X” represented the class, type, or design. Caboose 4618 is a C-50-7. Power for the caboose was provided by a small electrical generator mounted on the lead truck. This caboose was purchased from a California rail yard in 2005 by George Lutterman. In April 2013 it was donated to Frontier Homestead State Park and moved in partnership with Iron County, Union Pacific, Construction Steel, Inc., and Gilbert Development, Inc.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68869475716539, 
+      lng: -113.06217893706986,
+    },
+  },
+  {
+    id: 92834923874923847793,
+    title: "Utah Parks Company Bus Garage",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "In the early days of National Park tourism, visitors rode buses to the parks from Cedar City, Utah after a thirty-five-mile railroad spur off the mainline from Lund was finished in 1923. These long buses featured convertible tops, which provided for much better viewing of the park’s spectacular scenery. During the mid-1920s, the Union Pacific and the Utah Parks Company built a bus garage in Cedar City to house and maintain forty 11-passenger buses purchased to take tourists on a tour of what became known as “The Grand Circle,” which included Bryce Canyon, Cedar Breaks, the North Rim of the Grand Canyon, Pipe Springs, and Zion National Park.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68557699977359, 
+      lng: -113.06208129147443,
+    },
+  },
+  {
+    id: 92834923874923847794,
+    title: "Original Rail Crossing Sign & Mining Car",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "During a recent upgrade to the Best Western Plus hotel, the owners wanted to pay homage to the history of the location as depot and passenger area for the Union Pacific rail line spur into Cedar City. The rail crossing sign is the original sign for the property preserved for generations to enjoy. The mining car was used in the iron mines west of Cedar City, which was also served by the railroad in shipping the raw ore to northern Utah.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.682022072606415, 
+      lng: -113.06205068150156,
+    },
+  },
+  {
+    id: 92834923874923847795,
+    title: "Union Pacific Depot",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Immediately after the completion of the Transcontinental Railroad across Utah in 1869, the Utah Central Railroad began to stretch to the south. Every extension of rail shortened wagon travel and shipping into the region, however, tracks didn’t cross into Iron County until 1905 and the spur in Cedar City wasn’t completed until 1923 (celebrated by a visit from President Warren G Harding and his wife on June 27, 1923). Railroads proved pivotal for Iron County. Freight trains were able to haul more raw materials than ever before, increasing profits for local mining companies. Hollywood came to Cedar City by train as well, thanks to brothers Gronway, Chauncey and Whitney Parry. Cedar City also marketed itself (and continues to do so today) as the “Gateway to the National Parks” and became the jumping-off point for national park tour groups brought in by the Union Pacific owned Utah Parks Company (UPC). The UPC provided meals, transportation, and entertainment for the guests, commonly referred to as “dudes.” The “Grand Circle” Tour took the “dudes” to Zion National Park, the North Rim of the Grand Canyon, Bryce Canyon, and Cedar Breaks. Today, the historic Depot houses a restaurant, bakery, and an antique store.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.681478607711554, 
+      lng: -113.06242474505744,
+    },
+  },
+  {
+    id: 92834923874923847796,
+    title: "Main Street Park",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "The park was established in 1886 and originally known as Liberty Park. The Liberty Flagpole in the center of the park was built by the Daughters of the Utah Pioneers and is considered to be one of the tallest historic flagpoles in the West. The first City Hall was located on the southwest corner of the park but was later torn down to make way for park improvements. After World War II, the grounds became a makeshift campground for National Park visitors traveling by automobile rather than train. Nowadays, the park serves as the hub of historic downtown and hosts many events each year including the Midsummer Renaissance Faire, July 4th and 24th Celebration, Pioneer Day, and July Jamboree.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68168097114926, 
+      lng: -113.06101354206969,
+    },
+  },
+  {
+    id: 92834923874923847797,
+    title: "El Escalante Hotel",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "Supported by the Cedar City Chamber of Commerce and designed by Randall Jones in 1919, the El Escalante hotel, located conveniently across from the railroad depot became the answer. Construction began under the direction of city leaders with locally made brick and soon the hotel was purchased by Union Pacific to accommodate tourists to the nearby Utah parks. In 1923, the hotel began hosting thousands of visitors a year, including movie stars and President Warren G. Harding. Not only did the El Escalante serve as a hotel, but also as community event space, dorms for pilot trainees during WWII, and as the anchor of the north end of Main Street for nearly 50 years. With the decline in rail travel, the hotel was sold to the city in the late 1950s. In August of 1971, it was sold to a private enterprise and was demolished.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.68097829982143, 
+      lng: -113.06510587725035,
+    },
+  },
+  {
+    id: 92834923874923847798,
+    title: "Utah Parks Commissary",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "This building served as the headquarters for the UPC. All supplies, reservations, accounting, maintenance, and hiring for the UPC was coordinated through this office. Supplies for the various operations were shipped to the commissary by train and sent to the Parks by truck. Four to five hundred dollars of merchandise was sent to the UPC locations three times a week – Mondays, Wednesdays, and Fridays. The building was equipped with a large freight elevator that moved canned goods and bulk supplies down to and up from the basement. There were large refrigerators for the meat, which was sliced to order by the butcher on site. The building also housed a large humidor for tobacco products and large shelves for concession items. The commissary staff controlled nearly every UPC field operation.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.681290163282874, 
+      lng: -113.0636329144359,
+    },
+  },
+  {
+    id: 92834923874923847799,
+    title: "Rail Road Workers' Housing",
+    subtitle: "Cedar City Railroad History Walking Tour",
+    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+    description:
+      "As you walk down this portion of 100 West, you see a nice row of houses. This section of town was developed to help house the many workers of the Union Pacific Railroad and their subsidiary company Utah Parks Company.",
+    image:
+      "",
+    categories: [
+      AttractionCategories.Experiences.subcategories.RailroadTour,
+
+    ],    
+    coordinates: {
+      lat: 37.681824142548464, 
+      lng: -113.06359308875075,
+    },
+  }
 ];

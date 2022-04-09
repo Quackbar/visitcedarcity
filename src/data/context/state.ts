@@ -1,5 +1,5 @@
 // import { AllCategories, AttractionItem, SubscriptionItem, User } from "../../models/defaultModels";
-import { ExpObj, Foods, Lodging } from "../attractions";
+import { ExpObj, Foods, Lodging, TourItems } from "../attractions";
 import {
   AllCategories,
   AttractionCategories,
@@ -19,7 +19,6 @@ import {
   shield,
   bonfire,
   telescope,
-  ticket,
   carSport,
   fish,
   sunny,
@@ -55,8 +54,42 @@ const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
   return concatArray;
 };
 
+let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging]).concat(Foods.concat(CityItems)).concat(TourItems)
+
+let biases = localStorage.getItem("Biases") ?? "[]"
+let biasesArr: string[] = []
+try {
+  biasesArr = JSON.parse(biases)
+} catch (error) {
+  console.log(error)
+}
+let filters = localStorage.getItem("Filters") ?? "[]"
+let filtersArr: string[] = []
+try {
+  filtersArr = JSON.parse(filters)
+} catch (error) {
+  console.log(error)
+}
+
+let index = 0
+reAttraction.forEach(el => {
+  filtersArr.forEach(element => {
+    if(el.title.includes(element)){
+      reAttraction.splice(index, 1);
+    }
+  });
+  biasesArr.forEach(element => {
+    if(el.title.includes(element)){
+      reAttraction.splice(index, 1);
+      reAttraction.unshift(el)
+      console.log(reAttraction)
+    }
+  });
+  index++
+})
+
 export const initialState: AppState = {
-  attractionItems: shuffleArrays([OutdoorItems, CityItems, ExpObj, Foods, Lodging]),
+  attractionItems: reAttraction,
   allAttractionFilters: Object.values(AllCategories),
   subscriptionItems: Subscriptions,
   groupedAttractions: {
