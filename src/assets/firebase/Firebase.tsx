@@ -37,6 +37,7 @@ const mountainDoc = doc(f_db, "mountainData", "current");
 const RoadConDoc = doc(f_db, "RoadConditions", "current");
 const filterDoc = doc(f_db, "Filters", "current")
 const biasDoc = doc(f_db, "Biases", "current")
+const customDoc = doc(f_db, "Custom", "current")
 
 
 const mountainRef = collection(f_db, "mountainData");
@@ -223,6 +224,22 @@ export async function getFoods() : Promise<string> {
       });
   });
 }getFoods()
+
+export async function getCustom() : Promise<string> {
+  return new Promise(async (resolve, reject) => {
+    await getDoc(customDoc)
+      .then((docSnap) => {
+        // docSnap.data() will be undefined if document doesn't exist
+        // console.log(docSnap.data()!.current )
+        let returnable = docSnap.data()!.current || "[]"
+        localStorage.setItem('Custom', returnable)
+        resolve(docSnap.data()!.current+"]" as string);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}getCustom()
 
 export async function getLodgings() : Promise<string> {
   return new Promise(async (resolve, reject) => {

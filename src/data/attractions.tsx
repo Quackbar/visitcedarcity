@@ -10,7 +10,7 @@ export type AppState = {
 const Experiences = localStorage.getItem("Experiences") ?? "[]";
 const Fooder = localStorage.getItem("Foods") ?? "[]";
 const Lodges = localStorage.getItem("Lodging") ?? "[]";
-
+const Customs = localStorage.getItem("Custom") ?? "[]";
 
 export let ExpObj = [] as AttractionItem[];
 try {
@@ -41,6 +41,58 @@ Foods.forEach((el) => {
   el.categories.push(AttractionCategories.FoodAndDrink.subcategories.LocalEatery);
 });
 
+export let Custom = [] as AttractionItem[];
+
+try {
+  Custom = JSON.parse(Customs || "[]") as AttractionItem[];
+} catch (error) {
+  console.log(error)
+  console.log(Customs)
+}
+
+Custom.forEach((el) => {
+  if(el.subtitle.includes("Trail")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.Trails);
+  }
+  if(el.subtitle.includes("Camp")){
+    el.categories.push(AttractionCategories.Lodging.subcategories.Campground);
+  }
+  if(el.subtitle.includes("Recreation")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.RecArea);
+    el.categories.push(AttractionCategories.Experiences.subcategories.FamilyFun);
+
+  }
+  if(el.subtitle.includes("Fish")||el.subtitle.includes("Lake")||el.subtitle.includes("Reservoir")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.Fishing);
+    el.categories.push(AttractionCategories.Experiences.subcategories.FamilyFun);
+  }
+  if(el.subtitle.includes("Lookout")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.DarkSkies);
+  }
+  if(el.subtitle.includes("Art")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.CedarCityArts);
+  }
+  if(el.subtitle.includes("Shop")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.Shop);
+  }
+  if(el.subtitle.includes("National")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.NationalParks);
+  }
+  if(el.subtitle.includes("Food")){
+    el.categories.push(AttractionCategories.FoodAndDrink.subcategories.LocalEatery);
+  }
+  if(el.subtitle.includes("Drink")){
+    el.categories.push(AttractionCategories.FoodAndDrink.subcategories.Alcohol);
+  }
+  if(el.subtitle.includes("Lodge")){
+    el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel);
+  }
+  if(el.title.includes("RV")){
+    el.categories.push(AttractionCategories.Lodging.subcategories.RVSite);
+  }
+  el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity);
+});
+
 export let Lodging = [] as AttractionItem[];
 
 try {
@@ -53,6 +105,9 @@ try {
 Lodging.forEach((el) => {
   if(el.title.includes("RV")){
     el.categories.push(AttractionCategories.Lodging.subcategories.RVSite);
+  }
+  if(el.subtitle.includes("Camp")){
+    el.categories.push(AttractionCategories.Lodging.subcategories.Campground);
   }
   el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel);
 });
@@ -694,7 +749,6 @@ export const OutdoorItems = [
     categories: [
       AttractionCategories.Experiences.subcategories.Outdoor,
       AttractionCategories.Experiences.subcategories.FamilyFun,
-      AttractionCategories.Experiences.subcategories.Fishing,
       AttractionCategories.Experiences.subcategories.RecArea,
     ],    
     coordinates: {

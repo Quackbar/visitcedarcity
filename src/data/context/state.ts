@@ -1,5 +1,5 @@
 // import { AllCategories, AttractionItem, SubscriptionItem, User } from "../../models/defaultModels";
-import { ExpObj, Foods, Lodging, TourItems } from "../attractions";
+import { Custom, ExpObj, Foods, Lodging, TourItems } from "../attractions";
 import {
   AllCategories,
   AttractionCategories,
@@ -54,7 +54,7 @@ const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
   return concatArray;
 };
 
-let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging]).concat(Foods.concat(CityItems)).concat(TourItems)
+let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging, Custom]).concat(Foods.concat(CityItems)).concat(TourItems)
 
 let biases = localStorage.getItem("Biases") ?? "[]"
 let biasesArr: string[] = []
@@ -82,7 +82,6 @@ reAttraction.forEach(el => {
     if(el.title.includes(element)){
       reAttraction.splice(index, 1);
       reAttraction.unshift(el)
-      console.log(reAttraction)
     }
   });
   index++
