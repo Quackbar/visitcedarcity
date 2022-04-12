@@ -17,6 +17,7 @@ import {
   IonHeader,
   IonToolbar,
   IonIcon,
+  IonCardContent,
 } from "@ionic/react";
 import { RefresherEventDetail } from "@ionic/core";
 import { settingsOutline } from "ionicons/icons";
@@ -275,10 +276,20 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
 
   getTodays(formattedDate);
 
+  let toggles = JSON.parse(localStorage.getItem("Toggles") || "[true,true,true,true,true,true,true]");
+
   const HomeModules: { [key in AllModules]: { label: string; src: ReactElement } } = {
     [AllModules.Weather]: {
       label: "Weather",
       src: (
+        !toggles[0] ? 
+        <IonCard>
+          <IonCardContent>
+          <IonLabel class="centered">Weather<br/></IonLabel>
+          <IonLabel class="centered">Not Available during this season.</IonLabel>
+          </IonCardContent>
+        </IonCard>
+        :
         <Weather
           CedarImg={CedarImg || String(localStorage.getItem("CedarImg"))}
           CedarTemp={CedarTemp || String(localStorage.getItem("CedarTemp"))}
@@ -292,6 +303,14 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
     [AllModules.Schedule]: {
       label: "Schedule",
       src: (
+        !toggles[1] ? 
+        <IonCard>
+          <IonCardContent>
+          <IonLabel class="centered">Schedule<br/></IonLabel>
+          <IonLabel class="centered">Not Available during this season.</IonLabel>
+          </IonCardContent>
+        </IonCard>
+        :
         <IonCard class="basiccentered">
           <IonItem button={true} id="open-date-input">
             <IonLabel>Date</IonLabel>
@@ -326,19 +345,48 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         </IonCard>
       ),
     },
-    [AllModules.FestivalFood]: { label: "Festival Food", src: <FestivalFood /> },
+    [AllModules.FestivalFood]: { label: "Festival Food", src: (!toggles[2] ? 
+      <IonCard>
+        <IonCardContent>
+        <IonLabel class="centered">Festival Food<br/></IonLabel>
+        <IonLabel class="centered">Not Available during this season.</IonLabel>
+        </IonCardContent>
+      </IonCard>
+      :<FestivalFood />) },
     [AllModules.SkyData]: {
       label: "Sky Data",
       src: (
+        !toggles[3] ? 
+        <IonCard>
+          <IonCardContent>
+          <IonLabel class="centered">Sky Data<br/></IonLabel>
+          <IonLabel class="centered">Not Available during this season.</IonLabel>
+          </IonCardContent>
+        </IonCard>
+        :
         <IonCard key={AllModules.RoadConditions}>
           <SkyData />
         </IonCard>
       ),
     },
-    [AllModules.RoadConditions]: { label: "Road Conditions", src: <RoadConditions /> },
+    [AllModules.RoadConditions]: { label: "Road Conditions", src: (!toggles[4] ? 
+      <IonCard>
+        <IonCardContent>
+        <IonLabel class="centered">Road Conditions<br/></IonLabel>
+        <IonLabel class="centered">Not Available during this season.</IonLabel>
+        </IonCardContent>
+      </IonCard>
+      :<RoadConditions />) },
     [AllModules.WinterMountainData]: {
       label: "Winter Mountain Data",
-      src: (
+      src: (!toggles[5] ? 
+        <IonCard>
+          <IonCardContent>
+          <IonLabel class="centered">Winter Mountain Data<br/></IonLabel>
+          <IonLabel class="centered">Not Available during this season.</IonLabel>
+          </IonCardContent>
+        </IonCard>
+        :
         <MountainData
           BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
           OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
@@ -350,6 +398,14 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
     [AllModules.SnowPack]: {
       label: "Snow Pack",
       src: (
+        !toggles[6] ? 
+        <IonCard>
+          <IonCardContent>
+          <IonLabel class="centered">Snow Pack<br/></IonLabel>
+          <IonLabel class="centered">Not Available during this season.</IonLabel>
+          </IonCardContent>
+        </IonCard>
+        :
         <IonCard>
           <SnowPack
             theDates={JSON.parse(String(localStorage.getItem("dates")))}
