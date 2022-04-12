@@ -127,7 +127,6 @@ export const AllCategoryLabels: { [key in AllCategories]?: string } = {
   [AllCategories.USA]: "USA",
   [AllCategories.Shows]: "Shows",
   [AllCategories.Shop]: "Shop",
-
 };
 
 const FoodAndDrink = {
@@ -272,8 +271,8 @@ export interface AttractionItem {
   location?: AttractionLocations;
   coordinates?: {
     lat: number;
-    lng: number
-  }
+    lng: number;
+  };
 }
 
 export interface SubscriptionItem {
@@ -293,6 +292,7 @@ export interface User {
   selectedSubscriptions: number[];
   selectedHomeModules: AllModules[];
   searchText?: string;
+  darkTheme: boolean;
 }
 
 export interface ConditionsReturnType {

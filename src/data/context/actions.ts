@@ -68,6 +68,14 @@ export const setHasSeenTutorial = (hasSeenTutorial: boolean) => async (dispatch:
   } as const;
 };
 
+export const setDarkTheme = (darkTheme: boolean) => {
+  localStorage.setItem("dark-theme", JSON.stringify(darkTheme));
+  return {
+    type: "set-dark-theme",
+    darkTheme,
+  } as const;
+};
+
 export type StateActions =
   | ActionType<typeof setData>
   | ActionType<typeof updateSelectedAttractionFilters>
@@ -75,4 +83,5 @@ export type StateActions =
   | ActionType<typeof updateSelectedHomeModules>
   | ActionType<typeof updateSearchText>
   | ActionType<typeof setIsLoading>
-  | ActionType<typeof setHasSeenTutorial>;
+  | ActionType<typeof setHasSeenTutorial>
+  | ActionType<typeof setDarkTheme>;
