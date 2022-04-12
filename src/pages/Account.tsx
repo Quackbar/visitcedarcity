@@ -1,21 +1,22 @@
+import React, { useEffect, useState } from "react";
 import {
   IonCheckbox,
   IonContent,
   IonItem,
   IonPage,
-  IonText,
-  IonTitle,
   IonIcon,
-  IonButton,
   IonHeader,
   IonToolbar,
-  IonPopover,
-  IonActionSheet,
+  IonTitle,
+  IonList,
+  IonLabel,
+  IonItemGroup,
+  IonItemDivider,
+  IonToggle,
 } from "@ionic/react";
-import React, { Fragment, useEffect, useState } from "react";
 
 import { BarChart, chartDataType, datasetType } from "../components/Chart";
-import { updateSelectedSubscriptions } from "../data/context/actions";
+import { setDarkTheme, updateSelectedSubscriptions } from "../data/context/actions";
 import { connect } from "../data/context/connect";
 import { SubscriptionItem } from "../models/defaultModels";
 
@@ -23,12 +24,13 @@ import { informationCircle, logoFacebook } from "ionicons/icons";
 import { Browser } from "@capacitor/browser";
 import { Toast } from "@capacitor/toast";
 import { PushNotifications, Token } from "@capacitor/push-notifications";
-// import './Home.css';
 import SafeAreaWrapper from "../components/SafeAreaWrapper";
+import { getMode } from "@ionic/core";
 
 const chartOptions = {
   plugins: {
     legend: {
+      display: false,
       position: "bottom" as const,
     },
     title: {
@@ -59,18 +61,55 @@ const chartOptions = {
 const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 interface StateProps {
+  darkTheme: boolean;
   allSubscriptions: SubscriptionItem[];
   selectedSubscriptions: number[];
 }
 interface DispatchProps {
   updateSelectedSubscriptions: typeof updateSelectedSubscriptions;
+  setDarkTheme: typeof setDarkTheme;
 }
 
 type AccountProps = StateProps & DispatchProps;
 
-const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptions, updateSelectedSubscriptions }) => {
-  const nullEntry: any[] = [];
-  // const [notifications, setnotifications] = useState(nullEntry);
+const Account: React.FC<AccountProps> = ({
+  darkTheme,
+  allSubscriptions,
+  selectedSubscriptions,
+  updateSelectedSubscriptions,
+  setDarkTheme,
+}) => {
+  const [chartData, setChartData] = useState<chartDataType>();
+  const ios = getMode() === "ios";
+
+  const register = () => {
+    // On success, we should be able to receive notifications
+    PushNotifications.addListener("registration", (token: Token) => {
+      showToast("Push registration success");
+    });
+
+    // Some issue with our setup and push will not work
+    PushNotifications.addListener("registrationError", (error: any) => {
+      alert("Error on registration: " + JSON.stringify(error));
+    });
+  };
+
+  const showToast = async (msg: string) => {
+    await Toast.show({
+      text: msg,
+    });
+  };
+
+  const didToggleCheckbox = (index: number) => {
+    // flip the subscription state
+    if (selectedSubscriptions.includes(index)) {
+      selectedSubscriptions.splice(selectedSubscriptions.indexOf(index), 1);
+    } else {
+      selectedSubscriptions.push(index);
+    }
+
+    updateSelectedSubscriptions([...selectedSubscriptions]);
+  };
 
   useEffect(() => {
     PushNotifications.checkPermissions().then((res) => {
@@ -88,33 +127,9 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
         register();
       }
     });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const register = () => {
-    //console.log("Initializing HomePage");
-
-    // Register with Apple / Google to receive push via APNS/FCM
-    // PushNotifications.register();
-
-    // On success, we should be able to receive notifications
-    PushNotifications.addListener("registration", (token: Token) => {
-      showToast("Push registration success");
-    });
-
-    // Some issue with our setup and push will not work
-    PushNotifications.addListener("registrationError", (error: any) => {
-      alert("Error on registration: " + JSON.stringify(error));
-    });
-  };
-
-  const showToast = async (msg: string) => {
-    await Toast.show({
-      text: msg,
-    });
-  };
-  //
-
-  const [chartData, setChartData] = useState<chartDataType>();
 
   useEffect(() => {
     let newChartDataSet: datasetType[] = [];
@@ -135,32 +150,18 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
     });
   }, [allSubscriptions, selectedSubscriptions]);
 
-  const didToggleCheckbox = (index: number) => {
-    // flip the subscription state
-    if (selectedSubscriptions.includes(index)) {
-      selectedSubscriptions.splice(selectedSubscriptions.indexOf(index), 1);
-    } else {
-      selectedSubscriptions.push(index);
-    }
-
-    updateSelectedSubscriptions([...selectedSubscriptions]);
-  };
-  const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
-  const [showFilterModal, setShowFilterModal] = useState(false);
-
   return (
     <IonPage id="account-page" onLoad={register}>
-      <IonContent>
-        <SafeAreaWrapper>
-          <h1 className="centered">
-            <br />
-            Event Spread
-          </h1>
-          <BarChart propOptions={chartOptions} propData={chartData} propHeight={300} />
-          <h1>
-            <br />
-            &nbsp;&nbsp;Subscriptions
-          </h1>
+      <IonContent fullscreen={true}>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Account</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <h3 className="centered ion-padding-top">Event Spread</h3>
+        <BarChart propOptions={chartOptions} propData={chartData} propHeight={300} />
+        <h3 className="ion-padding">Subscriptions</h3>
+        <IonList lines={ios ? "inset" : "full"}>
           {Object.values(allSubscriptions).map((subscription, index) => {
             const openSite = async () => {
               await Browser.open({ url: subscription.url });
@@ -168,82 +169,47 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
             const openFacebook = async () => {
               await Browser.open({ url: subscription.furl });
             };
+
             return (
               <IonItem key={index}>
-                <IonItem class="ninety">
-                  <IonCheckbox
-                    class={"c" + subscription.color.slice(1)}
-                    onClick={() => didToggleCheckbox(index)}
-                    checked={selectedSubscriptions.includes(subscription.id)}
-                  >
-                    {subscription.title}
-                  </IonCheckbox>
-                  <IonText>&nbsp;{subscription.title}</IonText>
-                </IonItem>
-
+                <IonCheckbox
+                  class={"c" + subscription.color.slice(1)}
+                  onClick={() => didToggleCheckbox(index)}
+                  checked={selectedSubscriptions.includes(subscription.id)}
+                />
+                <IonLabel>{subscription.title}</IonLabel>
                 <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
                 <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
               </IonItem>
             );
           })}
-          <h1>&nbsp;&nbsp;Account Settings</h1>
-          {/* <IonItem>
-            <IonButton>Sign In</IonButton>
-          </IonItem>
-          <IonItem>
-            <IonButton>Create Account</IonButton>
-          </IonItem> */}
-          <IonItem>
+        </IonList>
+        <h3 className="ion-padding-top ion-padding-start">Account</h3>
+        <IonList lines={ios ? "inset" : "full"}>
+          <IonItemGroup>
+            <IonItemDivider sticky>
+              <IonLabel>Settings</IonLabel>
+            </IonItemDivider>
             <IonItem>
-              <IonButton href="/tutorial">See Tutorial</IonButton>
+              <IonLabel>App Theme</IonLabel>
+              <IonToggle checked={darkTheme} color="dark" onIonChange={(e) => setDarkTheme(e.detail.checked)} />
             </IonItem>
-          </IonItem>
-          <IonItem>
-            <IonItem>
-              <IonButton href="mailto:info@goldblockchain.us">Get Technical Help</IonButton>
+          </IonItemGroup>
+          <IonItemGroup>
+            <IonItemDivider sticky>
+              <IonLabel>Help</IonLabel>
+            </IonItemDivider>
+            <IonItem href="/tutorial">
+              <IonLabel>View Tutorial</IonLabel>
             </IonItem>
-          </IonItem>
-          <IonItem>
-            <IonItem>
-              <IonButton href="mailto:tourism.group@ironcounty.net">Get Cedar City Help</IonButton>
+            <IonItem href="mailto:info@goldblockchain.us">
+              <IonLabel>Get Technical Help</IonLabel>
             </IonItem>
-          </IonItem>
-          {/* <IonPopover
-            event={popoverState.event}
-            isOpen={popoverState.showPopover}
-            onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
-          >
-            <p>This is popover content</p>
-          </IonPopover>
-          <IonActionSheet
-            isOpen={showFilterModal}
-            onDidDismiss={() => setShowFilterModal(false)}
-            cssClass="my-custom-class"
-            buttons={[
-              {
-                text: "Technical Question / Suggestion",
-                handler: () => {
-                  Browser.open({ url: "mailto:info@goldblockchain.us" });
-                },
-              },
-              {
-                text: "Visit Cedar City / Brian Head Question",
-                handler: () => {
-                  Browser.open({ url: "mailto:tourism.group@ironcounty.net" });
-                },
-              },
-              {
-                text: "Cancel",
-                role: "cancel",
-                handler: () => {
-                  //console.log("Cancel clicked");
-                },
-              },
-            ]}
-          >
-            
-          </IonActionSheet> */}
-        </SafeAreaWrapper>
+            <IonItem href="mailto:tourism.group@ironcounty.net">
+              <IonLabel>Get Cedar City Help</IonLabel>
+            </IonItem>
+          </IonItemGroup>
+        </IonList>
       </IonContent>
     </IonPage>
   );
@@ -251,11 +217,13 @@ const Account: React.FC<AccountProps> = ({ allSubscriptions, selectedSubscriptio
 
 export default connect<{}, StateProps, DispatchProps>({
   mapStateToProps: (state) => ({
+    darkTheme: state.user.darkTheme,
     allSubscriptions: state.subscriptionItems,
     selectedSubscriptions: state.user.selectedSubscriptions,
   }),
   mapDispatchToProps: {
     updateSelectedSubscriptions,
+    setDarkTheme,
   },
   component: Account,
 });

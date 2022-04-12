@@ -13,7 +13,17 @@ export const AppContext = createContext<AppContextState>({
 });
 
 export const AppContextProvider: React.FC = (props) => {
-  const [state, dispatch] = useReducer(reducers, initialState);
+  let darkThemeStorage = JSON.parse(localStorage.getItem("dark-theme") || "false");
+
+  const updatedInitialState: AppState = {
+    ...initialState,
+    user: {
+      ...initialState.user,
+      darkTheme: darkThemeStorage,
+    },
+  };
+
+  const [state, dispatch] = useReducer(reducers, updatedInitialState);
 
   return (
     <AppContext.Provider

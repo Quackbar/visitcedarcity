@@ -54,40 +54,47 @@ const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
   return concatArray;
 };
 
-let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging, Custom]).concat(Foods.concat(CityItems)).concat(TourItems)
+let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging, Custom])
+  .concat(Foods.concat(CityItems))
+  .concat(TourItems);
 
+<<<<<<< HEAD
 console.log("number of listed attractions: ",reAttraction.length)
 
 let biases = localStorage.getItem("Biases") ?? "[]"
 let biasesArr: string[] = []
+=======
+let biases = localStorage.getItem("Biases") ?? "[]";
+let biasesArr: string[] = [];
+>>>>>>> 99067333e8ab69bce53484d29f0df790975ad159
 try {
-  biasesArr = JSON.parse(biases)
+  biasesArr = JSON.parse(biases);
 } catch (error) {
-  console.log(error)
+  console.log(error);
 }
-let filters = localStorage.getItem("Filters") ?? "[]"
-let filtersArr: string[] = []
+let filters = localStorage.getItem("Filters") ?? "[]";
+let filtersArr: string[] = [];
 try {
-  filtersArr = JSON.parse(filters)
+  filtersArr = JSON.parse(filters);
 } catch (error) {
-  console.log(error)
+  console.log(error);
 }
 
-let index = 0
-reAttraction.forEach(el => {
-  filtersArr.forEach(element => {
-    if(el.title.includes(element)){
+let index = 0;
+reAttraction.forEach((el) => {
+  filtersArr.forEach((element) => {
+    if (el.title.includes(element)) {
       reAttraction.splice(index, 1);
     }
   });
-  biasesArr.forEach(element => {
-    if(el.title.includes(element)){
+  biasesArr.forEach((element) => {
+    if (el.title.includes(element)) {
       reAttraction.splice(index, 1);
-      reAttraction.unshift(el)
+      reAttraction.unshift(el);
     }
   });
-  index++
-})
+  index++;
+});
 
 export const initialState: AppState = {
   attractionItems: reAttraction,
@@ -136,7 +143,10 @@ export const initialState: AppState = {
       name: "Art",
       icon: colorPalette,
       color: "#ffffff",
-      categories: [AttractionCategories.Experiences.subcategories.CedarCityArts,AttractionCategories.Experiences.subcategories.Shows],
+      categories: [
+        AttractionCategories.Experiences.subcategories.CedarCityArts,
+        AttractionCategories.Experiences.subcategories.Shows,
+      ],
     },
     [GroupedAttractionCategories.Drinks]: {
       name: "Drinks",
@@ -202,9 +212,7 @@ export const initialState: AppState = {
       name: "Recreation Areas",
       icon: trailSign,
       color: "#1c5717",
-      categories: [
-        AttractionCategories.Experiences.subcategories.RecArea,
-      ],
+      categories: [AttractionCategories.Experiences.subcategories.RecArea],
     },
     [MapAttractionCategories.Food]: {
       name: "Food",
@@ -244,7 +252,10 @@ export const initialState: AppState = {
       name: "Art",
       icon: colorPalette,
       color: "#ffffff",
-      categories: [AttractionCategories.Experiences.subcategories.CedarCityArts,AttractionCategories.Experiences.subcategories.Shows],
+      categories: [
+        AttractionCategories.Experiences.subcategories.CedarCityArts,
+        AttractionCategories.Experiences.subcategories.Shows,
+      ],
     },
     [MapAttractionCategories.Drinks]: {
       name: "Drinks",
@@ -308,5 +319,6 @@ export const initialState: AppState = {
     hasSeenTutorial: false,
     isLoading: false,
     searchText: undefined,
+    darkTheme: false,
   },
 };

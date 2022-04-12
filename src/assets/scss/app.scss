@@ -7,57 +7,71 @@
   margin: auto;
   text-align: center;
 }
+
 .basiccentered {
   text-align: center;
 }
 .left {
   text-align: left;
 }
+
 .right {
   text-align: right;
 }
+
 .nightback {
   background-image: url("../img/nighbackground.png");
   background-size: cover;
 }
+
 .higher {
   padding-bottom: 30px;
   background-color: #c9dce466;
 }
+
 .dayback {
   background-image: url("../img/daybackground.png");
   background-size: cover;
 }
+
 .wintermountainbackground {
   background-color: #c9dce4;
   background-size: cover;
 }
+
 .half-image {
   padding: 0.5px;
 }
+
 .trublack {
   color: #000;
 }
+
 .gray {
   background-color: #ffffffd8;
   padding: 10px;
 }
+
 .white {
   background-color: #ffffff;
   color: black;
   padding: 10px;
 }
+
 .green {
   background-color: #c6d488;
   color: black;
   padding: 10px;
 }
+
 .right {
   float: right;
 }
+
 .left {
   float: left;
 }
+
 .ninety {
   width: 79vw;
   float: left;
@@ -142,7 +156,7 @@ ion-chip {
 
 ion-checkbox.prevent-onclick-when-active {
   &.checkbox-checked {
-  pointer-events: none;
+    pointer-events: none;
   }
 }
 
@@ -158,6 +172,10 @@ ion-checkbox.prevent-onclick-when-active {
     left: 0;
     right: 0;
     height: fit-content;
+
+    .searchbar-input.sc-ion-searchbar-ios {
+      background: var(--ion-background-color);
+    }
 
     #results-wrapper {
       margin: 0 12px;
@@ -243,3 +261,104 @@ ion-checkbox.prevent-onclick-when-active {
     }
   }
 }
+
+// Account page checkbox colors
+
+// body {
+//   background-color: #444463c9;
+// }
+.cc3121e {
+  color: #c3121e;
+  --border-color-checked: #c3121e;
+  --background-checked: #c3121e;
+}
+
+.c0000ff {
+  color: #0000ff;
+  --border-color-checked: #0000ff;
+  --background-checked: #0000ff;
+}
+.c2f4f4f {
+  color: #2f4f4f;
+  --border-color-checked: #2f4f4f;
+  --background-checked: #2f4f4f;
+}
+.c228b22 {
+  color: #228b22;
+  --border-color-checked: #228b22;
+  --background-checked: #228b22;
+}
+.c4b0082 {
+  color: #4b0082;
+  --border-color-checked: #4b0082;
+  --background-checked: #4b0082;
+}
+.cffe4c4 {
+  color: #ffe4c4;
+  --border-color-checked: #ffe4c4;
+  --background-checked: #ffe4c4;
+}
+.cff0000 {
+  color: #ff0000;
+  --border-color-checked: #ff0000;
+  --background-checked: #ff0000;
+}
+.c8b4513 {
+  color: #8b4513;
+  --border-color-checked: #8b4513;
+  --background-checked: #8b4513;
+}
+.c00ffff {
+  color: #00ffff;
+  --border-color-checked: #00ffff;
+  --background-checked: #00ffff;
+}
+.c6495ed {
+  color: #6495ed;
+  --border-color-checked: #6495ed;
+  --background-checked: #6495ed;
+}
+.c000000 {
+  color: #000000;
+  --border-color-checked: #000000;
+  --background-checked: #000000;
+}
+
+.cff69b4 {
+  color: #ff69b4;
+  --border-color-checked: #ff69b4;
+  --background-checked: #ff69b4;
+}
+
+.c00ff00 {
+  color: #00ff00;
+  --border-color-checked: #00ff00;
+  --background-checked: #00ff00;
+}
+
+.c8c34eb {
+  color: #8c34eb;
+  --border-color-checked: #8c34eb;
+  --background-checked: #8c34eb;
+}
+
+.c7f1545 {
+  color: #7f1545;
+  --border-color-checked: #7f1545;
+  --background-checked: #7f1545;
+}
+
+.cc4142599 {
+  color: #c4142599;
+  --border-color-checked: #c4142599;
+  --background-checked: #c4142599;
+}
+
+.cbbbbbb {
+  color: #bbbbbb;
+  --border-color-checked: #bbbbbb;
+  --background-checked: #bbbbbb;
+}
+
+// border-color: var();
+// background: var();

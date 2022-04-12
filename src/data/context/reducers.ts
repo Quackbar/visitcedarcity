@@ -66,5 +66,14 @@ export const reducers = (state: AppState, action: StateActions): AppState => {
         },
       };
     }
+    case "set-dark-theme": {
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          darkTheme: action.darkTheme,
+        },
+      };
+    }
   }
 };

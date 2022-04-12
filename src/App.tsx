@@ -10,10 +10,10 @@ import {
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { homeOutline, searchOutline, mapOutline, personOutline } from "ionicons/icons";
 
-import { AppContextProvider } from "./data/context/AppContext";
+import { AppContext, AppContextProvider } from "./data/context/AppContext";
 import { loadUserData } from "./data/context/actions";
 
 import HomeOrTutorial from "./components/HomeOrTutorial";
@@ -39,7 +39,6 @@ import "@ionic/react/css/text-alignment.css";
 import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
-import { getSunrise, getSunset } from "sunrise-sunset-js";
 
 /* Theme variables */
 import "./theme/variables.css";
@@ -48,7 +47,7 @@ import "./assets/scss/app.scss";
 import { getBrianHeadWeather, getCedarWeather, getParoWeather } from "./assets/firebase/Firebase";
 import { getBHSched, getCBAlerts, getCCSched, getSUMASched } from "./assets/data/ScheduleUpdater";
 import { Timestamp } from "@firebase/firestore";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { connect } from "./data/context/connect";
 
 setupIonicReact();
@@ -95,24 +94,6 @@ getSUMASched();
 getCBAlerts();
 getCCSched();
 
-
-// const truesunset = getSunset(37.68912, -113.047006);
-// const truesunrise = getSunrise(37.68912, -113.047006);
-
-// const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()];
-// const sunset = [truesunset.getHours(), truesunset.getMinutes()];
-
-// var sunrise_m = sunrise[0] * 60 + sunrise[1];
-// var sunset_m = sunset[0] * 60 + sunset[1];
-
-// var now = new Date();
-// var now_m = now.getHours() * 60 + now.getMinutes();
-
-// if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
-//   darkMode = true;
-// } else {
-//   darkMode = false;
-// }
 interface StateProps {
   isLoading: boolean;
 }
@@ -123,49 +104,17 @@ interface DispatchProps {
 interface IonicAppProps extends StateProps, DispatchProps {}
 
 const VisitCedarCity: React.FC<IonicAppProps> = ({ isLoading, loadUserData }) => {
+  const { state } = useContext(AppContext);
+
   useEffect(() => {
     loadUserData();
     // eslint-disable-next-line
   }, []);
 
-
-let result = JSON.parse(localStorage.getItem('test')||"[]")
-
-// console.log("result",result.myBool)
-
-const [darkMode, setDarkMode] = useState(result.myBool ?? true);
-
-
-let storeMe = {
-  myBool: darkMode,
-}
-
-localStorage.setItem('test', JSON.stringify(storeMe))
-
-   
-
-// const truesunset = getSunset(37.68912, -113.047006);
-// const truesunrise = getSunrise(37.68912, -113.047006);
-
-// const sunrise = [truesunrise.getHours(), truesunrise.getMinutes()];
-// const sunset = [truesunset.getHours(), truesunset.getMinutes()];
-
-// var sunrise_m = sunrise[0] * 60 + sunrise[1];
-// var sunset_m = sunset[0] * 60 + sunset[1];
-
-// var now = new Date();
-// var now_m = now.getHours() * 60 + now.getMinutes();
-
-// if (now_m > sunrise_m + 60 && now_m <= sunset_m + 30) {
-//   setDarkMode(true);
-// } else {
-//   setDarkMode(false);
-// }
-
   return isLoading ? (
     <div></div>
   ) : (
-    <IonApp className={`${darkMode ? "dark-theme" : ""}`}>
+    <IonApp className={`${state.user.darkTheme ? "dark-theme" : ""}`}>
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
@@ -186,11 +135,6 @@ localStorage.setItem('test', JSON.stringify(storeMe))
             <IonTabButton tab="discover" href="/discover">
               <IonIcon icon={searchOutline} />
               <IonLabel>Discover</IonLabel>
-            </IonTabButton>
-            <IonTabButton>
-                <IonToggle color="dark" onIonChange={()=> {setDarkMode(!darkMode)}}/>
-                <IonLabel>{darkMode ? "Dark" : "Light"}</IonLabel>
-
             </IonTabButton>
             <IonTabButton tab="map" href="/map">
               <IonIcon icon={mapOutline} />
