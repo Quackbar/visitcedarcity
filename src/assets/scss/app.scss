@@ -71,10 +71,15 @@
 .left {
   float: left;
 }
-
 .ninety {
   width: 79vw;
   float: left;
+  margin-left: -10px;
+}
+.ios .ninety {
+  width: 79vw;
+  float: left;
+  margin-left: -20px;
 }
 
 .weatherhead {
@@ -92,7 +97,6 @@
 .ten {
   width: 10vw;
   float: left;
-  padding-top: 15px;
   font-size: large;
 }
 

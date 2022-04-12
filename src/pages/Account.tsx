@@ -172,12 +172,15 @@ const Account: React.FC<AccountProps> = ({
 
             return (
               <IonItem key={index}>
+                <IonItem class="ninety">
                 <IonCheckbox
                   class={"c" + subscription.color.slice(1)}
                   onClick={() => didToggleCheckbox(index)}
                   checked={selectedSubscriptions.includes(subscription.id)}
                 />
-                <IonLabel>{subscription.title}</IonLabel>
+                <IonLabel>&nbsp;{subscription.title}</IonLabel>
+                </IonItem>
+                
                 <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
                 <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
               </IonItem>
