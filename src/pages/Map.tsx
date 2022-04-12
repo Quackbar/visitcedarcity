@@ -22,7 +22,7 @@ import {
 } from "@ionic/react";
 // @ts-ignore
 // import mapboxgl, { Map as MapDataType } from "!mapbox-gl";
-import { layersOutline, pinOutline, homeOutline, settingsOutline } from "ionicons/icons";
+import { layersOutline, pinOutline, homeOutline, mapOutline } from "ionicons/icons";
 
 // @ts-ignore
 import mapboxgl, { Map as MapDataType } from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
@@ -447,7 +447,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
     <IonPage id="map-page" className={`${!mapIsLoaded && "isLoading"}`} ref={pageRef}>
       <IonFab slot="fixed" vertical="bottom" horizontal="start">
         <IonFabButton size="small">
-          <IonIcon icon={settingsOutline}></IonIcon>
+          <IonIcon icon={mapOutline}></IonIcon>
         </IonFabButton>
         <IonFabList side="top">
           <IonFabButton onClick={() => setShowPinsModal(true)}>
@@ -489,7 +489,7 @@ const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, 
                     })
                   ) : (
                     <IonItem>
-                      <IonLabel>No Results -<br/> But our database can be incomplete. <br/>Please try other sources.</IonLabel>
+                      <IonLabel>No Results, please try other sources.</IonLabel>
                     </IonItem>
                   )
                 ) : (

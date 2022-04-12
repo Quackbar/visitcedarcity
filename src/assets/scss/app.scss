@@ -181,6 +181,7 @@ ion-checkbox.prevent-onclick-when-active {
       margin: 0 12px;
       height: fit-content;
       border-radius: 10px;
+      overflow: hidden;
       background-color: #ffffff;
 
       .ion-item-border {
@@ -199,6 +200,7 @@ ion-checkbox.prevent-onclick-when-active {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         max-height: 40vh;
         overflow-y: scroll;
+        border-radius: 10px;
       }
     }
   }
@@ -263,10 +265,6 @@ ion-checkbox.prevent-onclick-when-active {
 }
 
 // Account page checkbox colors
-
-// body {
-//   background-color: #444463c9;
-// }
 .cc3121e {
   color: #c3121e;
   --border-color-checked: #c3121e;
@@ -359,6 +357,3 @@ ion-checkbox.prevent-onclick-when-active {
   --border-color-checked: #bbbbbb;
   --background-checked: #bbbbbb;
 }
-
-// border-color: var();
-// background: var();
