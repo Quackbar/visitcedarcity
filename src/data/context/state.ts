@@ -56,6 +56,8 @@ const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
 
 let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging, Custom]).concat(Foods.concat(CityItems)).concat(TourItems)
 
+console.log("number of listed attractions: ",reAttraction.length)
+
 let biases = localStorage.getItem("Biases") ?? "[]"
 let biasesArr: string[] = []
 try {

@@ -22,6 +22,9 @@ try {
 
 
 ExpObj.forEach((el) => {
+  if(el.description==="true"){
+    el.description="Come connect with us and let us show you around!"
+  }
   el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity);
 });
 
@@ -84,13 +87,15 @@ Custom.forEach((el) => {
   if(el.subtitle.includes("Drink")){
     el.categories.push(AttractionCategories.FoodAndDrink.subcategories.Alcohol);
   }
-  if(el.subtitle.includes("Lodge")){
+  if(el.subtitle.includes("Lodg")){
     el.categories.push(AttractionCategories.Lodging.subcategories.HotelMotel);
   }
   if(el.title.includes("RV")){
     el.categories.push(AttractionCategories.Lodging.subcategories.RVSite);
   }
-  el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity);
+  if(el.title.includes("Universi")){
+    el.categories.push(AttractionCategories.Experiences.subcategories.LoveLocalCedarCity);
+  }
 });
 
 export let Lodging = [] as AttractionItem[];
@@ -1183,7 +1188,7 @@ export const CityItems: AttractionItem[] = [
     subtitle: "Cedar City Theatre Festival",
     url: "https://www.bard.org/",
     description: "Tony Award-winning theater at the Utah Shakespeare Festival in Cedar City, Utah.",
-    image: "https://www.bard.org/assets/images/Engelstad_StarryNight.jpg",
+    image: "https://www.bard.org/images/homepage/home1.jpg",
     categories: [
       AttractionCategories.Experiences.subcategories.Shows,
       AttractionCategories.Experiences.subcategories.FamilyFun,

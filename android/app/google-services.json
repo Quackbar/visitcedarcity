@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:449734764848:android:10fcd68c2c524b0d9740f5",
+        "mobilesdk_app_id": "1:449734764848:android:ce1d26b61af7dfc69740f5",
         "android_client_info": {
           "package_name": "us.goldblockchain.cedarcity"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "449734764848-m60m9ifnpno2lbsiqtnc5rjr1d9r18c9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "us.goldblockchain.cedarcity",
+            "certificate_hash": "71a4ff482db57df0edca379082e62987f43f82fb"
+          }
+        },
         {
           "client_id": "449734764848-be5th03o2gr9m1ejqkm4us6bk30ll9t1.apps.googleusercontent.com",
           "client_type": 3
