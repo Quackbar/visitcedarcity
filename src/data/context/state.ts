@@ -58,15 +58,8 @@ let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging, Cust
   .concat(Foods.concat(CityItems))
   .concat(TourItems);
 
-<<<<<<< HEAD
-console.log("number of listed attractions: ",reAttraction.length)
-
-let biases = localStorage.getItem("Biases") ?? "[]"
-let biasesArr: string[] = []
-=======
 let biases = localStorage.getItem("Biases") ?? "[]";
 let biasesArr: string[] = [];
->>>>>>> 99067333e8ab69bce53484d29f0df790975ad159
 try {
   biasesArr = JSON.parse(biases);
 } catch (error) {
