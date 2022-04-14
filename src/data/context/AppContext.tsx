@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useEffect, useReducer } from "react";
 import { AppState, initialState } from "./state";
 import { reducers } from "./reducers";
 
@@ -23,7 +23,15 @@ export const AppContextProvider: React.FC = (props) => {
     },
   };
 
+  console.log("------------------");
+  console.log(initialState);
+  console.log(updatedInitialState);
+  console.log("");
   const [state, dispatch] = useReducer(reducers, updatedInitialState);
+
+  useEffect(() => {
+    console.log(state.user.selectedHomeModules);
+  }, [state.user.selectedHomeModules]);
 
   return (
     <AppContext.Provider

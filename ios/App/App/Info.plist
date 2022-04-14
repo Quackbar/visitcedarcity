@@ -29,8 +29,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Location permissions is required to display your position on the map.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location permissions is required to display your position on the map.</string>
 	<key>UIBackgroundModes</key>

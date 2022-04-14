@@ -72,7 +72,6 @@ const HomeModulesFilter: React.FC<HomeModulesFilterProps> = ({
     } else {
       selectedHomeModules.push(index);
     }
-    console.log(selectedHomeModules);
     updateSelectedHomeModules([...selectedHomeModules]);
   };
 

@@ -22,6 +22,8 @@ export const getUserData = async () => {
     });
   }
 
+  console.log(response[2].value);
+
   const selectedHomeModulesString = (await response[2].value) ?? false;
   let selectedHomeModules: number[] = [];
   if (selectedHomeModulesString) {
@@ -29,6 +31,17 @@ export const getUserData = async () => {
     selectedHomeModules = selectedHomeModulesData.map((subscription: number) => {
       return subscription;
     });
+  } else {
+    console.log('dont exist')
+    selectedHomeModules = [
+      AllModules.Weather,
+      AllModules.Schedule,
+      AllModules.FestivalFood,
+      AllModules.SkyData,
+      AllModules.RoadConditions,
+      AllModules.WinterMountainData,
+      AllModules.SnowPack,
+    ]
   }
 
   return {
