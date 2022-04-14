@@ -33,7 +33,6 @@
 	<string>Location permissions is required to display your position on the map.</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>location</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
