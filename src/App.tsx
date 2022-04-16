@@ -93,6 +93,7 @@ getBHSched();
 getSUMASched();
 getCBAlerts();
 getCCSched();
+localStorage.setItem("blocker", "false")
 
 interface StateProps {
   isLoading: boolean;

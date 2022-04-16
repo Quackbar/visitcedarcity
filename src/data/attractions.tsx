@@ -431,7 +431,7 @@ export const OutdoorItems = [
   },
   {
     id: 19,
-    title: "Ramparts",
+    title: "South Rim Trail",
     subtitle: "Brian Head Area Trails",
     url: "https://www.alltrails.com/trail/us/utah/spectra-point-and-rampart-overlook-trails",
     description: "2 mile, Out-and-Back type trail accessible Summer though Fall.",

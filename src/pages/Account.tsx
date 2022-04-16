@@ -202,7 +202,7 @@ const Account: React.FC<AccountProps> = ({
             <IonItemDivider sticky>
               <IonLabel>Help</IonLabel>
             </IonItemDivider>
-            <IonItem href="/tutorial">
+            <IonItem href="/tutorial" onClick={()=>{localStorage.setItem("blocker", "true")}}>
               <IonLabel>View Tutorial</IonLabel>
             </IonItem>
             <IonItem href="mailto:info@goldblockchain.us">

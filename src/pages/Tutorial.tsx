@@ -99,8 +99,14 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
     updateSelectedHomeModules([...selectedHomeModules]);
   };
 
+  if(!Boolean(localStorage.getItem("blocker"))){
+    updateSelectedHomeModules([...vals]);
+    updateSelectedSubscriptions([...subs]);
+  }
+
+
   return (
-    <IonPage id="tutorial-page">
+    <IonPage id="tutorial-page" >
       <IonContent fullscreen>
         <SafeAreaWrapper>
           <Swiper pagination={true} onSwiper={setSwiper} onSlideChangeTransitionStart={handleSlideChangeStart}>
