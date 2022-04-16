@@ -2,6 +2,7 @@
 import { Custom, ExpObj, Foods, Lodging, TourItems } from "../attractions";
 import {
   AllCategories,
+  AllModules,
   AttractionCategories,
   AttractionItem,
   GroupedAttractionCategories,
@@ -58,10 +59,8 @@ let reAttraction = shuffleArrays([OutdoorItems, CityItems, ExpObj, Lodging, Cust
   .concat(Foods.concat(CityItems))
   .concat(TourItems);
 
-console.log("number of listed attractions: ",reAttraction.length)
-
-let biases = localStorage.getItem("Biases") ?? "[]"
-let biasesArr: string[] = []
+let biases = localStorage.getItem("Biases") ?? "[]";
+let biasesArr: string[] = [];
 try {
   biasesArr = JSON.parse(biases);
 } catch (error) {

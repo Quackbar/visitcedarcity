@@ -6,7 +6,6 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  IonToggle,
   setupIonicReact,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
@@ -50,7 +49,9 @@ import { Timestamp } from "@firebase/firestore";
 import React, { useContext, useEffect } from "react";
 import { connect } from "./data/context/connect";
 
-setupIonicReact();
+setupIonicReact({
+  swipeBackEnabled: false,
+});
 
 let CedarImg = "";
 let CedarTemp = "";

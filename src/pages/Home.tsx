@@ -154,20 +154,19 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   let things: TodaysType[] = [];
   things = [];
   const today = new Date();
-  let preformat = today.toLocaleDateString('en-US', { timeZone: 'America/Denver' }).split("/")
+  let preformat = today.toLocaleDateString("en-US", { timeZone: "America/Denver" }).split("/");
 
   function pad(d: number) {
-    return (d < 10) ? '0' + d.toString() : d.toString();
+    return d < 10 ? "0" + d.toString() : d.toString();
   }
-
 
   const context = useContext(AppContext);
 
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
-  const [formattedDate, setFormattedDate] = useState(preformat[2]+"-"+pad(Number(preformat[0]))+"-"+pad(Number(preformat[1])));
-
-
+  const [formattedDate, setFormattedDate] = useState(
+    preformat[2] + "-" + pad(Number(preformat[0])) + "-" + pad(Number(preformat[1]))
+  );
 
   let CBAlerts: { schedule: subtype[] } = { schedule: [] };
 
@@ -281,15 +280,17 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   const HomeModules: { [key in AllModules]: { label: string; src: ReactElement } } = {
     [AllModules.Weather]: {
       label: "Weather",
-      src: (
-        !toggles[0] ? 
+      src: !toggles[0] ? (
         <IonCard>
           <IonCardContent>
-          <IonLabel class="centered">Weather<br/></IonLabel>
-          <IonLabel class="centered">Not Available during this season.</IonLabel>
+            <IonLabel class="centered">
+              Weather
+              <br />
+            </IonLabel>
+            <IonLabel class="centered">Not Available during this season.</IonLabel>
           </IonCardContent>
         </IonCard>
-        :
+      ) : (
         <Weather
           CedarImg={CedarImg || String(localStorage.getItem("CedarImg"))}
           CedarTemp={CedarTemp || String(localStorage.getItem("CedarTemp"))}
@@ -302,15 +303,17 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
     },
     [AllModules.Schedule]: {
       label: "Schedule",
-      src: (
-        !toggles[1] ? 
+      src: !toggles[1] ? (
         <IonCard>
           <IonCardContent>
-          <IonLabel class="centered">Schedule<br/></IonLabel>
-          <IonLabel class="centered">Not Available during this season.</IonLabel>
+            <IonLabel class="centered">
+              Schedule
+              <br />
+            </IonLabel>
+            <IonLabel class="centered">Not Available during this season.</IonLabel>
           </IonCardContent>
         </IonCard>
-        :
+      ) : (
         <IonCard class="basiccentered">
           <IonItem button={true} id="open-date-input">
             <IonLabel>Date</IonLabel>
@@ -345,48 +348,69 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         </IonCard>
       ),
     },
-    [AllModules.FestivalFood]: { label: "Festival Food", src: (!toggles[2] ? 
-      <IonCard>
-        <IonCardContent>
-        <IonLabel class="centered">Festival Food<br/></IonLabel>
-        <IonLabel class="centered">Not Available during this season.</IonLabel>
-        </IonCardContent>
-      </IonCard>
-      :<FestivalFood />) },
-    [AllModules.SkyData]: {
-      label: "Sky Data",
-      src: (
-        !toggles[3] ? 
+    [AllModules.FestivalFood]: {
+      label: "Festival Food",
+      src: !toggles[2] ? (
         <IonCard>
           <IonCardContent>
-          <IonLabel class="centered">Sky Data<br/></IonLabel>
-          <IonLabel class="centered">Not Available during this season.</IonLabel>
+            <IonLabel class="centered">
+              Festival Food
+              <br />
+            </IonLabel>
+            <IonLabel class="centered">Not Available during this season.</IonLabel>
           </IonCardContent>
         </IonCard>
-        :
+      ) : (
+        <FestivalFood />
+      ),
+    },
+    [AllModules.SkyData]: {
+      label: "Sky Data",
+      src: !toggles[3] ? (
+        <IonCard>
+          <IonCardContent>
+            <IonLabel class="centered">
+              Sky Data
+              <br />
+            </IonLabel>
+            <IonLabel class="centered">Not Available during this season.</IonLabel>
+          </IonCardContent>
+        </IonCard>
+      ) : (
         <IonCard key={AllModules.RoadConditions}>
           <SkyData />
         </IonCard>
       ),
     },
-    [AllModules.RoadConditions]: { label: "Road Conditions", src: (!toggles[4] ? 
-      <IonCard>
-        <IonCardContent>
-        <IonLabel class="centered">Road Conditions<br/></IonLabel>
-        <IonLabel class="centered">Not Available during this season.</IonLabel>
-        </IonCardContent>
-      </IonCard>
-      :<RoadConditions />) },
-    [AllModules.WinterMountainData]: {
-      label: "Winter Mountain Data",
-      src: (!toggles[5] ? 
+    [AllModules.RoadConditions]: {
+      label: "Road Conditions",
+      src: !toggles[4] ? (
         <IonCard>
           <IonCardContent>
-          <IonLabel class="centered">Winter Mountain Data<br/></IonLabel>
-          <IonLabel class="centered">Not Available during this season.</IonLabel>
+            <IonLabel class="centered">
+              Road Conditions
+              <br />
+            </IonLabel>
+            <IonLabel class="centered">Not Available during this season.</IonLabel>
           </IonCardContent>
         </IonCard>
-        :
+      ) : (
+        <RoadConditions />
+      ),
+    },
+    [AllModules.WinterMountainData]: {
+      label: "Winter Mountain Data",
+      src: !toggles[5] ? (
+        <IonCard>
+          <IonCardContent>
+            <IonLabel class="centered">
+              Winter Mountain Data
+              <br />
+            </IonLabel>
+            <IonLabel class="centered">Not Available during this season.</IonLabel>
+          </IonCardContent>
+        </IonCard>
+      ) : (
         <MountainData
           BaseDepth={MDBaseDepth || String(localStorage.getItem("MDBaseDepth"))}
           OneDaySnowfall={MDOneDay || String(localStorage.getItem("MDOneDaySnowfall"))}
@@ -397,15 +421,17 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
     },
     [AllModules.SnowPack]: {
       label: "Snow Pack",
-      src: (
-        !toggles[6] ? 
+      src: !toggles[6] ? (
         <IonCard>
           <IonCardContent>
-          <IonLabel class="centered">Snow Pack<br/></IonLabel>
-          <IonLabel class="centered">Not Available during this season.</IonLabel>
+            <IonLabel class="centered">
+              Snow Pack
+              <br />
+            </IonLabel>
+            <IonLabel class="centered">Not Available during this season.</IonLabel>
           </IonCardContent>
         </IonCard>
-        :
+      ) : (
         <IonCard>
           <SnowPack
             theDates={JSON.parse(String(localStorage.getItem("dates")))}
@@ -432,6 +458,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
           <IonRefresherContent></IonRefresherContent>
         </IonRefresher>
+        {console.log(selectedHomeModules)}
         {selectedHomeModules.length > 0 ? (
           selectedHomeModules.map((moduleId: AllModules, index) => {
             return <Fragment key={index}>{HomeModules[moduleId].src}</Fragment>;
@@ -439,7 +466,9 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         ) : (
           <div className="no-module-selected-wrapper">
             <IonLabel className="no-module-selected-title">No modules selected.</IonLabel>
-            <IonLabel className="no-module-selected-description">Get started by selecting and reordering your preffered modules from the settings.</IonLabel>
+            <IonLabel className="no-module-selected-description">
+              Get started by selecting and reordering your preffered modules from the settings.
+            </IonLabel>
           </div>
         )}
       </IonContent>
