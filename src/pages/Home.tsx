@@ -129,7 +129,7 @@ function checkSched(things: TodaysType[]) {
         name="Sorry No Events Today"
         timeStart=""
         timeEnd=""
-        thelocation="Please Check out our Discovery page"
+        thelocation="Check your subscriptions on the Account page"
         url="https://visitcedarcity.com/"
       />
     );
@@ -399,12 +399,12 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
       ),
     },
     [AllModules.WinterMountainData]: {
-      label: "Winter Mountain Data",
+      label: "Mountain Data",
       src: !toggles[5] ? (
         <IonCard>
           <IonCardContent>
             <IonLabel class="centered">
-              Winter Mountain Data
+              Mountain Data
               <br />
             </IonLabel>
             <IonLabel class="centered">Not Available during this season.</IonLabel>

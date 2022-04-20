@@ -1002,11 +1002,12 @@ export let BHSchedule = {"schedule": [
     ]}
 
 let schedule = localStorage.getItem("BHScheduleUpdate")?.slice(0,-1) + "]}" || "{\"schedule\": []}"
-    // console.log(schedule)
+// console.log(schedule)
 
 
 try{
     BHSchedule = JSON.parse(schedule)
 }catch(err){
     console.log(err)
+    localStorage.setItem("BHScheduleUpdate", "{\"schedule\": []")
 }

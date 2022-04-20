@@ -1,4 +1,4 @@
-export const SUUPSchedule = {"schedule": [
+export let SUUPSchedule = {"schedule": [
     {
     "date": "2022-04-09",
     "groups": [{ "time": "7:30:00 PM",
@@ -7,140 +7,14 @@ export const SUUPSchedule = {"schedule": [
     "timeEnd": "9:30:00 PM",
     "location": "Heritage Center Theater, 105 N 100 E, Cedar City, UT 84720, USA",
     "tracks": ["SUU Performing Arts"],"id": "1"}]},]},
-    {
-    "date": "2022-04-16",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Music Masterworks Series Jazz Band Concert",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Heritage Center Theater, 105 N 100 E, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "2"}]},]},
-    {
-    "date": "2022-04-09",
-    "groups": [{ "time": "5:00:00 PM",
-    "sessions": [ {"name": "Zion Trio Concert",
-    "url": "https://www.suu.edu/pva/","timeStart": "5:00:00 PM",
-    "timeEnd": "6:00:00 PM",
-    "location": "Thorley Music Recital Hall, 351 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "3"}]},]},
-    {
-    "date": "2022-04-20",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Pierce Emata Guest Artist Piano Recital",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "8:30:00 PM",
-    "location": "Thorley Music Recital Hall, 351 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "4"}]},]},
-    {
-    "date": "2022-04-24",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Percussion Ensemble Concert",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "8:30:00 PM",
-    "location": "undefined",
-    "tracks": ["SUU Performing Arts"],"id": "5"}]},]},
-    {
-    "date": "2022-04-13",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Hal Campbell - String Quartet",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "8:30:00 PM",
-    "location": "Thorley Music Recital Hall, 351 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "6"}]},]},
-    {
-    "date": "2022-04-15",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Falsettos",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Eileen and Allen Anes Studio Theatre, 101-199 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "7"}]},]},
-    {
-    "date": "2022-04-16",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Falsettos",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Eileen and Allen Anes Studio Theatre, 101-199 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "8"}]},]},
-    {
-    "date": "2022-04-16",
-    "groups": [{ "time": "2:00:00 PM",
-    "sessions": [ {"name": "Falsettos",
-    "url": "https://www.suu.edu/pva/","timeStart": "2:00:00 PM",
-    "timeEnd": "4:00:00 PM",
-    "location": "Eileen and Allen Anes Studio Theatre, 101-199 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "9"}]},]},
-    {
-    "date": "2022-04-06",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Brass and Woodwind Ensembles Recital",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Thorley Music Recital Hall, 351 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "10"}]},]},
-    {
-    "date": "2022-04-05",
-    "groups": [{ "time": "5:00:00 PM",
-    "sessions": [ {"name": "CAN-AM Trio",
-    "url": "https://www.suu.edu/pva/","timeStart": "5:00:00 PM",
-    "timeEnd": "6:00:00 PM",
-    "location": "Thorley Recital Hall, SUU Music Building",
-    "tracks": ["SUU Performing Arts"],"id": "11"}]},]},
-    {
-    "date": "2022-04-07",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Saxophone Studio Concert",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "8:30:00 PM",
-    "location": "Thorley Recital Hall, SUU Music Building",
-    "tracks": ["SUU Performing Arts"],"id": "12"}]},]},
-    {
-    "date": "2022-04-12",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Faculty Cello Duo - Jessika Soli and Daniel Gaisford - Thorley Recital Hall",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "8:30:00 PM",
-    "location": "undefined",
-    "tracks": ["SUU Performing Arts"],"id": "13"}]},]},
-    {
-    "date": "2022-04-17",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Music Masterworks Series Choir & Symphony Orchestra Concert",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Heritage Center Theater, 105 N 100 E, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "14"}]},]},
-    {
-    "date": "2022-04-17",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Falsettos",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Eileen and Allen Anes Studio Theatre, 101-199 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "15"}]},]},
-    {
-    "date": "2022-04-19",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Falsettos",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Eileen and Allen Anes Studio Theatre, 101-199 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "16"}]},]},
-    {
-    "date": "2022-04-23",
-    "groups": [{ "time": "7:30:00 PM",
-    "sessions": [ {"name": "Falsettos",
-    "url": "https://www.suu.edu/pva/","timeStart": "7:30:00 PM",
-    "timeEnd": "9:30:00 PM",
-    "location": "Eileen and Allen Anes Studio Theatre, 101-199 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "17"}]},]},
-    {
-    "date": "2022-04-23",
-    "groups": [{ "time": "2:00:00 PM",
-    "sessions": [ {"name": "Falsettos",
-    "url": "https://www.suu.edu/pva/","timeStart": "2:00:00 PM",
-    "timeEnd": "4:00:00 PM",
-    "location": "Eileen and Allen Anes Studio Theatre, 101-199 W University Blvd, Cedar City, UT 84720, USA",
-    "tracks": ["SUU Performing Arts"],"id": "18"}]},]},
     ]}
+
+let schedule = localStorage.getItem("SUUPUpdate")?.slice(0,-1) + "]}" || "{\"schedule\": []}"
+// console.log(schedule)
+
+
+try{
+    SUUPSchedule = JSON.parse(schedule)
+}catch(err){
+    console.log(err)
+}

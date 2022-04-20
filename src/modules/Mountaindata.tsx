@@ -26,12 +26,12 @@ const MountainData: React.FC<MountainProps> = ({ BaseDepth, OneDaySnowfall, Lift
         <IonCard>
           <h3 className="centered">
             <br/>
-            Brian Head Winter
+            Brian Head
             <br /> Mountain Data
           </h3>
 
-          <h2>&emsp;Base Snow Depth: {BaseDepth}</h2>
-          <h2>&emsp;One Day Snowfall: {OneDaySnowfall}</h2>
+          {!(BaseDepth === "NaN") ? <h2>&emsp;Base Snow Depth: {BaseDepth}</h2> : <></>}
+          {!(OneDaySnowfall === "NaN") ? <h2>&emsp;One Day Snowfall: {OneDaySnowfall}</h2> : <></>}
           <h2>&emsp;Trails Open: {TrailsOpen}</h2>
           <h2>&emsp;Lifts Open: {LiftsOpen}</h2>
 
