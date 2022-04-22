@@ -1,5 +1,5 @@
 import React from "react";
-import { IonCardHeader, IonCard } from "@ionic/react";
+import { IonCardHeader, IonCard, IonRow, IonGrid, IonCol } from "@ionic/react";
 
 import "../assets/scss/app.scss";
 
@@ -29,12 +29,45 @@ const MountainData: React.FC<MountainProps> = ({ BaseDepth, OneDaySnowfall, Lift
             Brian Head
             <br /> Mountain Data
           </h3>
-
-          {!(BaseDepth === "NaN") ? <h2>&emsp;Base Snow Depth: {BaseDepth}</h2> : <></>}
+          <IonGrid class="centered">
+            {!(BaseDepth === "NaN") ? <IonRow>
+              <IonCol>
+              <p>&emsp;Base Depth: </p>      
+              </IonCol>
+              <IonCol>
+              <p>{BaseDepth}</p>
+              </IonCol>
+            </IonRow> : <></>}
+            {!(OneDaySnowfall === "NaN") ? <IonRow>
+              <IonCol>
+              <p>&emsp;24hr Snow: </p>      
+              </IonCol>
+              <IonCol>
+              <p>{OneDaySnowfall}</p>
+              </IonCol>
+            </IonRow> : <></>}
+            <IonRow>
+              <IonCol>
+              <p>&emsp;Trails Open:</p>      
+              </IonCol>
+              <IonCol>
+              <p>{TrailsOpen}</p>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol>
+              <p>&emsp;Lifts Open:</p>      
+              </IonCol>
+              <IonCol>
+              <p>{LiftsOpen}</p>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+          {/* {!(BaseDepth === "NaN") ? <h2>&emsp;Base Snow Depth: {BaseDepth}</h2> : <></>}
           {!(OneDaySnowfall === "NaN") ? <h2>&emsp;One Day Snowfall: {OneDaySnowfall}</h2> : <></>}
           <h2>&emsp;Trails Open: {TrailsOpen}</h2>
           <h2>&emsp;Lifts Open: {LiftsOpen}</h2>
-
+<br/> */}
           {/* <h6>Last Updated: {CedarUpdate}</h6> */}
         </IonCard>
       </>
