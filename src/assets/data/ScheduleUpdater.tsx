@@ -33,7 +33,7 @@ export async function getCCSched() : Promise<string> {
 
                     returnable = returnable + "\"sessions\": [ {\"name\": \""+name+"\","
                 
-                    returnable = returnable + "\"url\": \""+element.website+"\",\"timeStart\": \""+element.starttime+"\","
+                    returnable = returnable + "\"url\": \"https://visitcedarcity.com/event-details/?eid="+element.eventid+"\",\"timeStart\": \""+element.starttime+"\","
                 
                     returnable = returnable + "\"timeEnd\": \""+element.endtime+"\","
                     returnable = returnable + "\"location\": \""+element.location+"\","
