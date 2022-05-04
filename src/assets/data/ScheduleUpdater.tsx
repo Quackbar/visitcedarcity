@@ -6,7 +6,7 @@ export async function getCCSched() : Promise<string> {
     return new Promise(async (resolve, reject) => {
         let returnable = "{\"schedule\": ["
         var id = 1000;
-        let thefetch = await fetch('https://visitcedarcity.com/wp-json/wp/v2/events?per_page=300&page=1')  
+        let thefetch = await fetch('https://visitcedarcity.com/wp-json/solid/v1/events?per_page=50&page=1')  
         .then(response => response.json())
         .then(data => {
             // console.log(data.toString().includes("Art Festival"))
@@ -14,16 +14,16 @@ export async function getCCSched() : Promise<string> {
             let date = new Date()
             date.setDate(date.getDate() - 1);
 
-            data.forEach((element: any) => {
+            data.events.event.forEach((element: any) => {
                 
-                if(!(new Date(element.acf.start_date).getTime()<date.getTime())){
+                if(!(new Date(element.startdate).getTime()<date.getTime())){
                     // console.log(element)
                     id++;
                     returnable = returnable + "{"
-                    returnable = returnable + "\"date\": \""+new Date(element.acf.start_date).toISOString().slice(0, 10)+"\","
+                    returnable = returnable + "\"date\": \""+new Date(element.startdate).toISOString().slice(0, 10)+"\","
                 
-                    returnable = returnable + "\"groups\": [{ \"time\": \"" + new Date(element.acf.start_date).toLocaleTimeString("en-US")+"\","
-                    let name = element.acf.full_title
+                    returnable = returnable + "\"groups\": [{ \"time\": \"" + new Date(element.startdate).toLocaleTimeString("en-US")+"\","
+                    let name = element.title
                     if(name.includes('"')){
                         name = "Check out this event on our Online Calendar"
                         // name.replaceAll("\"","")
@@ -33,10 +33,10 @@ export async function getCCSched() : Promise<string> {
 
                     returnable = returnable + "\"sessions\": [ {\"name\": \""+name+"\","
                 
-                    returnable = returnable + "\"url\": \""+element.link+"\",\"timeStart\": \""+element.acf.start_time+"\","
+                    returnable = returnable + "\"url\": \""+element.website+"\",\"timeStart\": \""+element.starttime+"\","
                 
-                    returnable = returnable + "\"timeEnd\": \""+element.acf.end_time+"\","
-                    returnable = returnable + "\"location\": \""+element.acf.location+"\","
+                    returnable = returnable + "\"timeEnd\": \""+element.endtime+"\","
+                    returnable = returnable + "\"location\": \""+element.location+"\","
                 
                     returnable = returnable + "\"tracks\": [\"General Events\"],\"id\": \""+id+"\"}]}]},"
                 }

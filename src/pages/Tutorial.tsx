@@ -49,11 +49,11 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
   const [showSkip, setShowSkip] = useState(true);
   let [swiper, setSwiper] = useState<SwiperCore>();
 
-  const startApp = async () => {
-    console.log('starting app')
-    await setHasSeenTutorial(true);
-    history.push("/home", { direction: "none" });
-  };
+  // const startApp = async () => {
+  //   console.log('starting app')
+  //   await setHasSeenTutorial(true);
+  //   history.push("/home", { direction: "none" });
+  // };
 
   const handleSlideChangeStart = () => {
     if (!swiper) return;
@@ -549,13 +549,13 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
                   <p></p>
                   <IonRow>
                   <p><br/></p>
-                    <IonButton fill="clear" class="centered" onClick={e => {
+                    <IonButton fill="clear" href="/home" class="centered" onClick={e => {
                       // console.log("subs",subs)
                       // localStorage.setItem("subs", JSON.stringify(subs))
 
                       updateSelectedHomeModules([...vals]);
                       updateSelectedSubscriptions([...subs]);
-                      startApp()
+                      setHasSeenTutorial(true);
                     }}>
                       Get Started
                       <IonIcon slot="end" icon={arrowForward} />
