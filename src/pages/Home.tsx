@@ -331,6 +331,10 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
           </IonItem>
 
           {things.map((event, index) => {
+            let yourDate = new Date(formattedDate)
+            
+            const filters = localStorage.getItem("ScheduleFilters")
+            if(!(filters?.includes(yourDate.toISOString().split('T')[0]+" • "+event.name))){
             return (
               <ScheduleComp
                 key={index}
@@ -341,6 +345,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
                 url={event.url}
               />
             );
+            }
           })}
           {checkSched(things)}
           <IonButton onClick={openSite}>See Extended Events Calendar</IonButton>

@@ -23,10 +23,10 @@ export const AppContextProvider: React.FC = (props) => {
     },
   };
 
-  console.log("------------------");
-  console.log(initialState);
-  console.log(updatedInitialState);
-  console.log("");
+  // console.log("------------------");
+  // console.log(initialState);
+  // console.log(updatedInitialState);
+  // console.log("");
   const [state, dispatch] = useReducer(reducers, updatedInitialState);
 
   useEffect(() => {

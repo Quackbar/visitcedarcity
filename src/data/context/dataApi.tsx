@@ -22,7 +22,7 @@ export const getUserData = async () => {
     });
   }
 
-  console.log(response[2].value);
+  //console.log(response[2].value);
 
   const selectedHomeModulesString = (await response[2].value) ?? false;
   let selectedHomeModules: number[] = [];

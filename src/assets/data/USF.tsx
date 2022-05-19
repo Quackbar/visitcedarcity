@@ -2703,4 +2703,4 @@ export const USFSchedule = {"schedule": [
   {"time": "10:00 AM","sessions": [{"name": "Play Seminar","url": "https://www.bard.org/plays/play-seminars/","timeStart": "10:00 AM","timeEnd": "","location": "Seminar Grove","tracks": ["Theatre"],"id": "5339177692914"}]},
   ]},
 ]}
-
+// console.log(JSON.stringify(USFSchedule).slice(0,-1))

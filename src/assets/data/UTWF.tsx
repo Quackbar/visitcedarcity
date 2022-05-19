@@ -1,5 +1,5 @@
 export const UTWFSchedule = {
-    schedule: [
+    "schedule": [
         {
             "date": "2022-09-02",
             "groups": [{ "time": "6:00 PM",
@@ -19,7 +19,7 @@ export const UTWFSchedule = {
             "url": "https://utahwinefest.com/","timeStart": "6:00 PM",
             "timeEnd": "8:00 PM",
             "location": "Water Canyon Resort Winery",
-            "tracks": ["Utah Wine Fest"],"id": "2"}]},
+            "tracks": ["Utah Wine Fest"],"id": "2"}]}
             ]},
         {
             "date": "2022-09-03",
@@ -46,7 +46,7 @@ export const UTWFSchedule = {
             "url": "https://utahwinefest.com/","timeStart": "5:30 PM",
             "timeEnd": "8:00 PM",
             "location": "Beautiful outdoor locations.   Just off the edge of the Grid.",
-            "tracks": ["Utah Wine Fest"],"id": "6"}]},]},
+            "tracks": ["Utah Wine Fest"],"id": "6"}]}]},
         {
             "date": "2022-09-04",
             "groups": [{ "time": "11:00 AM",

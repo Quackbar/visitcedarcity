@@ -77,7 +77,7 @@ function firstChoice() {
   } else {
     return (
       <IonCard class="centered">
-        <h1>Everythings Closed</h1>
+        <h1>It's After Hours, Check Back Tomorrow</h1>
         <p>
           Sorry but its likely that most things are closed within walking distance. Please do check for yourself though
           as this could be out of date.

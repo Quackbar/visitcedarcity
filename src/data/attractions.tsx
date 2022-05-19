@@ -17,7 +17,7 @@ try {
   ExpObj = JSON.parse(Experiences?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 } catch (error) {
   console.log(error)
-  console.log(Experiences)
+  // console.log(Experiences)
 }
 
 
@@ -34,7 +34,7 @@ try {
   Foods = JSON.parse(Fooder?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 } catch (error) {
   console.log(error)
-  console.log(Fooder)
+  // console.log(Fooder)
 }
 
 Foods.forEach((el) => {
@@ -50,7 +50,7 @@ try {
   Custom = JSON.parse(Customs || "[]") as AttractionItem[];
 } catch (error) {
   console.log(error)
-  console.log(Customs)
+  //console.log(Customs)
 }
 
 Custom.forEach((el) => {
@@ -104,7 +104,7 @@ try {
   Lodging = JSON.parse(Lodges?.slice(0, -1) + "]" || "[]") as AttractionItem[];
 } catch (error) {
   console.log(error)
-  console.log(Lodges)
+  // console.log(Lodges)
 }
 
 Lodging.forEach((el) => {
@@ -138,23 +138,23 @@ export const OutdoorItems = [
       lng: -112.79736578806097,
     },
   },
-  {
-    id: 500,
-    title: "Yankee Meadow Campground",
-    subtitle: "Brian Head Area Campground",
-    url: "https://www.fs.usda.gov/recarea/dixie/recarea/?recid=24888",
-    description: "Yankee Meadows and Yankee Meadows Reservoir is below Brian Head and above Parowan in Utah.",
-    image: "https://lh5.googleusercontent.com/p/AF1QipPCxcL-tmrVRS6FD7kZcOprAy_58PkNMQKBF4_1=w408-h544-k-no",
-    categories: [
-      AttractionCategories.Lodging.subcategories.Campground,
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.760690,  
-      lng: -112.758565,
-    },
-  },
+  // {
+  //   id: 500,
+  //   title: "Yankee Meadow Campground",
+  //   subtitle: "Brian Head Area Campground",
+  //   url: "https://www.fs.usda.gov/recarea/dixie/recarea/?recid=24888",
+  //   description: "Yankee Meadows and Yankee Meadows Reservoir is below Brian Head and above Parowan in Utah.",
+  //   image: "https://lh5.googleusercontent.com/p/AF1QipPCxcL-tmrVRS6FD7kZcOprAy_58PkNMQKBF4_1=w408-h544-k-no",
+  //   categories: [
+  //     AttractionCategories.Lodging.subcategories.Campground,
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.760690,  
+  //     lng: -112.758565,
+  //   },
+  // },
   {
     id: 102,
     title: "Noah's Ark",
@@ -1182,23 +1182,23 @@ export const CityItems: AttractionItem[] = [
       lng: -113.06205498119003,
     },
   },
-  {
-    id: 837456834551,
-    title: "Utah Shakespeare Festival",
-    subtitle: "Cedar City Theatre Festival",
-    url: "https://www.bard.org/",
-    description: "Tony Award-winning theater at the Utah Shakespeare Festival in Cedar City, Utah.",
-    image: "https://www.bard.org/images/homepage/home1.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Shows,
-      AttractionCategories.Experiences.subcategories.FamilyFun,
-      AttractionCategories.Experiences.subcategories.FestivalCity,
-    ],    
-    coordinates: {
-      lat: 37.67662071664922, 
-      lng: -113.06499935801874,
-    },
-  },
+  // {
+  //   id: 837456834551,
+  //   title: "Utah Shakespeare Festival",
+  //   subtitle: "Cedar City Theatre Festival",
+  //   url: "https://www.bard.org/",
+  //   description: "Tony Award-winning theater at the Utah Shakespeare Festival in Cedar City, Utah.",
+  //   image: "https://www.bard.org/images/homepage/home1.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Shows,
+  //     AttractionCategories.Experiences.subcategories.FamilyFun,
+  //     AttractionCategories.Experiences.subcategories.FestivalCity,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.67662071664922, 
+  //     lng: -113.06499935801874,
+  //   },
+  // },
   {
     id: 837456834552,
     title: "Main Street Books Cedar City",
