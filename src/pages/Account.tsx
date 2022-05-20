@@ -525,6 +525,8 @@ const Account: React.FC<AccountProps> = ({
                 </IonCardContent>
               </IonCard>
             </IonCol>
+          </IonRow>
+          <IonRow>
             <IonCol>
 
               <IonCard onClick={openSite2}>
@@ -539,7 +541,7 @@ const Account: React.FC<AccountProps> = ({
             </IonCol>
           </IonRow>
           <IonButton onClick={openSite4}>See Extended Lodging Options</IonButton>
-          <h1><br/><br/></h1>
+          <h1><br/><br/><br/><br/><br/><br/></h1>
 
           </div>
         </IonGrid>
