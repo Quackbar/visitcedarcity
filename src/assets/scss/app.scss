@@ -89,10 +89,13 @@
   height: 400px;
   overflow-x: scroll;
 }
-.fit {
+ .dark-theme .fit{
+  color:rgb(201, 201, 202);
   width: 100%;
 }
-
+.fit{
+  width: 100%;
+}
 .weatherhead {
   font-size: larger;
   color: #000000;

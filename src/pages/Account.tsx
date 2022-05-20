@@ -376,7 +376,7 @@ const Account: React.FC<AccountProps> = ({
         <BarChart propOptions={chartOptions} propData={chartData} propHeight={300} />
         <IonGrid class="centered"><IonRow><IonCol>
         <IonButton id="trigger-button">
-          Plan a Trip
+          Plan Your Trip
         </IonButton>
         </IonCol></IonRow></IonGrid>
 
@@ -434,14 +434,14 @@ const Account: React.FC<AccountProps> = ({
           </IonItemGroup>
         </IonList>
       </IonContent>
-      <IonModal trigger="trigger-button" breakpoints={[.1, 1]} initialBreakpoint={1}>
+      <IonModal trigger="trigger-button" breakpoints={[0, 1]} initialBreakpoint={1}>
         <IonGrid class="centered fit">
           <IonRow>
             <IonCol>
               <p></p>
-              <h1>
+              <IonTitle>
                 Choose Your Dates to Explore
-              </h1>
+              </IonTitle>                  
             </IonCol>
           </IonRow>
           <IonRow>
@@ -471,10 +471,10 @@ const Account: React.FC<AccountProps> = ({
           </IonRow>
           <IonRow>
             <IonCol>
-              <h1>
-                Some Things Going On Then
-              </h1>
-            </IonCol>
+            <IonTitle>
+                          Some Things Going On Then
+            </IonTitle>  
+          </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
