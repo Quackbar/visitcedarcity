@@ -81,6 +81,17 @@
   float: left;
   margin-left: -20px;
 }
+.scrollingcontainer{
+  height: 180px;
+  overflow-x: scroll;
+}
+.scrollingcontaineralt{
+  height: 400px;
+  overflow-x: scroll;
+}
+.fit {
+  width: 100%;
+}
 
 .weatherhead {
   font-size: larger;
