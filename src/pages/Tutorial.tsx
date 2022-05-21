@@ -88,19 +88,6 @@ const Tutorial: React.FC<TutorialProps> = ({ selectedHomeModules, history, setHa
     }
   }
 
-  const toggleModule = (index: number) => {
-    // flip the subscription state
-    if (selectedHomeModules.includes(index)) {
-      selectedHomeModules.splice(selectedHomeModules.indexOf(index), 1);
-    } else {
-      selectedHomeModules.push(index);
-    }
-    // console.log(selectedHomeModules)
-    updateSelectedHomeModules([...selectedHomeModules]);
-  };
-
-
-
   return (
     <IonPage id="tutorial-page" >
       <IonContent fullscreen>

@@ -19,7 +19,6 @@ import {
   IonIcon,
   IonCardContent,
 } from "@ionic/react";
-import { RefresherEventDetail } from "@ionic/core";
 import { settingsOutline } from "ionicons/icons";
 
 // modules
@@ -134,11 +133,8 @@ function checkSched(things: TodaysType[]) {
       />
     );
   }
-}
+}  
 
-function doRefresh(event: CustomEvent<RefresherEventDetail>) {
-  window.location.reload();
-}
 
 interface StateProps {
   selectedHomeModules: AllModules[];
@@ -150,7 +146,14 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   const formatDate = (value: string) => {
     return format(parseISO(value), "MMM dd yyyy");
   };
+  const refresherRef = useRef<HTMLIonRefresherElement>(null);
 
+
+  const doRefresh = () => {
+    // TODO: refresh data
+    window.location.reload();
+    refresherRef.current!.complete();
+  };
   let things: TodaysType[] = [];
   things = [];
   const today = new Date();
@@ -315,10 +318,10 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         </IonCard>
       ) : (
         <IonCard class="basiccentered">
-          <IonItem button={true} id="open-date-input">
+          <IonItem button={true} id="open-date-input-home">
             <IonLabel>Date</IonLabel>
             <IonText slot="end">{popoverDate}</IonText>
-            <IonPopover alignment="end" side="top" trigger="open-date-input" showBackdrop={true}>
+            <IonPopover alignment="end" side="top" trigger="open-date-input-home" showBackdrop={true}>
               <IonDatetime
                 presentation="date"
                 onIonChange={(ev) => {
@@ -460,8 +463,8 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
             </IonButton>
           </IonToolbar>
         </IonHeader>
-        <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
-          <IonRefresherContent></IonRefresherContent>
+        <IonRefresher slot="fixed" ref={refresherRef} onIonRefresh={doRefresh}>
+          <IonRefresherContent />
         </IonRefresher>
         {console.log(selectedHomeModules)}
         {selectedHomeModules.length > 0 ? (

@@ -30,17 +30,13 @@ import {
 } from "@ionic/react";
 import { BarChart, chartDataType, datasetType } from "../components/Chart";
 import { setDarkTheme, updateSelectedSubscriptions } from "../data/context/actions";
-import { AllModules, ConditionsReturnType, MountainDataType, TodaysType, SubscriptionItem } from "../models/defaultModels";
+import { TodaysType, SubscriptionItem } from "../models/defaultModels";
 import { AppContext } from "../data/context/AppContext";
-import { Virtuoso } from 'react-virtuoso';
-
-import { format, parseISO, getDate, getMonth, getYear } from 'date-fns';
 
 import { informationCircle, logoFacebook } from "ionicons/icons";
 import { Browser } from "@capacitor/browser";
 import { Toast } from "@capacitor/toast";
 import { PushNotifications, Token } from "@capacitor/push-notifications";
-import SafeAreaWrapper from "../components/SafeAreaWrapper";
 import { getMode } from "@ionic/core";
 
 import { FMFSchedule } from "../assets/data/FMF";
@@ -148,9 +144,7 @@ const Account: React.FC<AccountProps> = ({
   function pad(d: number) {
     return d < 10 ? "0" + d.toString() : d.toString();
   }
-  const [formattedDate, setFormattedDate] = useState(
-    preformat[2] + "-" + pad(Number(preformat[0])) + "-" + pad(Number(preformat[1]))
-  );
+
 
   const [popoverDate, setPopoverDate] = useState(    
     preformat[2] + "-" + pad(Number(preformat[0])) + "-" + pad(Number(preformat[1]))
@@ -244,7 +238,7 @@ const Account: React.FC<AccountProps> = ({
   function getRange(start: string, end: string) {
     let temp: any[] = [];
     yourSchedule.forEach((item) => {
-      if (item.date > start && item.date < end) {
+      if (item.date >= start && item.date <= end) {
         temp.push(
           item.groups.map((group) => {
             if(!group.sessions[0].name.includes(" • "))
@@ -438,9 +432,9 @@ const Account: React.FC<AccountProps> = ({
         <IonGrid class="centered fit">
           <IonRow>
             <IonCol>
-              <p></p>
+              <p><br/></p>
               <IonTitle>
-                Choose Your Dates to Explore
+                Choose Dates to Explore
               </IonTitle>                  
             </IonCol>
           </IonRow>
@@ -455,7 +449,12 @@ const Account: React.FC<AccountProps> = ({
                   onIonChange={ev => setPopoverDate(formatDate(ev.detail.value!))}
                 />
               </IonPopover>
+              
               </IonItem>
+              </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
               <br/>
               <IonItem button={true} id="close-date-input">
               <IonLabel>End Date</IonLabel>
@@ -463,7 +462,7 @@ const Account: React.FC<AccountProps> = ({
               <IonPopover trigger="close-date-input" showBackdrop={false}>
                 <IonDatetime
                   presentation="date"
-                  onIonChange={ev => setPopoverDate2(formatDate(ev.detail.value!))}
+                  onIonChange={evl => setPopoverDate2(formatDate(evl.detail.value!))}
                 />
               </IonPopover>
               </IonItem>
@@ -471,6 +470,8 @@ const Account: React.FC<AccountProps> = ({
           </IonRow>
           <IonRow>
             <IonCol>
+            <p><br/></p>
+
             <IonTitle>
                           Some Things Going On Then
             </IonTitle>  
@@ -541,7 +542,7 @@ const Account: React.FC<AccountProps> = ({
             </IonCol>
           </IonRow>
           <IonButton onClick={openSite4}>See Extended Lodging Options</IonButton>
-          <h1><br/><br/><br/><br/><br/><br/></h1>
+          <h1><br/><br/><br/><br/><br/><br/><br/><br/><br/></h1>
 
           </div>
         </IonGrid>

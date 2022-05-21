@@ -46,11 +46,7 @@ interface StateProps {
 }
 
 type MapProps = {} & StateProps & DispatchProps;
-const showToast = async (msg: string) => {
-  await Toast.show({
-    text: msg,
-  });
-};
+
 
 const Map: React.FC<MapProps> = ({ attractionItems, mapAttractions, searchText, updateSearchText }) => {
   const { id } = useParams<{ id: string | undefined }>();
