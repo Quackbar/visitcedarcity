@@ -115,13 +115,7 @@ interface DispatchProps {
 
 type AccountProps = StateProps & DispatchProps;
 
-const Account: React.FC<AccountProps> = ({
-  darkTheme,
-  allSubscriptions,
-  selectedSubscriptions,
-  updateSelectedSubscriptions,
-  setDarkTheme,
-}) => {
+const Account: React.FC<AccountProps> = ({ darkTheme, allSubscriptions, selectedSubscriptions, updateSelectedSubscriptions, setDarkTheme }) => {
   const context = useContext(AppContext);
 
   const [chartData, setChartData] = useState<chartDataType>();
@@ -136,7 +130,7 @@ const Account: React.FC<AccountProps> = ({
   things = [];
   const today = new Date();
   const nextweek = new Date();
-  nextweek.setDate(today.getDate() + 7)
+  nextweek.setDate(today.getDate() + 7);
 
   let preformat = today.toLocaleDateString("en-US", { timeZone: "America/Denver" }).split("/");
   let preformat2 = nextweek.toLocaleDateString("en-US", { timeZone: "America/Denver" }).split("/");
@@ -145,14 +139,8 @@ const Account: React.FC<AccountProps> = ({
     return d < 10 ? "0" + d.toString() : d.toString();
   }
 
-
-  const [popoverDate, setPopoverDate] = useState(    
-    preformat[2] + "-" + pad(Number(preformat[0])) + "-" + pad(Number(preformat[1]))
-  );
-  const [popoverDate2, setPopoverDate2] = useState(   
-    preformat2[2] + "-" + pad(Number(preformat2[0])) + "-" + pad(Number(preformat2[1]))
-
-  );
+  const [popoverDate, setPopoverDate] = useState(preformat[2] + "-" + pad(Number(preformat[0])) + "-" + pad(Number(preformat[1])));
+  const [popoverDate2, setPopoverDate2] = useState(preformat2[2] + "-" + pad(Number(preformat2[0])) + "-" + pad(Number(preformat2[1])));
 
   function checkSched(things: TodaysType[]) {
     if (things.length === 0) {
@@ -241,8 +229,7 @@ const Account: React.FC<AccountProps> = ({
       if (item.date >= start && item.date <= end) {
         temp.push(
           item.groups.map((group) => {
-            if(!group.sessions[0].name.includes(" • "))
-              group.sessions[0].name = item.date + " • " + group.sessions[0].name
+            if (!group.sessions[0].name.includes(" • ")) group.sessions[0].name = item.date + " • " + group.sessions[0].name;
 
             return group.sessions[0] as TodaysType;
           })
@@ -256,24 +243,24 @@ const Account: React.FC<AccountProps> = ({
       });
     });
     things = returnable;
-    function compare( a: TodaysType, b: TodaysType ) {
-      if ( a.name < b.name ){
+    function compare(a: TodaysType, b: TodaysType) {
+      if (a.name < b.name) {
         return -1;
       }
-      if ( a.name > b.name ){
+      if (a.name > b.name) {
         return 1;
       }
       return 0;
     }
-    
-    returnable.sort( compare );
+
+    returnable.sort(compare);
     return returnable;
   }
-  getRange(popoverDate, popoverDate2)
+  getRange(popoverDate, popoverDate2);
 
   const formatDate = (value: string) => {
-    console.log(value)
-      return value.split("T")[0];
+    console.log(value);
+    return value.split("T")[0];
   };
   const ios = getMode() === "ios";
 
@@ -368,11 +355,13 @@ const Account: React.FC<AccountProps> = ({
         </IonHeader>
         <h3 className="centered ion-padding-top">Predicted Event Spread</h3>
         <BarChart propOptions={chartOptions} propData={chartData} propHeight={300} />
-        <IonGrid class="centered"><IonRow><IonCol>
-        <IonButton id="trigger-button">
-          Plan Your Trip
-        </IonButton>
-        </IonCol></IonRow></IonGrid>
+        <IonGrid class="centered">
+          <IonRow>
+            <IonCol>
+              <IonButton id="trigger-button">Plan Your Trip</IonButton>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
 
         <h3 className="ion-padding">Subscriptions</h3>
         <IonList lines={ios ? "inset" : "full"}>
@@ -387,14 +376,14 @@ const Account: React.FC<AccountProps> = ({
             return (
               <IonItem key={index}>
                 <IonItem class="ninety">
-                <IonCheckbox
-                  class={"c" + subscription.color.slice(1)}
-                  onClick={() => didToggleCheckbox(index)}
-                  checked={selectedSubscriptions.includes(subscription.id)}
-                />
-                <IonLabel>&nbsp;{subscription.title}</IonLabel>
+                  <IonCheckbox
+                    class={"c" + subscription.color.slice(1)}
+                    onClick={() => didToggleCheckbox(index)}
+                    checked={selectedSubscriptions.includes(subscription.id)}
+                  />
+                  <IonLabel>&nbsp;{subscription.title}</IonLabel>
                 </IonItem>
-                
+
                 <IonIcon icon={informationCircle} onClick={openSite} class="ion-text-right ten" color="primary" />
                 <IonIcon icon={logoFacebook} onClick={openFacebook} class="ion-text-right ten" color="primary" />
               </IonItem>
@@ -432,118 +421,114 @@ const Account: React.FC<AccountProps> = ({
         <IonGrid class="centered fit">
           <IonRow>
             <IonCol>
-              <p><br/></p>
-              <IonTitle>
-                Choose Dates to Explore
-              </IonTitle>                  
+              <p>
+                <br />
+              </p>
+              <IonTitle>Choose Dates to Explore</IonTitle>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
               <IonItem button={true} id="open-date-input">
-              <IonLabel>Start Date</IonLabel>
-              <IonText slot="end">{popoverDate}</IonText>
-              <IonPopover trigger="open-date-input" showBackdrop={false}>
-                <IonDatetime
-                  presentation="date"
-                  onIonChange={ev => setPopoverDate(formatDate(ev.detail.value!))}
-                />
-              </IonPopover>
-              
-              </IonItem>
-              </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-              <br/>
-              <IonItem button={true} id="close-date-input">
-              <IonLabel>End Date</IonLabel>
-              <IonText slot="end">{popoverDate2}</IonText>
-              <IonPopover trigger="close-date-input" showBackdrop={false}>
-                <IonDatetime
-                  presentation="date"
-                  onIonChange={evl => setPopoverDate2(formatDate(evl.detail.value!))}
-                />
-              </IonPopover>
+                <IonLabel>Start Date</IonLabel>
+                <IonText slot="end">{popoverDate}</IonText>
+                <IonPopover size="cover" alignment="end" side="top" trigger="open-date-input" showBackdrop={false}>
+                  <IonDatetime presentation="date" size="cover" onIonChange={(ev) => setPopoverDate(formatDate(ev.detail.value!))} />
+                </IonPopover>
               </IonItem>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-            <p><br/></p>
-
-            <IonTitle>
-                          Some Things Going On Then
-            </IonTitle>  
-          </IonCol>
+              <br />
+              <IonItem button={true} id="close-date-input">
+                <IonLabel>End Date</IonLabel>
+                <IonText slot="end">{popoverDate2}</IonText>
+                <IonPopover size="cover" alignment="end" side="top" trigger="close-date-input" showBackdrop={false}>
+                  <IonDatetime presentation="date" size="cover" onIonChange={(evl) => setPopoverDate2(formatDate(evl.detail.value!))} />
+                </IonPopover>
+              </IonItem>
+            </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-            <div className="scrollingcontainer">
+              <p>
+                <br />
+              </p>
 
-
-            {things.map((event, index) => {
-            return (
-              <ScheduleComp
-                key={index}
-                name={event.name}
-                timeStart={event.timeStart}
-                timeEnd={event.timeEnd}
-                thelocation={event.location}
-                url={event.url}
-              />
-            );
-            
-          })}
-          {checkSched(things)}
-          <IonButton onClick={openSite}>See Extended Events Calendar</IonButton>
-          </div>
-
+              <IonTitle>Some Things Going On Then</IonTitle>
+            </IonCol>
+          </IonRow>
+          <IonRow>
+            <IonCol>
+              <div className="scrollingcontainer">
+                {things.map((event, index) => {
+                  return (
+                    <ScheduleComp
+                      key={index}
+                      name={event.name}
+                      timeStart={event.timeStart}
+                      timeEnd={event.timeEnd}
+                      thelocation={event.location}
+                      url={event.url}
+                    />
+                  );
+                })}
+                {checkSched(things)}
+                <IonButton onClick={openSite}>See Extended Events Calendar</IonButton>
+              </div>
             </IonCol>
           </IonRow>
           <div className="scrollingcontaineralt">
-
-          <IonRow>
-            <IonCol>
-            <IonCard onClick={openSite1}>
-                <IonImg src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Hotel-Exterior-Twilight_7F122E41-5056-A36F-239064A297FE3347-7f122cc45056a36_7f122e95-5056-a36f-2395e5169d8aec44.jpg" />
-                <IonCardHeader>
-                  <IonCardSubtitle>Best Western Premier Brian Head</IonCardSubtitle>
-                </IonCardHeader>
-                <IonCardContent>
-                  $$$
-                </IonCardContent>
-              </IonCard>
-            </IonCol>
-            <IonCol>
-            <IonCard onClick={openSite3}>
-                <IonImg src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Abbey-Inn--King-Suite_D4A6B91C-5056-A36F-2322F5D269286ACC-d4a6b69f5056a36_d4a6b987-5056-a36f-23f0b979464418ad.jpg" />
-                <IonCardHeader>
-                  <IonCardSubtitle><br/>Abbey Inn & Suites</IonCardSubtitle>
-                </IonCardHeader>
-                <IonCardContent>
-                  $$
-                </IonCardContent>
-              </IonCard>
-            </IonCol>
-          </IonRow>
-          <IonRow>
-            <IonCol>
-
-              <IonCard onClick={openSite2}>
-                <IonImg src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Big-Yellow-Inn-front_7F48E6D4-5056-A36F-234B3B3EAC689FE7-7f48e5675056a36_7f48e72c-5056-a36f-23bc0b86e81eba7d.jpg" />
-                <IonCardHeader>
-                  <IonCardSubtitle>Big Yellow Inn<br/></IonCardSubtitle>
-                </IonCardHeader>
-                <IonCardContent>
-                  $$$
-                </IonCardContent>
-              </IonCard>
-            </IonCol>
-          </IonRow>
-          <IonButton onClick={openSite4}>See Extended Lodging Options</IonButton>
-          <h1><br/><br/><br/><br/><br/><br/><br/><br/><br/></h1>
-
+            <IonRow>
+              <IonCol>
+                <IonCard onClick={openSite1}>
+                  <IonImg src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Hotel-Exterior-Twilight_7F122E41-5056-A36F-239064A297FE3347-7f122cc45056a36_7f122e95-5056-a36f-2395e5169d8aec44.jpg" />
+                  <IonCardHeader>
+                    <IonCardSubtitle>Best Western Premier Brian Head</IonCardSubtitle>
+                  </IonCardHeader>
+                  <IonCardContent>$$$</IonCardContent>
+                </IonCard>
+              </IonCol>
+              <IonCol>
+                <IonCard onClick={openSite3}>
+                  <IonImg src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Abbey-Inn--King-Suite_D4A6B91C-5056-A36F-2322F5D269286ACC-d4a6b69f5056a36_d4a6b987-5056-a36f-23f0b979464418ad.jpg" />
+                  <IonCardHeader>
+                    <IonCardSubtitle>
+                      <br />
+                      Abbey Inn & Suites
+                    </IonCardSubtitle>
+                  </IonCardHeader>
+                  <IonCardContent>$$</IonCardContent>
+                </IonCard>
+              </IonCol>
+            </IonRow>
+            <IonRow>
+              <IonCol>
+                <IonCard onClick={openSite2}>
+                  <IonImg src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Big-Yellow-Inn-front_7F48E6D4-5056-A36F-234B3B3EAC689FE7-7f48e5675056a36_7f48e72c-5056-a36f-23bc0b86e81eba7d.jpg" />
+                  <IonCardHeader>
+                    <IonCardSubtitle>
+                      Big Yellow Inn
+                      <br />
+                    </IonCardSubtitle>
+                  </IonCardHeader>
+                  <IonCardContent>$$$</IonCardContent>
+                </IonCard>
+              </IonCol>
+            </IonRow>
+            <IonButton onClick={openSite4}>See Extended Lodging Options</IonButton>
+            <h1>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </h1>
           </div>
         </IonGrid>
       </IonModal>
