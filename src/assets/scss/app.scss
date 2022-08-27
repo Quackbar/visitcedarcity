@@ -81,7 +81,21 @@
   float: left;
   margin-left: -20px;
 }
-
+.scrollingcontainer{
+  height: 180px;
+  overflow-x: scroll;
+}
+.scrollingcontaineralt{
+  height: 500px;
+  overflow-x: scroll;
+}
+ .dark-theme .fit{
+  color:rgb(201, 201, 202);
+  width: 100%;
+}
+.fit{
+  width: 100%;
+}
 .weatherhead {
   font-size: larger;
   color: #000000;

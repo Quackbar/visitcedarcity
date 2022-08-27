@@ -6,8 +6,8 @@ android {
         applicationId "us.goldblockchain.cedarcity"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 22
-        versionName '1.0491'
+        versionCode 28
+        versionName '1.0497'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from.;;;;;;;;;;;;;;;;;;;-0l the packaged assets dir, modified to accommodate modern web apps.

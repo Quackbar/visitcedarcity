@@ -19,7 +19,6 @@ import {
   IonIcon,
   IonCardContent,
 } from "@ionic/react";
-import { RefresherEventDetail } from "@ionic/core";
 import { settingsOutline } from "ionicons/icons";
 
 // modules
@@ -136,10 +135,6 @@ function checkSched(things: TodaysType[]) {
   }
 }
 
-function doRefresh(event: CustomEvent<RefresherEventDetail>) {
-  window.location.reload();
-}
-
 interface StateProps {
   selectedHomeModules: AllModules[];
 }
@@ -150,7 +145,13 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
   const formatDate = (value: string) => {
     return format(parseISO(value), "MMM dd yyyy");
   };
+  const refresherRef = useRef<HTMLIonRefresherElement>(null);
 
+  const doRefresh = () => {
+    // TODO: refresh data
+    window.location.reload();
+    refresherRef.current!.complete();
+  };
   let things: TodaysType[] = [];
   things = [];
   const today = new Date();
@@ -164,9 +165,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
 
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [popoverDate, setPopoverDate] = useState(today.toDateString());
-  const [formattedDate, setFormattedDate] = useState(
-    preformat[2] + "-" + pad(Number(preformat[0])) + "-" + pad(Number(preformat[1]))
-  );
+  const [formattedDate, setFormattedDate] = useState(preformat[2] + "-" + pad(Number(preformat[0])) + "-" + pad(Number(preformat[1])));
 
   let CBAlerts: { schedule: subtype[] } = { schedule: [] };
 
@@ -315,12 +314,14 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         </IonCard>
       ) : (
         <IonCard class="basiccentered">
-          <IonItem button={true} id="open-date-input">
+          <IonItem button={true} id="open-date-input-home">
             <IonLabel>Date</IonLabel>
             <IonText slot="end">{popoverDate}</IonText>
-            <IonPopover alignment="end" side="top" trigger="open-date-input" showBackdrop={true}>
+
+            <IonPopover size="cover" alignment="end" side="top" trigger="open-date-input-home" showBackdrop={true}>
               <IonDatetime
                 presentation="date"
+                size="cover"
                 onIonChange={(ev) => {
                   setPopoverDate(formatDate(ev.detail.value!));
                   setFormattedDate(ev.detail.value!.slice(0, -15));
@@ -331,16 +332,21 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
           </IonItem>
 
           {things.map((event, index) => {
-            return (
-              <ScheduleComp
-                key={index}
-                name={event.name}
-                timeStart={event.timeStart}
-                timeEnd={event.timeEnd}
-                thelocation={event.location}
-                url={event.url}
-              />
-            );
+            let yourDate = new Date(formattedDate);
+
+            const filters = localStorage.getItem("ScheduleFilters");
+            if (!filters?.includes(yourDate.toISOString().split("T")[0] + " • " + event.name)) {
+              return (
+                <ScheduleComp
+                  key={index}
+                  name={event.name}
+                  timeStart={event.timeStart}
+                  timeEnd={event.timeEnd}
+                  thelocation={event.location}
+                  url={event.url}
+                />
+              );
+            }
           })}
           {checkSched(things)}
           <IonButton onClick={openSite}>See Extended Events Calendar</IonButton>
@@ -455,8 +461,8 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
             </IonButton>
           </IonToolbar>
         </IonHeader>
-        <IonRefresher slot="fixed" onIonRefresh={doRefresh}>
-          <IonRefresherContent></IonRefresherContent>
+        <IonRefresher slot="fixed" ref={refresherRef} onIonRefresh={doRefresh}>
+          <IonRefresherContent />
         </IonRefresher>
         {console.log(selectedHomeModules)}
         {selectedHomeModules.length > 0 ? (
@@ -473,12 +479,7 @@ const Home: React.FC<HomeProps> = ({ selectedHomeModules }) => {
         )}
       </IonContent>
 
-      <IonModal
-        isOpen={showFilterModal}
-        onDidDismiss={() => setShowFilterModal(false)}
-        swipeToClose={true}
-        presentingElement={pageRef.current!}
-      >
+      <IonModal isOpen={showFilterModal} onDidDismiss={() => setShowFilterModal(false)} swipeToClose={true} presentingElement={pageRef.current!}>
         <HomeModulesFilter homeModules={HomeModules} onDismissModal={() => setShowFilterModal(false)} />
       </IonModal>
     </IonPage>

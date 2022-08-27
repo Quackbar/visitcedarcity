@@ -48,7 +48,7 @@ export const updateSearchText = (searchText?: string) =>
   } as const);
 export const updateSelectedHomeModules =
   (selectedHomeModules: AllModules[]) => async (dispatch: React.Dispatch<any>) => {
-    console.log(selectedHomeModules);
+    //console.log(selectedHomeModules);
     await setSelectedHomeModulesData(selectedHomeModules);
     return {
       type: "update-selected-home-modules",
