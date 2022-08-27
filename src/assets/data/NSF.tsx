@@ -1,7 +1,7 @@
 export const NSFSchedule = {
     "schedule": [
       {
-        "date": "2022-06-07",
+        "date": "2022-07-07",
         "groups": [
           {
             "time": "7:00 pm",
@@ -20,7 +20,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-08",
+        "date": "2022-07-08",
         "groups": [
           {
             "time": "7:00 pm",
@@ -39,7 +39,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-09",
+        "date": "2022-07-09",
         "groups": [
           {
             "time": "7:00 pm",
@@ -58,7 +58,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-10",
+        "date": "2022-07-10",
         "groups": [
           {
             "time": "7:00 pm",
@@ -77,7 +77,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-13",
+        "date": "2022-07-13",
         "groups": [
           {
             "time": "2:00 pm",
@@ -110,7 +110,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-14",
+        "date": "2022-07-14",
         "groups": [
           {
             "time": "2:00 pm",
@@ -143,7 +143,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-15",
+        "date": "2022-07-15",
         "groups": [
           {
             "time": "7:00 pm",
@@ -176,7 +176,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-16",
+        "date": "2022-07-16",
         "groups": [
           {
             "time": "7:00 pm",
@@ -209,7 +209,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-17",
+        "date": "2022-07-17",
         "groups": [
           {
             "time": "7:00 pm",
@@ -228,7 +228,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-20",
+        "date": "2022-07-20",
         "groups": [
           {
             "time": "2:00 pm",
@@ -261,7 +261,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-21",
+        "date": "2022-07-21",
         "groups": [
           {
             "time": "7:00 pm",
@@ -294,7 +294,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-22",
+        "date": "2022-07-22",
         "groups": [
           {
             "time": "7:00 pm",
@@ -327,7 +327,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-23",
+        "date": "2022-07-23",
         "groups": [
           {
             "time": "2:00 pm",
@@ -360,7 +360,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-24",
+        "date": "2022-07-24",
         "groups": [
           {
             "time": "7:00 pm",
@@ -379,7 +379,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-27",
+        "date": "2022-07-27",
         "groups": [
           {
             "time": "2:00 pm",
@@ -412,7 +412,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-28",
+        "date": "2022-07-28",
         "groups": [
           {
             "time": "2:00 pm",
@@ -445,7 +445,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-29",
+        "date": "2022-07-29",
         "groups": [
           {
             "time": "7:00 pm",
@@ -478,7 +478,7 @@ export const NSFSchedule = {
          ]
        },
        {
-        "date": "2022-06-30",
+        "date": "2022-07-30",
         "groups": [
           {
             "time": "7:00 pm",
