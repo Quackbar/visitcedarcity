@@ -925,179 +925,179 @@ export const OutdoorItems = [
 ];
 
 export const CityItems: AttractionItem[] = [
-  {
-    id: 837456834538,
-    title: "Pastry Pub",
-    subtitle: "Cedar City Dining",
-    url: "https://pastrypubcedarcity.com/",
-    description:
-      "The Pastry Pub has been Serving Cedar City, Utah since 1999, we offer a relaxing atmosphere and a fun pub like setting. Starting out as a small coffee shop we decided to offer so much more to our customers just a short time after we opened our doors. Now years later our menu has grown so much your sure to find something for everyone, from a loaded pastrami sandwich to vegetarian and gluten free menus. We serve in one of our two dining rooms, offer on site and off site catering for any of life’s important events!",
-    image:
-      "https://secureservercdn.net/198.71.233.83/lzw.0ad.myftpupload.com/wp-content/uploads/IMG-9047-1-scaled-1.jpg",
-    categories: [
-      AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-      AttractionCategories.FoodAndDrink.subcategories.Alcohol,
-      AttractionCategories.FoodAndDrink.subcategories.Coffee,
-    ],    
-    coordinates: {
-      lat: 37.677518204616916, 
-      lng: -113.06312943618299,
-    },
-  },
+  // {
+  //   id: 837456834538,
+  //   title: "The Pub",
+  //   subtitle: "Cedar City Dining",
+  //   url: "https://thepubcedarcity.com",
+  //   description:
+  //     "The Pub has been Serving Cedar City, Utah since 1999, we offer a relaxing atmosphere and a fun pub like setting. Starting out as a small coffee shop we decided to offer so much more to our customers just a short time after we opened our doors. Now years later our menu has grown so much your sure to find something for everyone, from a loaded pastrami sandwich to vegetarian and gluten free menus. We serve in one of our two dining rooms, offer on site and off site catering for any of life’s important events!",
+  //   image:
+  //     "https://secureservercdn.net/198.71.233.83/lzw.0ad.myftpupload.com/wp-content/uploads/IMG-9047-1-scaled-1.jpg",
+  //   categories: [
+  //     AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+  //     AttractionCategories.FoodAndDrink.subcategories.Alcohol,
+  //     AttractionCategories.FoodAndDrink.subcategories.Coffee,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.677518204616916, 
+  //     lng: -113.06312943618299,
+  //   },
+  // },
 
-  {
-    id: 837456834539,
-    title: "I/G Winery",
-    subtitle: "Cedar City Winery",
-    url: "https://igwinery.com/",
-    description:
-      "Nestled in the heart of Downtown Cedar City. Our wines are all made, blended and vinted locally, using grapes sourced from Washington, Oregon, California, and Utah.",
-    image: "https://igwinery.com/wp-content/uploads/Building.jpg",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
-    coordinates: {
-      lat: 37.67716458227816, 
-      lng: -113.06278323744154,
-    },
-  },
+  // {
+  //   id: 837456834539,
+  //   title: "I/G Winery",
+  //   subtitle: "Cedar City Winery",
+  //   url: "https://igwinery.com/",
+  //   description:
+  //     "Nestled in the heart of Downtown Cedar City. Our wines are all made, blended and vinted locally, using grapes sourced from Washington, Oregon, California, and Utah.",
+  //   image: "https://igwinery.com/wp-content/uploads/Building.jpg",
+  //   categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
+  //   coordinates: {
+  //     lat: 37.67716458227816, 
+  //     lng: -113.06278323744154,
+  //   },
+  // },
 
-  {
-    id: 837456834540,
-    title: "Centro Woodfired Pizzaria",
-    subtitle: "Cedar City Dining",
-    url: "https://www.centropizzeria.com/",
-    description:
-      "The pizza at centro woodfired pizzeria is inspired by traditional italian cooking techniques and proven family recipes handed down over generations. In addition to great pizza, the restaurant offers a variety of salads and starters, featuring local seasonal produce delivered to the restaurant by our network of farmers. The restaurant also offers four beers on tap and several craft bottled selections including many from local producers. The restaurant wine list features a variety of local, regional and international wines with many selections being offered by the glass.",
-    image:
-      "https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w",
-    categories: [
-      AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-      AttractionCategories.FoodAndDrink.subcategories.Alcohol,
-    ],    
-    coordinates: {
-      lat: 37.67753085664828, 
-      lng: -113.06274563962826,
-    },
-  },
+  // {
+  //   id: 837456834540,
+  //   title: "Centro Woodfired Pizzaria",
+  //   subtitle: "Cedar City Dining",
+  //   url: "https://www.centropizzeria.com/",
+  //   description:
+  //     "The pizza at centro woodfired pizzeria is inspired by traditional italian cooking techniques and proven family recipes handed down over generations. In addition to great pizza, the restaurant offers a variety of salads and starters, featuring local seasonal produce delivered to the restaurant by our network of farmers. The restaurant also offers four beers on tap and several craft bottled selections including many from local producers. The restaurant wine list features a variety of local, regional and international wines with many selections being offered by the glass.",
+  //   image:
+  //     "https://images.squarespace-cdn.com/content/v1/5ce2e2957873390001631a70/1584648977627-ZZK0F60Q0SRS6ZYST0X5/573A87F1-241C-4210-A951-FEA4CE8718C4.jpg?format=2500w",
+  //   categories: [
+  //     AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+  //     AttractionCategories.FoodAndDrink.subcategories.Alcohol,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.67753085664828, 
+  //     lng: -113.06274563962826,
+  //   },
+  // },
 
-  {
-    id: 837456834541,
-    title: "Policy Kings Brewery",
-    subtitle: "Cedar City Brewery",
-    url: "https://policykingsbrewery.com/",
-    description:
-      "One pint at a time, we are waking up the pallets of our Community through creative & innovative sessionable style beers. From our signature tea beers, to our classic Westcoast IPAs, our main goal is to always deliver a crushable beer.",
-    image: "https://policykingsbrewery.com/wp-content/uploads/2021/01/24556.jpeg",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
-    coordinates: {
-      lat: 37.68153042996585, 
-      lng: -113.06422980687805,
-    },
-  },
+  // {
+  //   id: 837456834541,
+  //   title: "Policy Kings Brewery",
+  //   subtitle: "Cedar City Brewery",
+  //   url: "https://policykingsbrewery.com/",
+  //   description:
+  //     "One pint at a time, we are waking up the pallets of our Community through creative & innovative sessionable style beers. From our signature tea beers, to our classic Westcoast IPAs, our main goal is to always deliver a crushable beer.",
+  //   image: "https://policykingsbrewery.com/wp-content/uploads/2021/01/24556.jpeg",
+  //   categories: [AttractionCategories.FoodAndDrink.subcategories.Alcohol],    
+  //   coordinates: {
+  //     lat: 37.68153042996585, 
+  //     lng: -113.06422980687805,
+  //   },
+  // },
 
-  {
-    id: 837456834542,
-    title: "Calvario's Family Restaurant",
-    subtitle: "Parowan Dining",
-    url: "https://calvarios-family-restaurant.business.site/",
-    description:
-      "Family owned and ran business, we specialize in Mexican American cuisine. If it's not on the menu and we can make it we will. Here you are family!",
-    image: "https://lh5.googleusercontent.com/p/AF1QipNFOhtwlOGPUv9If7dBkMxqHi6f-GsptHJs067x=s798-k-no",
-    categories: [
-      AttractionCategories.FoodAndDrink.subcategories.Mexican,
-      AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-    ],    
-    coordinates: {
-      lat: 37.842729102073726, 
-      lng: -112.82741031500996,
-    },
-  },
+  // {
+  //   id: 837456834542,
+  //   title: "Calvario's Family Restaurant",
+  //   subtitle: "Parowan Dining",
+  //   url: "https://calvarios-family-restaurant.business.site/",
+  //   description:
+  //     "Family owned and ran business, we specialize in Mexican American cuisine. If it's not on the menu and we can make it we will. Here you are family!",
+  //   image: "https://lh5.googleusercontent.com/p/AF1QipNFOhtwlOGPUv9If7dBkMxqHi6f-GsptHJs067x=s798-k-no",
+  //   categories: [
+  //     AttractionCategories.FoodAndDrink.subcategories.Mexican,
+  //     AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.842729102073726, 
+  //     lng: -112.82741031500996,
+  //   },
+  // },
 
-  {
-    id: 837456834543,
-    title: "Bristlecone Coffee | Yoga | Connect",
-    subtitle: "Cedar City Coffee House",
-    url: "https://calvarios-family-restaurant.business.site/",
-    description:
-      "At Bristlecone, we think of coffee as a member of the community. Coffee is with you when you share some news with a friend. Coffee is with you when you’re stressed about that final. You have coffee when you’re happy and when you’re sad. We at Bristlecone want to build that sense of community for everyone to feel welcome. We invite YOU to join us.",
-    image: "https://bristleconeco.com/wp-content/uploads/2020/06/connection.png",
-    categories: [
-      AttractionCategories.FoodAndDrink.subcategories.Coffee,
-      AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-      AttractionCategories.Events.subcategories.CommunityWorkshop,
-    ],    
-    coordinates: {
-      lat: 37.67699857559947, 
-      lng: -113.06294845810962,
-    },
-  },
+  // {
+  //   id: 837456834543,
+  //   title: "Bristlecone Coffee | Yoga | Connect",
+  //   subtitle: "Cedar City Coffee House",
+  //   url: "https://calvarios-family-restaurant.business.site/",
+  //   description:
+  //     "At Bristlecone, we think of coffee as a member of the community. Coffee is with you when you share some news with a friend. Coffee is with you when you’re stressed about that final. You have coffee when you’re happy and when you’re sad. We at Bristlecone want to build that sense of community for everyone to feel welcome. We invite YOU to join us.",
+  //   image: "https://bristleconeco.com/wp-content/uploads/2020/06/connection.png",
+  //   categories: [
+  //     AttractionCategories.FoodAndDrink.subcategories.Coffee,
+  //     AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+  //     AttractionCategories.Events.subcategories.CommunityWorkshop,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.67699857559947, 
+  //     lng: -113.06294845810962,
+  //   },
+  // },
 
-  {
-    id: 837456834544,
-    title: "Sook Jai Thai Cuisine",
-    subtitle: "Brian Head Dining",
-    url: "https://www.sookjaibrianhead.com/",
-    description:
-      "We serve classic, authentic Thai cuisine like curries, stir-fries, rice dishes, and noodles. Add tofu, chicken, pork, beef, or shrimp to any of your favorite entrées. ",
-    image:
-      "https://images.squarespace-cdn.com/content/v1/5a26b7a1d7bdcec8c32fa731/1512496647000-APVQY53U4X1GMPFA1FMF/SJ-Our-Favorites-Wide_0003_Kaeng-Ka-Ree.png?format=1500w",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.LocalEatery],    
-    coordinates: {
-      lat: 37.69402238012576, 
-      lng: -112.84666533279108,
-    },
-  },
+  // {
+  //   id: 837456834544,
+  //   title: "Sook Jai Thai Cuisine",
+  //   subtitle: "Brian Head Dining",
+  //   url: "https://www.sookjaibrianhead.com/",
+  //   description:
+  //     "We serve classic, authentic Thai cuisine like curries, stir-fries, rice dishes, and noodles. Add tofu, chicken, pork, beef, or shrimp to any of your favorite entrées. ",
+  //   image:
+  //     "https://images.squarespace-cdn.com/content/v1/5a26b7a1d7bdcec8c32fa731/1512496647000-APVQY53U4X1GMPFA1FMF/SJ-Our-Favorites-Wide_0003_Kaeng-Ka-Ree.png?format=1500w",
+  //   categories: [AttractionCategories.FoodAndDrink.subcategories.LocalEatery],    
+  //   coordinates: {
+  //     lat: 37.69402238012576, 
+  //     lng: -112.84666533279108,
+  //   },
+  // },
 
-  {
-    id: 837456834545,
-    title: "Best Western Premier Brian Head",
-    subtitle: "Brian Head Lodging",
-    url: "https://bwpbrianheadhotel.com/",
-    description:
-      "The Best Western Premier Brian Head is located in the beautiful ski resort town of Brian Head, Utah. Surrounded by breathtaking views and magnificent scenery, we are the perfect location for lovers of the great outdoors. Discover the local area by visiting Brian Head Ski Resort for skiing, snowboarding, tubing, and snowmobiling. In the summer, guests can enjoy endless hiking, mountain biking, and ATV trails as well as great fishing spots.",
-    image:
-      "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Hotel-Exterior-Twilight_7F122E41-5056-A36F-239064A297FE3347-7f122cc45056a36_7f122e95-5056-a36f-2395e5169d8aec44.jpg",
-    categories: [
-      AttractionCategories.Lodging.subcategories.Lodge,
-      AttractionCategories.Lodging.subcategories.HotelMotel,
-      AttractionCategories.Lodging.subcategories.Resort,
-    ],    
-    coordinates: {
-      lat: 37.70551542695132, 
-      lng: -112.85239654327744,
-    },
-  },
+  // {
+  //   id: 837456834545,
+  //   title: "Best Western Premier Brian Head",
+  //   subtitle: "Brian Head Lodging",
+  //   url: "https://bwpbrianheadhotel.com/",
+  //   description:
+  //     "The Best Western Premier Brian Head is located in the beautiful ski resort town of Brian Head, Utah. Surrounded by breathtaking views and magnificent scenery, we are the perfect location for lovers of the great outdoors. Discover the local area by visiting Brian Head Ski Resort for skiing, snowboarding, tubing, and snowmobiling. In the summer, guests can enjoy endless hiking, mountain biking, and ATV trails as well as great fishing spots.",
+  //   image:
+  //     "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Hotel-Exterior-Twilight_7F122E41-5056-A36F-239064A297FE3347-7f122cc45056a36_7f122e95-5056-a36f-2395e5169d8aec44.jpg",
+  //   categories: [
+  //     AttractionCategories.Lodging.subcategories.Lodge,
+  //     AttractionCategories.Lodging.subcategories.HotelMotel,
+  //     AttractionCategories.Lodging.subcategories.Resort,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.70551542695132, 
+  //     lng: -112.85239654327744,
+  //   },
+  // },
 
-  {
-    id: 837456834546,
-    title: "Big Yellow Inn (B&B)",
-    subtitle: "Cedar City Lodging",
-    url: "http://bigyellowinn.com/",
-    description:
-      "Our Elegant Georgian Revival Bed & Breakfast is just one block from the Utah Shakespeare Festival. Leave your car in our parking lot and walk to dining and the downtown historic district. We offer twelve air-conditioned rooms all with private full baths. Your lodging experience includes a grand staircase, eight fireplaces, three sitting rooms, a great room, crown moldings, balconies and porches. A guest library has books and a large video collection. A full breakfast is served each morning. You can choose to eat inside in the dining area, the library or out on on of the porches. We are a luxurious Inn with the amenities of an exclusive hotel.",
-    image:
-      "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Big-Yellow-Inn-front_7F48E6D4-5056-A36F-234B3B3EAC689FE7-7f48e5675056a36_7f48e72c-5056-a36f-23bc0b86e81eba7d.jpg",
-    categories: [AttractionCategories.Lodging.subcategories.BedAndBreakfast],    
-    coordinates: {
-      lat: 37.67311581150884, 
-      lng: -113.06719234430257,
-    },
-  },
+  // {
+  //   id: 837456834546,
+  //   title: "Big Yellow Inn (B&B)",
+  //   subtitle: "Cedar City Lodging",
+  //   url: "http://bigyellowinn.com/",
+  //   description:
+  //     "Our Elegant Georgian Revival Bed & Breakfast is just one block from the Utah Shakespeare Festival. Leave your car in our parking lot and walk to dining and the downtown historic district. We offer twelve air-conditioned rooms all with private full baths. Your lodging experience includes a grand staircase, eight fireplaces, three sitting rooms, a great room, crown moldings, balconies and porches. A guest library has books and a large video collection. A full breakfast is served each morning. You can choose to eat inside in the dining area, the library or out on on of the porches. We are a luxurious Inn with the amenities of an exclusive hotel.",
+  //   image:
+  //     "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Big-Yellow-Inn-front_7F48E6D4-5056-A36F-234B3B3EAC689FE7-7f48e5675056a36_7f48e72c-5056-a36f-23bc0b86e81eba7d.jpg",
+  //   categories: [AttractionCategories.Lodging.subcategories.BedAndBreakfast],    
+  //   coordinates: {
+  //     lat: 37.67311581150884, 
+  //     lng: -113.06719234430257,
+  //   },
+  // },
 
-  {
-    id: 837456834547,
-    title: "Abbey Inn and Suites",
-    subtitle: "Cedar City Lodging",
-    url: "https://abbeyinncedar.com/",
-    description:
-      "Abbey Inn of Cedar City, Utah is the ideal headquarters for your visit to Utah’s Color Country. Six national parks and some of the world’s most beautiful scenery are accessible by the major highways that intersect Cedar City. With a short drive you can visit Zion, Bryce Canyon, Grand Canyon North Rim, Capitol Reef, Great Basin National Parks, Cedar Breaks National Monument and Lake Powell.",
-    image:
-      "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Abbey-Inn--King-Suite_D4A6B91C-5056-A36F-2322F5D269286ACC-d4a6b69f5056a36_d4a6b987-5056-a36f-23f0b979464418ad.jpg",
-    categories: [AttractionCategories.Lodging.subcategories.HotelMotel],    
-    coordinates: {
-      lat: 37.681645435763485, 
-      lng: -113.07550534089559,
-    },
-  },
+  // {
+  //   id: 837456834547,
+  //   title: "Abbey Inn and Suites",
+  //   subtitle: "Cedar City Lodging",
+  //   url: "https://abbeyinncedar.com/",
+  //   description:
+  //     "Abbey Inn of Cedar City, Utah is the ideal headquarters for your visit to Utah’s Color Country. Six national parks and some of the world’s most beautiful scenery are accessible by the major highways that intersect Cedar City. With a short drive you can visit Zion, Bryce Canyon, Grand Canyon North Rim, Capitol Reef, Great Basin National Parks, Cedar Breaks National Monument and Lake Powell.",
+  //   image:
+  //     "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/Abbey-Inn--King-Suite_D4A6B91C-5056-A36F-2322F5D269286ACC-d4a6b69f5056a36_d4a6b987-5056-a36f-23f0b979464418ad.jpg",
+  //   categories: [AttractionCategories.Lodging.subcategories.HotelMotel],    
+  //   coordinates: {
+  //     lat: 37.681645435763485, 
+  //     lng: -113.07550534089559,
+  //   },
+  // },
 
   {
     id: 837456834548,
@@ -1150,38 +1150,38 @@ export const CityItems: AttractionItem[] = [
       lng: -112.82792254465679,
     },
   },
-  {
-    id: 837456834510013,
-    title: "Megaplex Theatre Cedar City",
-    subtitle: "Cedar City Movie Theatre",
-    url: "https://www.megaplextheatres.com/cedarcity",
-    description:
-      "Visit Megaplex's Cedar City theatre in Cedar City, UT 84720. Check out new films, movie trailers, showtimes, and buy movie tickets for your ultimate cinema experience.",
-    image: "https://media.megaplextheatres.com/theatres/cedarcity/header-mobile.jpg",
-    categories: [AttractionCategories.Experiences.subcategories.Shows],    
-    coordinates: {
-      lat: 37.65925889308963, 
-      lng: -113.08192531214618,
-    },
-  },
-  {
-    id: 837456834550,
-    title: "Grind Coffee House",
-    subtitle: "Cedar City Coffee House",
-    url: "https://grindcoffeehouse.business.site/",
-    description:
-      "The Grind Coffeehouse Cafe is a family owned coffeehouse in scenic Southern Utah. We sell Caffe Ibis coffee and delicious breakfast and lunch items. We have recently introduced more Gluten Free and Vegan/Vegetarian options, to better accommodate everyone's needs! Located in Historic Downtown Cedar City, Utah, we are surrounded by Utah's beautiful National Parks. Come check us out!",
-    image:
-      "https://lh3.googleusercontent.com/-Xt2ZvykFyH0/X-PNAoaIIMI/AAAAAAAAA84/Zk-E5NecNAUkPjLm91h_sGoF1MLhrfuKQCJUFGAYYCw/w768-h768-n-o-k-v1/",
-    categories: [
-      AttractionCategories.FoodAndDrink.subcategories.Coffee,
-      AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
-    ],    
-    coordinates: {
-      lat: 37.6778169395864, 
-      lng: -113.06205498119003,
-    },
-  },
+  // {
+  //   id: 837456834510013,
+  //   title: "Megaplex Theatre Cedar City",
+  //   subtitle: "Cedar City Movie Theatre",
+  //   url: "https://www.megaplextheatres.com/cedarcity",
+  //   description:
+  //     "Visit Megaplex's Cedar City theatre in Cedar City, UT 84720. Check out new films, movie trailers, showtimes, and buy movie tickets for your ultimate cinema experience.",
+  //   image: "https://media.megaplextheatres.com/theatres/cedarcity/header-mobile.jpg",
+  //   categories: [AttractionCategories.Experiences.subcategories.Shows],    
+  //   coordinates: {
+  //     lat: 37.65925889308963, 
+  //     lng: -113.08192531214618,
+  //   },
+  // },
+  // {
+  //   id: 837456834550,
+  //   title: "Grind Coffee House",
+  //   subtitle: "Cedar City Coffee House",
+  //   url: "https://grindcoffeehouse.business.site/",
+  //   description:
+  //     "The Grind Coffeehouse Cafe is a family owned coffeehouse in scenic Southern Utah. We sell Caffe Ibis coffee and delicious breakfast and lunch items. We have recently introduced more Gluten Free and Vegan/Vegetarian options, to better accommodate everyone's needs! Located in Historic Downtown Cedar City, Utah, we are surrounded by Utah's beautiful National Parks. Come check us out!",
+  //   image:
+  //     "https://lh3.googleusercontent.com/-Xt2ZvykFyH0/X-PNAoaIIMI/AAAAAAAAA84/Zk-E5NecNAUkPjLm91h_sGoF1MLhrfuKQCJUFGAYYCw/w768-h768-n-o-k-v1/",
+  //   categories: [
+  //     AttractionCategories.FoodAndDrink.subcategories.Coffee,
+  //     AttractionCategories.FoodAndDrink.subcategories.LocalEatery,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.6778169395864, 
+  //     lng: -113.06205498119003,
+  //   },
+  // },
   // {
   //   id: 837456834551,
   //   title: "Utah Shakespeare Festival",
@@ -1791,3 +1791,5 @@ export const TourItems: AttractionItem[] =[
     },
   }
 ];
+
+

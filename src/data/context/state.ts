@@ -34,9 +34,10 @@ export type AppState = {
   attractionItems: AttractionItem[];
   allAttractionFilters: AllCategories[];
   subscriptionItems: SubscriptionItem[];
-  groupedAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
+  groupedAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[];url: string; } };
   mapAttractions: { [id: string]: { name: string; icon: string; color: string; categories: AllCategories[] } };
   user: User;
+  
 };
 
 const shuffleArrays: (arrays: Array<any>[]) => Array<any> = (arrays) => {
@@ -100,12 +101,15 @@ export const initialState: AppState = {
       icon: heart,
       color: "#ff2222",
       categories: [AttractionCategories.Experiences.subcategories.LoveLocalCedarCity],
+      url: "https://visitcedarcity.com/blog/#blog-posts",
     },
     [GroupedAttractionCategories.Parks]: {
       name: "National\xa0Parks",
       icon: shield,
       color: "#4b5e26",
       categories: [AttractionCategories.Experiences.subcategories.NationalParks],
+      url: "https://visitcedarcity.com/things-to-do/outdoor-activities/national-parks/",
+
     },
     [GroupedAttractionCategories.Lodging]: {
       name: "Lodging",
@@ -117,6 +121,8 @@ export const initialState: AppState = {
         AttractionCategories.Lodging.subcategories.BedAndBreakfast,
         AttractionCategories.Lodging.subcategories.Resort,
       ],
+      url: "https://visitcedarcity.com/lodging/",
+
     },
     [GroupedAttractionCategories.FamilyFun]: {
       name: "Family\xa0Fun",
@@ -126,12 +132,16 @@ export const initialState: AppState = {
         AttractionCategories.Experiences.subcategories.FamilyFun,
         AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
       ],
+      url: "https://visitcedarcity.com/things-to-do/outdoor-activities/discovery/",
+
     },
     [GroupedAttractionCategories.Shops]: {
       name: "Shops",
       icon: storefront,
       color: "#8800ff",
       categories: [AttractionCategories.Experiences.subcategories.Shop],
+      url: "https://visitcedarcity.com/shop-local/",
+
     },
     [GroupedAttractionCategories.Arts]: {
       name: "Art",
@@ -141,6 +151,8 @@ export const initialState: AppState = {
         AttractionCategories.Experiences.subcategories.CedarCityArts,
         AttractionCategories.Experiences.subcategories.Shows,
       ],
+      url: "https://visitcedarcity.com/things-to-do/city-activities/art-culture/",
+
     },
     [GroupedAttractionCategories.Drinks]: {
       name: "Drinks",
@@ -150,6 +162,8 @@ export const initialState: AppState = {
         AttractionCategories.FoodAndDrink.subcategories.Alcohol,
         AttractionCategories.FoodAndDrink.subcategories.Coffee,
       ],
+      url: "https://visitcedarcity.com/food-drink/",
+
     },
     [GroupedAttractionCategories.Food]: {
       name: "Food",
@@ -160,6 +174,8 @@ export const initialState: AppState = {
         AttractionCategories.FoodAndDrink.subcategories.Specialty,
         AttractionCategories.FoodAndDrink.subcategories.Mexican,
       ],
+      url: "https://visitcedarcity.com/food-drink/",
+
     },
     [GroupedAttractionCategories.Camping]: {
       name: "Camp\xa0Grounds",
@@ -172,24 +188,32 @@ export const initialState: AppState = {
         AttractionCategories.Lodging.subcategories.Cabin,
         AttractionCategories.Lodging.subcategories.Cabinettes,
       ],
+      url: "https://visitcedarcity.com/lodging/",
+
     },
     [GroupedAttractionCategories.Drives]: {
       name: "Drives",
       icon: carSport,
       color: "#0cfa00",
       categories: [AttractionCategories.Experiences.subcategories.Drives],
+      url: "https://visitcedarcity.com/on-the-road-again-scenic-byways/",
+
     },
     [GroupedAttractionCategories.Fishing]: {
       name: "Fishing",
       icon: fish,
       color: "#2116b8",
       categories: [AttractionCategories.Experiences.subcategories.Fishing],
+      url: "https://wildlife.utah.gov/fishing/main-fishing-page.html",
+
     },
     [GroupedAttractionCategories.Lookouts]: {
       name: "Lookouts",
       icon: telescope,
       color: "#a6a6a6",
       categories: [AttractionCategories.Experiences.subcategories.DarkSkies],
+      url: "https://visitcedarcity.com",
+
     },
     [GroupedAttractionCategories.Trails]: {
       name: "Trails",
@@ -199,6 +223,8 @@ export const initialState: AppState = {
         AttractionCategories.Experiences.subcategories.CedarCityWalks,
         AttractionCategories.Experiences.subcategories.Trails,
       ],
+      url: "https://visitcedarcity.com/things-to-do/trails/",
+
     },
   },
   mapAttractions: {

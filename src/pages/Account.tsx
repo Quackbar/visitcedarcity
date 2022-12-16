@@ -363,7 +363,7 @@ const Account: React.FC<AccountProps> = ({ darkTheme, allSubscriptions, selected
           </IonRow>
         </IonGrid>
 
-        <h3 className="ion-padding">Subscriptions</h3>
+        <h3 className="ion-padding">Interests</h3>
         <IonList lines={ios ? "inset" : "full"}>
           {Object.values(allSubscriptions).map((subscription, index) => {
             const openSite = async () => {

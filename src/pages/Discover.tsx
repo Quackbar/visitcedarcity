@@ -23,6 +23,7 @@ import { AttractionItem } from "../models/defaultModels";
 import { updateSearchText } from "../data/context/actions";
 import { connect } from "../data/context/connect";
 import { Browser } from "@capacitor/browser";
+import { settings } from "cluster";
 
 interface DispatchProps {
   updateSearchText: typeof updateSearchText;
@@ -34,6 +35,7 @@ const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
   const refresherRef = useRef<HTMLIonRefresherElement>(null);
   const pageRef = useRef<HTMLElement>(null);
 
+  const [extendedSite, setExtendedSite] = useState("https://visitcedarcity.com/");
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [filteredAttractions, setFilteredAttractions] = useState<AttractionItem[]>(context.state.attractionItems);
 
@@ -51,8 +53,9 @@ const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
     // selected filters changed
     let filteredResults: AttractionItem[] = [];
     for (let selectedFilter of selectedAttractionFilters) {
-      const resultsForFilter = attractionItems.filter((item) => item.categories?.some((e) => e === selectedFilter));
+      attractionItems.filter((item) => setExtendedSite(item.url));
 
+      const resultsForFilter = attractionItems.filter((item) => item.categories?.some((e) => e === selectedFilter));
       for (let filterResult of resultsForFilter) {
         if (!filteredResults.includes(filterResult)) {
           filteredResults.push(filterResult);
@@ -63,12 +66,14 @@ const Discover: React.FC<DispatchProps> = ({ updateSearchText }) => {
     if (searchText !== undefined) {
       filteredResults = filteredResults.filter((s) => s.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1);
     }
-
+    console.log(filteredResults);
+    setExtendedSite(localStorage.getItem("ExtendedUrl") || "https://visitcedarcity.com/");
     setFilteredAttractions(filteredResults);
   }, [context.state.attractionItems, context.state.user.selectedAttractionFilters, context.state.user.searchText]);
+  
   const openSite = async () => {
     await Browser.open({
-      url: "https://visitcedarcity.com/",
+      url: extendedSite,
     });
   };
   return (

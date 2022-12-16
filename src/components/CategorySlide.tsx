@@ -6,7 +6,7 @@ import { connect } from "../data/context/connect";
 import { AllCategories } from "../models/defaultModels";
 
 interface StateProps {
-  groupedAttractions: { [id: string]: { name: string; icon: string; categories: AllCategories[] } };
+  groupedAttractions: { [id: string]: { name: string; icon: string; categories: AllCategories[]; url: string } };
   selectedFilters: AllCategories[];
   allFilters: AllCategories[];
 }
@@ -53,7 +53,7 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
               <IonIcon icon={groupedAttractions[selectedSlideCategory].icon} color="primary" />
               <IonLabel>{groupedAttractions[selectedSlideCategory].name}</IonLabel>
             </IonChip>
-            <IonSegmentButton onClick={() => deselectFilterGroup()} layout="icon-start">
+            <IonSegmentButton onClick={() => {deselectFilterGroup() }} layout="icon-start">
               <IonIcon icon={close} />
             </IonSegmentButton>
           </IonSegment>
@@ -62,7 +62,7 @@ const CategorySlides: React.FC<CategorySlidesProps> = ({
         <>
           <IonSegment id="categorySlideSegment" className={"hide-scrollbar"} scrollable={true} draggable={true}>
             {Object.keys(groupedAttractions).map((key, index) => (
-              <IonChip key={index} onClick={() => selectFilterGroup(key)}>
+              <IonChip key={index} onClick={() => {selectFilterGroup(key);localStorage.setItem("ExtendedUrl", groupedAttractions[key].url); console.log(groupedAttractions[key].url)}}>
                 <IonIcon icon={groupedAttractions[key].icon} color="primary" />
                 <IonLabel>{groupedAttractions[key].name}</IonLabel>
               </IonChip>

@@ -75,7 +75,7 @@ const Weather: React.FC<WeatherProps> = ({ CedarImg, CedarTemp, ParoImg, ParoTem
 
                     <img src={BrianImg} />
 
-                    <h2>{BrianTemp}</h2>
+                    <h2>{BrianTemp.slice(0,5)}</h2>
                   </IonCard>
                 </IonCol>
               </IonRow>
