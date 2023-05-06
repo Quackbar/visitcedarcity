@@ -61,16 +61,6 @@ export const Subscriptions = [
     subscribed: true,
   },
   {
-    id: 6,
-    title: "SUU Performing Arts",
-    schedule: "/assets/data/SUUPA.tsx",
-    timing: ["1", "2", "2", "2", "0", "0", "0", "0", "0", "1", "2", "2"],
-    color: "#ff0000",
-    url: "https://www.suu.edu/pva/",
-    furl: "https://www.facebook.com/SUUTBirds",
-    subscribed: true,
-  },
-  {
     id: 7,
     title: "Orchestra Of Southern Utah",
     schedule: "/assets/data/OSU.tsx",

@@ -121,93 +121,93 @@ Lodging.forEach((el) => {
 
 
 export const OutdoorItems = [
-  {
-    id: 101,
-    title: "Vermillion Castle",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/vermillion-castle-trail",
-    description: "2 mile, Out-and-Back type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/1fb8638d-3e2b-48b1-93d1-5b48ded737ac",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.795291046474226, 
-      lng: -112.79736578806097,
-    },
-  },
   // {
-  //   id: 500,
-  //   title: "Yankee Meadow Campground",
-  //   subtitle: "Brian Head Area Campground",
-  //   url: "https://www.fs.usda.gov/recarea/dixie/recarea/?recid=24888",
-  //   description: "Yankee Meadows and Yankee Meadows Reservoir is below Brian Head and above Parowan in Utah.",
-  //   image: "https://lh5.googleusercontent.com/p/AF1QipPCxcL-tmrVRS6FD7kZcOprAy_58PkNMQKBF4_1=w408-h544-k-no",
+  //   id: 101,
+  //   title: "Vermillion Castle",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/vermillion-castle-trail",
+  //   description: "2 mile, Out-and-Back type trail accessible Late Spring though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/1fb8638d-3e2b-48b1-93d1-5b48ded737ac",
   //   categories: [
-  //     AttractionCategories.Lodging.subcategories.Campground,
   //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
   //     AttractionCategories.Experiences.subcategories.Trails,
   //   ],
   //   coordinates: {
-  //     lat: 37.760690,  
-  //     lng: -112.758565,
+  //     lat: 37.795291046474226, 
+  //     lng: -112.79736578806097,
   //   },
   // },
-  {
-    id: 102,
-    title: "Noah's Ark",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/noahs-ark-trail",
-    description: "3 mile, Out-and-Back type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/b812a61d-2904-4c68-93f2-e872693e473f",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.79446317826018, 
-      lng: -112.79324622929663,
-    },
-  },
-  {
-    id: 104,
-    title: "Hidden Haven",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/hidden-haven-waterfall",
-    description: "1 mile, Out-and-Back type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.772104474814135, 
-      lng: -112.8401943702633,
-    },
-  },
+  // // {
+  // //   id: 500,
+  // //   title: "Yankee Meadow Campground",
+  // //   subtitle: "Brian Head Area Campground",
+  // //   url: "https://www.fs.usda.gov/recarea/dixie/recarea/?recid=24888",
+  // //   description: "Yankee Meadows and Yankee Meadows Reservoir is below Brian Head and above Parowan in Utah.",
+  // //   image: "https://lh5.googleusercontent.com/p/AF1QipPCxcL-tmrVRS6FD7kZcOprAy_58PkNMQKBF4_1=w408-h544-k-no",
+  // //   categories: [
+  // //     AttractionCategories.Lodging.subcategories.Campground,
+  // //     AttractionCategories.Experiences.subcategories.Outdoor,
+  // //     AttractionCategories.Experiences.subcategories.Trails,
+  // //   ],
+  // //   coordinates: {
+  // //     lat: 37.760690,  
+  // //     lng: -112.758565,
+  // //   },
+  // // },
+  // {
+  //   id: 102,
+  //   title: "Noah's Ark",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/noahs-ark-trail",
+  //   description: "3 mile, Out-and-Back type trail accessible Late Spring though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/b812a61d-2904-4c68-93f2-e872693e473f",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.79446317826018, 
+  //     lng: -112.79324622929663,
+  //   },
+  // },
+  // {
+  //   id: 104,
+  //   title: "Hidden Haven",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/hidden-haven-waterfall",
+  //   description: "1 mile, Out-and-Back type trail accessible Late Spring though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.772104474814135, 
+  //     lng: -112.8401943702633,
+  //   },
+  // },
 
-  {
-    id: 105,
-    title: "Hendrickson Lake",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/hendrickson-lake-trail",
-    description:
-      "3 mile, Out-and-Back (or continue on Dark Hollow Trai for point-to-point or loop) type trail accessible Early Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/f39f1ee6-2d25-415d-b574-4871798b4364",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.739147888113074, 
-      lng: -112.7954093093424,
-    },
-  },
+  // {
+  //   id: 105,
+  //   title: "Hendrickson Lake",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/hendrickson-lake-trail",
+  //   description:
+  //     "3 mile, Out-and-Back (or continue on Dark Hollow Trai for point-to-point or loop) type trail accessible Early Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/f39f1ee6-2d25-415d-b574-4871798b4364",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.739147888113074, 
+  //     lng: -112.7954093093424,
+  //   },
+  // },
   // {
   //   id: 6,
   //   title: "Manzanita",
@@ -259,74 +259,74 @@ export const OutdoorItems = [
   //     lng: -112.8424624,
   //   },
   // },
-  {
-    id: 109,
-    title: "Dark Hollow",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/dark-hollow-second-left-hand-canyon/",
-    description: "14.5 mile, Point-to-Point type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/45f000c3-548f-44be-9bdc-360dfec454e8",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.702092036835666, 
-      lng: -112.80814498183658,
-    },
-  },
-  {
-    id: 1010,
-    title: "Sidney Peaks",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/sydney-peak-trail",
-    description: "4 mile, Point-to-Point type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/afbfecff-722a-436d-991b-fdac1bdb9649",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.7017793160736, 
-      lng: -112.79824629077574,
-    },
-  },
-  {
-    id: 1011,
-    title: "Bunker Creek",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/right-fork-of-bunker-creek",
-    description: "11 mile, Point-to-Point type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/8f1d2314-e81f-4ae0-b1f0-f2e836562c5a",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.716585353752244, 
-      lng: -112.75225545818769,
-    },
-  },
-  {
-    id: 1012,
-    title: "Twisted Forest",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/twisted-forest",
-    description: "1 mile, Out-and-Back type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/66e5092c-d0ef-4b53-995c-228a2b325bd1",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],
-    coordinates: {
-      lat: 37.68443051619365, 
-      lng: -112.88635109866028,
-    },
-  },
+  // {
+  //   id: 109,
+  //   title: "Dark Hollow",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/dark-hollow-second-left-hand-canyon/",
+  //   description: "14.5 mile, Point-to-Point type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/45f000c3-548f-44be-9bdc-360dfec454e8",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.702092036835666, 
+  //     lng: -112.80814498183658,
+  //   },
+  // },
+  // {
+  //   id: 1010,
+  //   title: "Sidney Peaks",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/sydney-peak-trail",
+  //   description: "4 mile, Point-to-Point type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/afbfecff-722a-436d-991b-fdac1bdb9649",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.7017793160736, 
+  //     lng: -112.79824629077574,
+  //   },
+  // },
+  // {
+  //   id: 1011,
+  //   title: "Bunker Creek",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/right-fork-of-bunker-creek",
+  //   description: "11 mile, Point-to-Point type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/8f1d2314-e81f-4ae0-b1f0-f2e836562c5a",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.716585353752244, 
+  //     lng: -112.75225545818769,
+  //   },
+  // },
+  // {
+  //   id: 1012,
+  //   title: "Twisted Forest",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/twisted-forest",
+  //   description: "1 mile, Out-and-Back type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/66e5092c-d0ef-4b53-995c-228a2b325bd1",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],
+  //   coordinates: {
+  //     lat: 37.68443051619365, 
+  //     lng: -112.88635109866028,
+  //   },
+  // },
   // {
   //   id: 13,
   //   title: "Navajo Loop",
@@ -344,108 +344,108 @@ export const OutdoorItems = [
   //     lng: -112.8424624,
   //   },
   // },
-  {
-    id: 1014,
-    title: "Marathon / Mace's Run",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/marathon-trail",
-    description: "5 mile, Loop type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.68272328218124, 
-      lng: -112.800831208387,
-    },
-  },
-  {
-    id: 1015,
-    title: "Lowder Ponds Loop",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/lower-lowder-ponds",
-    description: "11.5 mile, Loop type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/db1a48da-f22d-466b-a613-91aa4ecc0085",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.67308144702817, 
-      lng: -112.78988688816634,
-    },
-  },
-  {
-    id: 1016,
-    title: "High Mountain",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/dry-lakes-high-mountain-scenic-backway",
-    description: "6 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
-    image: "https://www.visitbrianhead.org/File/393200b3-5022-4323-88d8-ec11f099ad64",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.67835651590776, 
-      lng: -112.89964457494001,
-    },
-  },
-  {
-    id: 17,
-    title: "Rattlesnake",
-    subtitle: "Brian Head Area Trails",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description: "10 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
-    image: "https://www.alltrails.com/trail/us/utah/rattlesnake-creek-trail",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.66245436477396, 
-      lng: -112.83812874436182,
-    },
-  },
-  {
-    id: 18,
-    title: "Alpine Pond",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/alpine-pond-trail--3",
-    description: "1 mile, Loop type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/95328441-a68e-4fd1-a319-0187f3ebc0d7",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.63276810877802, 
-      lng: -112.83144330417213,
-    },
-  },
-  {
-    id: 19,
-    title: "South Rim Trail",
-    subtitle: "Brian Head Area Trails",
-    url: "https://www.alltrails.com/trail/us/utah/spectra-point-and-rampart-overlook-trails",
-    description: "2 mile, Out-and-Back type trail accessible Summer though Fall.",
-    image: "https://www.visitbrianhead.org/File/7e6f955b-1e42-4a0a-a2b6-932d694b89f6",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.61173736026522, 
-      lng: -112.83736796263182,
-    },
-  },
+  // {
+  //   id: 1014,
+  //   title: "Marathon / Mace's Run",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/marathon-trail",
+  //   description: "5 mile, Loop type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/220b031f-b3cd-4ddd-aaba-9018f1bd8f23",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.68272328218124, 
+  //     lng: -112.800831208387,
+  //   },
+  // },
+  // {
+  //   id: 1015,
+  //   title: "Lowder Ponds Loop",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/lower-lowder-ponds",
+  //   description: "11.5 mile, Loop type trail accessible Late Spring though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/db1a48da-f22d-466b-a613-91aa4ecc0085",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.67308144702817, 
+  //     lng: -112.78988688816634,
+  //   },
+  // },
+  // {
+  //   id: 1016,
+  //   title: "High Mountain",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/dry-lakes-high-mountain-scenic-backway",
+  //   description: "6 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/393200b3-5022-4323-88d8-ec11f099ad64",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.67835651590776, 
+  //     lng: -112.89964457494001,
+  //   },
+  // },
+  // {
+  //   id: 17,
+  //   title: "Rattlesnake",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+  //   description: "10 mile, Out-and-Back or Point-to-Point type trail accessible Late Spring though Fall.",
+  //   image: "https://www.alltrails.com/trail/us/utah/rattlesnake-creek-trail",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.66245436477396, 
+  //     lng: -112.83812874436182,
+  //   },
+  // },
+  // {
+  //   id: 18,
+  //   title: "Alpine Pond",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/alpine-pond-trail--3",
+  //   description: "1 mile, Loop type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/95328441-a68e-4fd1-a319-0187f3ebc0d7",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.63276810877802, 
+  //     lng: -112.83144330417213,
+  //   },
+  // },
+  // {
+  //   id: 19,
+  //   title: "South Rim Trail",
+  //   subtitle: "Brian Head Area Trails",
+  //   url: "https://www.alltrails.com/trail/us/utah/spectra-point-and-rampart-overlook-trails",
+  //   description: "2 mile, Out-and-Back type trail accessible Summer though Fall.",
+  //   image: "https://www.visitbrianhead.org/File/7e6f955b-1e42-4a0a-a2b6-932d694b89f6",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.61173736026522, 
+  //     lng: -112.83736796263182,
+  //   },
+  // },
   // {
   //   id: 20,
   //   title: "Hancock Peak",
@@ -463,24 +463,24 @@ export const OutdoorItems = [
   //     lng: -112.7622343146256,
   //   },
   // },
-  {
-    id: 21,
-    title: "Brian Head Peak",
-    subtitle: "Brian Head Area Trails and Roads",
-    url: "https://www.alltrails.com/trail/us/utah/brian-head-peak-trail",
-    description:
-      "Our peak has the best view around at 11,307 ft.  From the top, one can see into neighboring states such as Arizona and Nevada.  The stone hut on the very tip of the peak was built between 1935-1937 by the Civilian Conservation Corps; ever since its construction, it has become an icon on the peak.  It not only provides a taste of Brian Head's past, but also a breathtaking view.  (Literally, breath taking since it is so high in elevation). Just before reaching the peak, you'll see the Sydney Peak Trailhead, which is the jumping off point for several of the hiking and mountain biking trails in Dixie National Forest, including Dark Hollow, Bunker Creek, Sydney Peaks, Spruces, and Mace's Run. Restrooms are located at the trailhead. *Note: The road to the summit is accessible in the summer and fall seasons only. ",
-    image: "https://www.visitbrianhead.org/file/image/m/300/200/d8c9c3fe-29ee-4e2e-b2d1-6817027910d3",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.Drives,
-      AttractionCategories.Experiences.subcategories.Trails,
-    ],    
-    coordinates: {
-      lat: 37.68188517658585, 
-      lng: -112.830314480243,
-    },
-  },
+  // {
+  //   id: 21,
+  //   title: "Brian Head Peak",
+  //   subtitle: "Brian Head Area Trails and Roads",
+  //   url: "https://www.alltrails.com/trail/us/utah/brian-head-peak-trail",
+  //   description:
+  //     "Our peak has the best view around at 11,307 ft.  From the top, one can see into neighboring states such as Arizona and Nevada.  The stone hut on the very tip of the peak was built between 1935-1937 by the Civilian Conservation Corps; ever since its construction, it has become an icon on the peak.  It not only provides a taste of Brian Head's past, but also a breathtaking view.  (Literally, breath taking since it is so high in elevation). Just before reaching the peak, you'll see the Sydney Peak Trailhead, which is the jumping off point for several of the hiking and mountain biking trails in Dixie National Forest, including Dark Hollow, Bunker Creek, Sydney Peaks, Spruces, and Mace's Run. Restrooms are located at the trailhead. *Note: The road to the summit is accessible in the summer and fall seasons only. ",
+  //   image: "https://www.visitbrianhead.org/file/image/m/300/200/d8c9c3fe-29ee-4e2e-b2d1-6817027910d3",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.Drives,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.68188517658585, 
+  //     lng: -112.830314480243,
+  //   },
+  // },
   {
     id: 22,
     title: "Yankee Meadows",
@@ -551,25 +551,25 @@ export const OutdoorItems = [
     ],    
 
   },
-  {
-    id: 26,
-    title: "Rising K Ranch Trail Rides",
-    subtitle: "Cedar City Experience",
-    url: "https://risingkranchtrailrides.com/",
-    description:
-      "Rising K Ranch: A Utah Horseback Riding Adventure for All Experience Levels! We are open all year, Summer, Winter, Spring and Fall, for Horseback Trail Rides and Horseback Riding Lessons. We are located perfectly between Zion and Bryce Canyon National Parks near Cedar City in Southern Utah!",
-    image: "https://j.b5z.net/i/u/10243073/i/rising_k-19.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.Trails,
-      AttractionCategories.Experiences.subcategories.FamilyFun,
-    ],    
-    coordinates: {
-      lat: 37.60821598840955, 
-      lng:-113.10591544846321,
-    },
-  },
+  // {
+  //   id: 26,
+  //   title: "Rising K Ranch Trail Rides",
+  //   subtitle: "Cedar City Experience",
+  //   url: "https://risingkranchtrailrides.com/",
+  //   description:
+  //     "Rising K Ranch: A Utah Horseback Riding Adventure for All Experience Levels! We are open all year, Summer, Winter, Spring and Fall, for Horseback Trail Rides and Horseback Riding Lessons. We are located perfectly between Zion and Bryce Canyon National Parks near Cedar City in Southern Utah!",
+  //   image: "https://j.b5z.net/i/u/10243073/i/rising_k-19.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //     AttractionCategories.Experiences.subcategories.FamilyFun,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.60821598840955, 
+  //     lng:-113.10591544846321,
+  //   },
+  // },
   {
     id: 27,
     title: "Cedar Breaks National Monument",
@@ -591,25 +591,25 @@ export const OutdoorItems = [
       lng: -112.83734794415587,
     },
   },
-  {
-    id: 27,
-    title: "Brian Head Resort",
-    subtitle: "Brian Head Resort",
-    url: "http://www.brianhead.com",
-    description:
-      "Brian Head Resort is Utah’s best kept secret-pure and simple, keeping winter sports fun and affordable with the lowest lift ticket prices for a full service ski resort in Utah. There are virtually no lift lines so you can actually enjoy your time on the slopes. Brian Head has two mountains with eight chairlifts and terrain to fit almost any skier or boarder. Navajo Mountain is completely dedicated to beginners, with a ski school, beginner terrain park and high speed quad. When the snow melts, it’s time for a whole different kind of fun at the Resort. Summer activities include: Mountain Biking, Brian Head Family Adventure Trail, Cliff Hanger Climbing Wall, Peak Shot Bungee Trampoline, Ridge Runner Zip Line, Avalanche Summer Tubing, Crooked Arrow Archery, Navajo Vistas Disc Golf Course, and Scenic Lift Ride. http://www.brianhead.com ",
-    image: "https://www.visitbrianhead.org/file/image/m/300/200/6f6d9345-e4a3-4d14-ba64-eca29ad82ce9",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.FamilyFun,
-      AttractionCategories.Experiences.subcategories.Trails,
-      AttractionCategories.Experiences.subcategories.Biking,
-    ],    
-    coordinates: {
-      lat: 37.70204499782152, 
-      lng: -112.85075049507414,
-    },
-  },
+  // {
+  //   id: 27,
+  //   title: "Brian Head Resort",
+  //   subtitle: "Brian Head Resort",
+  //   url: "http://www.brianhead.com",
+  //   description:
+  //     "Brian Head Resort is Utah’s best kept secret-pure and simple, keeping winter sports fun and affordable with the lowest lift ticket prices for a full service ski resort in Utah. There are virtually no lift lines so you can actually enjoy your time on the slopes. Brian Head has two mountains with eight chairlifts and terrain to fit almost any skier or boarder. Navajo Mountain is completely dedicated to beginners, with a ski school, beginner terrain park and high speed quad. When the snow melts, it’s time for a whole different kind of fun at the Resort. Summer activities include: Mountain Biking, Brian Head Family Adventure Trail, Cliff Hanger Climbing Wall, Peak Shot Bungee Trampoline, Ridge Runner Zip Line, Avalanche Summer Tubing, Crooked Arrow Archery, Navajo Vistas Disc Golf Course, and Scenic Lift Ride. http://www.brianhead.com ",
+  //   image: "https://www.visitbrianhead.org/file/image/m/300/200/6f6d9345-e4a3-4d14-ba64-eca29ad82ce9",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.FamilyFun,
+  //     AttractionCategories.Experiences.subcategories.Trails,
+  //     AttractionCategories.Experiences.subcategories.Biking,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.70204499782152, 
+  //     lng: -112.85075049507414,
+  //   },
+  // },
   {
     id: 28,
     title: "Bristlecone Pond ",
@@ -782,24 +782,24 @@ export const OutdoorItems = [
   },
 
 
-  {
-    id: 31,
-    title: "Point Supreme Campground",
-    subtitle: "National Parks and Monuments",
-    url: "https://www.nps.gov/cebr/planyourvisit/psc.htm",
-    description:
-      "Point Supreme Campground is surrounded by meadows of wildflowers in the summer! At 10,000 feet elevation, it is a comfortable place to camp during the hotter summer months. The Point Supreme Campground has 25 campsites and accommodates both tents and RVs. Camping is available from mid-June to mid-September. Note that the campground opening and closing dates may be vary & are subject to favorable weather.",
-    image:
-      "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/IMG_2811_DAF3FBE9-5056-A36F-230F3FDD8CB0BEB3-daf3f91a5056a36_daf3fc45-5056-a36f-230323817e9fcb42.jpg",
-    categories: [
-      AttractionCategories.Lodging.subcategories.Campground,
-      AttractionCategories.Lodging.subcategories.Tenting,
-    ],    
-    coordinates: {
-      lat: 37.61004256943162, 
-      lng: -112.83083200203632,
-    },
-  },
+  // {
+  //   id: 31,
+  //   title: "Point Supreme Campground",
+  //   subtitle: "National Parks and Monuments",
+  //   url: "https://www.nps.gov/cebr/planyourvisit/psc.htm",
+  //   description:
+  //     "Point Supreme Campground is surrounded by meadows of wildflowers in the summer! At 10,000 feet elevation, it is a comfortable place to camp during the hotter summer months. The Point Supreme Campground has 25 campsites and accommodates both tents and RVs. Camping is available from mid-June to mid-September. Note that the campground opening and closing dates may be vary & are subject to favorable weather.",
+  //   image:
+  //     "https://assets.simpleviewinc.com/simpleview/image/upload/c_fit,w_800,h_600/crm/ironcountyut/IMG_2811_DAF3FBE9-5056-A36F-230F3FDD8CB0BEB3-daf3f91a5056a36_daf3fc45-5056-a36f-230323817e9fcb42.jpg",
+  //   categories: [
+  //     AttractionCategories.Lodging.subcategories.Campground,
+  //     AttractionCategories.Lodging.subcategories.Tenting,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.61004256943162, 
+  //     lng: -112.83083200203632,
+  //   },
+  // },
   {
     id: 32,
     title: "Kolob Canyon",
@@ -1099,57 +1099,57 @@ export const CityItems: AttractionItem[] = [
   //   },
   // },
 
-  {
-    id: 837456834548,
-    title: "Southern Utah Museum of Art",
-    subtitle: "Cedar City Art",
-    url: "https://www.suu.edu/suma/",
-    description:
-      "The Southern Utah Museum of Art, on the campus of Southern Utah University, features the artwork of regional artists known for their landscapes, faculty and student artists from the SUU Department of Art & Design, as well as emerging and distinguished artists from around the country. Strengths of the nearly 2,000-object permanent collection include the body of work by Jimmie F. Jones that exemplifies his notable career in the region, as well as a robust collection of prints featuring well-known artists such as Pierre-Auguste Renoir, Salvador Dalí, Katsushika Hokusai, Thomas Hart Benton, and others. Part of the Beverley Taylor Sorenson Center for the Arts, which also includes the Utah Shakespeare Festival, SUMA is free and open to the public.",
-    image: "https://www.suu.edu/suma/images/banners/suma-banner1.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.CedarCityArts,
-      AttractionCategories.Experiences.subcategories.FamilyFun,
-    ],    
-    coordinates: {
-      lat: 37.67704689175199, 
-      lng: -113.06658084831352
-    },
-  },
+  // {
+  //   id: 837456834548,
+  //   title: "Southern Utah Museum of Art",
+  //   subtitle: "Cedar City Art",
+  //   url: "https://www.suu.edu/suma/",
+  //   description:
+  //     "The Southern Utah Museum of Art, on the campus of Southern Utah University, features the artwork of regional artists known for their landscapes, faculty and student artists from the SUU Department of Art & Design, as well as emerging and distinguished artists from around the country. Strengths of the nearly 2,000-object permanent collection include the body of work by Jimmie F. Jones that exemplifies his notable career in the region, as well as a robust collection of prints featuring well-known artists such as Pierre-Auguste Renoir, Salvador Dalí, Katsushika Hokusai, Thomas Hart Benton, and others. Part of the Beverley Taylor Sorenson Center for the Arts, which also includes the Utah Shakespeare Festival, SUMA is free and open to the public.",
+  //   image: "https://www.suu.edu/suma/images/banners/suma-banner1.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.CedarCityArts,
+  //     AttractionCategories.Experiences.subcategories.FamilyFun,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.67704689175199, 
+  //     lng: -113.06658084831352
+  //   },
+  // },
 
-  {
-    id: 8374568345498,
-    title: "Cedar City Walks",
-    subtitle: "Cedar City Walks",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
-    description:
-      "Cedar City is full of stories. From the historic to the unique and curious, from beautiful public artwork to stunning scenery, there’s more to see and do on a stroll through Cedar City than you might imagine. Finding where to start, what to focus on, and where to go can be tricky though, so we’re here to help! ",
-    image: "https://visitcedarcity.com/wp-content/uploads/2020/08/CedarCity-Downtown-Arika-Bauer-scaled.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.LoveLocalCedarCity,
-      AttractionCategories.Experiences.subcategories.FamilyFun,
-    ],    
-    coordinates: {
-      lat: 37.679869, 
-      lng: -113.061822,
-    },
-  },
-  {
-    id: 837456834549,
-    title: "Dry Lakes Ranch Beef",
-    subtitle: "Parowan Beef and Butcher Shop",
-    url: "https://www.drylakesranchbeef.com/",
-    description:
-      "Stop by our retail beef shop on Parowan's Historic Main Street where we offer fresh beef starting Thursday each week and continuing through Monday, or when we sell out. We are closed on Tuesdays and Wednesdays for travel when we take our steers to harvest, and also pick up our fresh beef each week.",
-    image:
-      "https://dry-lakes-ranch-beef.square.site/uploads/b/d8d90b79e1c8c1665c1345d5ed7f485dc04b16c3de1c82e192668144afdc8392/2021-10-30_14-45-45_1635626754.jpg?width=800",
-    categories: [AttractionCategories.FoodAndDrink.subcategories.Specialty],    
-    coordinates: {
-      lat: 37.84358657861868, 
-      lng: -112.82792254465679,
-    },
-  },
+  // {
+  //   id: 8374568345498,
+  //   title: "Cedar City Walks",
+  //   subtitle: "Cedar City Walks",
+  //   url: "https://visitcedarcity.com/things-to-do/city-activities/cedar-city-walks/",
+  //   description:
+  //     "Cedar City is full of stories. From the historic to the unique and curious, from beautiful public artwork to stunning scenery, there’s more to see and do on a stroll through Cedar City than you might imagine. Finding where to start, what to focus on, and where to go can be tricky though, so we’re here to help! ",
+  //   image: "https://visitcedarcity.com/wp-content/uploads/2020/08/CedarCity-Downtown-Arika-Bauer-scaled.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.LoveLocalCedarCity,
+  //     AttractionCategories.Experiences.subcategories.FamilyFun,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.679869, 
+  //     lng: -113.061822,
+  //   },
+  // },
+  // {
+  //   id: 837456834549,
+  //   title: "Dry Lakes Ranch Beef",
+  //   subtitle: "Parowan Beef and Butcher Shop",
+  //   url: "https://www.drylakesranchbeef.com/",
+  //   description:
+  //     "Stop by our retail beef shop on Parowan's Historic Main Street where we offer fresh beef starting Thursday each week and continuing through Monday, or when we sell out. We are closed on Tuesdays and Wednesdays for travel when we take our steers to harvest, and also pick up our fresh beef each week.",
+  //   image:
+  //     "https://dry-lakes-ranch-beef.square.site/uploads/b/d8d90b79e1c8c1665c1345d5ed7f485dc04b16c3de1c82e192668144afdc8392/2021-10-30_14-45-45_1635626754.jpg?width=800",
+  //   categories: [AttractionCategories.FoodAndDrink.subcategories.Specialty],    
+  //   coordinates: {
+  //     lat: 37.84358657861868, 
+  //     lng: -112.82792254465679,
+  //   },
+  // },
   // {
   //   id: 837456834510013,
   //   title: "Megaplex Theatre Cedar City",
@@ -1199,178 +1199,178 @@ export const CityItems: AttractionItem[] = [
   //     lng: -113.06499935801874,
   //   },
   // },
-  {
-    id: 837456834552,
-    title: "Main Street Books Cedar City",
-    subtitle: "Cedar City Book Shop",
-    url: "https://www.facebook.com/mainstreetbookscedarcity/",
-    description:
-      "Cedar City's only independent bookstore. We carry new, used, and collectible. Exchange books for store credit and take home a new adventure!",
-    image: "https://lh5.googleusercontent.com/p/AF1QipMLfnQf2LJQ_O0wWEpeq1koxBRMgk8Yl1Cdb9qd=s686-k-no",
-    categories: [AttractionCategories.Experiences.subcategories.Shop],    
-    coordinates: {
-      lat: 37.67792297229269, 
-      lng: -113.06198055206485,
-    },
-  },
-  {
-    id: 952,
-    title: "Shopping Guide",
-    subtitle: "Cedar City Shopping",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/shopping/",
-    description:
-      "A trip to Cedar City wouldn’t be complete without spending some time exploring our historic downtown, featuring local arts and crafts shops, coffee houses, wine bars, and restaurants. You can keep the fun going after a day on the trail, whether it’s with a little retail therapy, a good cup of coffee or a bite to eat. ",
-    image: "https://visitcedarcity.com/wp-content/uploads/2019/06/Shopping-Header.jpg",
-    categories: [AttractionCategories.Experiences.subcategories.Shop],    
-    coordinates: {
-      lat: 37.6769331,
-      lng: -113.0612103,
-    },
-  },
-  {
-    id: 953,
-    title: "Visitor Services",
-    subtitle: "Cedar City Visitor Resources",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/visitor-services/",
-    description:
-      "We want your trip to Cedar City to go off without a hitch. Let us help you plan your stay with services like outdoor adventure tours and rentals, pet boarding, spa treatments, transportation and so much more.",
-    image: "https://visitcedarcity.com/wp-content/uploads/2019/06/1-slideshow-3.jpg",
-    categories: [AttractionCategories.Experiences.subcategories.FactsAndInfo,
-      AttractionCategories.Experiences.subcategories.FamilyFun,
-      AttractionCategories.Experiences.subcategories.LoveLocalCedarCity],    
-    coordinates: {
-      lat: 37.68721027469668, 
-      lng: -113.06227713787322,
-    },
-  },
-  {
-    id: 837456834553,
-    title: "The Navajo Crafting Co.",
-    subtitle: "Cedar City Shop",
-    url: "https://www.navajocraftingco.com/",
-    description: "Carrying on tradition with authentic + hand-crafted Navajo jewelry",
-    image:
-      "https://www.navajocraftingco.com/uploads/b/89153bea32d5164d8f26027c80d1047874b99cb71021deb18d1b56438dc2aee6/2020-11-18_20-51-02_1605757880.jpg?width=400",
-    categories: [AttractionCategories.Experiences.subcategories.Shop],    
-    coordinates: {
-      lat: 37.67752164719273, 
-      lng: -113.06197191827322,
-    },
-  },
-  {
-    id: 837456834554,
-    title: "Artisans Gallery",
-    subtitle: "Cedar City Shop",
-    url: "https://www.facebook.com/pages/category/Artist/Artisans-Gallery-134547949914392/",
-    description:
-      "Established in 2009, offering local art and handcrafted items. Artisans offers an online gallery for local artists and artisans to showcase and sell their artwork as well as a physical art gallery located in the quaint downtown district of Cedar City and just one block east of Southern Utah University and the Utah Shakespearean Festival.",
-    image:
-      "https://scontent-lax3-1.xx.fbcdn.net/v/t31.18172-8/10700637_754836944552153_6950922609931521472_o.jpg?stp=dst-jpg_s2048x2048&_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xtk_why8ZmUAX_Uwd2Y&_nc_ht=scontent-lax3-1.xx&oh=00_AT-0pwHzOtU6zkbbAIJGWNw8tewVbNv_nXu2sgPfg5bWEw&oe=625AF82E",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Shop,
-      AttractionCategories.Experiences.subcategories.CedarCityArts,
-    ],    
-    coordinates: {
-      lat: 37.677521431873096, 
-      lng: -113.06322053414922,
-    },
-  },
-  {
-    id: 70,
-    title: "\"C\" Overlook - Iron Hills Trail System",
-    subtitle: "Cedar City Lookout",
-    url: "https://www.google.com/maps/place/%22C%22+Overlook+-+Iron+Hills+Trail+System/@37.6432323,-113.0349959,16.1z/data=!4m9!1m2!2m1!1sC-Overlook!3m5!1s0x80ca9f6f4be43a43:0xc816f3e8a199d5e3!8m2!3d37.6424104!4d-113.0345998!15sCgpDLU92ZXJsb29rkgELaGlraW5nX2FyZWE",
-    description:
-      "Breathtaking views at night of the city and the milkyway Galaxy.",
-    image:
-      "https://lh5.googleusercontent.com/p/AF1QipNH1ERRFw86FVSxmYGcgPWOk8WR4LzbN4yOosfq=w408-h306-k-no",
-    categories: [
-      AttractionCategories.Experiences.subcategories.DarkSkies,
-      AttractionCategories.Experiences.subcategories.Trails,
+  // {
+  //   id: 837456834552,
+  //   title: "Main Street Books Cedar City",
+  //   subtitle: "Cedar City Book Shop",
+  //   url: "https://www.facebook.com/mainstreetbookscedarcity/",
+  //   description:
+  //     "Cedar City's only independent bookstore. We carry new, used, and collectible. Exchange books for store credit and take home a new adventure!",
+  //   image: "https://lh5.googleusercontent.com/p/AF1QipMLfnQf2LJQ_O0wWEpeq1koxBRMgk8Yl1Cdb9qd=s686-k-no",
+  //   categories: [AttractionCategories.Experiences.subcategories.Shop],    
+  //   coordinates: {
+  //     lat: 37.67792297229269, 
+  //     lng: -113.06198055206485,
+  //   },
+  // },
+  // {
+  //   id: 952,
+  //   title: "Shopping Guide",
+  //   subtitle: "Cedar City Shopping",
+  //   url: "https://visitcedarcity.com/things-to-do/city-activities/shopping/",
+  //   description:
+  //     "A trip to Cedar City wouldn’t be complete without spending some time exploring our historic downtown, featuring local arts and crafts shops, coffee houses, wine bars, and restaurants. You can keep the fun going after a day on the trail, whether it’s with a little retail therapy, a good cup of coffee or a bite to eat. ",
+  //   image: "https://visitcedarcity.com/wp-content/uploads/2019/06/Shopping-Header.jpg",
+  //   categories: [AttractionCategories.Experiences.subcategories.Shop],    
+  //   coordinates: {
+  //     lat: 37.6769331,
+  //     lng: -113.0612103,
+  //   },
+  // },
+  // {
+  //   id: 953,
+  //   title: "Visitor Services",
+  //   subtitle: "Cedar City Visitor Resources",
+  //   url: "https://visitcedarcity.com/things-to-do/city-activities/visitor-services/",
+  //   description:
+  //     "We want your trip to Cedar City to go off without a hitch. Let us help you plan your stay with services like outdoor adventure tours and rentals, pet boarding, spa treatments, transportation and so much more.",
+  //   image: "https://visitcedarcity.com/wp-content/uploads/2019/06/1-slideshow-3.jpg",
+  //   categories: [AttractionCategories.Experiences.subcategories.FactsAndInfo,
+  //     AttractionCategories.Experiences.subcategories.FamilyFun,
+  //     AttractionCategories.Experiences.subcategories.LoveLocalCedarCity],    
+  //   coordinates: {
+  //     lat: 37.68721027469668, 
+  //     lng: -113.06227713787322,
+  //   },
+  // },
+  // {
+  //   id: 837456834553,
+  //   title: "The Navajo Crafting Co.",
+  //   subtitle: "Cedar City Shop",
+  //   url: "https://www.navajocraftingco.com/",
+  //   description: "Carrying on tradition with authentic + hand-crafted Navajo jewelry",
+  //   image:
+  //     "https://www.navajocraftingco.com/uploads/b/89153bea32d5164d8f26027c80d1047874b99cb71021deb18d1b56438dc2aee6/2020-11-18_20-51-02_1605757880.jpg?width=400",
+  //   categories: [AttractionCategories.Experiences.subcategories.Shop],    
+  //   coordinates: {
+  //     lat: 37.67752164719273, 
+  //     lng: -113.06197191827322,
+  //   },
+  // },
+  // {
+  //   id: 837456834554,
+  //   title: "Artisans Gallery",
+  //   subtitle: "Cedar City Shop",
+  //   url: "https://www.facebook.com/pages/category/Artist/Artisans-Gallery-134547949914392/",
+  //   description:
+  //     "Established in 2009, offering local art and handcrafted items. Artisans offers an online gallery for local artists and artisans to showcase and sell their artwork as well as a physical art gallery located in the quaint downtown district of Cedar City and just one block east of Southern Utah University and the Utah Shakespearean Festival.",
+  //   image:
+  //     "https://scontent-lax3-1.xx.fbcdn.net/v/t31.18172-8/10700637_754836944552153_6950922609931521472_o.jpg?stp=dst-jpg_s2048x2048&_nc_cat=109&ccb=1-5&_nc_sid=e3f864&_nc_ohc=xtk_why8ZmUAX_Uwd2Y&_nc_ht=scontent-lax3-1.xx&oh=00_AT-0pwHzOtU6zkbbAIJGWNw8tewVbNv_nXu2sgPfg5bWEw&oe=625AF82E",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Shop,
+  //     AttractionCategories.Experiences.subcategories.CedarCityArts,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.677521431873096, 
+  //     lng: -113.06322053414922,
+  //   },
+  // },
+  // {
+  //   id: 70,
+  //   title: "\"C\" Overlook - Iron Hills Trail System",
+  //   subtitle: "Cedar City Lookout",
+  //   url: "https://www.google.com/maps/place/%22C%22+Overlook+-+Iron+Hills+Trail+System/@37.6432323,-113.0349959,16.1z/data=!4m9!1m2!2m1!1sC-Overlook!3m5!1s0x80ca9f6f4be43a43:0xc816f3e8a199d5e3!8m2!3d37.6424104!4d-113.0345998!15sCgpDLU92ZXJsb29rkgELaGlraW5nX2FyZWE",
+  //   description:
+  //     "Breathtaking views at night of the city and the milkyway Galaxy.",
+  //   image:
+  //     "https://lh5.googleusercontent.com/p/AF1QipNH1ERRFw86FVSxmYGcgPWOk8WR4LzbN4yOosfq=w408-h306-k-no",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.DarkSkies,
+  //     AttractionCategories.Experiences.subcategories.Trails,
 
-    ],    
-    coordinates: {
-      lat: 37.642325947427565, 
-      lng: -113.0345333191046,
-    },
-  },
-  {
-    id: 71,
-    title: "Cedar City Outdoor Activities",
-    subtitle: "Cedar City Outdoor Activities Overview",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
-    description:
-      "Everyone knows that Utah has the greatest snow on earth, but did they also know that we have the sickest dirt jumps, the cleanest air, some of the richest human history, and the coolest hikes on earth, too? Living life elevated means a never-ending array of snow sports, fishing, hiking, mountain biking, golf, motorsports… the list goes on and on, proving that there really is something for everyone in Cedar City.",
-    image:
-      "https://visitcedarcity.com/wp-content/uploads/2019/07/Outdoor-Activities-Header.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Fishing,
-      AttractionCategories.Experiences.subcategories.Biking,
-      AttractionCategories.Experiences.subcategories.DarkSkies,
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.Trails,
+  //   ],    
+  //   coordinates: {
+  //     lat: 37.642325947427565, 
+  //     lng: -113.0345333191046,
+  //   },
+  // },
+  // {
+  //   id: 71,
+  //   title: "Cedar City Outdoor Activities",
+  //   subtitle: "Cedar City Outdoor Activities Overview",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/outdoor-activities/",
+  //   description:
+  //     "Everyone knows that Utah has the greatest snow on earth, but did they also know that we have the sickest dirt jumps, the cleanest air, some of the richest human history, and the coolest hikes on earth, too? Living life elevated means a never-ending array of snow sports, fishing, hiking, mountain biking, golf, motorsports… the list goes on and on, proving that there really is something for everyone in Cedar City.",
+  //   image:
+  //     "https://visitcedarcity.com/wp-content/uploads/2019/07/Outdoor-Activities-Header.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Fishing,
+  //     AttractionCategories.Experiences.subcategories.Biking,
+  //     AttractionCategories.Experiences.subcategories.DarkSkies,
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.Trails,
 
-    ],    
+  //   ],    
 
-  },
-  {
-    id: 72,
-    title: "Cedar City Recreation Areas",
-    subtitle: "Cedar City Recreation Areas Overview",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
-    description:
-      "Surrounded by national forests, serene lakes and canyons, there’s so much to discover in Cedar City, it’s easy to understand why it’d be hard to choose just one thing. So why not check them all out? ",
-    image:
-      "https://visitcedarcity.com/wp-content/uploads/2019/06/50038255742_598d8398fc_o-scaled.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.Fishing,
-      AttractionCategories.Experiences.subcategories.Biking,
-      AttractionCategories.Experiences.subcategories.DarkSkies,
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Lodging.subcategories.Campground,
-      AttractionCategories.Experiences.subcategories.Trails,
+  // },
+  // {
+  //   id: 72,
+  //   title: "Cedar City Recreation Areas",
+  //   subtitle: "Cedar City Recreation Areas Overview",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/recreation-areas/",
+  //   description:
+  //     "Surrounded by national forests, serene lakes and canyons, there’s so much to discover in Cedar City, it’s easy to understand why it’d be hard to choose just one thing. So why not check them all out? ",
+  //   image:
+  //     "https://visitcedarcity.com/wp-content/uploads/2019/06/50038255742_598d8398fc_o-scaled.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.Fishing,
+  //     AttractionCategories.Experiences.subcategories.Biking,
+  //     AttractionCategories.Experiences.subcategories.DarkSkies,
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Lodging.subcategories.Campground,
+  //     AttractionCategories.Experiences.subcategories.Trails,
 
-    ],    
+  //   ],    
 
-  },
-  {
-    id: 73,
-    title: "Discover The City",
-    subtitle: "Cedar City Discover The City",
-    url: "https://visitcedarcity.com/things-to-do/outdoor-activities/discovery/",
-    description:
-      "Explore the unique history of Cedar City through Old Iron Town, discover rare petroglyphs from the area’s first inhabitants and learn more about Southern Utah in one of our amazing museums.",
-    image:
-      "https://visitcedarcity.com/wp-content/uploads/2019/06/Discover-Header.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.CedarCityArts,
-      AttractionCategories.Experiences.subcategories.CedarCityWalks,
-      AttractionCategories.Experiences.subcategories.LoveLocalCedarCity,
-      AttractionCategories.Experiences.subcategories.Outdoor,
-      AttractionCategories.Experiences.subcategories.Drives,
+  // },
+  // {
+  //   id: 73,
+  //   title: "Discover The City",
+  //   subtitle: "Cedar City Discover The City",
+  //   url: "https://visitcedarcity.com/things-to-do/outdoor-activities/discovery/",
+  //   description:
+  //     "Explore the unique history of Cedar City through Old Iron Town, discover rare petroglyphs from the area’s first inhabitants and learn more about Southern Utah in one of our amazing museums.",
+  //   image:
+  //     "https://visitcedarcity.com/wp-content/uploads/2019/06/Discover-Header.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.CedarCityArts,
+  //     AttractionCategories.Experiences.subcategories.CedarCityWalks,
+  //     AttractionCategories.Experiences.subcategories.LoveLocalCedarCity,
+  //     AttractionCategories.Experiences.subcategories.Outdoor,
+  //     AttractionCategories.Experiences.subcategories.Drives,
 
-    ],    
+  //   ],    
 
-  },
-  {
-    id: 74,
-    title: "Cedar City Art And Culture",
-    subtitle: "Cedar City Art And Culture",
-    url: "https://visitcedarcity.com/things-to-do/city-activities/art-culture/",
-    description:
-      "Cedar City isn’t only home to some of the best outdoor recreation anywhere, you can find a rich art and culture scene here, too. Spend the day exploring several art museums and galleries or catch a show by one of our talented performing arts groups. Not to mention, Cedar City is home to a variety of festivals that celebrate everything from Shakespeare to UFOs to Neil Simon. No matter how you plan your trip, you can’t deny that being able to enjoy world-class art and entertainment against such a stunning backdrop is truly a unique experience.",
-    image:
-      "https://visitcedarcity.com/wp-content/uploads/2019/06/Header2.jpg",
-    categories: [
-      AttractionCategories.Experiences.subcategories.CedarCityArts,
-      AttractionCategories.Experiences.subcategories.LoveLocalCedarCity,
-      AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
-      AttractionCategories.Experiences.subcategories.Shows,
+  // },
+  // {
+  //   id: 74,
+  //   title: "Cedar City Art And Culture",
+  //   subtitle: "Cedar City Art And Culture",
+  //   url: "https://visitcedarcity.com/things-to-do/city-activities/art-culture/",
+  //   description:
+  //     "Cedar City isn’t only home to some of the best outdoor recreation anywhere, you can find a rich art and culture scene here, too. Spend the day exploring several art museums and galleries or catch a show by one of our talented performing arts groups. Not to mention, Cedar City is home to a variety of festivals that celebrate everything from Shakespeare to UFOs to Neil Simon. No matter how you plan your trip, you can’t deny that being able to enjoy world-class art and entertainment against such a stunning backdrop is truly a unique experience.",
+  //   image:
+  //     "https://visitcedarcity.com/wp-content/uploads/2019/06/Header2.jpg",
+  //   categories: [
+  //     AttractionCategories.Experiences.subcategories.CedarCityArts,
+  //     AttractionCategories.Experiences.subcategories.LoveLocalCedarCity,
+  //     AttractionCategories.Experiences.subcategories.ActivitiesAndEvents,
+  //     AttractionCategories.Experiences.subcategories.Shows,
 
-    ],    
+  //   ],    
 
-  },
+  // },
 ]
 
 export const TourItems: AttractionItem[] =[

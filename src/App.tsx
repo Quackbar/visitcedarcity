@@ -140,10 +140,10 @@ const VisitCedarCity: React.FC<IonicAppProps> = ({ isLoading, loadUserData }) =>
               <IonIcon icon={searchOutline} />
               <IonLabel>Discover</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="map" href="/map">
+            {/* <IonTabButton tab="map" href="/map">
               <IonIcon icon={mapOutline} />
               <IonLabel>Map</IonLabel>
-            </IonTabButton>
+            </IonTabButton> */}
             <IonTabButton tab="account" href="/account">
               <IonIcon icon={personOutline} />
               <IonLabel>Account</IonLabel>
