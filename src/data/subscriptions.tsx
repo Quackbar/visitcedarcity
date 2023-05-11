@@ -1,14 +1,15 @@
 export const Subscriptions = [
   {
     id: 0,
-    title: "Utah Shakespeare Festival",
-    schedule: "/assets/data/USF.tsx",
-    timing: ["0", "0", "0", "0", "0", "2", "4", "4", "4", "3", "0", "0"],
-    color: "#c3121e",
-    url: "https://www.bard.org/",
-    furl: "https://www.facebook.com/utahshakespeare",
+    title: "Local Events",
+    schedule: "/assets/data/CC.tsx",
+    timing: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
+    color: "#bbbbbb",
+    url: "https://visitcedarcity.com/events/",
+    furl: "https://www.facebook.com/VisitCedarCity",
     subscribed: true,
   },
+
   {
     id: 1,
     title: "Neil Simon Festival",
@@ -58,6 +59,16 @@ export const Subscriptions = [
     color: "#ffe4c4",
     url: "https://www.suu.edu/suma/",
     furl: "https://www.facebook.com/SUMACC",
+    subscribed: true,
+  },
+  {
+    id: 6,
+    title: "Utah Shakespeare Festival",
+    schedule: "/assets/data/USF.tsx",
+    timing: ["0", "0", "0", "0", "0", "2", "4", "4", "4", "3", "0", "0"],
+    color: "#c3121e",
+    url: "https://www.bard.org/",
+    furl: "https://www.facebook.com/utahshakespeare",
     subscribed: true,
   },
   {
@@ -150,14 +161,5 @@ export const Subscriptions = [
     furl: "https://www.facebook.com/SUUTBirds",
     subscribed: true,
   },
-  {
-    id: 16,
-    title: "Local Events",
-    schedule: "/assets/data/CC.tsx",
-    timing: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
-    color: "#bbbbbb",
-    url: "https://visitcedarcity.com/events/",
-    furl: "https://www.facebook.com/VisitCedarCity",
-    subscribed: true,
-  },
+
 ];

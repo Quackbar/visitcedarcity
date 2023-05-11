@@ -269,6 +269,7 @@ export interface AttractionItem {
   url: string;
   categories: AllCategories[];
   location?: AttractionLocations;
+  address?: string;
   coordinates?: {
     lat: number;
     lng: number;
